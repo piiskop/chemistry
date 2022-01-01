@@ -1,0 +1,97 @@
+---
+title: "Leelised"
+author: 'peacecop kalmer:'
+date: "12/31/2021"
+output:
+  bookdown::html_document2:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Kustutatud lubi
+
+## Valem
+
+Ca(OH)~2~
+
+## Täpne nimetus
+
+kaltsiumhüdroksiid
+
+## Väljanägemine
+
+![Kustutatud lubja väljanägemine](https://5.imimg.com/data5/SELLER/Default/2021/7/NL/DO/LJ/132686986/calcium-hydroxide-500x500.jpg)
+
+## Tihedus
+
+```{r}
+DENSITY_CAOH2 = 2.211E-3 / 1E-6
+```
+
+## Sulamistemperatuur
+
+852 * K
+
+Sulamistemperatuuri lähenedes kipub kaotama vett ja lagunema.
+
+## Saamine
+
+CaO + H~2~O -> Ca(OH)~2~
+
+CaCl~2~ + 2 * NaOH -> Ca(OH)~2~ + 2 * NaCl
+
+molluskite põletamise kaudu
+
+## Lahustuvus
+
+Vees hästi ei lahustu. Lahustuvus suureneb temperatuuri alanemisel. Lahustuvused:
+
+```{r}
+SOLUBILITY_CAOH2_273 = 1.89E-3 / 1E-3
+SOLUBILITY_CAOH2_293 = 1.73E-3 / 1E-3
+```
+
+Lahustub hapetes ja glütseroolis. Happega reageerides moodustab soola. Veega moodustab mõõduka leeliselise lubjavee ja ülejäägiks on lubjapiim. Lubjavesi reageerib metallidega. Reageerib süsinikdioksiidiga ja moodustab kaltsiumkarbonaadi:
+
+Ca(OH)~2~ + CO~2~ -> CaCO~3~ + H~2~O
+
+See protsess on karboneerimine.
+
+## Kasutus
+
+1. paberitööstuses puidu muutmiseks puidumassiks
+
+2. reovee puhastamises selitusainena
+
+3. ammoniaagi valmistamises
+
+4. kurkide marineerimises
+
+5. happelisuse muutmises
+
+6. plastiku tootmises
+
+7. hambaaukude täitmises
+
+8. pestitsiidie valmistamises
+
+9. kõva kummi valmistamises
+
+10. juuksehooldusvahendites
+
+11. karvade eemaldamises loomanahast
+
+12. suhkruroo ja -peedu töötlemises karboniseerimise kaudu
+
+13. maisi keetmises niatsiini (*B3*) paremaks omastamiseks ja mürkainete eemaldamiseks
+
+14. koka- ja tubakalehtede närimise sekka närimises alkaloidide paremaks omastamiseks
+
+15. psühhedeelilise aine peakomponendina
+
+16. mudamajade värvimises

@@ -1,0 +1,62 @@
+---
+title: "Soolad"
+author: 'peacecop kalmer:'
+date: "12/31/2021"
+output:
+  bookdown::html_document2:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Vaskvitriol
+
+## Valem
+
+$CuSO_4 \cdot 5 \cdot H_{2}O$
+
+## Täpne nimetus
+
+Copper(II) sulfate pentahydrate
+
+## Väljanägemine
+
+![Vaskvitrioli väljanägemine](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Copper_sulphate_%2848723911792%29.jpg/800px-Copper_sulphate_%2848723911792%29.jpg)
+
+## Kasutus
+
+patareide valmistamine
+
+# Glaubrisool
+
+## Valem
+
+Na~2~SO~4~ * 10 * H~2~O
+
+## Täpne nimetus
+
+naatriumsulfaadi dekahüdraat
+
+## Väljanägemine
+
+![Glaubrisoola välimus](Mangxiao.jpg)
+
+## Looduses
+
+1. soolavee allikad
+
+2. kuivanud soolaste järvede ääres
+
+## Reageerimine
+
+Laguneb kuivas õhus:
+
+Na~2~SO~4~ * 10 * H~2~O <-> Na~2~SO~4~ + 10 * H~2~O
+
+## Kasutus
+
+1. seedetegevuse hoogustamine

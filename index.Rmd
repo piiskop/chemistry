@@ -1,0 +1,21 @@
+---
+title: "Milleks?"
+author: 'peacecop kalmer:'
+output:
+  bookdown::html_document2:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+---
+
+kõige
+
+ehtsamad
+
+enda
+
+meisterdatud
+
+isuäratavad
+
+artiklid
