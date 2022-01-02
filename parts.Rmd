@@ -159,3 +159,61 @@ volume_vapor_standard <- number_moles * DENSITY_VAPOR_STANDARD
 Selle veekoguse aurustumisel tekkiva veeauru ruumala normaaltingimustel on `r volume_vapor_normal` * dm^3^ ja standardtingimustel `r volume_vapor_standard` * m^3^.
 
 ![Veekoguse arvude arvutamine](water.svg)
+
+## Lahus
+
+### Ülesande püstitus
+
+Segati 560 g 27 %-list ja  320 g 65 %-list lahust. Mitme protsendiline lahus saadi?
+
+### Lahendus
+
+Esimeses lahuses on 151.2 * g põhiainet. Teises lahuses on 208 * g põhiainet. Koondlahuses on seega 359.2 * g põhiainet ja koondlahus massib seega 880 * g. Saadi $\frac{3592}{8800} \cdot 100 \cdot \% === \frac{3592}{88} \cdot \% === \frac{1796}{44} \cdot \% === \frac{898}{22} \cdot \% === \frac{449}{11} \cdot \%$ lahus.
+
+![Osamäära arvutamine](solution.svg)
+
+## Soolvesi
+
+### Ülesande püstitus
+
+Mitu grammi soola on vaja lisada 360 cm^3^ veele, et saada  15 %-line lahus?
+
+### Lahendus
+
+360 * cm^3^ vett on 85 * %.
+
+Arvutuskäik:
+
+```{r}
+mass_salt = 15 / 85 * 360e-6 * DENSITY_WATER * 1e3
+```
+
+`r format(mass_salt, digits = 3)` * g soola on vaja lisada 360 * cm^3^ veele, et saada 15 * % lahus.
+
+![Soolasisalduse arvutamine](saltwater.svg)
+
+**10 punkti**
+
+## Etanool
+
+### Ülesande püstitus
+
+Segati 700 cm^3^ veevaba etanooli (tihedus 0,8 g/cm^3^) ja 250 cm^3^ vett. Leida saadud lahuse massi- ja mahuprotsent.
+
+### Lahendus
+
+Arvutamine:
+
+```{r}
+volume_ethanol <- 700e-6
+volume_water <- 250e-6
+mass_ethanol <- volume_ethanol * .8e-3 / 1e-6
+mass_water <- volume_water * DENSITY_WATER
+mass_percentage <- mass_ethanol / (mass_ethanol + mass_water) * 100
+volume_percentage <- volume_ethanol / (volume_ethanol + volume_water) * 100
+```
+
+`r format(mass_percentage, digits = 2)` on saadud lahuse massiprotsent ja `r format(volume_percentage, digits = 2)` on saadud lahuse mahuprotsent.
+
+![Protsentide arvutamine](alcohol.svg)
+

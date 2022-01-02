@@ -95,3 +95,62 @@ See protsess on karboneerimine.
 15. psühhedeelilise aine peakomponendina
 
 16. mudamajade värvimises
+
+# Alkohol
+
+## Struktuurivalem
+
+![Alkoholi struktuurivalem](Ethanol_Lewis.svg)
+
+## Temperatuurid
+
+```{r}
+MELTING_TEMPERATURE_ALCOHOL <- 159.15
+BOILING_TEMPERATURE_ALCOHOL <- 351.15
+```
+
+## Tihedus
+
+```{r}
+DENSICTY_ALCOHOL <- .789
+```
+
+## Looduses
+
+Etanooli leidub looduses nii vabalt (mõnedes taimedes, käärinud puuviljades ja marjades, hapupiimas) kui ka seotult taimede eeterlikes õlides. Samas esineb seda looduses vähe, kuna madala keemistemperatuuri tõttu lendub etanool kergesti. Seetõttu tuleb etanooli säilitada kinnises anumas.
+
+## Lahustuvus
+
+Lahustub hästi igas vahekorras.
+
+## Reageerimine
+
+Põlemine:
+
+CH~3~CH~2~OH + 3 * O~2~ -> 2 * CO~2~ + 3 * H~2~O
+
+## Saamine
+
+1. kääritamises: Pärmseente elutegevuse mõjul muundub glükoos etanooliks ja süsinikdioksiidiks:
+
+C~6~H~12~O~6~ -> 2 * CH~3~CH~2~OH + 2 * CO~2~
+
+2. tselluloosi sisaldavate ainete töötlemises
+
+3. eteeni hüdraatumises:
+
+CH~2~ = CH ~2~ + H~2~0 -> CH~3~-CH~2~OH
+
+## Kasutus
+
+1. alkohoolsete jookide toomises
+
+2. autokütuse tootmises
+
+3. raketikütuses
+
+4. lahustina
+
+5. antiseptikaks
+
+
