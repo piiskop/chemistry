@@ -22,11 +22,19 @@ MOLAR_MASS_NA = 22.99
 MOLAR_MASS_S = 32.06
 MOLAR_MASS_CA = 40.078
 MOLAR_MASS_CU = 63.546
+MOLAR_MASS_CUSULFATE <- MOLAR_MASS_CU + MOLAR_MASS_S + MOLAR_MASS_O * 4
+MOLAR_MASS_WATER <- MOLAR_MASS_H * 2 + MOLAR_MASS_O
 AVOGADRO = 6.02E23
 DENSITY_WATER <- .998E-3 / 1E-6
 DENSITY_VAPOR_NORMAL <- 22.4e-3
 DENSITY_VAPOR_STANDARD <- 22.7e-3
 ```
+
+Molaarruumala gaaside puhul: normaaltingimisetel $22.4e-3 \frac{m^3}{mol}$, standardtingimustel $22.7e-3 \frac{m^3}{mol}$.
+
+![Reeglid metallide reageerimiseks veega](metals-reacting-with-water.png)
+
+![Skeem metalli reageerimiseks veega](metal-water-oxide-hydroxide.png)
 
 # Ülesanded
 
@@ -160,7 +168,7 @@ Selle veekoguse aurustumisel tekkiva veeauru ruumala normaaltingimustel on `r vo
 
 ![Veekoguse arvude arvutamine](water.svg)
 
-## Lahus
+## Lahus segatavate lahuste kanguste ja masside järgi
 
 ### Ülesande püstitus
 
@@ -217,3 +225,458 @@ volume_percentage <- volume_ethanol / (volume_ethanol + volume_water) * 100
 
 ![Protsentide arvutamine](alcohol.svg)
 
+## Lahus kanguste ja olemasoleva lahuse massi järgi
+
+### Ülesande püstitus
+
+Laboris on 512 g 15 %-list lahust. Kui palju on vaja võtta 72 %-list lahust, et sellest valmistada 43 %-line lahus?
+
+### Lahendus
+
+Põhiainet 512 * g lahuses on 76.8 * g. 72 * % lahuse koguse tähistan *x*'ga. Seega on 72 * % lahuses põhiainet .72 * x * g. 43 * % lahust on (512 + x) * g. Põhiainet on selles .43 * (512 + x) * g. Siinkohal saan koostada võrrandi:
+
+$$76.8 \cdot g + .72 \cdot x \cdot g === .43 \cdot (512 + x) \cdot g$$
+
+Lahendan selle võrrandi:
+
+$$76.8 \cdot g + .72 \cdot x \cdot g === 220.16 \cdot g + .43 \cdot x \cdot g$$
+
+$$.29 \cdot x \cdot g === 153.36 \cdot g$$
+
+$$x = \frac{15336 \cdot 100}{100 \cdot 29}$$
+
+```{r}
+library(Ryacas)
+mass_solution_0 <- 512
+equality <- paste(15 / 100 * mass_solution_0, "+ 72 / 100 * massSolution1 ==", 43 / 100, "* (", mass_solution_0, "+ massSolution1)")
+equality
+mass_solution_1 = eval(parse(text = yac_str(y_rmvars(paste("Solve(", equality, ", massSolution1)", sep ="")))))
+```
+
+![Massi arvutamine](solution-to-take.svg)
+
+Ligikaudu `r format(mass_solution_1, digits = 3)` * g on vaja võtta 72 * % lahust, et sellest valmistada 43 * % lahus.
+
+## Vasksulfaat
+
+### Ülesande püstitus
+
+Mitu grammi vett ja vaskvitrioli on vaja võtta, et valmistada 800 g 10%-list CuSO~4~ lahust?
+
+### Lahendus
+
+Vaskvitriol koosneb vasksulfaadist ja veest. Vasksulfaadi lahuses peab olema 80 * g vasksulfaati. Lasen arvutada vasksulfaadi molaarkoguse:
+
+```{r}
+mass_solution <- 800
+mass_cusulfate <- mass_solution * 10 / 100
+amount_cusulfate <- mass_cusulfate / MOLAR_MASS_CUSULFATE
+```
+
+Vaskvitriolis on vasksulfaadi ja vee suhe üks viiele. Seega on vee molaarkogus viis korda suurem lõpplahuses:
+
+```{r}
+amount_water_cuvitriol <- amount_cusulfate * 5
+```
+
+Lasen arvutada lõpplahuse vaskvitrioli vee massi:
+
+```{r}
+mass_water_cuvitriol <- MOLAR_MASS_WATER * amount_water_cuvitriol
+```
+
+Lasen arvutada lõpplahuse vaskvitrioli ja vee massid:
+
+```{r}
+mass_cuvitriol <- mass_cusulfate + mass_water_cuvitriol
+mass_water <- mass_solution - mass_cuvitriol
+```
+
+![Masside arvutamine](cusulfate.svg)
+
+`r format(mass_cuvitriol, digits = 1)` * g vaskvitrioli ja `r format(mass_water, digits = 1)` * g vett on vaja võtta, et valmistada 800 * g 10 * % CuSO~4~ lahust.
+
+**20 punkti**
+
+## Soolalahus
+
+### Ülesande püstitus
+
+Laboris on 250 grammi vett ja 45 grammi 67 %-list soola vesilahust. Kui palju saab sellest valmistada 25 %-list lahust?
+
+### Lahendus
+
+45 grammis 67 * % soola vesilahuses on soola 30.15 * g. Lahuses, mille kangus on 25 * %, peab soola seega olema 30.15 * g. Vett peab selles 25 * % lahuses olema seega 90.45 * g. Valmistada saab .1206 * kg lahust, mille kangus on 25 * %.
+
+## Lahus kanguste ja sihtlahuse massi järgi
+
+### Ülesande püstitus
+
+Laboris on 27 %-line lahus. Vaja on valmistada 460 g 45 %-list lahust.  Mitu grammi tuleb selleks võtta 73 %-list lahust?
+
+### Lahendus
+
+Sihtlahuses on põhiainet 207 * g. Tähistan 73 * % lahuse koguse grammides *x*'ga. Sellises juhus on 73 * % lahuses põhiainet *(.73 \* x)* * g. Lahust, mille kangus on 27 * %, on seega *(460 - x)* * g ja selles lahuses on põhiainet *.27 \* (460 - x)* * g. Koostan võrrandi:
+
+$$.27 \cdot (460 - x) \cdot g + .73 \cdot x \cdot g === 207 \cdot g$$
+
+Lahendan selle võrrandi:
+
+$$124.2 - .27 \cdot x + .73 \cdot x === 207$$
+
+$$.46 \cdot x === 82.8$$
+
+$$x = \frac{828 \cdot 100}{10 \cdot 46} === \frac{414 \cdot 10}{23} === \frac{4140}{23} === 180$$
+
+`r .18` * kg tuleb võtta 73 * % lahust.
+
+## Tsink
+
+### Ülesande püstitus
+
+[Tsingi](metals.html#Tsink) reageerimisel [lämmastikhappega](acids.html#Lämmastikhape) tekivad [tsinknitraat](salts.html#Tsinknitraat), [vesi](water.html) ja gaasid [dilämmastikoksiid](gases.html#Naerugaas) ning [lämmastikoksiid](gases.html#Lämmastikoksiid) moolivahekorras 5:3. Koosta ja tasakaalusta reaktsiooni brutovõrrand.
+
+### Lahendus
+
+4 * Zn + 10 * HNO~3~ -> 4 * Zn(NO~3~)~2~ + 5 * H~2~O + N~2~O
+Zn^0^ - 2 * e -> Zn^2^
+2 * N^5^ + 8 * e -> N~2~^1^
+
+3 * Zn + 8 * HNO~3~ -> 3 * Zn(NO~3~)~2~ + 4 * H~2~O + 2 * NO
+Zn^0^ - 2 * e -> Zn^2^
+N^5^ + 3 * e -> N^2^
+
+![Tasakaalustamise kert martma versioon](balancing.png)
+
+Esimene võrrand tuleb korrutada kümnega, et lämmastikoksiidi ja dilämmastikoksiidi vahekord oleks vastav ülesande püstitusele:
+
+40 * Zn + 100 * HNO~3~ -> 40 * Zn(NO~3~)~2~ + 50 * H~2~O + 10 * N~2~O
+
+Teine võrrand tuleb samal põhjusel korrutada kolmega:
+
+9 * Zn + 24 * HNO~3~ -> 9 * Zn(NO~3~)~2~ + 12 * H~2~O + 6 * NO
+
+Järgnevalt tuleb võrrandid summeerida:
+
+49 * Zn + 124 * HNO~3~ -> 49 * Zn(NO~3~)~2~ + 62 * H~2~O + 10 * N~2~O + 6 * NO
+
+![Brutovõrrand kert martma järgi](bruttoequation.png)
+
+## Hapete valemid
+
+### Ülesande püstitus
+
+Kirjutada valemid:
+
+väävelhape, süsihape, vesiniksulfiidhape
+
+### Lahendus
+
+H~2~SO~4, H~2~CO~3~, H~2~S
+
+## Leeliste valemid
+
+### Ülesande püstitus
+
+Kirjutada valemid:
+
+naatriumhüdroksiid, ammoniaakhüdraat, vask(II)hüdroksiid, baariumhüdroksiid
+
+### Lahendus
+
+NaOH, NH~3~•H~2~O (nuuskpiiritus), Cu(OH)~2~, Ba(OH)~2~
+
+## Soolade valemid
+
+### Ülesande püstitus
+
+Kirjutada valemid:
+
+kaaliumsulfit, kaltsiumfosfaat, naatriumnitraat, vask(II)karbonaat
+
+### Lahendus
+
+K~2~SO~3~, Ca~3~(PO~4~)~2~, NaNO~3~, CuCO~3~
+
+## Oksiidide valemid
+
+### Ülesande püstitus
+
+Kirjutada valemid:
+
+alumiiniumoksiid, hõbeoksiid, raud(III)oksiid
+
+### Lahendus
+
+Al~2~O~3~, Ag~2~O, Fe~2~^3^O~3~
+
+## Reaktsioonivõrrandid
+
+### Ülesande püstitus
+
+Lõpetada reaktsioonivõrrandid ja kirjutada saaduste nimetused:
+
+KOH + H~2~SO~4~ ->
+
+Ca(OH)~2~ + H~3~PO~4~
+
+### Lahendus
+
+2 * KOH + H~2~SO~4~ -> K~2~SO~4~ + 2 * H~2~O
+
+3 * Ca(OH)~2~ + 2 * H~3~PO~4~ -> Ca~3~(PO~4~)~2~ + 6 * H~2~O
+
+## Lämmastik lämmastikhappes
+
+### Ülesande püstitus
+
+Mitu % lämmastikku sisaldub lämmastikhappes? Aatommassid: H-1, N-14, O-16.
+
+### Lahendus
+
+$$\frac{1400}{63} \cdot \%$$
+## Kaaliumkloriidi lahus
+
+### Ülesande püstitus
+
+Laborandil on vaja valmistada 25 grammi 15 %-st kaaliumkloriidi lahust. Mitu grammi on vajalik võtta selleks nimetatud soola ja vett?
+
+### Lahendus
+
+3.75 * g nimetatud soola ja 21.25 * g vett on vajalik võtta.
+
+## Hapniku ruumala
+
+### Ülesande püstitus
+
+Leidke 6 mooli hapniku ruumala standardtingimustel. Aatommass: O-16.
+
+### Lahendus
+
+.1362 * m^3^ on 6 mooli hapniku ruumala standardtingimustel.
+
+## Kaltsiumkloriid
+
+### Ülesande püstitus
+
+Mitu mooli kaltsiumi on 12 grammis kaltsiumkloriidis? Aatommassid: Ca-40, Cl-35,5.
+
+### Lahendus
+
+$\frac{12}{111}$ mooli kaltsiumi on 12 * g kaltsiumkloriidis.
+
+## Magneesium
+
+### Ülesande püstitus
+
+5 grammi magneesiumi reageerimisel sool- ehk vesinikkloriidhappega tekib sool ja eraldub gaasiline lihtaine. Kui suur on eralduva gaasi ruumala (dm^3^) standardtingimustel? Aatommass: Mg-24.
+
+### Lahendus
+
+Reaktsioonivõrrand:
+
+Mg + 2 * HCl -> MgCl~2~ + H~2~
+
+22.7 * dm^3^ on eralduva gaasi ruumala standardtingimustel.
+
+## Reaktsioonivõrrandid
+
+### Metall ja hapnik
+
+Metal oxides are formed, which are generally basic in nature.
+
+#### Aluseline metall ja hapnik
+
+1. 2 * Li + O~2~ -> Li~2~O
+
+2. 4 * Na + O~2~ -> 2 * Na~2~O
+
+5. 4 * K + O~2~ -> 2 * K~2~O
+
+#### Mittealuseline metall ja hapnik
+
+3. 2 * Mg + O~2~ -> 2 * MgO
+
+Reaktsioon toimub kõrge temperatuuriga.
+
+4. 4 * Al + 3 * O~2~ -> 2 * Al~2~O~3~
+
+Reaktsioon toimub kõrge temperatuuriga.
+
+6. 2 * Zn + O~2~ -> 2 * ZnO
+
+Reaktsioon toimub kõrge temperatuuriga.
+
+### Aluseline oksiid ja vesi
+
+1. Li~2~O + H~2~O -> 2 * LiOH
+
+2. Na~2~O + H~2~O -> 2 * NaOH
+
+3. MgO + H~2~O -> Mg(OH)~2~
+
+Reaktsioon toimub osaliselt.
+
+4. K~2~O + H~2~O -> 2 * KOH
+
+5. CaO + H~2~O -> Ca(OH)~2~
+
+### Vesi ja ülemineku järgse metalli oksiid
+
+1. Al~2~O~3~ + H~2~O
+
+Ei reageeri. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
+
+### Vesi ja ülemineku metalli oksiid
+
+1. FeO + H~2~O
+
+Ei reageeri.
+
+2. ZnO + H~2~O
+
+Ei reageeri.
+
+### Vesi ja metall
+
+Metal hydroxides are formed:
+
+1. 2 * Li + 2 * H~2~O -> Li~2~O + H~2~O + H~2~ -> 2 * LiOH + H~2~
+
+2. 2 * Na + 2 * H~2~O -> Na~2~O + H~2~O + H~2~ -> 2 * NaOH + H~2~
+
+Selles reaktsioonis eraldub soojus, mis põletab vesiniku ära.
+
+3. Mg + 2 * H~2~O -> MgO + H~2~O + H~2~ -> Mg(OH)~2~ + H~2~
+
+See reaktsioon toimub kõrge temperatuuriga.
+
+4. 2 * Al + 3* H~2~O -> Al~2~O~3~ + 3 * H~2~
+
+Reaktsioon toimub kõrge temperatuuriga. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
+
+5. 2 * K + 2 * H~2~O -> K~2~O + H~2~O + H~2~ -> 2 * KOH + H~2~
+
+Selle reaktsiooni kestel eraldub soojus, mis põletab vesiniku ära.
+
+6. Ca + 2 * H~2~O -> CaO + H~2~O + H~2~ -> Ca(OH)~2~ + H~2~
+
+Selle reaktsiooni kestel eraldub sooja, mis siiski ei põleta vesinikku ära.
+
+7. 3 * Fe + 4 * H~2~O <-> Fe~3~O~4~ + 4 * H~2~
+
+8. Cu + H~2~O
+
+reaktsioon ei toimu, sest vask on selleks liiga nõrk
+
+9. Zn + H~2~O -> ZnO + H~2~
+
+Reaktsioon toimub kõrge temperatuuriga.
+
+10. Ag + H~2~O
+
+Reaktsioon ei toimu.
+
+11. Au + H~2~O
+
+Reaktsioon ei toimu.
+
+12. Pb + H~2~O
+
+Reaktsioon ei toimu.
+
+### Vesinik ja metall
+
+Reactive metals from ionic metal hydrides:
+
+1. H~2~+ 2 * Na -> 2 * NaH
+
+2. H~2~ + Ca -> CaH~2~
+
+### Vesinik ja mittemetall
+
+Covalent hydrides are formed:
+
+1. H~2~ + Cl~2~ -> 2 * HCl
+
+2. N~2~ + 3 * H~2~ -> 2 * NH~3~ (ammoniaak)
+
+2. H~2~ + S -> H~2~S
+
+### Mittemetall ja vesi
+
+Generally, do not react:
+
+1. C + H~2~O -> (CO + H~2~) (vesigaas)
+
+See reaktsioon toimub auruga.
+
+### Mittemetall ja hapnik
+
+Non – metal oxides are formed, which are generally acidic in nature:
+
+1. 2 * C + O~2~ -> 2 * CO
+
+See reaktsioon toimub vähese hapnikuga.
+
+2. C + O~2~ -> CO~2~
+
+See reaktsioon tiomub rohke hapnikuga.
+
+2. 4 * P + 5 * O~2~ -> P~4~O~10~
+
+3. S + O~2~ -> SO~2~
+
+4. 2 * S + 3* O~2~ (erinev *9*'st) -> 2 * SO~3~
+
+### Vesi ja mittemetall
+
+1. H~2~O + S -> 
+
+### Vesi ja happeline oksiid
+
+1. H~2~O + CO~2~ -> H~2~CO~3~
+
+2. H~2~O + SO~2~ -> H~2~SO~3~
+
+### Metall ja hape
+
+Metals more reactive than hydrogen displace hydrogen from dilute acids to form metal salts and hydrogen gas:
+
+1. 2 * Na + 2 * HCl -> 2 * NaCl + H~2~
+
+2. Cu + HCl
+
+Reaktsioon ei toimu, sest vesinik on tugevam ja vask ei tõrju vesinikku välja.
+
+3. 3 * Cu + 8 * HNO~3~ -> 3 * Cu(NO~3~)~2~ + 4 * H~2~O + 2 * NO
+
+Vask siiski reageerib oksügeeni sisaldava happega.
+
+4. Cu + 2 * H~2~SO~4~ -> CuSO~4~ + 2 * H~2~O + SO~2~
+
+### Halogeen ja metall
+
+Metal chalogenides are formed which are ionic in nature:
+
+1. 2 * Na + Cl~2~ -> 2 * NaCl
+
+2. Ca + Cl~2~ -> CaCl~2~
+
+3. Ba + F~2~ -> BaF~2~
+
+### Happejääk ja metall
+
+1. K + 2 * S -> K~2~S
+
+### Metall ja sool
+
+More reactive metal displaces less reactive metal from its salt solution:
+
+1. Zn + CuSO~4~ -> ZnSO~4~ + Cu
+
+### Mittemetall ja sool
+
+Non-metal that is more reactive displaces less reactive non-metal from its salt solution:
+
+1. Cl~2~ + 2 * NaBr -> 2 * NaCl + Br~2~

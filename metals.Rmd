@@ -13,6 +13,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Aluselised metallid
+
 ## Naatrium
 
 ### Väljanägemine
@@ -126,6 +128,8 @@ Ca + 2 * HCO~3~ (CO~2~ on merevees sellisel kujul pH tõttu) → CaCO~3~ (lubjak
 
 CaO, CaCO~3~, [Ca(OH)~2~](bases.html#Kustutatud%20lubi), Ca~3~(AsO~4~)~2~, CaC~2~, CaCl~2~, Ca(C~6~H~11~O~7~)~2~, Ca(OCl)~2~, Ca(MnO~4~)~2~, Ca~3~(PO~4~)~2~, Ca~3~P~2~, Ca(C~18~H~35~O~2~)~2~, $CaSO_4 \cdot 3 \cdot H_2O$, CaWO~4~, Ca~5~(PO~4~)(OH)
 
+# Ülemineku metallid
+
 ## Vask
 
 ### Väljanägemine
@@ -147,3 +151,17 @@ CaO, CaCO~3~, [Ca(OH)~2~](bases.html#Kustutatud%20lubi), Ca~3~(AsO~4~)~2~, CaC~2
 5. vananemist pidurdav
 
 6. aitab toota melaniini, mis kaitseb juukseid halliks muutumise eest
+
+## Tsink
+
+## Väljanägemine
+
+![Tsingi väljanägemine](Zinc_fragment_sublimed_and_1cm3_cube.jpg)
+
+## Looduses
+
+taimedes ja loomades
+
+### Kasutus
+
+1. üks keskseid mineraalaineid organismi rakkude arengus, kasvus ja paljunemises

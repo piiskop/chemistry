@@ -6,12 +6,18 @@ navbar:
       href: index.html
     - text: "metallid"
       href: metals.html
+    - text: "mittemetallid"
+      href: nonmetals.html
     - text: "vesi"
       href: water.html
     - text: "soolad"
       href: salts.html
     - text: "leelised"
       href: bases.html
+    - text: "happed"
+      href: acids.html
+    - text: "gaasid"
+      href: gases.html
     - text: "osamäärad"
       href: parts.html
     - text: "autor"

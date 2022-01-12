@@ -19,6 +19,32 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Paljud soolad lahustuvad vees hästi. Hästi lahustuvad aktiivsete metallide soolad.
 
+# Tsinknitraat
+
+## Valem
+
+Zn(NO~3~)~2~
+
+## Väljanägemine
+
+![Tsinknitraadi väljanägemine](https://3.imimg.com/data3/OD/YW/GLADMIN-41582/zinc-nitrate-250x250.jpg)
+
+## Temperatuurid
+
+```{r}
+MELTING_TEMPERATURE_ZNNITRATE <- 110 + 273.15
+```
+
+# Vasksulfaat
+
+## Valem
+
+CuSO~4~
+
+## Väljanägemine
+
+![Vasksulfaadi väljanägemine](Copper-Sulfate-CuSo4-CAS-7758-98-7.webp)
+
 # Vaskvitriol
 
 ## Valem

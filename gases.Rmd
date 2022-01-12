@@ -1,0 +1,166 @@
+---
+title: "Gaasid"
+author: 'peacecop kalmer:'
+date: "1/3/2022"
+output:
+  bookdown::html_document2:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Lämmastikoksiid
+
+## Valem
+
+NO
+
+## Tihedus
+
+```{r}
+DENSITY_NO <- 1.3402
+```
+
+## Temperatuurid
+
+```{r}
+MELTING_TEMPERATURE_NO <- 109
+VAPORISING_TEMPERATURE_NO <- 121
+```
+
+## Saamine
+
+Moodustub põlemissüsteemides ja võib tekkida äikesetormide korral.
+
+Kaubanduslikes tingimustes toodetakse lämmastikoksiidi ammoniaagi oksüdeerimisel [1023.15, 1173.15] * K juures (tavaliselt temperatuuril 1123.15 * K), kasutades Ostwaldi protsessis katalüsaatorina plaatinat:
+
+4 * NH~3~+ 5 * O~2~ -> 4 * NO + 6 * H~2~O
+
+Hapniku (O~2~) ja lämmastiku (N~2~) katalüüsimata endotermiline reaktsioon, mis toimub kõrgel temperatuuril (>2000 °C) välgu toimel, ei ole praktiliseks kaubanduslikuks sünteesiks (Birkeland-Eyde'i protsess):
+
+N~2~ + O~2~ -> 2 * NO
+
+Laboris saadakse lämmastikoksiidi mugavalt lahjendatud lämmastikhappe redutseerimisel vasega:
+
+8 * HNO~3~ + 3 * Cu -> 3 * Cu(NO~3~)~2~ + 4 * H~2~O + 2 * NO
+
+Alternatiivne viis hõlmab dilämmastikhappe redutseerimist naatriumnitriti või kaaliumnitriti kujul:
+
+2 * NaNO~2~ + 2 * NaI + 2 * H~2~SO~4~ -> I~2~ + 2 * Na~2~SO~4~ + 2 * H~2~O + 2 * NO
+
+2 * NaNO~2~ + 2 * FeSO~4~ + 3 * H~2~SO~4~ -> Fe~2~(SO~4~)~3~ + 2 * NaHSO~4~ + 2 * H~2~O + 2 * NO
+
+3 * KNO~2~ + KNO~3~ + Cr~2~O~3~ -> 2 * K~2~CrO~4~ + 4 * NO
+
+## Reageerimine
+
+Kuna ^•^NO tekkesoojus on endotermiline, saab NO elementideks lagundada. Autode katalüüsmuundurid kasutavad seda reaktsiooni:
+
+2 * NO -> O~2~ + N~2~
+
+Hapnikuga kokkupuutel muutub lämmastikoksiid lämmastikdioksiidiks:
+
+2 * NO + O~2~ -> 2 * NO~2~
+
+Vees reageerib lämmastikoksiid hapnikuga, moodustades lämmastikhappe (HNO~2~). Arvatakse, et reaktsioon kulgeb järgmise stöhhiomeetria kaudu:
+
+4 * NO + O~2~ + 2 * H~2~O -> 4 * HNO~2~
+
+Lämmastikoksiid reageerib fluori, kloori ja broomiga, moodustades nitrosüülhalogeniidid, nagu nitrosüülkloriid:
+
+2 * NO + Cl~2~ -> 2 * NOCl
+
+NO~2~'ga, samuti radikaaliga, ühineb NO, moodustades intensiivselt sinise lämmastiktrioksiidi:
+
+$$NO + NO_2 \rightleftharpoons ON-NO~2~$$
+
+Lämmastikoksiid reageerib osooniga, tekitades hapnikku ja lämmastikdioksiidi, millega kaasneb valguse emissioon (kemoluminestsents):
+
+NO + O~3~ -> NO~2~ + O~2~ + *hv*
+
+## Kasutamine
+
+1. tööstusliku keemia oluline vaheühend
+
+2. Imetajatel, sealhulgas inimestel, on lämmastikoksiid signaalmolekuliks paljudes füsioloogilistes ja patoloogilistes protsessides.
+
+# Naerugaas
+
+## Valem
+
+N~2~O
+
+## Täpne nimetus
+
+lämmastikoksiid
+
+## Molekul
+
+![Naerugaasi molekul](https://upload.wikimedia.org/wikipedia/commons/1/1a/Nitrous-oxide-dimensions-3D-balls.png)
+
+## Tihedus
+
+```{r}
+DENSITY_SWEETAIR <- 1.977
+```
+
+## Temperatuurid
+
+```{r}
+MELTING_TEMPERATURE_SWEETAIR <- 182.29
+VAPORISING_TEMPERATURE_SWEETAIR <- 184.67
+```
+
+## Maitse
+
+kergelt metalne
+
+## Lõhn
+
+kergelt metalne
+
+## Saamine
+
+Dilämmastikoksiidi valmistatakse tööstuslikus mastaabis ammooniumnitraadi ettevaatlikul kuumutamisel umbes 525.15 * K juures, mis laguneb dilämmastikoksiidiks ja veeauruks:
+
+NH~4~NO~3~ -> 2 * H~2~O + N~2~O
+
+![Naerugaasi tootmine](https://upload.wikimedia.org/wikipedia/commons/6/60/Nitrous_oxide_production.png)
+
+Samaväärselt võib seda saada naatriumnitraadi ja ammooniumsulfaadi segu kuumutamisel:
+
+2 * NaNO~3~ + (NH~4~)~2~SO~4~ -> Na~2~SO~4~ + 2 * N~2~O + 4 * H~2~O
+
+Teine meetod hõlmab uurea, lämmastikhappe ja väävelhappe reaktsiooni:
+
+2 * (NH~2~)~2~CO + 2 * HNO~3~ +  H~2~SO~4~ -> 2 * N~2~O + 2 * CO~2~ + (NH~4~)~2~SO~4~ + 2 * H~2~O
+
+On teatatud ammoniaagi otsesest oksüdatsioonist mangaandioksiid-vismutoksiidi katalüsaatoriga (Ostwaldi protsess):
+
+2 * NH~3~ + 2 * O~2~ -> N~2~O + 3 * H~2~O
+
+Hüdroksüülammooniumkloriid reageerib naatriumnitritiga, moodustades dilämmastikoksiidi. Kui nitrit lisatakse hüdroksüülamiini lahusele, on ainsaks järelejäänud kõrvalsaaduseks soolane vesi. Kui aga nitriti lahusele lisada hüdroksüülamiini lahust (nitritit on liias), siis tekivad ka mürgised kõrgemad lämmastikoksiidid:
+
+NH~3~OHCl + NaNO~2~ -> N~2~O + NaCl + 2 * H~2~O
+
+HNO~3~ ravimine SnCl~2~'ga ja HCl'ga on samuti näidatud:
+
+2 * HNO~3~ + 8 * HCl + 4 * SnCl~2~ -> 5 * H~2~O + 4 * SnCl~4~ + N~2~O
+
+Hüponitrooshape laguneb N~2~O'ks ja veeks poolväärtusajaga 16 päeva temperatuuril 298.15 * K pH 1–3 juures:
+
+H~2~N~2~O~2~ -> H~2~O + N~2~O
+
+## Reageerimine
+
+Kõrgendatud temperatuuril on dilämmastikoksiid võimas oksüdeerija, mis sarnaneb molekulaarse hapnikuga.
+
+## Kasutus
+
+1. Dilämmastikoksiidil on selle anesteetilise ja valuvaigistava toime tõttu märkimisväärne meditsiiniline kasutus, eriti kirurgias ja hambaravis.
+
+2. Seda kasutatakse ka oksüdeerijana raketikütustes ja võidusõidus mootorite võimsuse suurendamiseks.
