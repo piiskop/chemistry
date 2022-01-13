@@ -481,29 +481,31 @@ Mg + 2 * HCl -> MgCl~2~ + H~2~
 
 ## Reaktsioonivõrrandid
 
-### Metall ja hapnik
+### Hapnik ja metall
 
 Metal oxides are formed, which are generally basic in nature.
 
-#### Aluseline metall ja hapnik
+#### Hapnik ja aluseline metall
 
 1. 2 * Li + O~2~ -> Li~2~O
 
 2. 4 * Na + O~2~ -> 2 * Na~2~O
 
-5. 4 * K + O~2~ -> 2 * K~2~O
+3. 4 * K + O~2~ -> 2 * K~2~O
 
-#### Mittealuseline metall ja hapnik
+4. 2 * Ca + O~2~ -> 2 * CaO
 
-3. 2 * Mg + O~2~ -> 2 * MgO
+#### Hapnik ja mittealuseline metall
 
-Reaktsioon toimub kõrge temperatuuriga.
-
-4. 4 * Al + 3 * O~2~ -> 2 * Al~2~O~3~
+1. 2 * Mg + O~2~ -> 2 * MgO
 
 Reaktsioon toimub kõrge temperatuuriga.
 
-6. 2 * Zn + O~2~ -> 2 * ZnO
+2. 4 * Al + 3 * O~2~ -> 2 * Al~2~O~3~
+
+Reaktsioon toimub kõrge temperatuuriga.
+
+3. 2 * Zn + O~2~ -> 2 * ZnO
 
 Reaktsioon toimub kõrge temperatuuriga.
 
@@ -527,6 +529,12 @@ Reaktsioon toimub osaliselt.
 
 Ei reageeri. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
 
+### Vesi ja metalloid
+
+1. H~2~O + SiO~2~
+
+Reaktsioon ei toimu, sest kovalentne side räni ja hapniku vahel on liiga tugev.
+
 ### Vesi ja ülemineku metalli oksiid
 
 1. FeO + H~2~O
@@ -541,57 +549,63 @@ Ei reageeri.
 
 Metal hydroxides are formed:
 
-1. 2 * Li + 2 * H~2~O -> Li~2~O + H~2~O + H~2~ -> 2 * LiOH + H~2~
+1. 2 * K + 2 * H~2~O -> K~2~O + H~2~O + H~2~ -> 2 * KOH + H~2~
+
+Selle reaktsiooni kestel eraldub soojus, mis põletab vesiniku ära.
 
 2. 2 * Na + 2 * H~2~O -> Na~2~O + H~2~O + H~2~ -> 2 * NaOH + H~2~
 
 Selles reaktsioonis eraldub soojus, mis põletab vesiniku ära.
 
-3. Mg + 2 * H~2~O -> MgO + H~2~O + H~2~ -> Mg(OH)~2~ + H~2~
-
-See reaktsioon toimub kõrge temperatuuriga.
-
-4. 2 * Al + 3* H~2~O -> Al~2~O~3~ + 3 * H~2~
-
-Reaktsioon toimub kõrge temperatuuriga. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
-
-5. 2 * K + 2 * H~2~O -> K~2~O + H~2~O + H~2~ -> 2 * KOH + H~2~
-
-Selle reaktsiooni kestel eraldub soojus, mis põletab vesiniku ära.
-
-6. Ca + 2 * H~2~O -> CaO + H~2~O + H~2~ -> Ca(OH)~2~ + H~2~
+3. Ca + 2 * H~2~O -> CaO + H~2~O + H~2~ -> Ca(OH)~2~ + H~2~
 
 Selle reaktsiooni kestel eraldub sooja, mis siiski ei põleta vesinikku ära.
 
-7. 3 * Fe + 4 * H~2~O <-> Fe~3~O~4~ + 4 * H~2~
+4. 2 * Li + 2 * H~2~O -> Li~2~O + H~2~O + H~2~ -> 2 * LiOH + H~2~
 
-8. Cu + H~2~O
+5. Mg + 2 * H~2~O -> MgO + H~2~O + H~2~ -> Mg(OH)~2~ + H~2~
 
-reaktsioon ei toimu, sest vask on selleks liiga nõrk
+See reaktsioon toimub kõrge temperatuuriga.
 
-9. Zn + H~2~O -> ZnO + H~2~
+6. 2 * Al + 3* H~2~O -> Al~2~O~3~ + 3 * H~2~
+
+Reaktsioon toimub kõrge temperatuuriga. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
+
+7. Zn + H~2~O -> ZnO + H~2~
 
 Reaktsioon toimub kõrge temperatuuriga.
 
-10. Ag + H~2~O
+8. 3 * Fe + 4 * H~2~O <-> Fe~3~O~4~ + 4 * H~2~
+
+9. Cu + H~2~O
+
+reaktsioon ei toimu, sest vask on selleks liiga nõrk
+
+10. Pb + H~2~O
 
 Reaktsioon ei toimu.
 
-11. Au + H~2~O
+11. Ag + H~2~O
 
 Reaktsioon ei toimu.
 
-12. Pb + H~2~O
+12. Au + H~2~O
 
 Reaktsioon ei toimu.
+
+### Mittemetall ja metall
+
+1. K + 2 * S -> K~2~S
 
 ### Vesinik ja metall
 
 Reactive metals from ionic metal hydrides:
 
-1. H~2~+ 2 * Na -> 2 * NaH
+1. H~2~ + Li -> 2 * LiH
 
-2. H~2~ + Ca -> CaH~2~
+2. H~2~+ 2 * Na -> 2 * NaH
+
+3. H~2~ + Ca -> CaH~2~
 
 ### Vesinik ja mittemetall
 
@@ -603,7 +617,7 @@ Covalent hydrides are formed:
 
 2. H~2~ + S -> H~2~S
 
-### Mittemetall ja vesi
+### Vesi ja mittemetall
 
 Generally, do not react:
 
@@ -611,7 +625,11 @@ Generally, do not react:
 
 See reaktsioon toimub auruga.
 
-### Mittemetall ja hapnik
+2. H~2~O + S
+
+See reaktsioon ei toimu.
+
+### Hapnik ja mittemetall
 
 Non – metal oxides are formed, which are generally acidic in nature:
 
@@ -621,39 +639,13 @@ See reaktsioon toimub vähese hapnikuga.
 
 2. C + O~2~ -> CO~2~
 
-See reaktsioon tiomub rohke hapnikuga.
+See reaktsioon toimub rohke hapnikuga.
 
 2. 4 * P + 5 * O~2~ -> P~4~O~10~
 
 3. S + O~2~ -> SO~2~
 
-4. 2 * S + 3* O~2~ (erinev *9*'st) -> 2 * SO~3~
-
-### Vesi ja mittemetall
-
-1. H~2~O + S -> 
-
-### Vesi ja happeline oksiid
-
-1. H~2~O + CO~2~ -> H~2~CO~3~
-
-2. H~2~O + SO~2~ -> H~2~SO~3~
-
-### Metall ja hape
-
-Metals more reactive than hydrogen displace hydrogen from dilute acids to form metal salts and hydrogen gas:
-
-1. 2 * Na + 2 * HCl -> 2 * NaCl + H~2~
-
-2. Cu + HCl
-
-Reaktsioon ei toimu, sest vesinik on tugevam ja vask ei tõrju vesinikku välja.
-
-3. 3 * Cu + 8 * HNO~3~ -> 3 * Cu(NO~3~)~2~ + 4 * H~2~O + 2 * NO
-
-Vask siiski reageerib oksügeeni sisaldava happega.
-
-4. Cu + 2 * H~2~SO~4~ -> CuSO~4~ + 2 * H~2~O + SO~2~
+4. 2 * S + 3* O~2~ (erinev *3*'st) -> 2 * SO~3~
 
 ### Halogeen ja metall
 
@@ -661,22 +653,148 @@ Metal chalogenides are formed which are ionic in nature:
 
 1. 2 * Na + Cl~2~ -> 2 * NaCl
 
-2. Ca + Cl~2~ -> CaCl~2~
+2. 2 * K + Br~2~ -> 2 * KBr
 
-3. Ba + F~2~ -> BaF~2~
+3. Ca + Cl~2~ -> CaCl~2~
 
-### Happejääk ja metall
+4. Ba + F~2~ -> BaF~2~
 
-1. K + 2 * S -> K~2~S
+### Aluselised oksiidid
 
-### Metall ja sool
+1. Li~2~O + CaO
+
+Reaktsioon ei toimu.
+
+### Happeline oksiid ja vesi
+
+1. H~2~O + CO~2~ <-> H~2~CO~3~
+
+Kui lisada süsihappe gaasi vette, siis tuleb see anum sättida suure rõhu alla, sest kui sellest me vabastame, laguneb süsihape. Karastusjoogid.
+
+2. H~2~O + SO~2~ -> H~2~SO~3~
+
+3. H~2~O + SO~3~ -> H~2~SO~4~
+
+4. 6 * H~2~O + P~4~O~10~ -> 4 * H~3~PO~4~
+
+### Happeline oksiid ja hapnik
+
+1. 2 * SO~2~ + O~2~ -> 2 * SO~3~
+
+### Hape ja metall
+
+Metals more reactive than hydrogen displace hydrogen from dilute acids to form metal salts and hydrogen gas:
+
+1. 2 * HCl + 2 * Na -> 2 * NaCl + H~2~
+
+2. HCl + Cu 
+
+Reaktsioon ei toimu, sest vesinik on tugevam ja vask ei tõrju vesinikku välja.
+
+3. H~2~SO~4 + 2 * K -> K~2~SO~4~ + H~2~
+
+4. 2 * H~2~SO~4~ + Cu -> CuSO~4~ + 2 * H~2~O + SO~2~
+
+5. 8 * HNO~3~ + 3 * Cu -> 3 * Cu(NO~3~)~2~ + 4 * H~2~O + 2 * NO
+
+Vask siiski reageerib oksügeeni sisaldava happega.
+
+6. H~3~PO~4 + Ag
+
+Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
+
+### Hape ja hapnik
+
+1. H~2~SO~3~ + O~2~ -> H~2~SO~4~
+
+### Hape ja leeliseline oksiid
+
+1. 2 * HCl + CaO -> H~2~O + CaCl~2~
+
+2. BaO + H~2~SO~4~ -> BaSO~4~ + H~2~O
+
+### Happed
+
+1. H~2~S + H~2~CO~3
+
+Reaktsioon ei toimu.
+
+### Alus ja hape
+
+1. 3 * NaOH + H~3~PO~4~ -> Na~3~PO~4~ + 3 * H~2~O
+
+### Happelised oksiidid
+
+1. CO~2~ + SO~3~
+
+Reaktsioon ei toimu.
+
+### Happeline oksiid ja leelis
+
+1. SO~2~ + Ca(OH)~2~ -> CaSO~3~ + H~2~O
+
+### Happeline ja leeliseline oksiid
+
+1. CaO + SO~2~ -> CaSO~3~
+
+### Sool ja metall
 
 More reactive metal displaces less reactive metal from its salt solution:
 
 1. Zn + CuSO~4~ -> ZnSO~4~ + Cu
 
-### Mittemetall ja sool
+### Sool ja mittemetall
 
 Non-metal that is more reactive displaces less reactive non-metal from its salt solution:
 
 1. Cl~2~ + 2 * NaBr -> 2 * NaCl + Br~2~
+
+### Sool ja leelis
+
+1. 2 * KOH + Cu(NO~3~)~2~ -> Cu(OH)~2~ + 2 * KNO~3~
+
+2. 2 * NaOH + CuSO~4~ -> Na~2~SO~4 + Cu(OH)~2~ (sade)
+
+3. Ca(OH)~2~ + K~2~SO~4 -> 
+
+3. NaOH + BaCl~2~
+
+Reaktsioon ei toimu, kuna sadet ei teki.
+
+### Sool ja leeliseline oksiid
+
+1. CaO + NaCl
+
+Reaktsioon ei toimu.
+
+### Sool ja happeline oksiid
+
+1. CO~2~ + Fe~2~SO~4~
+
+Reaktsioon ei toimu.
+
+### Sool ja hape
+
+1. Na~2~S + 2 * HCl -> 2 * NaCl + H~2~S
+
+2. Na~2~CO~3~ + H~2~SO~4~ -> Na~2~SO~4 + H~2~CO~3~ -> Na~2~SO~4~ + H~2~O + CO~2~
+
+3. CaCl~2~ + H~2~SO~4~ -> CaSO~4~ (mingil määral sadestub) + 2 * HCl 
+
+4. CaS + H~2~SO~3~ -> H~2~S + CaSO~3~
+
+### Soolad
+
+1. FeCl~2~ + K~2~CO~3~ -> FeCO~3~ (sade) + 2 * KCl
+
+2. Li~2~S + BaCl~2~
+
+Reaktsioon ei toimu, kuna baariumsulfiid on vähelahustuv.
+
+3. NaCl + K~2~SO~4~
+
+Reaktsioon ei toimu, kuna ei teki sadet.
+
+4. CuS + Na~2~CO~3
+
+Reaktsioon ei toimu, kuna vähemalt vasksulfiid ei lahustu vees.
