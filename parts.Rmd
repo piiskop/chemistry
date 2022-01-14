@@ -703,19 +703,59 @@ Metals more reactive than hydrogen displace hydrogen from dilute acids to form m
 
 1. 2 * HCl + 2 * Na -> 2 * NaCl + H~2~
 
-2. HCl + Cu 
-
-Reaktsioon ei toimu, sest vesinik on tugevam ja vask ei tõrju vesinikku välja.
+2. $Zn + 2 \cdot HCl → ZnCl_2 + H_2$
 
 3. H~2~SO~4 + 2 * K -> K~2~SO~4~ + H~2~
 
 4. 2 * H~2~SO~4~ + Cu -> CuSO~4~ + 2 * H~2~O + SO~2~
 
-5. 8 * HNO~3~ + 3 * Cu -> 3 * Cu(NO~3~)~2~ + 4 * H~2~O + 2 * NO
+$2 \cdot Al + 6 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}(S^{VI}O_4^{-II})_3 + 3 \cdot S^{IV}O_2^{-II} + 6 \cdot H_2^IO^{-II}$
 
-Vask siiski reageerib oksügeeni sisaldava happega.
+$$Al + 3 \cdot e \rightarrow Al_2^{III}$$
 
-6. H~3~PO~4 + Ag
+$$S^{VI} - 2 \cdot e \rightarrow S^{IV}$$
+
+Et saada võrdne arv elektronide liitmisi ja lahutamisi, on vaja alumiiniumile liidetavate elektronide arv korrutada kahega ja väävlilt eemaldatavate elektronide arv korrutada kolmega. See kaks rakendub alumiiniumi puhul kahele molekulile, kuna neid on kaks. Ühele järelikult üks.
+
+5. $Cu + 2 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} CuS^{VI}O_4^{-II} + S^{IV}O_2^{-II} \uparrow + 2 \cdot H_2^{I}O^{-II}$
+
+6. $2 \cdot Al + 6 \cdot (konts. H^IN^VO_3^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}O_3^{-II} + 6 \cdot N^{IV}O_2^{-II} + 3 \cdot H_2^IO^{-II}$
+
+$$Al - 3 \cdot e \xrightarrow{t°} Al^{III}$$
+
+$$N^V + 1 \cdot e \rightarrow N^{IV}$$
+
+When conc. HNO~3~ is added to aluminium a thin protective layer of alumina (Al~2~O~3~) is formed on its surface which prevents further action. As a result, Al becomes passive.
+
+7. $8 \cdot (konts. H^IN^VO_3^{-II}) + 3 \cdot Cu \rightarrow 3 \cdot Cu^{II}(N^VO_3^{-II})_2 + 4 \cdot H_2^IO^{-II} + 2 \cdot N^{II}O^{-II}$
+
+$$N^V + 3 \cdot e \rightarrow N^{II}$$
+
+$$Cu - 2 \cdot e \rightarrow Cu^{II}$$
+
+8. $4 \cdot (konts. H^IN^VO_3^{-II}) +  \cdot Cu \rightarrow  \cdot Cu^{II}(N^VO_3^{-II})_2 +  2 \cdot H_2^IO^{-II} + 2 \cdot N^{IV}O_2^{-II}$
+
+$$N^V + 1 \cdot e \rightarrow N^{IV}$$
+
+$$Cu - 2 \cdot e \rightarrow Cu^{II}$$
+
+9. HCl + Cu 
+
+Reaktsioon ei toimu, sest vesinik on tugevam ja vask ei tõrju vesinikku välja.
+
+10. $Al + (konts. H^IN^VO_3^{-II}, \text{suitsev pruunikalt, ebastabiilne})$
+
+Toatemperatuuril reaktsioon ei toimu.
+
+11. Fe + konts. H~2~SO~4~ →
+
+Toatemperatuuril reaktsioon ei tiomu.
+
+12. $Cu + HNO_3$
+
+Reaktsioon ei toimu, kuna vask on nõrgem kui vesinik.
+
+13. H~3~PO~4~ + Ag
 
 Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
 
@@ -807,7 +847,9 @@ Reaktsioon ei toimu.
 
 3. CaCl~2~ + H~2~SO~4~ -> CaSO~4~ (mingil määral sadestub) + 2 * HCl 
 
-4. CaS + H~2~SO~3~ -> H~2~S + CaSO~3~
+4. $FeS + H_2SO_4 → H_2S \uparrow + FeSO_4$
+
+5. CaS + H~2~SO~3~ -> H~2~S + CaSO~3~
 
 ### Soolad
 
