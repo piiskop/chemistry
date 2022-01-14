@@ -553,9 +553,11 @@ Metal hydroxides are formed:
 
 Selle reaktsiooni kestel eraldub soojus, mis põletab vesiniku ära.
 
-2. 2 * Na + 2 * H~2~O -> Na~2~O + H~2~O + H~2~ -> 2 * NaOH + H~2~
+2. $2 \cdot Na + 2 \cdot H_2^IO^{-II} \rightarrow Na_2^{I}O^{-II} + H_2^IO^{-II} + H_2 -> 2 \cdot Na^IO^{-II}H^I + H_2$
 
 Selles reaktsioonis eraldub soojus, mis põletab vesiniku ära.
+
+Na loovutab kaks elektroni olles redutseerija ja oksüdeerub.
 
 3. Ca + 2 * H~2~O -> CaO + H~2~O + H~2~ -> Ca(OH)~2~ + H~2~
 
@@ -643,9 +645,15 @@ See reaktsioon toimub rohke hapnikuga.
 
 2. 4 * P + 5 * O~2~ -> P~4~O~10~
 
-3. S + O~2~ -> SO~2~
+3. $S + O_2 \rightarrow S^{IV}O_2^{-II}$
+
+Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovutab neli elektroni olles redutseerija ja oksüdeerub.
 
 4. 2 * S + 3* O~2~ (erinev *3*'st) -> 2 * SO~3~
+
+### Hapnik ja vesinik
+
+1. 2 * H~2~ + O~2~ <-> 2 * H~2~O
 
 ### Halogeen ja metall
 
@@ -659,7 +667,7 @@ Metal chalogenides are formed which are ionic in nature:
 
 4. Ba + F~2~ -> BaF~2~
 
-### Aluselised oksiidid
+### Leeliselised oksiidid
 
 1. Li~2~O + CaO
 
@@ -673,13 +681,21 @@ Kui lisada süsihappe gaasi vette, siis tuleb see anum sättida suure rõhu alla
 
 2. H~2~O + SO~2~ -> H~2~SO~3~
 
-3. H~2~O + SO~3~ -> H~2~SO~4~
+3. SO~3~ + H~2~O -> H~2~SO~4~
 
 4. 6 * H~2~O + P~4~O~10~ -> 4 * H~3~PO~4~
+
+### Happeline oksiid ja leelis
+
+1. Ca(OH)~2~ + CO~2~ → CaCO~3~ + H~2~O
 
 ### Happeline oksiid ja hapnik
 
 1. 2 * SO~2~ + O~2~ -> 2 * SO~3~
+
+### Happeline oksiid ja leeliseline oksiid
+
+1. CO~2~ + CaO → CaCO~3~
 
 ### Hape ja metall
 
@@ -703,6 +719,14 @@ Vask siiski reageerib oksügeeni sisaldava happega.
 
 Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
 
+### Hape ja leelis
+
+1. KOH + HCl -> KCl + H~2~O
+
+2. $Na^IO^{-II}H^I + H^ICl^{-I} -> Na^ICl^{-I} + H_2^IO^{-II}$
+
+3. 3 * NaOH + H~3~PO~4~ -> Na~3~PO~4~ + 3 * H~2~O
+
 ### Hape ja hapnik
 
 1. H~2~SO~3~ + O~2~ -> H~2~SO~4~
@@ -719,10 +743,6 @@ Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
 
 Reaktsioon ei toimu.
 
-### Alus ja hape
-
-1. 3 * NaOH + H~3~PO~4~ -> Na~3~PO~4~ + 3 * H~2~O
-
 ### Happelised oksiidid
 
 1. CO~2~ + SO~3~
@@ -735,13 +755,17 @@ Reaktsioon ei toimu.
 
 ### Happeline ja leeliseline oksiid
 
-1. CaO + SO~2~ -> CaSO~3~
+1. CaO (lubjakivi) + CO~2~ <-> CaCO~3~
+
+2. CaO + SO~2~ -> CaSO~3~
 
 ### Sool ja metall
 
 More reactive metal displaces less reactive metal from its salt solution:
 
-1. Zn + CuSO~4~ -> ZnSO~4~ + Cu
+1. $Zn + Cu^{II}S^{VI}O_4^{-II} \rightarrow Zn^{II}S^{VI}O_4^{-II} + Cu$
+
+Zn loovutab kaks elektroni olles redutseerija ja oksüdeerub. Cu haarab kaks elektroni olles oksüdeeruja ja redutseerub.
 
 ### Sool ja mittemetall
 
@@ -750,6 +774,8 @@ Non-metal that is more reactive displaces less reactive non-metal from its salt 
 1. Cl~2~ + 2 * NaBr -> 2 * NaCl + Br~2~
 
 ### Sool ja leelis
+
+1. $CuCl_2 + 2 \cdot NaOH → 2 \cdot NaCl + Cu(OH)_2 \downarrow$ 
 
 1. 2 * KOH + Cu(NO~3~)~2~ -> Cu(OH)~2~ + 2 * KNO~3~
 
@@ -785,16 +811,18 @@ Reaktsioon ei toimu.
 
 ### Soolad
 
-1. FeCl~2~ + K~2~CO~3~ -> FeCO~3~ (sade) + 2 * KCl
+1. $BaCl_2 + CuSO_4 → BaSO_4 \downarrow + CuCl_2$
 
-2. Li~2~S + BaCl~2~
+2. FeCl~2~ + K~2~CO~3~ -> FeCO~3~ (sade) + 2 * KCl
+
+3. Li~2~S + BaCl~2~
 
 Reaktsioon ei toimu, kuna baariumsulfiid on vähelahustuv.
 
-3. NaCl + K~2~SO~4~
+4. NaCl + K~2~SO~4~
 
 Reaktsioon ei toimu, kuna ei teki sadet.
 
-4. CuS + Na~2~CO~3
+5. CuS + Na~2~CO~3
 
 Reaktsioon ei toimu, kuna vähemalt vasksulfiid ei lahustu vees.
