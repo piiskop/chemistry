@@ -17,11 +17,20 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 MOLAR_MASS_H = 1.008
+MOLAR_MASS_HE <- 4.0026
+MOLAR_MASS_C <- 12.011
+MOLAR_MASS_N <- 14.007
 MOLAR_MASS_O = 15.999
 MOLAR_MASS_NA = 22.99
 MOLAR_MASS_S = 32.06
+MOLAR_MASS_CL <- 35.45
+MOLAR_MASS_K <- 39.098
 MOLAR_MASS_CA = 40.078
+MOLAR_MASS_CR <- 51.996
+MOLAR_MASS_FE <- 55.845
 MOLAR_MASS_CU = 63.546
+MOLAR_MASS_AG <- 107.87
+MOLAR_MASS_AU <- 196.97
 MOLAR_MASS_CUSULFATE <- MOLAR_MASS_CU + MOLAR_MASS_S + MOLAR_MASS_O * 4
 MOLAR_MASS_WATER <- MOLAR_MASS_H * 2 + MOLAR_MASS_O
 AVOGADRO = 6.02E23
@@ -32,9 +41,6 @@ DENSITY_VAPOR_STANDARD <- 22.7e-3
 
 Molaarruumala gaaside puhul: normaaltingimisetel $22.4e-3 \frac{m^3}{mol}$, standardtingimustel $22.7e-3 \frac{m^3}{mol}$.
 
-![Reeglid metallide reageerimiseks veega](metals-reacting-with-water.png)
-
-![Skeem metalli reageerimiseks veega](metal-water-oxide-hydroxide.png)
 
 # Ülesanded
 
@@ -362,29 +368,17 @@ Järgnevalt tuleb võrrandid summeerida:
 
 ![Brutovõrrand kert martma järgi](bruttoequation.png)
 
-## Hapete valemid
-
-### Ülesande püstitus
-
-Kirjutada valemid:
-
-väävelhape, süsihape, vesiniksulfiidhape
-
-### Lahendus
-
-H~2~SO~4, H~2~CO~3~, H~2~S
-
 ## Leeliste valemid
 
 ### Ülesande püstitus
 
 Kirjutada valemid:
 
-naatriumhüdroksiid, ammoniaakhüdraat, vask(II)hüdroksiid, baariumhüdroksiid
+ammoniaakhüdraat, baariumhüdroksiid
 
 ### Lahendus
 
-NaOH, NH~3~•H~2~O (nuuskpiiritus), Cu(OH)~2~, Ba(OH)~2~
+NH~3~•H~2~O (nuuskpiiritus), Ba(OH)~2~
 
 ## Soolade valemid
 
@@ -404,27 +398,11 @@ K~2~SO~3~, Ca~3~(PO~4~)~2~, NaNO~3~, CuCO~3~
 
 Kirjutada valemid:
 
-alumiiniumoksiid, hõbeoksiid, raud(III)oksiid
+hõbeoksiid, raud(III)oksiid
 
 ### Lahendus
 
-Al~2~O~3~, Ag~2~O, Fe~2~^3^O~3~
-
-## Reaktsioonivõrrandid
-
-### Ülesande püstitus
-
-Lõpetada reaktsioonivõrrandid ja kirjutada saaduste nimetused:
-
-KOH + H~2~SO~4~ ->
-
-Ca(OH)~2~ + H~3~PO~4~
-
-### Lahendus
-
-2 * KOH + H~2~SO~4~ -> K~2~SO~4~ + 2 * H~2~O
-
-3 * Ca(OH)~2~ + 2 * H~3~PO~4~ -> Ca~3~(PO~4~)~2~ + 6 * H~2~O
+Ag~2~O, Fe~2~^3^O~3~
 
 ## Lämmastik lämmastikhappes
 
@@ -479,392 +457,872 @@ Mg + 2 * HCl -> MgCl~2~ + H~2~
 
 22.7 * dm^3^ on eralduva gaasi ruumala standardtingimustel.
 
-## Reaktsioonivõrrandid
+## Lahustuvus
 
-### Hapnik ja metall
+### Ülesande püstitus
 
-Metal oxides are formed, which are generally basic in nature.
+![Lahustuvus](solubility.png)
 
-#### Hapnik ja aluseline metall
+1. 50 g veele lisati temperatuuril 40 oC 20 g KNO3. Kas saadi (sellel temperatuuril) küllastunud või küllastumata lahus?
 
-1. 2 * Li + O~2~ -> Li~2~O
+2. 100 g  veest ja vastavast kogusest KNO3-st valmistati temperatuuril 80 oC küllastunud lahus. Mitu grammi KNO3 sadestub, kui see lahus jahutada 20 oC-ni?
 
-2. 4 * Na + O~2~ -> 2 * Na~2~O
+### Lahendus
 
-3. 4 * K + O~2~ -> 2 * K~2~O
+1. Saadi küllastumata lahus.
 
-4. 2 * Ca + O~2~ -> 2 * CaO
+2. 140 * g KNO~3~ sadestub, kui see lahus jahutada 20 * °C'ni.
 
-#### Hapnik ja mittealuseline metall
+## Väävelhappe molekulid
 
-1. 2 * Mg + O~2~ -> 2 * MgO
+### Ülesande püstitus
 
-Reaktsioon toimub kõrge temperatuuriga.
+Mitmes väävelhappe molekulis sisaldub 56 hapniku aatomit?
 
-2. 4 * Al + 3 * O~2~ -> 2 * Al~2~O~3~
+### Lahendus
 
-Reaktsioon toimub kõrge temperatuuriga.
+14's väävelhappe molekulis sisaldub 56 hapniku aatomit.
 
-3. 2 * Zn + O~2~ -> 2 * ZnO
+## Väävelhappe moolid 
 
-Reaktsioon toimub kõrge temperatuuriga.
+### Ülesande püstitus
 
-### Aluseline oksiid ja vesi
+Mitmes moolis väävelhappes on 12 mooli hapniku aatomeid?
 
-1. Li~2~O + H~2~O -> 2 * LiOH
+### Lahendus
 
-2. Na~2~O + H~2~O -> 2 * NaOH
+Ühes moolis väävelhappes on neli hapniku aatomit. Väävelhappe molekule, milles on 12 hapniku aatomit, on järelikult kolm.
 
-3. MgO + H~2~O -> Mg(OH)~2~
+Kolmes moolis väävelhappes on 12 * mol hapniku aatomeid.
 
-Reaktsioon toimub osaliselt.
+## Kaaliumdikromaat
 
-4. K~2~O + H~2~O -> 2 * KOH
+### Ülesande püstitus
 
-5. CaO + H~2~O -> Ca(OH)~2~
+Mitu mooli kaaliumi sisaldub 14 moolis kaaliumdikromaadis (K~2~Cr~2~O~7~)?
 
-### Vesi ja ülemineku järgse metalli oksiid
+### Lahendus
 
-1. Al~2~O~3~ + H~2~O
+28 * mol kaaliumi sisaldub 14 moolis kaaliumdikromaadis.
 
-Ei reageeri. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
+## Vase, alumiiniumi ja fosfori aatomid
 
-### Vesi ja metalloid
+### Ülesande püstitus
 
-1. H~2~O + SiO~2~
+Mitu mooli vase, alumiiniumi ja fosfori aatomeid ning vee molekule on 2,4 moolis mineraal türkiisis [CuAl~6~(PO~4~)4(OH)~8~ ∙ 4H~2~O]?
 
-Reaktsioon ei toimu, sest kovalentne side räni ja hapniku vahel on liiga tugev.
+### Lahendus
 
-### Vesi ja ülemineku metalli oksiid
+Vase aatomeid on 2.4 * mol türkiisis 2.4 * mol.
 
-1. FeO + H~2~O
+Alumiiniumi aatomeid on 2.4 * mol türkiisis 14.4 * mol.
 
-Ei reageeri.
+Fosfori aatomeid on 2.4 * mol türkiisis 9.6 * mol.
 
-2. ZnO + H~2~O
+Vee molekule on 2.4 * moolis türkiisis 9.6 * mol.
 
-Ei reageeri.
+## Vesinik fosforhappes
 
-### Vesi ja metall
+### Ülesande püstitus
 
-Metal hydroxides are formed:
+Mitu grammi vesinikku sisaldub 5 moolis fosforhappes?
 
-1. 2 * K + 2 * H~2~O -> K~2~O + H~2~O + H~2~ -> 2 * KOH + H~2~
+### Lahendus
 
-Selle reaktsiooni kestel eraldub soojus, mis põletab vesiniku ära.
+Arvutuskäik:
 
-2. $2 \cdot Na + 2 \cdot H_2^IO^{-II} \rightarrow Na_2^{I}O^{-II} + H_2^IO^{-II} + H_2 -> 2 \cdot Na^IO^{-II}H^I + H_2$
+```{r}
+mass_hydrogen <- 5 * 3 * MOLAR_MASS_H
+```
 
-Selles reaktsioonis eraldub soojus, mis põletab vesiniku ära.
+`r mass_hydrogen` * g vesinikku sisaldub 5 * mol fosforhappes.
 
-Na loovutab kaks elektroni olles redutseerija ja oksüdeerub.
+## Süsinikdioksiid
 
-3. Ca + 2 * H~2~O -> CaO + H~2~O + H~2~ -> Ca(OH)~2~ + H~2~
+### Ülesande püstitus
 
-Selle reaktsiooni kestel eraldub sooja, mis siiski ei põleta vesinikku ära.
+Mitu hapniku aatomit on 1 moolis süsinikdioksiidis?
 
-4. 2 * Li + 2 * H~2~O -> Li~2~O + H~2~O + H~2~ -> 2 * LiOH + H~2~
+### Lahendus
 
-5. Mg + 2 * H~2~O -> MgO + H~2~O + H~2~ -> Mg(OH)~2~ + H~2~
+Arvutuskäik:
 
-See reaktsioon toimub kõrge temperatuuriga.
+```{r}
+number_atoms_oxygen <- 2 * AVOGADRO
+```
 
-6. 2 * Al + 3* H~2~O -> Al~2~O~3~ + 3 * H~2~
+`r number_atoms_oxygen` hapniku aatomit on 1 * mol süsinikdioksiidis.
 
-Reaktsioon toimub kõrge temperatuuriga. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
+## Raua aatomi hulk
 
-7. Zn + H~2~O -> ZnO + H~2~
+### Ülesande püstitus
 
-Reaktsioon toimub kõrge temperatuuriga.
+Leida 1,806 · 10^23^ raua aatomi hulk moolides?
 
-8. 3 * Fe + 4 * H~2~O <-> Fe~3~O~4~ + 4 * H~2~
+### Lahendus
 
-9. Cu + H~2~O
+3E-1 on 1.806 * 10^23^ raua aatomi hulk moolides.
 
-reaktsioon ei toimu, sest vask on selleks liiga nõrk
+## Kontsentreeritud lämmastikhappe reageerimine vasega
 
-10. Pb + H~2~O
+### Ülesande püstitus
 
-Reaktsioon ei toimu.
+Mitu dm^3^ gaasi eraldub 30 * g kontsentreeritud lämmastikhappe reageerimisel 30 * g vasega?
 
-11. Ag + H~2~O
+### Lahendus
 
-Reaktsioon ei toimu.
+Reaktsioonivõrrand:
 
-12. Au + H~2~O
+$$4 \cdot (konts. H^IN^VO_3^{-II}) +  \cdot Cu \rightarrow  \cdot Cu^{II}(N^VO_3^{-II})_2 +  2 \cdot H_2^IO^{-II} + 2 \cdot N^{IV}O_2^{-II}$$
 
-Reaktsioon ei toimu.
+Järgnevalt on vaja arvutada, mitu mooli on koostisosi tegelikult etteantud grammmaaži põhjal.
 
-### Mittemetall ja metall
+Arvutan 30 * g kontsentreeritud lämmastikhappe moolide arvu:
 
-1. K + 2 * S -> K~2~S
+```{r}
+moles_concentrated_hno3 <- 30 / (MOLAR_MASS_H + MOLAR_MASS_N + MOLAR_MASS_O * 3)
+```
 
-### Vesinik ja metall
+See arvutatud moolide arv `r moles_concentrated_hno3` kehtib nelja üldise mooli kohta. Lasen arvutada ühe üldise mooli kohta:
 
-Reactive metals from ionic metal hydrides:
+```{r}
+moles_concentrated_hno3_per_mol <- moles_concentrated_hno3 / 4
+```
 
-1. H~2~ + Li -> 2 * LiH
+Ühe üldise mooli kohta on kontsentreeritud lämmastikhappe moolide arv `r moles_concentrated_hno3_per_mol`.
 
-2. H~2~+ 2 * Na -> 2 * NaH
+Lasen arvutada 30 * g vase moolide arvu:
 
-3. H~2~ + Ca -> CaH~2~
+```{r}
+moles_cu <- 30 / MOLAR_MASS_CU
+```
 
-### Vesinik ja mittemetall
+Võrdlen, kumb grammaažipõhine moolide arv on väiksem, ja väiksema põhjal lasen arvutada eralduva gaasi NO~2~ ruumala:
 
-Covalent hydrides are formed:
+```{r}
+if (moles_concentrated_hno3_per_mol < moles_cu) {
+  volume_no2 <- moles_concentrated_hno3 / 2 * DENSITY_VAPOR_STANDARD * 1e3
+} else {
+  volume_no2 <- moles_cu * 2 * DENSITY_VAPOR_STANDARD * 1e3
+}
+```
 
-1. H~2~ + Cl~2~ -> 2 * HCl
+`r signif(volume_no2, digits <- 5)` * dm^3^ gaasi eraldub 30 * g kontsentreeritud lämmastikhappe reageerimisel 30 * g vasega.
 
-2. N~2~ + 3 * H~2~ -> 2 * NH~3~ (ammoniaak)
+## Vees lahustatud sool ja suhkur
 
-2. H~2~ + S -> H~2~S
+### Ülesande püstitus
 
-### Vesi ja mittemetall
+250 g vees on lahustatud 27 g soola ja 67 g suhkrut. Leida soola ja suhkru %-line sisaldus lahuses.
 
-Generally, do not react:
+### Lahendus
 
-1. C + H~2~O -> (CO + H~2~) (vesigaas)
+Lahus koosneb veest, soolast ja suhkrust. Kokku on lahuse mass 344 * g.
 
-See reaktsioon toimub auruga.
+Soola %-line sisaldus lahuses on $\frac{27 * 100}{344} === \frac{2700}{344} === \frac{1350}{172} === \frac{675}{86} === 1\frac{589}{86} === 2\frac{503}{86} === 3\frac{417}{86} === 4\frac{331}{86} === 5\frac{245}{86} === 6\frac{159}{86} === 7\frac{73}{86}$. Suhkru %-line sisaldus lahuses on $19\frac{41}{86}$.
 
-2. H~2~O + S
+Lasen ka arvutada ebatäpsed väärtused:
 
-See reaktsioon ei toimu.
+```{r}
+mass_solution <- 27 + 67 + 250
+percentage_salt <- 27 / mass_solution * 100
+percentage_sugar<- 67 / mass_solution * 100
+```
 
-### Hapnik ja mittemetall
+Ebatäpselt ehk ümardatult on soola %-line sisaldus lahuses `r signif(percentage_salt, digits <- 2)` ja suhkru oma `r signif(percentage_sugar, digits <- 2)`.
 
-Non – metal oxides are formed, which are generally acidic in nature:
+## Soola lisamine soola lahusele
 
-1. 2 * C + O~2~ -> 2 * CO
+### Ülesande püstitus
 
-See reaktsioon toimub vähese hapnikuga.
+Mitu grammi soola on vaja lisada 34 g 45%-lisele soola lahusele, et saada 60%-ne lahus?
 
-2. C + O~2~ -> CO~2~
+### Lahendus
 
-See reaktsioon toimub rohke hapnikuga.
+Esialgses lahuses on 15.3 * g soola.
 
-2. 4 * P + 5 * O~2~ -> P~4~O~10~
+$\frac{5.1}{.4} \cdot g === \frac{51}{4} \cdot g === 12.75 \cdot g$ soola on vaja lisada 34 * g'le 45%'lisele soola lahusele, et saada 60%'ne lahus.
 
-3. $S + O_2 \rightarrow S^{IV}O_2^{-II}$
+## Lahuste segamine
 
-Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovutab neli elektroni olles redutseerija ja oksüdeerub.
+### Ülesande püstitus
 
-4. 2 * S + 3* O~2~ (erinev *3*'st) -> 2 * SO~3~
+Segati 320 g 10%-list ja 80 g 20%-list lahust. Mitme protsendiline lahus saadi?
 
-### Hapnik ja vesinik
+### Lahendus
 
-1. 2 * H~2~ + O~2~ <-> 2 * H~2~O
+12%-line lahus saadi.
 
-### Halogeen ja metall
+## Sool veele
 
-Metal chalogenides are formed which are ionic in nature:
+### Ülesande püstitus
 
-1. 2 * Na + Cl~2~ -> 2 * NaCl
+Mitu grammi soola on vaja lisada 200 cm^3^ veele, et saada 10%-line lahus?
 
-2. 2 * K + Br~2~ -> 2 * KBr
+### Lahendus
 
-3. Ca + Cl~2~ -> CaCl~2~
+Arvutuskäik:
 
-4. Ba + F~2~ -> BaF~2~
+```{r}
+mass_water <- 200e-6 * DENSITY_WATER
+mass_water
+mass_salt <- mass_water * 10 / 90 * 1e3
+```
 
-### Leeliselised oksiidid
+`r signif(mass_salt, digits <- 1)` * g soola on vaja lisada 200 * cm^3^ veele, et saada 10%-line lahus.
 
-1. Li~2~O + CaO
+## Vasksulfaadi lahus
 
-Reaktsioon ei toimu.
+### Ülesande püstitus
 
-### Happeline oksiid ja vesi
+Teil on vaja valmistada 120 g 35 %-st CuSO~4~ lahust. Laboris on olemas 25 %-ne CuSO~4~ lahus. Kui palju 90 %-st CuSO~4~ lahust tuleb sinna lisada, et valmistada vajalik lahus?
 
-1. H~2~O + CO~2~ <-> H~2~CO~3~
+### Lahendus
 
-Kui lisada süsihappe gaasi vette, siis tuleb see anum sättida suure rõhu alla, sest kui sellest me vabastame, laguneb süsihape. Karastusjoogid.
+Kuna küsitakse, kui palju 90%-list vasksulfaadi lahust tuleb lisada, siis tähistan 90%-lise vasksulfaadi lahuse koguse grammides *x*'ga. Selles lahuses on siis vasksulfaati *.9 \* x* * g. Kuna kokku on vaja valmistada 120 * g lahust, on 25%'st lahust *(120 - x)* * g. Vasksulfaati on selles teises lahuses *.25 \* (120 - x)* * g. Kokku on lõpplahuses vasksulfaati *(.9 \* x + .25 \* (120 - x))* * g. Lõpplahuse vasksulfaadi ja 120 * g suhe on .35:
 
-2. H~2~O + SO~2~ -> H~2~SO~3~
+$$\frac{(.9 \cdot x + .25 \cdot (120 - x)) \cdot g}{120 \cdot g} === .35$$
 
-3. SO~3~ + H~2~O -> H~2~SO~4~
+Lahendan selle võrrandi:
 
-4. 6 * H~2~O + P~4~O~10~ -> 4 * H~3~PO~4~
+$$.9 \cdot x + 30 - .25 \cdot x === 42$$
 
-### Happeline oksiid ja leelis
+$$.65 \cdot x === 12$$
 
-1. Ca(OH)~2~ + CO~2~ → CaCO~3~ + H~2~O
+$$x = \frac{12 \cdot 100}{65} === \frac{12 \cdot 20}{13} === \frac{240}{13} === 18\frac{6}{13}$$
 
-### Happeline oksiid ja hapnik
+See on kogus grammides. Teisendan kilogrammideks:
 
-1. 2 * SO~2~ + O~2~ -> 2 * SO~3~
+$$\frac{240}{13} \cdot g \cdot \frac{.001 \cdot kg}{1 \cdot g} === \frac{240}{13000} \cdot kg === \frac{24}{1300} \cdot kg === \frac{12}{650} \cdot kg === \frac{6}{325} \cdot kg$$
 
-### Happeline oksiid ja leeliseline oksiid
+Lasen selle väärtuse ka ebatäpseks arvutada:
 
-1. CO~2~ + CaO → CaCO~3~
+```{r}
+library(Ryacas)
+equality <- "(90 / 100 * mass + 25 / 100 * (120e-3 - mass)) / 120e-3 == 35 / 100"
+mass_solution_0 = eval(parse(text = yac_str(y_rmvars(paste("Solve(", equality, ", mass)", sep ="")))))
+mass_solution_0
+```
 
-### Hape ja metall
+$\frac{6}{325} \cdot kg$ ehk ebatäpselt `r signif(mass_solution_0, digits <- 2)` * kg 90%'list CuSO~4~ lahust tuleb lisada, et valmistada vajalik lahus.
 
-Metals more reactive than hydrogen displace hydrogen from dilute acids to form metal salts and hydrogen gas:
+## Kaaliumditsüanoauraat
 
-1. 2 * HCl + 2 * Na -> 2 * NaCl + H~2~
+### Ülesande püstitus
 
-2. $Zn + 2 \cdot HCl → ZnCl_2 + H_2$
+Mitu % kulda sisaldab kaaliumditsüanoauraat(I) - K[Au(CN)~2~]?
 
-3. H~2~SO~4 + 2 * K -> K~2~SO~4~ + H~2~
+### Lahendus
 
-4. 2 * H~2~SO~4~ + Cu -> CuSO~4~ + 2 * H~2~O + SO~2~
+Arvutuskäik:
 
-$2 \cdot Al + 6 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}(S^{VI}O_4^{-II})_3 + 3 \cdot S^{IV}O_2^{-II} + 6 \cdot H_2^IO^{-II}$
+```{r}
+percentage_au <- MOLAR_MASS_AU / (MOLAR_MASS_K + MOLAR_MASS_AU + (MOLAR_MASS_C + MOLAR_MASS_N) * 2) * 100
+```
 
-$$Al + 3 \cdot e \rightarrow Al_2^{III}$$
+`r signif(percentage_au, digits <- 5)`% kulda sisaldab kaaliumditsüanoauraat(I) - K[Au(CN)~2~].
 
-$$S^{VI} - 2 \cdot e \rightarrow S^{IV}$$
+## Moolide arv gaaside segus
 
-Et saada võrdne arv elektronide liitmisi ja lahutamisi, on vaja alumiiniumile liidetavate elektronide arv korrutada kahega ja väävlilt eemaldatavate elektronide arv korrutada kolmega. See kaks rakendub alumiiniumi puhul kahele molekulile, kuna neid on kaks. Ühele järelikult üks.
+### Ülesande püstitus
 
-5. $Cu + 2 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} CuS^{VI}O_4^{-II} + S^{IV}O_2^{-II} \uparrow + 2 \cdot H_2^{I}O^{-II}$
+Leia CO₂ ja SO₃ moolide arv 9,03∙10^24^ molekulis gaaside segus kui ühe CO₂ molekuli kohta tuleb kaks SO₃ molekuli.
 
-6. $2 \cdot Al + 6 \cdot (konts. H^IN^VO_3^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}O_3^{-II} + 6 \cdot N^{IV}O_2^{-II} + 3 \cdot H_2^IO^{-II}$
+### Lahendus
 
-$$Al - 3 \cdot e \xrightarrow{t°} Al^{III}$$
+Arvutuskäik:
 
-$$N^V + 1 \cdot e \rightarrow N^{IV}$$
+```{r}
+number_mol <- 9.03e24 / AVOGADRO
+number_molecules <- 1 + 2
+number_mol_co2 <- number_mol * 1 / number_molecules
+number_mol_so3 <- number_mol * 2 / number_molecules
+```
 
-When conc. HNO~3~ is added to aluminium a thin protective layer of alumina (Al~2~O~3~) is formed on its surface which prevents further action. As a result, Al becomes passive.
+`r number_mol_co2` on CO~2~ ja `r number_mol_so3` SO~3~ moolide arv 9.03e^24^ molekulis gaaside segus, kui ühe CO~2~molekuli kohta tuleb kaks SO~3~molekuli.
 
-7. $8 \cdot (konts. H^IN^VO_3^{-II}) + 3 \cdot Cu \rightarrow 3 \cdot Cu^{II}(N^VO_3^{-II})_2 + 4 \cdot H_2^IO^{-II} + 2 \cdot N^{II}O^{-II}$
+## Vesiniku moolide arv
 
-$$N^V + 3 \cdot e \rightarrow N^{II}$$
+### Ülesande püstitus
 
-$$Cu - 2 \cdot e \rightarrow Cu^{II}$$
+Mitu mooli on 5,6 m^3^ vesinikku (normaal tingimustel - nt)?
 
-8. $4 \cdot (konts. H^IN^VO_3^{-II}) +  \cdot Cu \rightarrow  \cdot Cu^{II}(N^VO_3^{-II})_2 +  2 \cdot H_2^IO^{-II} + 2 \cdot N^{IV}O_2^{-II}$
+### Lahendus
 
-$$N^V + 1 \cdot e \rightarrow N^{IV}$$
+Arvutuskäik:
 
-$$Cu - 2 \cdot e \rightarrow Cu^{II}$$
+$$\frac{5.6 \cdot m^3}{.0224 \cdot \frac{m^3}{mol}} === \frac{56 \cdot 10000}{10 \cdot 224} \cdot mol === \frac{28 \cdot 1000}{112} \cdot mol === \frac{7 \cdot 1000}{28} \cdot mol === 250 \cdot mol$$
 
-9. HCl + Cu 
+250 mooli on 5.6 * m^3^ vesinikku nt normaaltingimustes.
 
-Reaktsioon ei toimu, sest vesinik on tugevam ja vask ei tõrju vesinikku välja.
+## Happevihma põhjustav gaas
 
-10. $Al + (konts. H^IN^VO_3^{-II}, \text{suitsev pruunikalt, ebastabiilne})$
+### Ülesande püstitus
 
-Toatemperatuuril reaktsioon ei toimu.
+Kui suur ruumala on 16 g happevihma põhjustaval gaasil vääveldioksiidil (nt)?
 
-11. Fe + konts. H~2~SO~4~ →
+### Lahendus
 
-Toatemperatuuril reaktsioon ei tiomu.
+Arvutuskäik:
 
-12. $Cu + HNO_3$
+```{r}
+volume <- 16 / (MOLAR_MASS_S + MOLAR_MASS_O * 2) * DENSITY_VAPOR_STANDARD
+```
 
-Reaktsioon ei toimu, kuna vask on nõrgem kui vesinik.
+`r signif(volume, digits <- 5)` * m^3^ suurune ruumala on 16 * g happevihma põhjustaval gaasil vääveldioksiidil normaaltingimustes.
 
-13. H~3~PO~4~ + Ag
+## Hingamisel süsinikdioksiidi eritamine
 
-Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
+### Ülesande püstitus
 
-### Hape ja leelis
+Hingamisel eritab inimene ööpäevas keskmiselt 1,0 kg süsinikdioksiidi. Leida eralduva süsihappegaasi maht.
 
-1. KOH + HCl -> KCl + H~2~O
+### Lahendus
 
-2. $Na^IO^{-II}H^I + H^ICl^{-I} -> Na^ICl^{-I} + H_2^IO^{-II}$
+Arvutuskäik:
 
-3. 3 * NaOH + H~3~PO~4~ -> Na~3~PO~4~ + 3 * H~2~O
+```{r}
+volume <- 1.0e3 / (MOLAR_MASS_C + MOLAR_MASS_O * 2) * DENSITY_VAPOR_STANDARD
+```
 
-### Hape ja hapnik
+`r signif(volume, digits <-5 )` * m^3^ on eralduva süsihappegaasi maht.
 
-1. H~2~SO~3~ + O~2~ -> H~2~SO~4~
+## Õhupallid
 
-### Hape ja leeliseline oksiid
+### Ülesande püstitus
 
-1. 2 * HCl + CaO -> H~2~O + CaCl~2~
+Üks õhupall oli täidetud 1 g vesinikuga (H~2~) ja teine 1 g heeliumiga (He). Näidata arvutustega, kumma õhupalli ruumala on normaaltingimustel suurem.
 
-2. BaO + H~2~SO~4~ -> BaSO~4~ + H~2~O
+### Lahendus
 
-### Happed
+Arvutuskäik:
 
-1. H~2~S + H~2~CO~3
+```{r}
+volume_h2 <- 1 / (MOLAR_MASS_H * 2) * DENSITY_VAPOR_NORMAL
+volume_h2
+volume_he <- 1 / (MOLAR_MASS_HE) * DENSITY_VAPOR_NORMAL
+volume_he
+if (volume_h2 > volume_he) {
+  answer <- "Vesinikuga täidetud õhupalli ruumala on normaaltingimustes suurem."
+} else if (volume_he > volume_h2) {
+  answer <- "Heeliumiga täidetud õhupalli ruumala on normaaltingimustes suurem."
+} else {
+  answer <- "Õhupallide ruumalad on normaaltingimustes võrdsed."
+}
+```
 
-Reaktsioon ei toimu.
+`r answer`
 
-### Happelised oksiidid
+## Kloor ja vääveldioksiid
 
-1. CO~2~ + SO~3~
+### Ülesande püstitus
 
-Reaktsioon ei toimu.
+Kummas on rohkem molekule, kas 700 ml klooris või 34 g vääveldioksiidis?
 
-### Happeline oksiid ja leelis
+### Lahendus
 
-1. SO~2~ + Ca(OH)~2~ -> CaSO~3~ + H~2~O
+Arvutuskäik:
 
-### Happeline ja leeliseline oksiid
+```{r}
+number_molecules_cl <- 700e-6 / DENSITY_VAPOR_STANDARD * AVOGADRO
+number_molecules_so2 <- 34 / (MOLAR_MASS_S + MOLAR_MASS_O * 2) * AVOGADRO
+if (number_molecules_cl > number_molecules_so2) {
+  answer <- "700 * ml klooris on rohkem molekule kui 34 * g vääveldioksiidis."
+} else if (number_molecules_so2 > number_molecules_cl) {
+  answer <- "34 * g vääveldioksiidis on rohkem molekule kui 700 * ml klooris."
+} else {
+  answer <- "700 * ml klooris ja 34 * g vääveldioksiidis on ühepalju molekule."
+}
+```
 
-1. CaO (lubjakivi) + CO~2~ <-> CaCO~3~
+`r answer`
 
-2. CaO + SO~2~ -> CaSO~3~
+## Hapniku aatomid
 
-### Sool ja metall
+### Ülesande püstitus
 
-More reactive metal displaces less reactive metal from its salt solution:
+Mitu mooli hapniku aatomeid sisaldab: 
+a) 3 mooli vett 
+b) 12 mooli väävelhapet 
+c) 8 mooli Al(NO~3~)~3~ 
+d) 2000 g Ca(OH)~2~ 
+e) 0,56 m^3^ vääveltrioksiidi.
 
-1. $Zn + Cu^{II}S^{VI}O_4^{-II} \rightarrow Zn^{II}S^{VI}O_4^{-II} + Cu$
+### Lahendus
 
-Zn loovutab kaks elektroni olles redutseerija ja oksüdeerub. Cu haarab kaks elektroni olles oksüdeeruja ja redutseerub.
+a) 3 * mol hapniku aatomeid sisaldab 3 * mol vett.
 
-### Sool ja mittemetall
+b) 48 * mol hapniku aatomeid sisaldab 12 * mol väävelhapet.
 
-Non-metal that is more reactive displaces less reactive non-metal from its salt solution:
+c) 72 * mol hapniku aatomeid sisaldab 8 * mol Al(NO~3~)~3~.
 
-1. Cl~2~ + 2 * NaBr -> 2 * NaCl + Br~2~
+d) Arvutused:
 
-### Sool ja leelis
+```{r}
+number_atoms_oxygen <- 2000 / (MOLAR_MASS_CA + (MOLAR_MASS_O + MOLAR_MASS_H) * 2) * 2
+```
 
-1. $CuCl_2 + 2 \cdot NaOH → 2 \cdot NaCl + Cu(OH)_2 \downarrow$ 
+`r signif(number_atoms_oxygen, digits <- 5)` * mol hapniku aatomeid sisaldab 2000 * g Ca(OH)~2~.
 
-1. 2 * KOH + Cu(NO~3~)~2~ -> Cu(OH)~2~ + 2 * KNO~3~
+e) Arvutused:
 
-2. 2 * NaOH + CuSO~4~ -> Na~2~SO~4 + Cu(OH)~2~ (sade)
+```{r}
+number_atoms_oxygen <- .56 / DENSITY_VAPOR_STANDARD * 3
+```
 
-3. Ca(OH)~2~ + K~2~SO~4 -> 
+`r signif(number_atoms_oxygen, digits <- 3)` * mol hapniku aatomeid sisaldab .56 * m^3^ vääveltrioksiidi.
 
-3. NaOH + BaCl~2~
+## Lämmastik sõrmkübaras
 
-Reaktsioon ei toimu, kuna sadet ei teki.
+### Ülesande püstitus
 
-### Sool ja leeliseline oksiid
+Mitu lämmastiku molekuli on sõrmkübaras (3,0 cm^3^) olevas õhus, kui mahuliselt on õhus 78% lämmastikku?
 
-1. CaO + NaCl
+### Lahendus
 
-Reaktsioon ei toimu.
+Arvutuskäik:
 
-### Sool ja happeline oksiid
+```{r}
+number_molecules <- 3.0e-6 * 78 / 100 / DENSITY_VAPOR_STANDARD * AVOGADRO
+```
 
-1. CO~2~ + Fe~2~SO~4~
+`r signif(number_molecules, digits <- 3)` lämmastiku molekuli on sõrmkübaras olevas õhus, kui mahuliselt on õhus 78% lämmastikku.
 
-Reaktsioon ei toimu.
+## Vesiniku ja hapniku moolide arv gaaside segus
 
-### Sool ja hape
+### Ülesande püstitus
 
-1. Na~2~S + 2 * HCl -> 2 * NaCl + H~2~S
+Arvutada 33,6 m³ gaaside segus sisalduv vesiniku ja hapniku moolide arv kui neid on mahuliselt vastavalt 60% ja 40%.
 
-2. Na~2~CO~3~ + H~2~SO~4~ -> Na~2~SO~4 + H~2~CO~3~ -> Na~2~SO~4~ + H~2~O + CO~2~
+### Lahendus
 
-3. CaCl~2~ + H~2~SO~4~ -> CaSO~4~ (mingil määral sadestub) + 2 * HCl 
+Arvutuskäik:
 
-4. $FeS + H_2SO_4 → H_2S \uparrow + FeSO_4$
+```{r}
+volume <- 33.6
+number_moles_h <- volume / DENSITY_VAPOR_STANDARD * 60 / 100
+number_moles_o <- volume / DENSITY_VAPOR_STANDARD * 40 / 100
+```
 
-5. CaS + H~2~SO~3~ -> H~2~S + CaSO~3~
+`r signif(number_moles_h, digits <- 3)` on vesiniku ja `r signif(number_moles_o, digits <- 3)` hapniku moolide arv 33.6 * m^3^ gaaside segus, kui neid on vastavalt 60% ja 40%.
 
-### Soolad
+## Ammoniaagivesi
 
-1. $BaCl_2 + CuSO_4 → BaSO_4 \downarrow + CuCl_2$
+### Ülesande püstitus
 
-2. FeCl~2~ + K~2~CO~3~ -> FeCO~3~ (sade) + 2 * KCl
+Mitu mooli ammoniaaki sisaldub 10 kg 6,8% ammoniaagivees?
 
-3. Li~2~S + BaCl~2~
+### Lahendus
 
-Reaktsioon ei toimu, kuna baariumsulfiid on vähelahustuv.
+Arvutuskäik:
 
-4. NaCl + K~2~SO~4~
+```{r}
+number_moles <- 10e3 * 6.8 / 100 / (MOLAR_MASS_N + MOLAR_MASS_H * 3)
+```
 
-Reaktsioon ei toimu, kuna ei teki sadet.
+`r signif(number_moles, digits <- 5)` * mol ammonikaaki sisaldub 10 * kg 6.8%-lises ammoniaagivees.
 
-5. CuS + Na~2~CO~3
+## Ammoniaagilahus
 
-Reaktsioon ei toimu, kuna vähemalt vasksulfiid ei lahustu vees.
+### Ülesande püstitus
+
+Mitu mooli NH₃ on lahustunud 1 m³ lahuses kui 7 m³ lahuse valmistamiseks kulus 78,4 m³ ammoniaaki?
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+number_moles <- 78.4 / 7 / DENSITY_VAPOR_STANDARD
+```
+
+Ligikaudu `r signif(number_moles, digits <- 3)` * mol NH~3~ on lahustunud 1 * m^3^ lahuses, kui 7 * m^3^ lahuse valmistamiseks kulus 78.4 * m^3^ ammoniaaki.
+
+## Moolide arv väävelhappe lahuses
+
+### Ülesande püstitus
+
+Arvutada vee ja väävelhappe moolide arv 180 g 68%-lises väävelhappe lahuses.
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+mass <- 180
+number_moles_water <- mass * (100 - 68) / 100 / (MOLAR_MASS_H * 2 + MOLAR_MASS_O)
+number_moles_h2so4 <- mass * 68 / 100 / (MOLAR_MASS_H * 2 + MOLAR_MASS_S + MOLAR_MASS_O * 4)
+```
+
+`r signif(number_moles_water, digits <- 5)` on vee ja `r signif(number_moles_h2so4, digits <- 5)` väävelhappe moolide arv 180 * g 68%'lises väävelhappe lahuses.
+
+## Hapnik lämmastikhappes
+
+### Ülesande püstitus
+
+Leia hapniku aatomite moolide arv 3,01∙10^22^ molekulis lämmastikhappes.
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+number_moles <- 3.01e22 / AVOGADRO * 3
+```
+
+`r number_moles` * mol hapniku aatomeid on 3.01e22's molekulis lämmastikhappes.
+
+## Gaasisegu mass
+
+### Ülesande püstitus
+
+Kui suur on 9,03∙10^26^ CO₂ molekulist ja 3,01∙10^25^ molekulist lämmastikdioksiidist  koosneva gaasisegu mass?
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+mass <- (9.03e26 / AVOGADRO * (MOLAR_MASS_C + MOLAR_MASS_O * 2) + 3.01e25 / AVOGADRO * (MOLAR_MASS_N + MOLAR_MASS_O * 2)) *1e-3
+```
+
+`r mass` * kg on 9.03e26 CO~2~ molekulist ja 3.01e25 molekulist lämmastikdioksiidist koosneva gaasisegu mass.
+
+## Vääveltrioksiidist ja süsinikdioksiidist koosneva gaasisegu mass
+
+### Ülesande püstitus
+
+Arvutada 5,6 m³ gaasisegu mass kui see koosneb 60 mahuprotsendist vääveltrioksiidist ja 40 mahuprotsendist süsinikdioksiidist.
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+mass <- 5.6 / 100 / DENSITY_VAPOR_STANDARD * (60 * (MOLAR_MASS_S + MOLAR_MASS_O * 3) + 40 * (MOLAR_MASS_C + MOLAR_MASS_O * 2)) * 1e-3
+```
+
+`r signif(mass, digits <- 5)` * kg on 5.6 * m^3^ gaasisegu mass, kui see koosneb 60'st mahuprotsendist vääveltrioksiidist ja 40'st mahuprotsendist süsinikdioksiidist.
+
+## Hõbeda ja kulla sisaldus
+
+### Ülesande püstitus
+
+Leida hõbeda ja kulla sisaldus massiprotsentides, kui sulam koosneb 0,5 moolist Ag-st ja 0,25 moolist Au-st.
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+mass_ag <- .5 * MOLAR_MASS_AG 
+mass_au <- .25 * MOLAR_MASS_AU
+masses <- mass_ag + mass_au
+percentage_ag <- mass_ag / masses * 100
+percentage_au <- mass_au / masses * 100
+```
+
+Ligikaudu `r signif(percentage_ag, digits <- 5)` on hõbeda ja ligikaudu `r signif(percentage_au, digits <- 5)` kulla sisaldus massiprotsentides, ku isulam koosneb .5 * mol Ag'st ja .25 * mol Au'st.
+
+## Lämmastiku aatomid segus
+
+### Ülesande püstitus
+
+Mitu mooli lämmastiku aatomeid on segus, mis koosneb 15 moolist lämmastikdioksiidist ja 50 g gaasilisest lämmastikust?
+
+### Lahendus
+
+```{r}
+number_moles <- 15 + 50 / MOLAR_MASS_N
+```
+
+`r signif(number_moles, digits <- 5)` * mol lämmastiku aatomeid on segus, mis koosneb 15 * mol lämmastikdioksiidist ja 50 * g gaasilisest lämmastikust.
+
+## Klaasitäis vedelat vett
+
+### Ülesande püstitus
+
+Mitu vesiniku aatomit on klaasitäies vedelas vees (klaasi ruumala on 200 ml ja ρ(H~2~O) ≈ 1 g/cm3)?
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+number_atoms <- 200e-6 * 1e-3 / 1e-6 / (MOLAR_MASS_WATER * 1e-3) * 2 * AVOGADRO
+```
+
+Ligikaudu `r signif(number_atoms, digits <- 5)` vesiniku aatomit on klaasitäies vedelas vees.
+
+## Aspiriin
+
+### Ülesande püstitus
+
+Mitu süsiniku aatomit satub inimese organismi ühe tableti aspiriiniga (C~9~H~8~O~4~, tableti mass on 500 mg)?
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+number_atoms <- 500e-3 / (MOLAR_MASS_C * 9 + MOLAR_MASS_H * 8 + MOLAR_MASS_O * 4) * 9 * AVOGADRO
+```
+
+Ligikaudu `r signif(number_atoms, digits <- 5)` süsiniku aatomit satub inimese organismi ühe tableti aspiriiniga.
+
+## Koostisega segu 
+
+### Ülesande püstitus
+
+Segul (nt) on järgmine koostis: 150 dm^3^ H~2~ + 30 g HNO~3~ + 3 mol H~3~PO~4~.
+
+a) Leia segus oleva 150 dm^3^ H~2~ mass.
+
+b) Mitu mooli vesiniku aatomeid on segus kokku? Mitu vesiniku aatomit see on? 
+
+c) Mitu korda on segus lämmastiku aatomeid vähem kui on vesiniku aatomeid?
+
+### Lahendus
+
+Üldarvutused:
+
+```{r}
+number_moles_h2 <- 150e-3 / DENSITY_VAPOR_NORMAL
+number_moles_n <- 30 / (MOLAR_MASS_H + MOLAR_MASS_N + MOLAR_MASS_O * 3)
+```
+
+a) Arvutuskäik:
+
+```{r}
+mass <- number_moles_h2 * (MOLAR_MASS_H * 2) * 1e-3
+```
+
+`r mass` * kg on segus oleva 150 * dm^3^ H~2~ mass.
+
+b) Arvutuskäik:
+
+```{r}
+number_moles <- number_moles_h2 * 2 + number_moles_n + 3 * 3
+number_atoms_h <- number_moles * AVOGADRO
+```
+
+Ligikaudu `r signif(number_moles, digits <- 5)` * mol vesiniku aatomeid on segus kokku. Ligikaudu `r signif(number_atoms_h, digits <- 5)` vesiniku aatomit see on.
+
+c) Arvutuskäik:
+
+```{r}
+ratio <- number_atoms_h / number_moles_n / AVOGADRO
+ratio
+inversed_ratio <- 1 / ratio
+```
+
+Ligikaudu `r signif(inversed_ratio, digits <- 5)` korda on segus lämmastiku aatomeid vähem ku ion vesiniku aatomeid.
+
+## Hapniku aatomite hulk gaasisegus
+
+### Ülesande püstitus
+
+Arvutage hapniku aatomite hulk (moolides) järgmises gaasisegus: 
+3,5 mol N~2~O + 0,5 mol N~2~O~3~ + 1,0 mol O~2~
+
+### Lahendus
+
+7.0 on hapniku aatomite hulk.
+
+## Naatriumioonid glaubrisoolas
+
+### Ülesande püstitus
+
+Mitu mooli naatriumioone sisaldub 48,3 g glaubrisoolas (Na~2~SO~4~ · 10H~2~O)?
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+number_moles <- 48.3 / (MOLAR_MASS_NA * 2 + MOLAR_MASS_S + MOLAR_MASS_O * 4 + 10 * (MOLAR_MASS_H * 2 + MOLAR_MASS_O)) * 2
+```
+
+`r (signif(number_moles, digits <- 5))` * mol naatriumioone sisaldub 48.3 * g glaubrisoolas.
+
+## Süsinikoksiidi ja -dioksiidi gaasisegu
+
+## Ülesande püstitus
+
+Arvutada võrdsest arvust CO ja CO₂ molekulidest koosneva  448 dm³ gaasisegu mass.
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+mass <- 448e-3 / DENSITY_VAPOR_STANDARD * (MOLAR_MASS_C + MOLAR_MASS_O + MOLAR_MASS_C + MOLAR_MASS_O * 2) * 1e-3
+```
+
+Ligikaudu `r signif(mass, digits <- 5)` * kg on võrdsest arvust CO ja CO~2~ molekulidest koosneva 448 * dm^3^ gaasisegu mass.
+
+## Hapniku aatomite arv väävelhappes 
+
+### Ülesande püstitus
+
+Arvuta  hapniku aatomite arv 2,5 moolis väävelhappes.
+
+### Lahendus
+
+6.02e24 hapniku aatomit on 2.5 * mol väävelhappes.
+
+## Vesiniku aatomite arv ammoniaagis
+
+### Ülesande püstitus
+
+Arvutada vesiniku aatomite arv, mis sisaldub 0,112 cm³ ammoniaagis.
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+number_atoms <- .112e-6 / DENSITY_VAPOR_STANDARD * 3 * AVOGADRO
+```
+
+Ligikaudu `r signif(number_atoms, digits <- 3)` vesiniku aatomit sisaldub .112 * cm^3^ ammoniaagis.
+
+## Trihapniku ruumala
+
+### Ülesande püstitus
+
+Milline on 18,06∙10^27^ hapniku aatomist koosneva trihapniku (osooni O₃) ruumala?
+
+### Lahendus
+
+Hapniku moole on 3e4. Osooni moole on 1e4.
+
+227 * m^3^ on 18.06e27'st hapniku aatomist koosneva trihapniku ruumala.
+
+## Gaasisegu ruumala
+
+### Ülesande püstitus
+
+Gaasisegu koostises on 400 g SO₃ ja 88 g CO₂. Leia selle gaasisegu ruumala.
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+volume <- (400 / (MOLAR_MASS_S + MOLAR_MASS_O * 3) + 88 / (MOLAR_MASS_C + MOLAR_MASS_O * 2)) * DENSITY_VAPOR_STANDARD
+```
+
+Ligikaudu `r signif(volume, digits <- 5)` * m^3^ on gaasisegu ruumala.
+
+## Lämmastik gaaside segus
+
+### Ülesande püstitus
+
+Millise ruumala võtab enda alla 9,03∙10^26^ molekulist koosnevas gaaside segus lämmastiku kui tema sisaldus mahu järgi on 10%?
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+volume <- 9.03e26 / AVOGADRO * DENSITY_VAPOR_STANDARD * 10 / 100
+```
+
+`r volume` * m^3 võtab enda alla 9.03e26'st molekulist koosnevas gaaside segus lämmastik, kui selle sisaldus mahu järgi on 10%.
+
+## Massiprotsentides
+
+### Ülesande püstitus
+
+Gaaside segu koosneb mahuliselt 30% SO₂ ja 70% lämmastikust. Leia koostis massiprotsentides.
+
+### Lahendus
+
+Lämmastik ja SO~2~ suhtuvad mahuliselt üksteisesse kui 7 : 3. See on ka molaarselt nii. Eeldan, et lämmastiku all mõeldakse N~2~. Edasine arvutuskäik:
+
+```{r}
+mass_so2 <- 3 * (MOLAR_MASS_S + MOLAR_MASS_O * 2)
+mass_n2 <- 7 * (MOLAR_MASS_N * 2)
+masses <- mass_so2 + mass_n2
+percentage_so2 <- mass_so2 / masses * 100
+percentage_n2 <- mass_n2 / masses * 100
+```
+
+Ligikaudu `r signif(percentage_so2, digits <- 5)` on SO~2~ ja ligikaudu `r signif(percentage_n2, digits <- 5)` lämmastiku osa massiprotsentides.
+
+## Aatomite arvu võrdlus
+
+### Ülesande püstitus
+
+Mitmes g K₂Cr₂O₇ on samapalju aatomeid kui 100 g NaOH?
+
+### Lahendus
+
+Arvutuskäik:
+
+```{r}
+number_atoms <- 100 / (MOLAR_MASS_NA + MOLAR_MASS_O + MOLAR_MASS_H) * AVOGADRO
+mass <- number_atoms / AVOGADRO * (MOLAR_MASS_K * 2 + MOLAR_MASS_CR * 2 + MOLAR_MASS_O * 7)
+```
+
+Ligikaudu `r signif(mass, digits <- 5)` * g K~2~Cr~2~O~7~'s on samapalju aatomeid kui 100 * g NaOH's.
+
+## Püriit
+
+### Ülesande püstitus
+
+320 kg püriidist, mis sisaldas 50% väävlit, saadi 350 kg väävelhapet. Leia saagis.
+
+### Lahendus
+
+Püriit on FeS~2~. 160 * kg oli väävlit. Kui jagan selle väävli massi molaarmassiga, saan väävli osa moolides. Kui selle väävli osa moolides korrutan väävelhappe molaarmassiga, saan väävelhappe teoreetilise massi. Arvutuskäik:
+
+```{r}
+mass_sulfur <- 320 * 50 / 100
+mass_sulfur
+ratio_mass_sulfur_to_molar_mass_sulfur <- mass_sulfur / MOLAR_MASS_S
+ratio_mass_sulfur_to_molar_mass_sulfur
+molar_mass_sulfurid_acid <- MOLAR_MASS_H * 2 + MOLAR_MASS_S + MOLAR_MASS_O * 4
+molar_mass_sulfurid_acid
+theoretical_yield <- ratio_mass_sulfur_to_molar_mass_sulfur * molar_mass_sulfurid_acid
+theoretical_yield
+practical_yield <- 350 / theoretical_yield
+```
+
+Ligikaudu `r signif(practical_yield, digits <- 5)` on saagis.
+
+## Vesinikkloriidi lahuse reageerimine
+
+### Ülesande püstitus
+
+Mitu dm³ CO₂ eraldub 730 g 5%-lise HCl lahuse reageerimisel CaCO₃-ga, kui kaod on 20%?
+
+### Lahendus
+
+Reaktsioonivõrrand:
+
+$$2 \cdot HCl + CaCO_3 \rightarrow CaCl_2 + H_2O + CO_2$$
+
+Arvutuskäik:
+
+```{r}
+percentage_hcl <- 5 / 100
+percentage_hcl
+mass_hcl <- 730 * percentage_hcl
+mass_hcl
+number_moles_hcl <- mass_hcl / (2 * (MOLAR_MASS_H + MOLAR_MASS_CL))
+number_moles_hcl
+theoretical_volume_co2 <- number_moles_hcl * DENSITY_VAPOR_STANDARD
+theoretical_volume_co2
+percentage_loss <- 20 / 100
+percentage_loss
+percentage_yield <- 1 - percentage_loss
+percentage_yield
+actual_volume_co2 <- theoretical_volume_co2 * percentage_yield
+actual_volume_co2
+actual_volume_co2_dm3 <- actual_volume_co2 * 1e3
+actual_volume_co2_dm3
+```
+
+`r signif(actual_volume_co2_dm3, digits <- 4)` * dm^3^ CO~2~ eraldub 730 * g 5%'lise HCl'i lahuse reageerimisel CaCO~3~'ga, kui kaod on 20%.

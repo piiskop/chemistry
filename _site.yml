@@ -18,6 +18,8 @@ navbar:
       href: acids.html
     - text: "gaasid"
       href: gases.html
+    - text: "võrrandid"
+      href: equalities.html
     - text: "osamäärad"
       href: parts.html
     - text: "autor"

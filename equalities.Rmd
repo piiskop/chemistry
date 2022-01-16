@@ -1,0 +1,436 @@
+---
+title: "Reaktsioonivõrrandid"
+author: 'peacecop kalmer:'
+date: "1/15/2022"
+output:
+  bookdown::html_document2:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Reeglid oksüdatsiooniastmete jaoks
+
+1. Free elements have an oxidation state of zero (e.g. Na, Fe, H2, O2, S8).
+
+2. In an ion the all Oxidation numbers must add up to the charge on the ion.
+
+3. In a neutral compound all Oxidation Numbers must add up to zero.
+
+4. Group 1 = +1
+
+5. Group 2 = +2
+
+6. Hydrogen with Non-Metals = +1
+
+7. Hydrogen with Metals (or Boron) = -1
+
+8. Fluorine = -1
+
+9. Oxygen = -2 (except in H~2~O~2~ or with Fluorine)
+
+10. Group 17(7A) = -1 except with Oxygen and other halogens lower in the group
+
+# Hapnik ja metall
+
+Metal oxides are formed, which are generally basic in nature.
+
+## Hapnik ja aluseline metall
+
+1. 2 * Li + O~2~ -> Li~2~O
+
+2. 4 * Na + O~2~ -> 2 * Na~2~O
+
+3. 4 * K + O~2~ -> 2 * K~2~O
+
+4. 2 * Ca + O~2~ -> 2 * CaO
+
+## Hapnik ja mittealuseline metall
+
+1. 2 * Mg + O~2~ -> 2 * MgO
+
+Reaktsioon toimub kõrge temperatuuriga.
+
+2. 4 * Al + 3 * O~2~ -> 2 * Al~2~O~3~
+
+Reaktsioon toimub kõrge temperatuuriga.
+
+3. 2 * Zn + O~2~ -> 2 * ZnO
+
+Reaktsioon toimub kõrge temperatuuriga.
+
+# Aluseline oksiid ja vesi
+
+1. Li~2~O + H~2~O -> 2 * LiOH
+
+2. Na~2~O + H~2~O -> 2 * NaOH
+
+3. MgO + H~2~O -> Mg(OH)~2~
+
+Reaktsioon toimub osaliselt.
+
+4. K~2~O + H~2~O -> 2 * KOH
+
+5. CaO + H~2~O -> Ca(OH)~2~
+
+# Ülemineku järgse metalli oksiid ja vesi
+
+1. $Al_2O_3 (alumiiniumoksiid) + H_2O$
+
+Ei reageeri. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
+
+# Vesi ja metalloid
+
+1. H~2~O + SiO~2~
+
+Reaktsioon ei toimu, sest kovalentne side räni ja hapniku vahel on liiga tugev.
+
+# Ülemineku metalli oksiid ja vesi
+
+1. FeO + H~2~O
+
+Ei reageeri.
+
+2. ZnO + H~2~O
+
+Ei reageeri.
+
+# Vesi ja metall
+
+![Reeglid metallide reageerimiseks veega](metals-reacting-with-water.png)
+
+![Skeem metalli reageerimiseks veega](metal-water-oxide-hydroxide.png)
+
+Metal hydroxides are formed:
+
+1. 2 * K + 2 * H~2~O -> K~2~O + H~2~O + H~2~ -> 2 * KOH + H~2~
+
+Selle reaktsiooni kestel eraldub soojus, mis põletab vesiniku ära.
+
+2. $2 \cdot Na + 2 \cdot H_2^IO^{-II} \rightarrow Na_2^{I}O^{-II} + H_2^IO^{-II} + H_2 -> 2 \cdot Na^IO^{-II}H^I + H_2$
+
+Selles reaktsioonis eraldub soojus, mis põletab vesiniku ära.
+
+Na loovutab kaks elektroni olles redutseerija ja oksüdeerub.
+
+3. Ca + 2 * H~2~O -> CaO + H~2~O + H~2~ -> Ca(OH)~2~ + H~2~
+
+Selle reaktsiooni kestel eraldub sooja, mis siiski ei põleta vesinikku ära.
+
+4. 2 * Li + 2 * H~2~O -> Li~2~O + H~2~O + H~2~ -> 2 * LiOH + H~2~
+
+5. Mg + 2 * H~2~O -> MgO + H~2~O + H~2~ -> Mg(OH)~2~ + H~2~
+
+See reaktsioon toimub kõrge temperatuuriga.
+
+6. 2 * Al + 3* H~2~O -> Al~2~O~3~ + 3 * H~2~
+
+Reaktsioon toimub kõrge temperatuuriga. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
+
+7. Zn + H~2~O -> ZnO + H~2~
+
+Reaktsioon toimub kõrge temperatuuriga.
+
+8. 3 * Fe + 4 * H~2~O <-> Fe~3~O~4~ + 4 * H~2~
+
+9. Cu + H~2~O
+
+reaktsioon ei toimu, sest vask on selleks liiga nõrk
+
+10. Pb + H~2~O
+
+Reaktsioon ei toimu.
+
+11. Ag + H~2~O
+
+Reaktsioon ei toimu.
+
+12. Au + H~2~O
+
+Reaktsioon ei toimu.
+
+# Mittemetall ja metall
+
+1. K + 2 * S -> K~2~S
+
+# Vesinik ja metall
+
+Reactive metals from ionic metal hydrides:
+
+1. H~2~ + Li -> 2 * LiH
+
+2. H~2~+ 2 * Na -> 2 * NaH
+
+3. H~2~ + Ca -> CaH~2~
+
+# Vesinik ja mittemetall
+
+Covalent hydrides are formed:
+
+1. H~2~ + Cl~2~ -> 2 * HCl
+
+2. N~2~ + 3 * H~2~ -> 2 * NH~3~ (ammoniaak)
+
+2. H~2~ + S -> H~2~S
+
+# Vesi ja mittemetall
+
+Generally, do not react:
+
+1. C + H~2~O -> (CO + H~2~) (vesigaas)
+
+See reaktsioon toimub auruga.
+
+2. H~2~O + S
+
+See reaktsioon ei toimu.
+
+# Hapnik ja mittemetall
+
+Non – metal oxides are formed, which are generally acidic in nature:
+
+1. 2 * C + O~2~ -> 2 * CO
+
+See reaktsioon toimub vähese hapnikuga.
+
+2. C + O~2~ -> CO~2~
+
+See reaktsioon toimub rohke hapnikuga.
+
+2. 4 * P + 5 * O~2~ -> P~4~O~10~
+
+3. $S + O_2 \rightarrow S^{IV}O_2^{-II}$
+
+Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovutab neli elektroni olles redutseerija ja oksüdeerub.
+
+4. 2 * S + 3* O~2~ (erinev *3*'st) -> 2 * SO~3~
+
+# Hapnik ja vesinik
+
+1. 2 * H~2~ + O~2~ <-> 2 * H~2~O
+
+# Halogeen ja metall
+
+Metal chalogenides are formed which are ionic in nature:
+
+1. 2 * Na + Cl~2~ -> 2 * NaCl
+
+2. 2 * K + Br~2~ -> 2 * KBr
+
+3. Ca + Cl~2~ -> CaCl~2~
+
+4. Ba + F~2~ -> BaF~2~
+
+# aluselised oksiidid
+
+1. Li~2~O + CaO
+
+Reaktsioon ei toimu.
+
+# Happeline oksiid ja vesi
+
+1. H~2~O + CO~2~ <-> H~2~CO~3~
+
+Kui lisada süsihappe gaasi vette, siis tuleb see anum sättida suure rõhu alla, sest kui sellest me vabastame, laguneb süsihape. Karastusjoogid.
+
+2. H~2~O + SO~2~ -> H~2~SO~3~
+
+3. SO~3~ + H~2~O -> H~2~SO~4~
+
+4. 6 * H~2~O + P~4~O~10~ -> 4 * H~3~PO~4~
+
+# Happeline oksiid ja alus
+
+1. Ca(OH)~2~ + CO~2~ → CaCO~3~ + H~2~O
+
+# Happeline oksiid ja hapnik
+
+1. 2 * SO~2~ + O~2~ -> 2 * SO~3~
+
+# Happeline oksiid ja aluseline oksiid
+
+1. CO~2~ + CaO → CaCO~3~
+
+# Hape ja metall
+
+Metals more reactive than hydrogen displace hydrogen from dilute acids to form metal salts and hydrogen gas:
+
+1. 2 * HCl + 2 * Na -> 2 * NaCl + H~2~
+
+2. $Zn + 2 \cdot HCl → ZnCl_2 + H_2$
+
+3. $H_2SO_4 (väävelhape) + 2 * K -> K_2SO_4 + H_2$
+
+4. 2 * H~2~SO~4~ + Cu -> CuSO~4~ + 2 * H~2~O + SO~2~
+
+$2 \cdot Al + 6 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}(S^{VI}O_4^{-II})_3 + 3 \cdot S^{IV}O_2^{-II} + 6 \cdot H_2^IO^{-II}$
+
+$$Al + 3 \cdot e \rightarrow Al_2^{III}$$
+
+$$S^{VI} - 2 \cdot e \rightarrow S^{IV}$$
+
+Et saada võrdne arv elektronide liitmisi ja lahutamisi, on vaja alumiiniumile liidetavate elektronide arv korrutada kahega ja väävlilt eemaldatavate elektronide arv korrutada kolmega. See kaks rakendub alumiiniumi puhul kahele molekulile, kuna neid on kaks. Ühele järelikult üks.
+
+5. $Cu + 2 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} CuS^{VI}O_4^{-II} + S^{IV}O_2^{-II} \uparrow + 2 \cdot H_2^{I}O^{-II}$
+
+6. $2 \cdot Al + 6 \cdot (konts. H^IN^VO_3^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}O_3^{-II} + 6 \cdot N^{IV}O_2^{-II} + 3 \cdot H_2^IO^{-II}$
+
+$$Al - 3 \cdot e \xrightarrow{t°} Al^{III}$$
+
+$$N^V + 1 \cdot e \rightarrow N^{IV}$$
+
+When conc. HNO~3~ is added to aluminium a thin protective layer of alumina (Al~2~O~3~) is formed on its surface which prevents further action. As a result, Al becomes passive.
+
+7. $8 \cdot (konts. H^IN^VO_3^{-II}) + 3 \cdot Cu \rightarrow 3 \cdot Cu^{II}(N^VO_3^{-II})_2 + 4 \cdot H_2^IO^{-II} + 2 \cdot N^{II}O^{-II}$
+
+$$N^V + 3 \cdot e \rightarrow N^{II}$$
+
+$$Cu - 2 \cdot e \rightarrow Cu^{II}$$
+
+8. $4 \cdot (konts. H^IN^VO_3^{-II}) +  \cdot Cu \rightarrow  \cdot Cu^{II}(N^VO_3^{-II})_2 +  2 \cdot H_2^IO^{-II} + 2 \cdot N^{IV}O_2^{-II}$
+
+$$N^V + 1 \cdot e \rightarrow N^{IV}$$
+
+$$Cu - 2 \cdot e \rightarrow Cu^{II}$$
+
+9. HCl + Cu 
+
+Reaktsioon ei toimu, sest vesinik on tugevam ja vask ei tõrju vesinikku välja.
+
+10. $Al + (konts. H^IN^VO_3^{-II}, \text{suitsev pruunikalt, ebastabiilne})$
+
+Toatemperatuuril reaktsioon ei toimu.
+
+11. Fe + konts. H~2~SO~4~ →
+
+Toatemperatuuril reaktsioon ei tiomu.
+
+12. $Cu + HNO_3$
+
+Reaktsioon ei toimu, kuna vask on nõrgem kui vesinik.
+
+13. H~3~PO~4~ + Ag
+
+Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
+
+# Hape ja alus
+
+1. KOH + HCl -> KCl + H~2~O
+
+2. $Na^IO^{-II}H^I (naatriumhüdroksiid ehk seebikivi) + H^ICl^{-I} -> Na^ICl^{-I} + H_2^IO^{-II}$
+
+3. $2 \cdot KOH + H_2SO_4 \rightarrow \underbrace{K_2SO_4}_{kaaliumsulfaat} + 2 \cdot \underbrace{H_2O}_{vesi}$
+
+4. 3 * NaOH + H~3~PO~4~ -> Na~3~PO~4~ + 3 * H~2~O
+
+5. $3 \cdot Ca(OH)_2 + 2 \cdot H_3PO_4 \rightarrow \underbrace{Ca_3(PO_4)_2}_{kaltsiumfosfaat} + 6 \cdot \underbrace{H_2O}_{vesi}$
+
+# Hape ja hapnik
+
+1. H~2~SO~3~ + O~2~ -> H~2~SO~4~
+
+# Hape ja aluseline oksiid
+
+1. 2 * HCl + CaO -> H~2~O + CaCl~2~
+
+2. BaO + H~2~SO~4~ -> BaSO~4~ + H~2~O
+
+# Happed
+
+1. $\underbrace{H_2S}_{vesiniksulfiid} + \underbrace{H_2CO_3}_{süsihape}$
+
+Reaktsioon ei toimu.
+
+# Happelised oksiidid
+
+1. CO~2~ + SO~3~
+
+Reaktsioon ei toimu.
+
+# Happeline oksiid ja alus
+
+1. SO~2~ + Ca(OH)~2~ -> CaSO~3~ + H~2~O
+
+# Happeline ja aluseline oksiid
+
+1. CaO (lubjakivi) + CO~2~ <-> CaCO~3~
+
+2. CaO + SO~2~ -> CaSO~3~
+
+# Sool ja metall
+
+More reactive metal displaces less reactive metal from its salt solution:
+
+1. $Zn + Cu^{II}S^{VI}O_4^{-II} \rightarrow Zn^{II}S^{VI}O_4^{-II} + Cu$
+
+Zn loovutab kaks elektroni olles redutseerija ja oksüdeerub. Cu haarab kaks elektroni olles oksüdeeruja ja redutseerub.
+
+# Sool ja mittemetall
+
+Non-metal that is more reactive displaces less reactive non-metal from its salt solution:
+
+1. Cl~2~ + 2 * NaBr -> 2 * NaCl + Br~2~
+
+# Sool ja alus
+
+1. $CuCl_2 + 2 \cdot NaOH → 2 \cdot NaCl + Cu(OH)_2 (vask(II)hüdroksiid) \downarrow$ 
+
+1. 2 * KOH + Cu(NO~3~)~2~ -> Cu(OH)~2~ + 2 * KNO~3~
+
+2. 2 * NaOH + CuSO~4~ -> Na~2~SO~4 + Cu(OH)~2~ (sade)
+
+3. Ca(OH)~2~ + K~2~SO~4 -> 
+
+3. NaOH + BaCl~2~
+
+Reaktsioon ei toimu, kuna sadet ei teki.
+
+# Sool ja aluseline oksiid
+
+1. CaO + NaCl
+
+Reaktsioon ei toimu.
+
+# Sool ja happeline oksiid
+
+1. CO~2~ + Fe~2~SO~4~
+
+Reaktsioon ei toimu.
+
+# Sool ja hape
+
+1. Na~2~S + 2 * HCl -> 2 * NaCl + H~2~S
+
+2. Na~2~CO~3~ + H~2~SO~4~ -> Na~2~SO~4 + H~2~CO~3~ -> Na~2~SO~4~ + H~2~O + CO~2~
+
+3. CaCl~2~ + H~2~SO~4~ -> CaSO~4~ (mingil määral sadestub) + 2 * HCl 
+
+4. $FeS + H_2SO_4 → H_2S \uparrow + FeSO_4$
+
+5. CaS + H~2~SO~3~ -> H~2~S + CaSO~3~
+
+# Soolad
+
+1. $BaCl_2 + CuSO_4 → BaSO_4 \downarrow + CuCl_2$
+
+2. FeCl~2~ + K~2~CO~3~ -> FeCO~3~ (sade) + 2 * KCl
+
+3. Li~2~S + BaCl~2~
+
+Reaktsioon ei toimu, kuna baariumsulfiid on vähelahustuv.
+
+4. NaCl + K~2~SO~4~
+
+Reaktsioon ei toimu, kuna ei teki sadet.
+
+5. CuS + Na~2~CO~3
+
+Reaktsioon ei toimu, kuna vähemalt vasksulfiid ei lahustu vees.
+
+# Lagunemised
+
+$H_2SO_4 \rightarrow 2 \cdot H + S + 4 \cdot O$
