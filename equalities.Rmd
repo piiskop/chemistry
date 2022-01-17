@@ -63,6 +63,8 @@ Reaktsioon toimub kõrge temperatuuriga.
 
 Reaktsioon toimub kõrge temperatuuriga.
 
+4. $3 \cdot O_2 + 4 \cdot Fe \rightarrow 2 \cdot Fe_2O_3$
+
 # Aluseline oksiid ja vesi
 
 1. Li~2~O + H~2~O -> 2 * LiOH
@@ -111,7 +113,7 @@ Metal hydroxides are formed:
 
 Selle reaktsiooni kestel eraldub soojus, mis põletab vesiniku ära.
 
-2. $2 \cdot Na + 2 \cdot H_2^IO^{-II} \rightarrow Na_2^{I}O^{-II} + H_2^IO^{-II} + H_2 -> 2 \cdot Na^IO^{-II}H^I + H_2$
+2. $2 \cdot Na + 2 \cdot H_2^IO^{-II} \rightarrow Na_2^{I}O^{-II} + H_2^IO^{-II} + H_2 -> 2 \cdot Na^IO^{-II}H^I + H_2 \uparrow$
 
 Selles reaktsioonis eraldub soojus, mis põletab vesiniku ära.
 
@@ -155,7 +157,9 @@ Reaktsioon ei toimu.
 
 # Mittemetall ja metall
 
-1. K + 2 * S -> K~2~S
+1. $2 \cdot Na + S \rightarrow Na_2S$
+
+2. K + 2 * S -> K~2~S
 
 # Vesinik ja metall
 
@@ -217,19 +221,33 @@ Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovuta
 
 Metal chalogenides are formed which are ionic in nature:
 
-1. 2 * Na + Cl~2~ -> 2 * NaCl
+1. $2 \cdot K + Cl_2 \rightarrow 2 \cdot KCl$
 
-2. 2 * K + Br~2~ -> 2 * KBr
+2. 2 * Na + Cl~2~ -> 2 * NaCl
 
-3. Ca + Cl~2~ -> CaCl~2~
+3. 2 * K + Br~2~ -> 2 * KBr
 
 4. Ba + F~2~ -> BaF~2~
 
-# aluselised oksiidid
+5. Ca + Cl~2~ -> CaCl~2~
+
+6. $2 \cdot Fe + 3 \cdot Cl_2 \rightarrow 2 \cdot FeCl_3$
+
+# Aluseline oksiid ja mittemetall
+
+1. $Zn^{II}O^{-II} + C \rightarrow Zn + C^{II}O^{-II}$
+
+Süsinik oksüdeerub. Tsink redutseerub.
+
+# Aluselised oksiidid
 
 1. Li~2~O + CaO
 
 Reaktsioon ei toimu.
+
+# Happeline oksiid ja mittemetall
+
+1. $SiO_2 + 2 \cdot C → Si + 2 \cdot CO$
 
 # Happeline oksiid ja vesi
 
@@ -243,9 +261,17 @@ Kui lisada süsihappe gaasi vette, siis tuleb see anum sättida suure rõhu alla
 
 4. 6 * H~2~O + P~4~O~10~ -> 4 * H~3~PO~4~
 
+5. $SiO_2 + H_2O$
+
+Reaktsioon ei toimu.
+
 # Happeline oksiid ja alus
 
-1. Ca(OH)~2~ + CO~2~ → CaCO~3~ + H~2~O
+1 $2 \cdot NaOH + SO_3 \rightarrow Na_2SO_4 + H_2O$
+
+2. $CO_2 + 2 \cdot NaOH \rightarrow Na_2CO_3 + H_2O$
+
+3. Ca(OH)~2~ + CO~2~ → CaCO~3~ + H~2~O
 
 # Happeline oksiid ja hapnik
 
@@ -253,7 +279,11 @@ Kui lisada süsihappe gaasi vette, siis tuleb see anum sättida suure rõhu alla
 
 # Happeline oksiid ja aluseline oksiid
 
-1. CO~2~ + CaO → CaCO~3~
+1. $SO_2 + Na_2O \rightarrow Na_2SO_3$
+
+2. $SO_3 + Na_2O \rightarrow Na_2SO_4$
+
+3. CO~2~ + CaO → CaCO~3~
 
 # Hape ja metall
 
@@ -263,9 +293,13 @@ Metals more reactive than hydrogen displace hydrogen from dilute acids to form m
 
 2. $Zn + 2 \cdot HCl → ZnCl_2 + H_2$
 
-3. $H_2SO_4 (väävelhape) + 2 * K -> K_2SO_4 + H_2$
+3. $H_2SO_4 + 2 \cdot Na \rightarrow Na_2SO_4 + H_2$
 
-4. 2 * H~2~SO~4~ + Cu -> CuSO~4~ + 2 * H~2~O + SO~2~
+4. $H_2SO_4 (väävelhape) + 2 * K -> K_2SO_4 + H_2$
+
+5. $H_2SO_4 + Mg \rightarrow MgSO_4 + H_2$
+
+6. 2 * H~2~SO~4~ + Cu -> CuSO~4~ + 2 * H~2~O + SO~2~
 
 $2 \cdot Al + 6 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}(S^{VI}O_4^{-II})_3 + 3 \cdot S^{IV}O_2^{-II} + 6 \cdot H_2^IO^{-II}$
 
@@ -323,11 +357,19 @@ Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
 
 2. $Na^IO^{-II}H^I (naatriumhüdroksiid ehk seebikivi) + H^ICl^{-I} -> Na^ICl^{-I} + H_2^IO^{-II}$
 
-3. $2 \cdot KOH + H_2SO_4 \rightarrow \underbrace{K_2SO_4}_{kaaliumsulfaat} + 2 \cdot \underbrace{H_2O}_{vesi}$
+3. $H_2SO_4 + 2 \cdot NaOH \rightarrow 2 \cdot H_2O + Na_2SO_4$
 
-4. 3 * NaOH + H~3~PO~4~ -> Na~3~PO~4~ + 3 * H~2~O
+4. $2 \cdot KOH + H_2SO_4 \rightarrow \underbrace{K_2SO_4}_{kaaliumsulfaat} + 2 \cdot \underbrace{H_2O}_{vesi}$
 
-5. $3 \cdot Ca(OH)_2 + 2 \cdot H_3PO_4 \rightarrow \underbrace{Ca_3(PO_4)_2}_{kaltsiumfosfaat} + 6 \cdot \underbrace{H_2O}_{vesi}$
+5. $H_2SO_4 + Ca(OH)_2 \rightarrow CaSO_4 + 2 \cdot H_2O$
+
+6. 3 * NaOH + H~3~PO~4~ -> Na~3~PO~4~ + 3 * H~2~O
+
+7. $2 \cdot H_3PO_4 + 3 \cdot Mg(OH)_2 \rightarrow 6 \cdot H_2O + Mg_3(PO_4)_2$
+
+8. $3 \cdot Ca(OH)_2 + 2 \cdot H_3PO_4 \rightarrow \underbrace{Ca_3(PO_4)_2}_{kaltsiumfosfaat} + 6 \cdot \underbrace{H_2O}_{vesi}$
+
+9. $H_2CO_3 + 2 \cdot NaOH \rightarrow Na_2CO_3 + 2 \cdot H_20$
 
 # Hape ja hapnik
 
@@ -335,9 +377,15 @@ Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
 
 # Hape ja aluseline oksiid
 
+1. $2 \cdot HCl + MgO \rightarrow MgCl_2 + H_2O$
+
 1. 2 * HCl + CaO -> H~2~O + CaCl~2~
 
-2. BaO + H~2~SO~4~ -> BaSO~4~ + H~2~O
+2. $H_2SO_4 + Na_2O \rightarrow Na_2SO_4 + H_2O$
+
+3. BaO + H~2~SO~4~ -> BaSO~4~ + H~2~O
+
+4. $H_2SO_4 + CuO \rightarrow H_2O + CuSO_4$
 
 # Happed
 
@@ -365,9 +413,13 @@ Reaktsioon ei toimu.
 
 More reactive metal displaces less reactive metal from its salt solution:
 
-1. $Zn + Cu^{II}S^{VI}O_4^{-II} \rightarrow Zn^{II}S^{VI}O_4^{-II} + Cu$
+1. $CuCl_2 + Zn \rightarrow Cu + ZnCl_2$
+
+2. $Zn + Cu^{II}S^{VI}O_4^{-II} \rightarrow Zn^{II}S^{VI}O_4^{-II} + Cu$
 
 Zn loovutab kaks elektroni olles redutseerija ja oksüdeerub. Cu haarab kaks elektroni olles oksüdeeruja ja redutseerub.
+
+3. $Fe + CuSO_4 \rightarrow FeSO_4 + Cu$
 
 # Sool ja mittemetall
 
@@ -389,6 +441,10 @@ Non-metal that is more reactive displaces less reactive non-metal from its salt 
 
 Reaktsioon ei toimu, kuna sadet ei teki.
 
+# Sool ja hapnik
+
+1. $2 \cdot ZnS + 3 \cdot O_2 \rightarrow 2 \cdot ZnO + 2 \cdot SO_2$
+
 # Sool ja aluseline oksiid
 
 1. CaO + NaCl
@@ -405,32 +461,72 @@ Reaktsioon ei toimu.
 
 1. Na~2~S + 2 * HCl -> 2 * NaCl + H~2~S
 
-2. Na~2~CO~3~ + H~2~SO~4~ -> Na~2~SO~4 + H~2~CO~3~ -> Na~2~SO~4~ + H~2~O + CO~2~
+2. $\underbrace{CaCO_3}_{pulbrina} + 2 \cdot HCl \xrightarrow{t°} CaCl_2 + H_2CO_3$
 
-3. CaCl~2~ + H~2~SO~4~ -> CaSO~4~ (mingil määral sadestub) + 2 * HCl 
+3. Na~2~CO~3~ + H~2~SO~4~ -> Na~2~SO~4 + H~2~CO~3~ -> Na~2~SO~4~ + H~2~O + CO~2~
 
-4. $FeS + H_2SO_4 → H_2S \uparrow + FeSO_4$
+4. $2 \cdot NaCl + H_2SO_4 \rightarrow Na_2SO_4 + 2 \cdot HCl \uparrow$
 
-5. CaS + H~2~SO~3~ -> H~2~S + CaSO~3~
+5. $Na_2S + H_2SO_4 \rightarrow Na_2SO_4 + H_2S$
+
+6. CaCl~2~ + H~2~SO~4~ -> CaSO~4~ (mingil määral sadestub) + 2 * HCl 
+
+7. $CaCO_3 + H_2SO_4 \rightarrow CaSO_4 + H_2 + CO_2$
+
+8. $FeS + H_2SO_4 → H_2S \uparrow + FeSO_4$
+
+9. CaS + H~2~SO~3~ -> H~2~S + CaSO~3~
+
+10. $FeSO_4 + H_2S \rightarrow FeS \downarrow + H_2SO_r$
 
 # Soolad
 
-1. $BaCl_2 + CuSO_4 → BaSO_4 \downarrow + CuCl_2$
+1. $Cs_2SO_4 + Ba(NO_3)_2 \rightarrow 2 \cdot CsNO_3 + BaSO_4 \downarrow$
 
-2. FeCl~2~ + K~2~CO~3~ -> FeCO~3~ (sade) + 2 * KCl
+2. $NaCl + AgNO_3 \rightarrow NaNO_3 + AgCl \downarrow$
 
-3. Li~2~S + BaCl~2~
+3. $BaCl_2 + CuSO_4 → BaSO_4 \downarrow + CuCl_2$
+
+4. FeCl~2~ + K~2~CO~3~ -> FeCO~3~ (sade) + 2 * KCl
+
+5. $CuSO_4\cdot5H_2O + Na_2S \rightarrow CuS \downarrow + Na_2SO_4 + 5H_2O$
+
+6. Li~2~S + BaCl~2~
 
 Reaktsioon ei toimu, kuna baariumsulfiid on vähelahustuv.
 
-4. NaCl + K~2~SO~4~
+7. NaCl + K~2~SO~4~
 
 Reaktsioon ei toimu, kuna ei teki sadet.
 
-5. CuS + Na~2~CO~3
+8. CuS + Na~2~CO~3
 
 Reaktsioon ei toimu, kuna vähemalt vasksulfiid ei lahustu vees.
 
+# Muu liitaine ja hapnik
+
+1. $CH_4 + 2 \cdot O_2 \rightarrow 2 \cdot H_2O + CO_2$
+
+2. $C_3H_8 + 5 \cdot O_2 \rightarrow 3 \cdot CO_2 + 4 \cdot H_2O + kuumus$
+
 # Lagunemised
 
-$H_2SO_4 \rightarrow 2 \cdot H + S + 4 \cdot O$
+1. $2 \cdot KCl \rightarrow Cl_2 + 2 \cdot K$
+
+2. $2 \cdot AgBr \xrightarrow{valgus} 2 \cdot Ag + Br_2$
+
+3. $2 \cdot NaCl \xrightarrow{elekter} 2 \cdot Na + Cl_2$
+
+4. $H_2SO_4 \rightarrow H_2O + SO_3 \rightarrow 2 \cdot H + S + 4 \cdot O$
+
+5. $H_2SiO_3 \xrightarrow{t°} SiO_2 + H_2O$
+
+6. $Ca(OH)_2 \xrightarrow{t°} CaO + H_2O$
+
+7. $2 \cdot Al(OH)_3 \rightarrow Al_2O_3 + 3 \cdot H_2O$
+
+8. $Cu(OH)_2 \rightarrow CuO + H_2O$
+
+9. $CaCO_3 \xrightarrow{t°} CaO + CO_2$
+
+7. $2 \cdot HgO \rightarrow 2 \cdot Hg + O_2$

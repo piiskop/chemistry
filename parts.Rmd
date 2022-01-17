@@ -18,10 +18,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 MOLAR_MASS_H = 1.008
 MOLAR_MASS_HE <- 4.0026
+MOLAR_MASS_LI <- 6.94
 MOLAR_MASS_C <- 12.011
 MOLAR_MASS_N <- 14.007
 MOLAR_MASS_O = 15.999
 MOLAR_MASS_NA = 22.99
+MOLAR_MASS_SI <- 28.085
+MOLAR_MASS_P <- 30.974
 MOLAR_MASS_S = 32.06
 MOLAR_MASS_CL <- 35.45
 MOLAR_MASS_K <- 39.098
@@ -29,7 +32,10 @@ MOLAR_MASS_CA = 40.078
 MOLAR_MASS_CR <- 51.996
 MOLAR_MASS_FE <- 55.845
 MOLAR_MASS_CU = 63.546
+MOLAR_MASS_ZN <- 65.38
 MOLAR_MASS_AG <- 107.87
+MOLAR_MASS_CS <- 132.91
+MOLAR_MASS_BA <- 137.33
 MOLAR_MASS_AU <- 196.97
 MOLAR_MASS_CUSULFATE <- MOLAR_MASS_CU + MOLAR_MASS_S + MOLAR_MASS_O * 4
 MOLAR_MASS_WATER <- MOLAR_MASS_H * 2 + MOLAR_MASS_O
@@ -41,6 +47,7 @@ DENSITY_VAPOR_STANDARD <- 22.7e-3
 
 Molaarruumala gaaside puhul: normaaltingimisetel $22.4e-3 \frac{m^3}{mol}$, standardtingimustel $22.7e-3 \frac{m^3}{mol}$.
 
+$${kontsentratsioon}_{molaarne} = \frac{moole}{ruumala * l} * M$$
 
 # Ülesanded
 
@@ -1326,3 +1333,373 @@ actual_volume_co2_dm3
 ```
 
 `r signif(actual_volume_co2_dm3, digits <- 4)` * dm^3^ CO~2~ eraldub 730 * g 5%'lise HCl'i lahuse reageerimisel CaCO~3~'ga, kui kaod on 20%.
+
+## Väävelhappe lahus
+
+### Ülesande püstitus
+
+300 cm^3^ väävelhappe lahust (ρ = 1,12 g/cm^3^) sisaldas 0,6 mol väävelhapet. 
+
+a) Arvutage väävelhappe protsendiline sisaldus (massiprotsentides) selles lahuses. 
+
+b) Mitu mooli naatriumhüdroksiidi kulub ülesande lähteandmetes toodud 300 cm^3^
+           väävelhappe lahuse täielikuks neutraliseerimiseks? Mitu grammi Na~2~SO~4~ · 10H~2~O on    
+           võimalik saada lähtudes reaktsioonil tekkinud naatriumsulfaadist?
+           
+### Lahendus
+
+Üldanne:
+
+```{r}
+amount_h2so4 <- .6
+```
+
+a) Arvutuskäik:
+
+```{r}
+mass_solution <- 300 * 1.12
+mass_h2so4 <- amount_h2so4 * (MOLAR_MASS_H * 2 + MOLAR_MASS_S + MOLAR_MASS_O * 4)
+percentage <- mass_h2so4 / mass_solution * 100
+```
+
+`r signif(percentage, digits <- 5)`% sisaldab lahus väävelhapet.
+
+b) Reaktsioonivõrrand:
+
+$$H_2SO_4 + 2 \cdot NaOH \rightarrow Na_2SO_4 + 2 \cdot H_2O$$
+
+1.2 * mol naatriumhüdroksiidi kulub ülesande lähteandmetes toodud 300 * cm^3^ väävelhappe lahuse täielikuks neutraliseerimiseks.
+
+Arvutuskäik:
+
+```{r}
+mass_na2so4 <- amount_h2so4 * (MOLAR_MASS_NA * 2 + MOLAR_MASS_S + MOLAR_MASS_O * 4)
+mass_h2o_for_na2so4 <- amount_h2so4 * (MOLAR_MASS_H * 2 + MOLAR_MASS_O) * 10
+mass <- mass_na2so4 + mass_h2o_for_na2so4
+```
+
+`r mass` * g Na~2~SO~4~ · 10H~2~O on võimalik saada lähtudes reaktsioonil tekkinud naatriumsulfaadist.
+
+## Divesiniksulfiidi ruumala
+
+### Ülesande püstitus
+
+Arvuta divesiniksulfiidi ruumala, mis tekib a) 2,2 g raud(II)sulfiidi reageerimisel väävelhappega, b) 6,4 g väävli reageerimisel vesinikuga.
+
+### Lahendus
+
+a) Reaktsioonivõrrand:
+
+$$FeS + H_2SO_4 → H_2S \uparrow + FeSO_4$$
+
+Arvutuskäik:
+
+```{r}
+volume <- 2.2 / (MOLAR_MASS_FE + MOLAR_MASS_S) * DENSITY_VAPOR_STANDARD
+```
+
+`r volume` m^3^ on divesiniksulfiidi ruumala, mis tekib 2.2 * g raud(II)sulfiidi reageerimisel väävelhappega.
+
+b) Reaktsioonivõrrand:
+
+$$S + H_2 \rightarrow H_2S$$
+
+Arvutuskäik:
+
+```{r}
+volume <- 6.4 / MOLAR_MASS_S * DENSITY_VAPOR_STANDARD
+```
+
+`r volume` * m^3^ on divesiniksulfiidi ruumala, mis tekib 6.4 * g väävli reageerimisel vesinikuga.
+
+## Tsinkhelgi täielik põletamine
+
+### Ülesande püstitus
+
+Mitu kuupmeetrit hapnikku kulub 485 kg tsinkhelgi (ZnS) täielikuks põletamiseks?
+
+### Lahendus
+
+Reaktsioonivõrrand:
+
+$$2 \cdot ZnS + 3 \cdot O_2 \rightarrow 2 \cdot ZnO + 2 \cdot SO_2$$
+
+Arvutuskäik:
+
+```{r}
+amount_zns <- 485e3 / (MOLAR_MASS_ZN + MOLAR_MASS_S)
+amount_o2 <- amount_zns / 2 * 3
+volume_o2 <- amount_o2 * DENSITY_VAPOR_STANDARD
+```
+
+`r volume_o2` * m^3^ hapnikku kulub 485 * kg tsinkhelgi täielikuks põletamiseks.
+
+## Liitiumhüdroksiidi lahuse molaarne kontsentratsioon
+
+### Ülesande püstitus
+
+Leida 150 cm^3^ liitiumhüdroksiidi lahuse molaarne kontsentratsioon, mis tekkis 2,3 g liitiumoksiidi reageerimisel veega.
+
+### Lahendus
+
+Reaktsioonivõrrand:
+
+$$Li_2O + H_2O \rightarrow 2 \cdot LiOH$$
+
+Arvutuskäik:
+
+```{r}
+amount_li2o <- 2.3 / (MOLAR_MASS_LI * 2 + MOLAR_MASS_O)
+ratio <- amount_li2o * 2 / 150e-3
+```
+
+`r signif(ratio, digits <- 5)` * M on 150 * cm^3^ liitiumhüdroksiidi lahuse molaarne kontsentratsioon, mis tekkis 2.3 * g liitiumoksiidi reageerimisel veega.
+
+## Raua reageerimine klooriga
+
+### Ülesande püstitus
+
+Mitu mooli ja mitu grammi raud(III)kloriidi tekib raua reageerimisel 6,72 dm^3^ klooriga, kui reaktsiooni kaod on 30%.
+
+### Lahendus
+
+Reaktsioonivõrrand:
+
+$$2 \cdot Fe + 3 \cdot Cl_2 \rightarrow 2 \cdot FeCl_3$$
+
+Arvutuskäik:
+
+```{r}
+amount_cl2 <- 6.72e-3 / DENSITY_VAPOR_STANDARD
+amount_fecl3 <- amount_cl2 / 3 * 2 * (1 - 30 / 100)
+mass_fecl3 <- amount_fecl3 * (MOLAR_MASS_FE + MOLAR_MASS_CL * 3)
+```
+
+Ligikaudu `r signif(amount_fecl3, digits <- 5)` * mol ja ligikaudu `r signif(mass_fecl3, digits <- 5)` * g raud(III)kloriidi tekib raua reageerimisel 6.72 * dm^3^ klooriga, kui reaktsiooni kaod on 30%.
+
+## Sademe tekkimine milligrammides
+
+### Ülesande püstitus
+
+3 grammi 1,4%-list tseesiumsulfaadi lahust lisati 1 grammile 2,9%-lisele baariumnitraadi lahusele. Mitu milligrammi sadet tekkis?
+
+### Lahendus
+
+Reaktsioonivõrrand:
+
+$$Cs_2SO_4 + Ba(NO_3)_2 \rightarrow 2 \cdot CsNO_3 + BaSO_4 \downarrow$$
+
+Arvutuskäik:
+
+```{r}
+mass_cs2so4 <- 3 * 1.4 / 100
+amount_cs2so4 <- mass_cs2so4 / (MOLAR_MASS_CS * 2 + MOLAR_MASS_S + MOLAR_MASS_O * 4)
+mass_bano3 <- 2.9 / 100
+amount_bano3 <- mass_bano3 / (MOLAR_MASS_BA + (MOLAR_MASS_N + MOLAR_MASS_O * 3) * 2)
+if (amount_cs2so4 < amount_bano3) {
+  mass_baso4_mg <- amount_cs2so4 * (MOLAR_MASS_BA + MOLAR_MASS_S + MOLAR_MASS_O * 4) * 1e3
+} else {
+  mass_baso4_mg <- amount_bano3 * (MOLAR_MASS_BA + MOLAR_MASS_S + MOLAR_MASS_O * 4) * 1e3
+}
+```
+
+`r mass_baso4_mg` * mg sadet tekkis.
+
+## Sademe tekkimine kilogrammides
+
+### Ülesande püstitus
+
+Kui palju sadet tekkis, kui segati 4 g 2%-list vasksulfaadi lahust 2,4 g 2%-lise naatriumhüdroksiidi lahusega?
+
+### Lahendus
+
+Reaktsioonivõrrand:
+
+$$CuSO_4 + 2 \cdot NaOH \rightarrow Cu(OH)_2 \downarrow + Na_2SO_4$$
+
+Arvutuskäik:
+
+```{r}
+mass_cuso4 <- 4 * 2 / 100
+amount_cuso4 <- mass_cuso4 / (MOLAR_MASS_CU + MOLAR_MASS_S + MOLAR_MASS_O * 4)
+amount_cuso4
+amount_naoh_for_comparison <- amount_cuso4 * 2
+amount_naoh_for_comparison
+mass_naoh <- 2.4 * 2 / 100
+amount_naoh <- mass_naoh / ((MOLAR_MASS_NA + MOLAR_MASS_O + MOLAR_MASS_H))
+amount_naoh
+if (amount_naoh_for_comparison < amount_naoh) {
+  mass_cuoh2 <- amount_cuso4 * (MOLAR_MASS_CU * (MOLAR_MASS_O + MOLAR_MASS_H) * 2) * 1e-3
+} else {
+  mass_cuoh2 <- amount_naoh / 2 * (MOLAR_MASS_CU * (MOLAR_MASS_O + MOLAR_MASS_H) * 2) * 1e-3
+}
+```
+
+Ligikaudu `r signif(mass_cuoh2, digits <- 5)` * kg sadet tekkis, kui segati 4 * g 2%'list vasksulfaadi lahust 2.4 * g 2%'lise naatriumhüdroksiidi lahusega.
+
+## Kaaliumi asetamine anumasse
+
+### Ülesande püstitus
+
+2,24 g kaaliumi asetati anumasse, kus oli 72 g vett. Mitu grammi 5%-list väävelhapet võib neutraliseerida tekkinud leelisega?
+
+### Lahendus
+
+Kaaliumi anumasse asetamise võrrand:
+
+$$2 \cdot K + 2 \cdot H_2O \rightarrow 2 \cdot KOH + H_2$$
+
+Lasen arvutada kaaliumhüdroksiidi massi:
+
+```{r}
+amount_k <- 2.24 / MOLAR_MASS_K
+amount_k
+amount_water <- 72 / (MOLAR_MASS_H * 2 + MOLAR_MASS_O)
+amount_water
+```
+
+Reaktsioonivõrrand:
+
+$$2 \cdot KOH + H_2SO_4 \rightarrow K_2SO_4 + 2 \cdot H_2O$$
+
+Arvutuskäik:
+
+```{r}
+molar_mass_h2so4 <- MOLAR_MASS_H * 2 + MOLAR_MASS_S + MOLAR_MASS_O * 4
+molar_mass_h2so4
+if (amount_k < amount_water) {
+  mass_h2so4 <- amount_k / 2 * (molar_mass_h2so4)
+} else {
+  mass_h2so4 <- amount_water / 2 * (molar_mass_h2so4)
+}
+```
+
+Puhast väävelhapet saab neutraliseerida `r mass_h2so4` * g. See on 5% väävelhappe lahust. Nüüd tuleb arvutada lahuse mass:
+
+```{r}
+mass_solution <- mass_h2so4 * 100 / 5
+```
+
+Ligikaudu `r signif(mass_solution, digits <- 5)` * g 5%'list väävelhapet võib neutraliseerida tekkinud leelisega.
+
+## Kaalium tööstuslikult
+
+### Ülesande püstitus
+
+Kaaliumi saadakse tööstuslikult sula KCl elektrolüüsil. Protsessi käigus eraldub anoodil kloor ning katoodil metalne kaalium (2KCl → 2K + Cl2↑). Mitu tonni toorainet, mis sisaldab 82 % kaaliumkloriidi tuleb võtta 5,5 m^3^ kaaliumi (ρ = 0,86 g/cm^3^) saamiseks kui kogu protsessi saagis on 73 %?
+
+### Lahendus
+
+Reaktsioonivõrrand:
+
+$$2 \cdot KCl \rightarrow Cl_2 + 2 \cdot K$$
+
+Arvutuskäik:
+
+```{r}
+mass_k_actual <- 5.5 * .86e-3 / 1e-6
+mass_k_theoretical <- mass_k_actual * 100 / 73
+amount_k_theoretical <- mass_k_theoretical * 1e3 / MOLAR_MASS_K
+mass_kcl_theoretical <- amount_k_theoretical * (MOLAR_MASS_K + MOLAR_MASS_CL)
+mass_kcl_actual <- mass_kcl_theoretical * 100 / 82 * 1e-6
+```
+
+Ligikaudu `r signif(mass_kcl_actual, digits <- 5)` * t toorainet, mis sisaldab 82% kaaliumklriidi, tuleb võtta 5.5 * m^3^ kaaliumi saamiseks, kui kogu protsessi saagis on 73%.
+
+## Nüüdisaegne elektroonikatööstus
+
+### Ülesande püstitus
+
+Nüüdisaegne elektroonikatööstus vajab suurtes kogustes räni. Räni toodetakse ränidioksiidi redutseerimisel söega elektriahjudes. Mitu kg liiva, mis sisaldab 85% SiO~2~, tuleb võtta 5,6 kg räni saamiseks?
+
+### Lahendus
+
+Reaktsioonivõrrand:
+
+$$SiO_2 + 2 \cdot C → Si + 2 \cdot CO$$
+
+Arvutuskäik:
+
+```{r}
+amount_si <- 5.6e3 / MOLAR_MASS_SI
+mass_sio2 <- amount_si * (MOLAR_MASS_SI + MOLAR_MASS_O * 2)
+mass_sand <- mass_sio2 * 100 / 85 * 1e-3
+```
+
+`r signif(mass_sand, digits <- 5)` * kg liiva, mis sisaldab 85% SiO~2~, tuleb võtta 5.6 * kg räni saamiseks.
+
+## Kontsentratsioonid 
+
+### Ülesande püstitus
+
+Leida 350 cm^3^ fosforhappe lahuse (ρ=1,445 g/dm^3^) molaarne, molaalne ning protsendiline kontsentratsioon, mis tekkis 288,62 g tetrafosfordekaoksiidi reageerimisel veega?
+
+### Lahendus
+
+Reaktsioonivõrrand:
+
+$$P_4O_{10} + 6 \cdot H_2O \rightarrow 4 \cdot H_3PO_4$$
+
+Arvutuskäik:
+
+```{r}
+amount_p4o10 <- 288.62 / (MOLAR_MASS_P * 4 + MOLAR_MASS_O * 10)
+amount_h3po4 <- amount_p4o10 * 4
+mass_h3po4_solution <- 350e-6 * 1.445e-3 / 1e-3
+mass_h3po4 <- amount_h3po4 * (MOLAR_MASS_H * 3 + MOLAR_MASS_P + MOLAR_MASS_O * 4) * 1e-3
+percentage <- mass_h3po4 / mass_h3po4_solution * 100
+molarity <- amount_h3po4 / 350e-3
+molality <- 1 / molarity
+```
+
+`r signif(molarity, digits <- 5)` * M on 350 cm^3 fosforhappe lahuse molaarne, $`r signif(molality, digits <- 5)` \cdot \frac{1}{M}$ molaalne ja `r signif(percentage, digits <- 5)` protsendiline kontsentratsioon, mis tekkis 288.62 * g tetrafosfordekaoksiidi reageerimisel veega.
+
+## Veele vaskvitrioli lisamine
+
+### Ülesande püstitus
+
+200 g veele lisati 40 g vaskvitrioli (CuSO~4~ · 5H~2~O).
+
+a) Arvutage 40 g vaskvitriolis sisalduva vask(II)sulfaadi hulk (moolides). 
+
+b) Arvutage vask(II)sulfaadi protsendiline sisaldus saadud lahuses. 
+
+c) Saadud lahusele lisati 9,6 g tahket naatriumsulfiidi. Mitu grammi sadet tekkis?
+
+### Lahendus
+
+Üldandmed ja -arvutused:
+
+```{r}
+mass_cuso45h2o <- 40
+molar_mass_cuso4 <- MOLAR_MASS_CU + MOLAR_MASS_S + MOLAR_MASS_O * 4
+amount_cuso45h2o <- mass_cuso45h2o / (molar_mass_cuso4 + 5 * (MOLAR_MASS_H * 2 + MOLAR_MASS_O))
+```
+
+a) `r amount_cuso45h2o` * mol vask(II)sulfaati on 40 * g vaskvitriolis.
+
+b) Arvutuskäik:
+
+```{r}
+mass_cuso4 <- amount_cuso45h2o * molar_mass_cuso4
+percentage <- mass_cuso4 / (240 + mass_cuso45h2o) * 100
+```
+
+`r signif(percentage, digits <- 5)`% vask(II)sulfaati sisaldub lahuses.
+
+c) Reaktsioonivõrrand:
+
+$$CuSO_4\cdot5H_2O + Na_2S \rightarrow CuS \downarrow + Na_2SO_4 + 5H_2O$$
+
+Arvutuskäik:
+
+```{r}
+amount_na2s <- 9.6 / (MOLAR_MASS_NA * 2 + MOLAR_MASS_S)
+if (amount_cuso45h2o < amount_na2s) {
+  mass_cus <- amount_cuso45h2o * (MOLAR_MASS_CU + MOLAR_MASS_S)
+} else {
+  mass_cus <- amount_na2s * (MOLAR_MASS_CU + MOLAR_MASS_S)
+}
+```
+
+`r signif(mass_cus, digits <- 5)` * g sadet tekkis.
