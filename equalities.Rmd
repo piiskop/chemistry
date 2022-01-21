@@ -161,17 +161,9 @@ Reaktsioon ei toimu.
 
 2. K + 2 * S -> K~2~S
 
-# Vesinik ja metall
+# Mittemetallid
 
-Reactive metals from ionic metal hydrides:
-
-1. H~2~ + Li -> 2 * LiH
-
-2. H~2~+ 2 * Na -> 2 * NaH
-
-3. H~2~ + Ca -> CaH~2~
-
-# Vesinik ja mittemetall
+## Vesinik ja mittemetall
 
 Covalent hydrides are formed:
 
@@ -181,19 +173,7 @@ Covalent hydrides are formed:
 
 2. H~2~ + S -> H~2~S
 
-# Vesi ja mittemetall
-
-Generally, do not react:
-
-1. C + H~2~O -> (CO + H~2~) (vesigaas)
-
-See reaktsioon toimub auruga.
-
-2. H~2~O + S
-
-See reaktsioon ei toimu.
-
-# Hapnik ja mittemetall
+## Hapnik ja mittemetall
 
 Non – metal oxides are formed, which are generally acidic in nature:
 
@@ -213,9 +193,31 @@ Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovuta
 
 4. 2 * S + 3* O~2~ (erinev *3*'st) -> 2 * SO~3~
 
-# Hapnik ja vesinik
+## Hapnik ja vesinik
 
-1. 2 * H~2~ + O~2~ <-> 2 * H~2~O
+1. $2H_2 + O_2 \leftrightarrow 2H_2O$
+
+# Vesinik ja metall
+
+Reactive metals from ionic metal hydrides:
+
+1. H~2~ + Li -> 2 * LiH
+
+2. H~2~+ 2 * Na -> 2 * NaH
+
+3. H~2~ + Ca -> CaH~2~
+
+# Vesi ja mittemetall
+
+Generally, do not react:
+
+1. C + H~2~O -> (CO + H~2~) (vesigaas)
+
+See reaktsioon toimub auruga.
+
+2. H~2~O + S
+
+See reaktsioon ei toimu.
 
 # Halogeen ja metall
 
@@ -255,13 +257,17 @@ Reaktsioon ei toimu.
 
 Kui lisada süsihappe gaasi vette, siis tuleb see anum sättida suure rõhu alla, sest kui sellest me vabastame, laguneb süsihape. Karastusjoogid.
 
-2. H~2~O + SO~2~ -> H~2~SO~3~
+2. $C_6H_{12}O_6 + 6O_2 \leftrightarrow 6CO_2 + 6H_2O + (energia: 18ATP + 12NADPH(3ATP))$
 
-3. SO~3~ + H~2~O -> H~2~SO~4~
+hingamine ja fotosüntees
 
-4. 6 * H~2~O + P~4~O~10~ -> 4 * H~3~PO~4~
+3. H~2~O + SO~2~ -> H~2~SO~3~
 
-5. $SiO_2 + H_2O$
+4. SO~3~ + H~2~O -> H~2~SO~4~
+
+5. 6 * H~2~O + P~4~O~10~ -> 4 * H~3~PO~4~
+
+6. $SiO_2 + H_2O$
 
 Reaktsioon ei toimu.
 
@@ -503,30 +509,42 @@ Reaktsioon ei toimu, kuna ei teki sadet.
 
 Reaktsioon ei toimu, kuna vähemalt vasksulfiid ei lahustu vees.
 
+# Muu liitaine ja vesinik
+
+1. $HCO_3^- + H^+ \leftrightarrow H_2CO_3 \leftrightarrow CO_2 + H_2O$
+
+From left to right: the process of raising pH as more CO2 is made. From right to left: the reverse process: the lowering of pH as more bicarbonate is created.
+
 # Muu liitaine ja hapnik
 
 1. $CH_4 + 2 \cdot O_2 \rightarrow 2 \cdot H_2O + CO_2$
 
 2. $C_3H_8 + 5 \cdot O_2 \rightarrow 3 \cdot CO_2 + 4 \cdot H_2O + kuumus$
 
+# Muu liitaine ja vesi
+
+1. $ATP + H_2O \leftrightarrow ADP + P_i + \underbrace{\overbrace{\text{vaba energia}}}^{-305e2 \cdot \frac{J}{mol}}_{-57e3 \cdot \frac{J}{mol} rakus}$
+
 # Lagunemised
 
-1. $2 \cdot KCl \rightarrow Cl_2 + 2 \cdot K$
+1. $2H_2O_2 \rightarrow 2H_2O + O_2$
 
-2. $2 \cdot AgBr \xrightarrow{valgus} 2 \cdot Ag + Br_2$
+2. $2 \cdot KCl \rightarrow Cl_2 + 2 \cdot K$
 
-3. $2 \cdot NaCl \xrightarrow{elekter} 2 \cdot Na + Cl_2$
+3. $2 \cdot AgBr \xrightarrow{valgus} 2 \cdot Ag + Br_2$
 
-4. $H_2SO_4 \rightarrow H_2O + SO_3 \rightarrow 2 \cdot H + S + 4 \cdot O$
+4. $2 \cdot NaCl \xrightarrow{elekter} 2 \cdot Na + Cl_2$
 
-5. $H_2SiO_3 \xrightarrow{t°} SiO_2 + H_2O$
+5. $H_2SO_4 \rightarrow H_2O + SO_3 \rightarrow 2 \cdot H + S + 4 \cdot O$
 
-6. $Ca(OH)_2 \xrightarrow{t°} CaO + H_2O$
+6. $H_2SiO_3 \xrightarrow{t°} SiO_2 + H_2O$
 
-7. $2 \cdot Al(OH)_3 \rightarrow Al_2O_3 + 3 \cdot H_2O$
+7. $Ca(OH)_2 \xrightarrow{t°} CaO + H_2O$
 
-8. $Cu(OH)_2 \rightarrow CuO + H_2O$
+8. $2 \cdot Al(OH)_3 \rightarrow Al_2O_3 + 3 \cdot H_2O$
 
-9. $CaCO_3 \xrightarrow{t°} CaO + CO_2$
+9. $Cu(OH)_2 \rightarrow CuO + H_2O$
 
-7. $2 \cdot HgO \rightarrow 2 \cdot Hg + O_2$
+10. $CaCO_3 \xrightarrow{t°} CaO + CO_2$
+
+11. $2 \cdot HgO \rightarrow 2 \cdot Hg + O_2$
