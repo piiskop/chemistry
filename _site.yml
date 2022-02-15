@@ -22,5 +22,7 @@ navbar:
       href: equalities.html
     - text: "osamäärad"
       href: parts.html
+    - text: "ÜLESANNE: Anorgaaniliste reaktsioonide toimumise tingimused"
+      href: ülesanne-anorgaaniliste-reaktsioonide-toimumise-tingimused.html
     - text: "autor"
       href: about.html

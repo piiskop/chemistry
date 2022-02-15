@@ -15,6 +15,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Reeglid oksüdatsiooniastmete jaoks
 
+Oksüdatsiooniaste näitab elektronide loovutamise ja liitmise võimet:
+
 1. Free elements have an oxidation state of zero (e.g. Na, Fe, H2, O2, S8).
 
 2. In an ion the all Oxidation numbers must add up to the charge on the ion.
@@ -34,6 +36,10 @@ knitr::opts_chunk$set(echo = TRUE)
 9. Oxygen = -2 (except in H~2~O~2~ or with Fluorine)
 
 10. Group 17(7A) = -1 except with Oxygen and other halogens lower in the group
+
+11. $\underbrace{RH}_{\text{reducing agent}} + \underbrace{NAD^+}_{\text{oxidizing agent}} → \underbrace{NADH}_{\text{reduced}}+\underbrace{R^+}_{oxidized}$
+
+12. $\text{Pyruvic acid} + NADH ↔ \text{lactic acid} + NAD^+$
 
 # Hapnik ja metall
 
@@ -58,6 +64,8 @@ Reaktsioon toimub kõrge temperatuuriga.
 2. 4 * Al + 3 * O~2~ -> 2 * Al~2~O~3~
 
 Reaktsioon toimub kõrge temperatuuriga.
+
+![Iooniline side on alumiiniumi ja hapniku ioonide vahel](al2o3-lewis.svg)
 
 3. 2 * Zn + O~2~ -> 2 * ZnO
 
@@ -167,11 +175,33 @@ Reaktsioon ei toimu.
 
 Covalent hydrides are formed:
 
-1. H~2~ + Cl~2~ -> 2 * HCl
+1. $2H_2 + O_2 \rightarrow 2H_2^IO^{-II}$
 
-2. N~2~ + 3 * H~2~ -> 2 * NH~3~ (ammoniaak)
+H - 1 * e -> H^+^
 
-2. H~2~ + S -> H~2~S
+H~2~ - 2 * e -> 2H^+^
+
+![Hapnik saab kaks elektroni ja redutseerub, kaks vesinikku loovutavad kumbki ühe elektroni ja oksüdeeruvad.](o--ii-h2-2hi.svg)
+
+Hapnik tahab vesinikku rohkem kui teist hapnikku, sest eleketronegatiivsused on erinevamad.
+
+![Hapniku aatomi ja vesiniku aatomi vahel on polaarne kovalentne side. Vee molekulide vahel on vesinikside.](h20-vesinikside.svg)
+
+2. $H_2 + F_2 \rightarrow 2HF$
+
+![Vesinikfluoriidi Lewise struktuur](hf-lewis.svg)
+
+3. H~2~ + Cl~2~ -> 2 * HCl
+
+4. N~2~ + 3 * H~2~ -> 2 * NH~3~ (ammoniaak)
+
+5. H~2~ + S -> H~2~S
+
+## Vesinik ja vesinik
+
+1. $H + H \rightarrow H_2$
+
+![reaktsioonivõrrand](h+h.svg)
 
 ## Hapnik ja mittemetall
 
@@ -191,11 +221,39 @@ See reaktsioon toimub rohke hapnikuga.
 
 Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovutab neli elektroni olles redutseerija ja oksüdeerub.
 
+![Vääveldioksiidi Lewise struktuur](so2-lewis.svg)
+
 4. 2 * S + 3* O~2~ (erinev *3*'st) -> 2 * SO~3~
+
+![Vääveltrioksiidi Lewise struktuur](so3-lewis.svg)
+
+![Vääveltrioksiidi kui aniooni Lewise struktuur](so3--2-lewis.svg)
 
 ## Hapnik ja vesinik
 
 1. $2H_2 + O_2 \leftrightarrow 2H_2O$
+
+## Hapnik ja hapnik
+
+1. $O + O \rightarrow O_2$
+
+![reaktsioonivõrrand](o+o-o2.svg)
+
+![Kaks hapniku aatomit jagavad kummagi kaht elektroni.](o-o-6+2.svg)
+
+## Muud
+
+1. $Cl + Cl \rightarrow Cl_2$
+
+![reaktsioonivõrrand](cl+cl-cl2.svg)
+
+![Kaks kloori aatomit jagamas ühist elektroni](cl-cl.svg)
+
+![Kummalgi kloori aatomil on enda seitse elektroni ja üks teise kloori aatomi elektron](cl-cl-7-1.svg)
+
+tugev mittepolaarne kovalentne side
+
+Looduses esineb Cl~2~, mitte Cl, sest nii on stabiilsem.
 
 # Vesinik ja metall
 
@@ -224,6 +282,8 @@ See reaktsioon ei toimu.
 Metal chalogenides are formed which are ionic in nature:
 
 1. $2 \cdot K + Cl_2 \rightarrow 2 \cdot KCl$
+
+![Iooniline side naatriumi ja kloori aatomite vahel](nacl-lewis.svg)
 
 2. 2 * Na + Cl~2~ -> 2 * NaCl
 
@@ -257,7 +317,7 @@ Reaktsioon ei toimu.
 
 Kui lisada süsihappe gaasi vette, siis tuleb see anum sättida suure rõhu alla, sest kui sellest me vabastame, laguneb süsihape. Karastusjoogid.
 
-2. $C_6H_{12}O_6 + 6O_2 \leftrightarrow 6CO_2 + 6H_2O + (energia: 18ATP + 12NADPH(3ATP))$
+2. $C_6H_{12}O_6 + 6O_2 \leftrightarrow 6CO_2 + 6H_2O + (energia: 18ATP + 12NADPH(3ATP)) + kuumus$
 
 hingamine ja fotosüntees
 
@@ -548,3 +608,5 @@ From left to right: the process of raising pH as more CO2 is made. From right to
 10. $CaCO_3 \xrightarrow{t°} CaO + CO_2$
 
 11. $2 \cdot HgO \rightarrow 2 \cdot Hg + O_2$
+
+12. $\text{Pyruvic acid} → CO_2 + acetaldehyde + NADH → ethanol + NAD^+$

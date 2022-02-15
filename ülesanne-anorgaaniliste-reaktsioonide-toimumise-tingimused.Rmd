@@ -1,0 +1,182 @@
+---
+title: 'ÜLESANNE: Anorgaaniliste reaktsioonide toimumise tingimused'
+author: 'peacecop kalmer:'
+date: "2/15/2022"
+output:
+  bookdown::html_document2:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Ülesande püstitus
+
+Töötage läbi kaasas olev materjal (["Keemia põhiteadmised"](https://nextcloud.tennis24.ee/index.php/s/tJbQDL75kQMQbc7)) ning interpreteerige järgnevad reaktsioonivõrrandid lähtudes allpool esitatud küsimustest:
+
+1.      Lõpetage ja tasakaalustage TOIMUVATE reaktsioonide võrrandid ning lisage võrrandi TOIMUMISE või MITTETOIMUMISE tingimus(ed).
+
+2.      Millised reaktsioonides on redoksreaktsioonid ning millest seda järeldate?
+
+3.      Määrake kõikides redoksreaktsioonides oksüdeerija ning redutseerija ja näidake elektronide üleminekud.
+
+1) $Al + H_2O → (toatemperatuuril)$
+
+2) $Fe + H_2O → (veeaur)$
+
+3) $Cu(OH)_2 + H_2S →$
+
+4) $Zn + H_2SO_4 → (arvestada, et tekib happele vastav sool, SO_2 ja vesi)$
+
+5) $Zn(OH)_2 + NaCl →$
+
+6) $Mg + CaCl_2 →$
+
+7) $SO_2 + O_2 →$
+
+8) $CO_2 + SO_2 →$
+
+9) $Ba + H_2O →$
+
+10) $Ca(OH)_2 + HCl →$
+
+11) $CuSO_4 + BaCl_2 →$
+
+12) $NaI + CaCl_2 →$
+
+13) $Al_2O_3 + H_2S →$
+
+14) $Li_2O + Ba(OH)_2 →$
+
+15) $Fe + ZnSO_4 →$
+
+16) $SO_3 + MgO →$
+
+17) $Na + S →$
+
+18) $Ba(NO_3)_2 + HCl →$
+
+19) $NaCl + H_2SO_4 →$
+
+20) $Ag + HCl →$
+
+# Lahendus
+
+1) Alumiinium ei reageeri veega toatemperatuuril.
+
+2) $2Fe + 3H_2^IO^{-II} → (veeaur) Fe_2^{III}O_3^{-II} + 3H_2$
+
+Redoksreaktsioon, sest oksüdatsiooniastmed muutuvad:
+
+Raud on redutseerija, sest loovutab elektrone:
+
+$$Fe - 3 * e \rightarrow Fe^{III}$$
+
+Vesinik on oksüdeerija, sest haagib elektrone:
+
+$$H^I + e \rightarrow H$$
+
+3) $Cu(OH)_2 + H_2S → CuS + 2H_2O$
+
+Reaktsioon toimub alati.
+
+4) $Zn + 2H_2S^{VI}O_4^{-II} → \text{(arvestada, et tekib happele vastav sool, SO_2 ja vesi)}Zn^{II}S^{VI}O_4^{-II} + S^{IV}O_2^{-II} + 2H_2O$
+
+Toatemperatuuril toimub reaktsioon mõõdukalt.
+
+See on redoksreaktsioon, sest oksüdatsiooniastmed muutuvad.
+
+Tsink on redutseerija, sest loovutab elektrone:
+
+$$Zn - 2 \cdot e \rightarrow Zn^{II}$$
+
+Väävel on oksüdeerija, sest haagib elektrone:
+
+$$S^{VI} + 2 \cdot e \rightarrow S^{IV}$$
+
+5) $Zn(OH)_2 + NaCl →$
+
+Tsinkhüdroksiid ei lahustu vees, mistõttu reaktsioon ei toimu.
+
+6) $Mg + CaCl_2 →$
+
+Reaktsioon ei toimu, kuna magneesium ei tõrju kaltsiumi kaltsiumkloriidist välja.
+
+7) $2S^{IV}O_2^{-II} + O_2 → 2S^{VI}O_3^{-II}$
+
+Reaktsioon toimub alati.
+
+See on redoksreaktsioon, sest elementide oksüdatsiooniastmed muutuvad.
+
+Väävel on redutseerija, sest loovutab elektrone:
+
+$$S^{IV} - 2 \cdot e \rightarrow S^{VI}$$
+
+Hapnik on oksüdeerija, sest haagib elektrone:
+
+$$O + 2 \cdot e \rightarrow O^{-II}$$
+
+8) $CO_2 + SO_2 →$
+
+Happelised oksiidid omavahel ei reageeri.
+
+9) $Ba + 2H_2^{I}O → Ba^{II}(OH)_2 + H_2$
+
+Reaktsioon toimub alati.
+
+See on redoksreaktsioon, sest elementide oksüdatsiooniastmed muutuvad.
+
+Baarium on redutseerija, sest loovutab elektrone:
+
+$$Ba - 2 \cdot e \rightarrow Ba^{II}$$
+
+Vesinik on oksüdeerija, sest hangib elektrone:
+
+$$H^{I} + e \rightarrow H$$
+
+10) $Ca(OH)_2 + 2HCl → CaCl_2 + 2H_2O$
+
+Reaktsioon toimub alati.
+
+11) $CuSO_4 + BaCl_2 → CuCl_2 + BaSO_4$
+
+Reaktsioon toimub alati.
+
+12) $NaI + CaCl_2 →$
+
+Reaktsioon ei toimu, kuna ei teki sadet.
+
+13) $Al_2O_3 + 3H_2S → Al_2S_3 + 3H_2O$
+
+Reaktsioon toimub alati.
+
+14) $Li_2O + Ba(OH)_2 →$
+
+Sellise reaktsiooni toimumise kohta infot pole.
+
+15) $Fe + ZnSO_4 →$
+
+Reaktsioon ei toimu, sest raud ei tõrju aktiivsemat tsinki soolast välja.
+
+16) $SO_3 + MgO → MgSO_4$
+
+Reaktsioon toimub alati.
+
+17) $Na + S →$
+
+Sellise reaktsiooni toimumise kohta infot pole.
+
+18) $Ba(NO_3)_2 + 2HCl → BaCl_2 + 2HNO_3$
+
+Reaktsioon toimub alati.
+
+19) $NaCl + H_2SO_4 →$
+
+Reaktsioon ei toimu, sest sadet ei teki ja vesinikkloriidhape pole väävelhappest nõrgem.
+
+20) $Ag + HCl →$
+
+Reaktsioon ei toimu, sest hõbe on selleks liiga nõrk.
