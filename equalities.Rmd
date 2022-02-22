@@ -145,21 +145,47 @@ Reaktsioon toimub kõrge temperatuuriga. Kui alumiiniumpakend on auruga piiratud
 
 Reaktsioon toimub kõrge temperatuuriga.
 
-8. 3 * Fe + 4 * H~2~O <-> Fe~3~O~4~ + 4 * H~2~
+8. $2Fe + 3H_2^IO^{-II} → (veeaur) Fe_2^{III}O_3^{-II} + 3H_2$
 
-9. Cu + H~2~O
+Redoksreaktsioon, sest oksüdatsiooniastmed muutuvad:
+
+Raud on redutseerija, sest loovutab elektrone:
+
+$$Fe - 3 * e \rightarrow Fe^{III}$$
+
+Vesinik on oksüdeerija, sest haagib elektrone:
+
+$$H^I + e \rightarrow H$$
+
+9. 3 * Fe + 4 * H~2~O <-> Fe~3~O~4~ + 4 * H~2~
+
+10. $Ba + 2H_2^{I}O → Ba^{II}(OH)_2 + H_2$
+
+Reaktsioon toimub alati.
+
+See on redoksreaktsioon, sest elementide oksüdatsiooniastmed muutuvad.
+
+Baarium on redutseerija, sest loovutab elektrone:
+
+$$Ba - 2 \cdot e \rightarrow Ba^{II}$$
+
+Vesinik on oksüdeerija, sest hangib elektrone:
+
+$$H^{I} + e \rightarrow H$$
+
+11. Cu + H~2~O
 
 reaktsioon ei toimu, sest vask on selleks liiga nõrk
 
-10. Pb + H~2~O
+12. Pb + H~2~O
 
 Reaktsioon ei toimu.
 
-11. Ag + H~2~O
+13. Ag + H~2~O
 
 Reaktsioon ei toimu.
 
-12. Au + H~2~O
+14. Au + H~2~O
 
 Reaktsioon ei toimu.
 
@@ -341,7 +367,19 @@ Reaktsioon ei toimu.
 
 # Happeline oksiid ja hapnik
 
-1. 2 * SO~2~ + O~2~ -> 2 * SO~3~
+1. $2S^{IV}O_2^{-II} + O_2 → 2S^{VI}O_3^{-II}$
+
+Reaktsioon toimub alati.
+
+See on redoksreaktsioon, sest elementide oksüdatsiooniastmed muutuvad.
+
+Väävel on redutseerija, sest loovutab elektrone:
+
+$$S^{IV} - 2 \cdot e \rightarrow S^{VI}$$
+
+Hapnik on oksüdeerija, sest haagib elektrone:
+
+$$O + 2 \cdot e \rightarrow O^{-II}$$
 
 # Happeline oksiid ja aluseline oksiid
 
@@ -349,7 +387,11 @@ Reaktsioon ei toimu.
 
 2. $SO_3 + Na_2O \rightarrow Na_2SO_4$
 
-3. CO~2~ + CaO → CaCO~3~
+3. $SO_3 + MgO → MgSO_4$
+
+Reaktsioon toimub alati.
+
+4. CO~2~ + CaO → CaCO~3~
 
 # Hape ja metall
 
@@ -367,7 +409,7 @@ Metals more reactive than hydrogen displace hydrogen from dilute acids to form m
 
 6. 2 * H~2~SO~4~ + Cu -> CuSO~4~ + 2 * H~2~O + SO~2~
 
-$2 \cdot Al + 6 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}(S^{VI}O_4^{-II})_3 + 3 \cdot S^{IV}O_2^{-II} + 6 \cdot H_2^IO^{-II}$
+$$2 \cdot Al + 6 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}(S^{VI}O_4^{-II})_3 + 3 \cdot S^{IV}O_2^{-II} + 6 \cdot H_2^IO^{-II}$$
 
 $$Al + 3 \cdot e \rightarrow Al_2^{III}$$
 
@@ -375,9 +417,23 @@ $$S^{VI} - 2 \cdot e \rightarrow S^{IV}$$
 
 Et saada võrdne arv elektronide liitmisi ja lahutamisi, on vaja alumiiniumile liidetavate elektronide arv korrutada kahega ja väävlilt eemaldatavate elektronide arv korrutada kolmega. See kaks rakendub alumiiniumi puhul kahele molekulile, kuna neid on kaks. Ühele järelikult üks.
 
-5. $Cu + 2 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} CuS^{VI}O_4^{-II} + S^{IV}O_2^{-II} \uparrow + 2 \cdot H_2^{I}O^{-II}$
+7. $Cu + 2 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} CuS^{VI}O_4^{-II} + S^{IV}O_2^{-II} \uparrow + 2 \cdot H_2^{I}O^{-II}$
 
-6. $2 \cdot Al + 6 \cdot (konts. H^IN^VO_3^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}O_3^{-II} + 6 \cdot N^{IV}O_2^{-II} + 3 \cdot H_2^IO^{-II}$
+$Zn + 2H_2S^{VI}O_4^{-II} → \text{(arvestada, et tekib happele vastav sool, SO_2 ja vesi)}Zn^{II}S^{VI}O_4^{-II} + S^{IV}O_2^{-II} + 2H_2O$
+
+Toatemperatuuril toimub reaktsioon mõõdukalt.
+
+See on redoksreaktsioon, sest oksüdatsiooniastmed muutuvad.
+
+Tsink on redutseerija, sest loovutab elektrone:
+
+$$Zn - 2 \cdot e \rightarrow Zn^{II}$$
+
+Väävel on oksüdeerija, sest haagib elektrone:
+
+$$S^{VI} + 2 \cdot e \rightarrow S^{IV}$$
+
+8. $2 \cdot Al + 6 \cdot (konts. H^IN^VO_3^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}O_3^{-II} + 6 \cdot N^{IV}O_2^{-II} + 3 \cdot H_2^IO^{-II}$
 
 $$Al - 3 \cdot e \xrightarrow{t°} Al^{III}$$
 
@@ -385,35 +441,39 @@ $$N^V + 1 \cdot e \rightarrow N^{IV}$$
 
 When conc. HNO~3~ is added to aluminium a thin protective layer of alumina (Al~2~O~3~) is formed on its surface which prevents further action. As a result, Al becomes passive.
 
-7. $8 \cdot (konts. H^IN^VO_3^{-II}) + 3 \cdot Cu \rightarrow 3 \cdot Cu^{II}(N^VO_3^{-II})_2 + 4 \cdot H_2^IO^{-II} + 2 \cdot N^{II}O^{-II}$
+9. $8 \cdot (konts. H^IN^VO_3^{-II}) + 3 \cdot Cu \rightarrow 3 \cdot Cu^{II}(N^VO_3^{-II})_2 + 4 \cdot H_2^IO^{-II} + 2 \cdot N^{II}O^{-II}$
 
 $$N^V + 3 \cdot e \rightarrow N^{II}$$
 
 $$Cu - 2 \cdot e \rightarrow Cu^{II}$$
 
-8. $4 \cdot (konts. H^IN^VO_3^{-II}) +  \cdot Cu \rightarrow  \cdot Cu^{II}(N^VO_3^{-II})_2 +  2 \cdot H_2^IO^{-II} + 2 \cdot N^{IV}O_2^{-II}$
+10. $4 \cdot (konts. H^IN^VO_3^{-II}) +  \cdot Cu \rightarrow  \cdot Cu^{II}(N^VO_3^{-II})_2 +  2 \cdot H_2^IO^{-II} + 2 \cdot N^{IV}O_2^{-II}$
 
 $$N^V + 1 \cdot e \rightarrow N^{IV}$$
 
 $$Cu - 2 \cdot e \rightarrow Cu^{II}$$
 
-9. HCl + Cu 
+11. HCl + Cu 
 
 Reaktsioon ei toimu, sest vesinik on tugevam ja vask ei tõrju vesinikku välja.
 
-10. $Al + (konts. H^IN^VO_3^{-II}, \text{suitsev pruunikalt, ebastabiilne})$
+12. $Ag + HCl →$
+
+Reaktsioon ei toimu, sest hõbe on selleks liiga nõrk.
+
+13. $Al + (konts. H^IN^VO_3^{-II}, \text{suitsev pruunikalt, ebastabiilne})$
 
 Toatemperatuuril reaktsioon ei toimu.
 
-11. Fe + konts. H~2~SO~4~ →
+14. Fe + konts. H~2~SO~4~ →
 
 Toatemperatuuril reaktsioon ei tiomu.
 
-12. $Cu + HNO_3$
+15. $Cu + HNO_3$
 
 Reaktsioon ei toimu, kuna vask on nõrgem kui vesinik.
 
-13. H~3~PO~4~ + Ag
+16. H~3~PO~4~ + Ag
 
 Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
 
@@ -421,21 +481,29 @@ Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
 
 1. KOH + HCl -> KCl + H~2~O
 
-2. $Na^IO^{-II}H^I (naatriumhüdroksiid ehk seebikivi) + H^ICl^{-I} -> Na^ICl^{-I} + H_2^IO^{-II}$
+2. $Ca(OH)_2 + 2HCl → CaCl_2 + 2H_2O$
 
-3. $H_2SO_4 + 2 \cdot NaOH \rightarrow 2 \cdot H_2O + Na_2SO_4$
+Reaktsioon toimub alati.
 
-4. $2 \cdot KOH + H_2SO_4 \rightarrow \underbrace{K_2SO_4}_{kaaliumsulfaat} + 2 \cdot \underbrace{H_2O}_{vesi}$
+3. $Na^IO^{-II}H^I (naatriumhüdroksiid ehk seebikivi) + H^ICl^{-I} -> Na^ICl^{-I} + H_2^IO^{-II}$
 
-5. $H_2SO_4 + Ca(OH)_2 \rightarrow CaSO_4 + 2 \cdot H_2O$
+4. $H_2SO_4 + 2 \cdot NaOH \rightarrow 2 \cdot H_2O + Na_2SO_4$
 
-6. 3 * NaOH + H~3~PO~4~ -> Na~3~PO~4~ + 3 * H~2~O
+5. $2 \cdot KOH + H_2SO_4 \rightarrow \underbrace{K_2SO_4}_{kaaliumsulfaat} + 2 \cdot \underbrace{H_2O}_{vesi}$
 
-7. $2 \cdot H_3PO_4 + 3 \cdot Mg(OH)_2 \rightarrow 6 \cdot H_2O + Mg_3(PO_4)_2$
+6. $H_2SO_4 + Ca(OH)_2 \rightarrow CaSO_4 + 2 \cdot H_2O$
 
-8. $3 \cdot Ca(OH)_2 + 2 \cdot H_3PO_4 \rightarrow \underbrace{Ca_3(PO_4)_2}_{kaltsiumfosfaat} + 6 \cdot \underbrace{H_2O}_{vesi}$
+7. 3 * NaOH + H~3~PO~4~ -> Na~3~PO~4~ + 3 * H~2~O
 
-9. $H_2CO_3 + 2 \cdot NaOH \rightarrow Na_2CO_3 + 2 \cdot H_20$
+8. $2 \cdot H_3PO_4 + 3 \cdot Mg(OH)_2 \rightarrow 6 \cdot H_2O + Mg_3(PO_4)_2$
+
+9. $3 \cdot Ca(OH)_2 + 2 \cdot H_3PO_4 \rightarrow \underbrace{Ca_3(PO_4)_2}_{kaltsiumfosfaat} + 6 \cdot \underbrace{H_2O}_{vesi}$
+
+10. $H_2CO_3 + 2 \cdot NaOH \rightarrow Na_2CO_3 + 2 \cdot H_2O$
+
+11. $Cu(OH)_2 + H_2S → CuS + 2H_2O$
+
+Reaktsioon toimub alati.
 
 # Hape ja hapnik
 
@@ -452,6 +520,10 @@ Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
 3. BaO + H~2~SO~4~ -> BaSO~4~ + H~2~O
 
 4. $H_2SO_4 + CuO \rightarrow H_2O + CuSO_4$
+
+5. $Al_2O_3 + 3H_2S → Al_2S_3 + 3H_2O$
+
+Reaktsioon toimub alati.
 
 # Happed
 
@@ -487,6 +559,14 @@ Zn loovutab kaks elektroni olles redutseerija ja oksüdeerub. Cu haarab kaks ele
 
 3. $Fe + CuSO_4 \rightarrow FeSO_4 + Cu$
 
+4. $Mg + CaCl_2 →$
+
+Reaktsioon ei toimu, kuna magneesium ei tõrju kaltsiumi kaltsiumkloriidist välja.
+
+5. $Fe + ZnSO_4 →$
+
+Reaktsioon ei toimu, sest raud ei tõrju aktiivsemat tsinki soolast välja.
+
 # Sool ja mittemetall
 
 Non-metal that is more reactive displaces less reactive non-metal from its salt solution:
@@ -503,7 +583,11 @@ Non-metal that is more reactive displaces less reactive non-metal from its salt 
 
 3. Ca(OH)~2~ + K~2~SO~4 -> 
 
-3. NaOH + BaCl~2~
+4. $Zn(OH)_2 + NaCl →$
+
+Tsinkhüdroksiid ei lahustu vees, mistõttu reaktsioon ei toimu.
+
+5. NaOH + BaCl~2~
 
 Reaktsioon ei toimu, kuna sadet ei teki.
 
@@ -545,6 +629,14 @@ Reaktsioon ei toimu.
 
 10. $FeSO_4 + H_2S \rightarrow FeS \downarrow + H_2SO_r$
 
+11. $Ba(NO_3)_2 + 2HCl → BaCl_2 + 2HNO_3$
+
+Reaktsioon ei toimu, sest HCl on lenduvam kui HNO~3~.
+
+12. $NaCl + H_2SO_4 →$
+
+Reaktsioon ei toimu, sest sadet ei teki ja vesinikkloriidhape pole väävelhappest nõrgem.
+
 # Soolad
 
 1. $Cs_2SO_4 + Ba(NO_3)_2 \rightarrow 2 \cdot CsNO_3 + BaSO_4 \downarrow$
@@ -552,6 +644,8 @@ Reaktsioon ei toimu.
 2. $NaCl + AgNO_3 \rightarrow NaNO_3 + AgCl \downarrow$
 
 3. $BaCl_2 + CuSO_4 → BaSO_4 \downarrow + CuCl_2$
+
+Reaktsioon toimub alati.
 
 4. FeCl~2~ + K~2~CO~3~ -> FeCO~3~ (sade) + 2 * KCl
 
@@ -561,11 +655,15 @@ Reaktsioon ei toimu.
 
 Reaktsioon ei toimu, kuna baariumsulfiid on vähelahustuv.
 
-7. NaCl + K~2~SO~4~
+7. $NaI + CaCl_2 →$
 
 Reaktsioon ei toimu, kuna ei teki sadet.
 
-8. CuS + Na~2~CO~3
+8. NaCl + K~2~SO~4~
+
+Reaktsioon ei toimu, kuna ei teki sadet.
+
+9. CuS + Na~2~CO~3
 
 Reaktsioon ei toimu, kuna vähemalt vasksulfiid ei lahustu vees.
 
