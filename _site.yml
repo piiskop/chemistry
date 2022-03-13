@@ -24,5 +24,7 @@ navbar:
       href: parts.html
     - text: "ÜLESANNE: Anorgaaniliste reaktsioonide toimumise tingimused"
       href: ülesanne-anorgaaniliste-reaktsioonide-toimumise-tingimused.html
+    - text: "Teadmiste kontrolli koostamine"
+      href: teadmiste-kontrolli-koostamine.html
     - text: "autor"
       href: about.html
