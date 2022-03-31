@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Teadmiste kontrolli koostamine
 
-## Reeglid
+## Konstandid
 
 $$M_{H} = 1.008 \cdot \frac{g}{mol} = 1.008 \cdot 10^{-3} \cdot \frac{kg}{mol}$$
 
@@ -28,11 +28,10 @@ $$M_{Cl} = 35.45 \cdot \frac{g}{mol} = 3.545 \cdot 10^{-4} \cdot \frac{kg}{mol}$
 
 ```{r}
 MOLAR_MASS_H <- 1.008e-3
-MOLAR_MASS_O <- 15.999e-4
+MOLAR_MASS_O <- 1.5999e-4
 MOLAR_MASS_NA <- 2.299E-4
 MOLAR_MASS_CL <- 3.545e-4
 ```
-
 
 ## Ülesande püstitus
 
@@ -58,45 +57,13 @@ Mina kasutasin MMS'i esmakordselt 2022. aastas välispidiselt saades ühe päeva
 
 Kõik ülesanded koostasin MMS'i kohta, et mõistaksin seda ise paremini ja et teised ka õpiksid seda keemiliselt tundma.
 
-### Teadmisi redoksprotsessi sisust arusaamise kohta
-
-Mind hakkas huvitama, kuidas MMS1 keemilist reaktsiooni võrrandina kirja panna. See reaktsioon on algebraliselt selline:
-
-$$\underbrace{NaClO_2}_{naatriumklorit} + \underbrace{HCl}_{maohape} \rightarrow \underbrace{ClO_2}_{klorit} + \underbrace{NaCl}_{lauasool} + \underbrace{H_2O}_{vesi}$$
-
-See avaldis ei ole võrrand, st vasak ja parem pool ei ole tasakaalus. Selles reaktsioonis osalevate elementide oksüdatsiooniastmed muutuvad, mistõttu on tegemist redoksreaktsiooniga. Järgnevalt tuleb see avaldis tasakaalustada.
-
-Kirjutan selle reaktsiooni algebraliselt uuesti välja koos oksüdatsiooniastmetega:
-
-$$Na^{1}\color{green}{Cl^{3}}O_2^{-2} + H^1\color{blue}{Cl^{-1}} \rightarrow \color{blue}{Cl^4}O_2^{-2} + Na^1\color{green}{Cl^{-1}} + H_2^1O^{-2}$$
-
-Näen, et muutub kloori oksüdatsiooniaste:
-
-$$\color{green}{Cl^3 + 4e \rightarrow Cl^{-1} | \cdot 5}$$
-
-$$\color{blue}{Cl^{-1} -5e \rightarrow Cl^4 | \cdot 4}$$
-
-Tasakaalustamiseks arvutan väikseima ühiskordaja tehetele elektronidega. Selleks on 20. Et saada neljast elektronist 20 elektroni, tuleb neli elektroni korrutada viiega. Et saada viiest elektronist 20 elektroni, tuleb viis elektroni korrutada neljaga.
-
-$$\color{green}{5Cl^3 + 20e \rightarrow 5Cl^{-1}}$$
-
-$$\color{blue}{4Cl^{-1} -20e \rightarrow 4Cl^4}$$
-
-Panen esialgu ainult kloori ainetele vastavad kordajad reaktsiooniesildises ette:
-
-$${\huge{\bf\color{green}{5}Na\color{green}{Cl}O_2} + {\bf\color{blue}{4}H\color{blue}{Cl}} \rightarrow {\bf\color{blue}{4Cl}O_2} + {\bf\color{green}{5}Na\color{green}{Cl}} + H_2O}$$
-
-Naatriumi ained on tasakaalus. Kloori ained on tasakaalus. Et hapniku ained tasakaalu saada, tuleb vesi korrutada kahega:
-
-$${\huge\color{green}{5}Na\color{green}{Cl}O_2 + \color{blue}{4}H\color{blue}{Cl} \rightarrow \color{blue}{4Cl}O_2 + \color{green}{5}Na\color{green}{Cl} + {\bf2H_2O}}$$
-
-Ka vesiniku ained on tasakaalus, millega on moodustatud reaktsioonivõrrand. Seesama võrrand on esitatud ka kirjutises [@ALIVENHEALTHY].
-
-### Teadmisi nii lahuste kui aine protsendilise koostise kohta
+### Lähtesegu valmistamine
 
 #### Ülesande püstitus
 
 MMS'i ehk kloordioksiidi lahuse koostises on naatriumkloritit vastavalt Jim Humble'le 22.4%[@how-to-make-mms]. Eestis müüakse siiski 23-% lahust, nii et arvutuste jaoks kasutame edaspidi arvu 23. Lisaks on selles lahuses intertsoolasid. See lahus pannakse kokku happelise aktivaatoriga, milleks kasutatakse tavaliselt 50-% sidrunihappe või 4-% maohappe lahust. Mõlemat, nii naatriumkloriti 23-% lahust kui aktivaatorilahust saab ise valmistada, kui on olemas vajalikud komponendid. Üks vajalik komponent on 80-% naatriumkloriti pulber või helbed, milles on veel 19% lauasoola ja ülejäänu on erinevad jääkmineraalid, mille seas naatriumhüdroksiid stabiliseerib vees tekkiva kloriti, lisaks on selles veel naatriumkloraati ja kloraati[@thomas-hesselink]. See 80-% naatriumkloriti pulber või helbed segatakse destilleeritud veega, nii et lõplikus lahuses oleks naatriumkloritit 23%. Igatahes see 80-% lahus säilivat paarkümmend aastat. [@MMS_making] Võiks muidugi kohe teha 23-% lahuse, aga selle jaoks oleks ju rohkem ruumi vaja!
+
+Alustuseks uurin, millest naatriumklorit koosneb. Mitu protsenti on igat naatriumkloriti koostisainet naatriumkloritis?
 
 Kui palju tuleb võtta protsentuaalselt naatriumkloriti 80-% pulbrit ja kui palju destilleeritud vett, et saada 23-% naatriumkloriti lahus?
 
@@ -112,7 +79,50 @@ Kui suurt anumat ma vajaksin selle koguse MMS'i jaoks?
 
 #### Lahendus
 
+##### Mitu protsenti on igat naatriumkloriti koostisainet naatriumkloritis?
+
+###### Temaatika
+
+**Teadmisi nii lahuste kui aine protsendilise koostise kohta.**
+
+###### Reeglistik
+
+$$protsendid_{Na, NaClO_2} = \frac{M_{Na} \cdot 100}{M_{NaClO_2}} = \frac{M_{Na} \cdot 100}{M_{Na} + M_{Cl} + M_{O} \cdot 2}$$
+
+$$protsendid_{Cl, NaClO_2} = \frac{M_{Cl} \cdot 100}{M_{NaClO_2}} = \frac{M_{Cl} \cdot 100}{M_{Na} + M_{Cl} + M_{O} \cdot 2}$$
+
+$$protsendid_{O, NaClO_2} = \frac{M_{O} \cdot 2 \cdot 100}{M_{NaClO_2}} = \frac{M_{O} \cdot 2 \cdot 100}{M_{Na} + M_{Cl} + M_{O} \cdot 2}$$
+
+###### Väljundid
+
+$$protsendid_{Na, NaClO_2} = ?$$
+
+$$protsendid_{Cl, NaClO_2} = ?$$
+
+$$protsendid_{O, NaClO_2} = ?$$
+
+###### Arvutamine
+```{r}
+percentage_na_in_naclo2 <- MOLAR_MASS_NA * 100 / (MOLAR_MASS_NA + MOLAR_MASS_CL + MOLAR_MASS_O * 2)
+percentage_cl_in_naclo2 <- MOLAR_MASS_CL * 100 / (MOLAR_MASS_NA + MOLAR_MASS_CL + MOLAR_MASS_O * 2)
+percentage_o_in_naclo2 <- MOLAR_MASS_O * 2 * 100 / (MOLAR_MASS_NA + MOLAR_MASS_CL + MOLAR_MASS_O * 2)
+```
+
+###### Lahend
+
+Naatriumkloriti protsentuaalne koostis:
+
+- naatrium: `r signif(percentage_na_in_naclo2, digits <- 5)`,
+
+- kloor: `r signif(percentage_cl_in_naclo2, digits <- 5)`,
+
+- hapnik: `r signif(percentage_o_in_naclo2, digits <- 5)`.
+
 ##### Mitu protsenti on 23-% naatriumkloriti lahuses 80-% NaClO~2~ pulbrit?
+
+###### Temaatika
+
+**Teadmisi nii lahuste kui aine protsendilise koostise kohta.**
 
 ###### Joonis
 
@@ -157,6 +167,10 @@ Lõpplahuses on naatriumkloriti 80-% lahust `r percentage_powder_in_final`%.
 
 ##### Mitu protsenti on 23-% naatriumkloriti lahuses destilleeritud vett?
 
+###### Temaatika
+
+**Teadmisi nii lahuste kui aine protsendilise koostise kohta.**
+
 ###### Sisend
 
 $$osa_{pulber, final} = `r percentage_powder_in_final`\%$$
@@ -180,6 +194,10 @@ percentage_water_in_final <- 100 - percentage_powder_in_final
 Sihtlahuses on vett `r percentage_water_in_final`%.
 
 ##### Mitmekordne 80-% naatriumkloriti pulbri kogus vett tuleb lisada?
+
+###### Temaatika
+
+**Teadmisi nii lahuste kui aine protsendilise koostise kohta.**
 
 ###### Joonis
 
@@ -208,6 +226,10 @@ ratio_water_to_powder_in_final_solution <- percentage_water_in_final / percentag
 `r signif(ratio_water_to_powder_in_final_solution, digits <- 4)` osa vett tuleb võtta ühe osa esialgse 80-% naatriumkloriti lahuse kohta.
 
 ##### Kui palju vett tuleb lisada 2.5-Kg 80-% NaClO~2~ pulbrile, et saada 23-% NaClO~2~ lahus?
+
+###### Temaatika
+
+**Teadmisi nii lahuste kui aine protsendilise koostise kohta.**
 
 ###### Joonis
 
@@ -259,6 +281,10 @@ Kasutada tuleks selleks umbes kümneliitrist anumat. Kui just pole plaanis massi
 
 ##### Kui suur oleks 23-% NaClO~2~ lahuse mass?
 
+###### Temaatika
+
+**Teadmisi nii lahuste kui aine protsendilise koostise kohta.**
+
 ###### Algandmed
 
 $$m_{pulber, final} = 2.5 \cdot Kg$$
@@ -289,6 +315,10 @@ Seega on tõesti lihtsam hoiustada 80-% naatriumkloriti lahust ja vajadusel seda
 
 ##### Vähemalt kui suures anumas peaks olema see nimetatud 23-% NaClO~2~ lahus?
 
+###### Temaatika
+
+**Teadmisi nii lahuste kui aine protsendilise koostise kohta.**
+
 ###### Algandmed
 
 $$m_{final} = `r signif(m_final, digits <- 5)` \cdot Kg$$
@@ -317,25 +347,81 @@ v_final <- m_final / density_final
 
 2.5 * Kg 23-% NaClO~2~ lahuse hoiustamiseks on vaja nõud suurusega `r signif(v_final, digits <- 5)` * m^3^.
 
-### Tarvitamissegu valmistamine
+### MMS'i keemiline reaktsioon
+
+#### Temaatika
+
+**Teadmisi redoksprotsessi sisust arusaamise kohta.**
 
 #### Ülesande püstitus
 
-Vastavalt *Protocol 1000*le on MMS1 kokkusegamiseks vaja võtta kolm tilka MMS'i ja kolm tilka 4-% maohappe lahust [@Protocol-1000]. Seejärel oodatakse pool minutit, kuni segu muutub tumekollaseks. Sellist värvumist nimetatakse naatriumkloriti aktiveerimiseks. Keemik Tomas Horky olevat väitnud, et ühe tilga ruumiline maht olevat $.042 \cdot ml$ [@MMS-dosage]. Tumekollasele segule lisatakse $120 \cdot ml$ puhast vett. Võib ka kasutada teatud mahla, aga mitte igasugust. Puumahl sobib hästi. Kraanivett ei soovitata, kuna selles on palju lisaaineid sees. Destilleeritud vesi sobib ka väga hästi.
+Mind hakkas huvitama, kuidas MMS1 keemilist reaktsiooni võrrandina kirja panna. See reaktsioon on algebraliselt selline:
+
+$$\underbrace{NaClO_2}_{naatriumklorit} + \underbrace{HCl}_{maohape} \rightarrow \underbrace{ClO_2}_{klorit} + \underbrace{NaCl}_{lauasool} + \underbrace{H_2O}_{vesi}$$
+
+See avaldis ei ole võrrand, st vasak ja parem pool ei ole tasakaalus. Selles reaktsioonis osalevate elementide oksüdatsiooniastmed muutuvad, mistõttu on tegemist redoksreaktsiooniga. Järgnevalt tuleb see avaldis tasakaalustada.
+
+#### Lahenduskäik
+
+Kirjutan selle reaktsiooni algebraliselt uuesti välja koos oksüdatsiooniastmetega:
+
+$$Na^{1}\color{green}{Cl^{3}}O_2^{-2} + H^1\color{blue}{Cl^{-1}} \rightarrow \color{blue}{Cl^4}O_2^{-2} + Na^1\color{green}{Cl^{-1}} + H_2^1O^{-2}$$
+
+Näen, et muutub kloori oksüdatsiooniaste:
+
+$$\color{green}{Cl^3 + 4e \rightarrow Cl^{-1} | \cdot 5}$$
+
+$$\color{blue}{Cl^{-1} -5e \rightarrow Cl^4 | \cdot 4}$$
+
+Tasakaalustamiseks arvutan väikseima ühiskordaja tehetele elektronidega. Selleks on 20. Et saada neljast elektronist 20 elektroni, tuleb neli elektroni korrutada viiega. Et saada viiest elektronist 20 elektroni, tuleb viis elektroni korrutada neljaga.
+
+$$\color{green}{5Cl^3 + 20e \rightarrow 5Cl^{-1}}$$
+
+$$\color{blue}{4Cl^{-1} -20e \rightarrow 4Cl^4}$$
+
+Panen esialgu ainult kloori ainetele vastavad kordajad reaktsiooniesildises ette:
+
+$${\huge{\bf\color{green}{5}Na\color{green}{Cl}O_2} + {\bf\color{blue}{4}H\color{blue}{Cl}} \rightarrow {\bf\color{blue}{4Cl}O_2} + {\bf\color{green}{5}Na\color{green}{Cl}} + H_2O}$$
+
+#### Lahend
+
+Naatriumi ained on tasakaalus. Kloori ained on tasakaalus. Et hapniku ained tasakaalu saada, tuleb vesi korrutada kahega:
+
+$${\huge\color{green}{5}Na\color{green}{Cl}O_2 + \color{blue}{4}H\color{blue}{Cl} \rightarrow \color{blue}{4Cl}O_2 + \color{green}{5}Na\color{green}{Cl} + {\bf2H_2O}}$$
+
+Ka vesiniku ained on tasakaalus, millega on moodustatud reaktsioonivõrrand. Seesama võrrand on esitatud ka kirjutises [@ALIVENHEALTHY].
+
+### Tarvitamissegu valmistamine ja tarbimine
+
+#### Ülesande püstitus
+
+Vastavalt THOMAS Hesselinkile on sobilik kogus naatriumkloritit inimese kehale on $1 \frac{\text{mg NaClO_2}}{\text{kg keha} \cdot p}$[@thomas-hesselink]. Vastavalt *Protocol 1000*le on MMS1 kokkusegamiseks vaja võtta kolm tilka MMS'i ja kolm tilka 4-% maohappe lahust [@Protocol-1000]. Seejärel oodatakse pool minutit, kuni segu muutub tumekollaseks. Sellist värvumist nimetatakse naatriumkloriti aktiveerimiseks. Keemik Tomas Horky olevat väitnud, et ühe tilga ruumiline maht olevat $.042 \cdot ml$ [@MMS-dosage]. Tumekollasele segule lisatakse $120 \cdot ml$ puhast vett. Võib ka kasutada teatud mahla, aga mitte igasugust. Puumahl sobib hästi. Kraanivett ei soovitata, kuna selles on palju lisaaineid sees. Destilleeritud vesi sobib ka väga hästi.
 
 Millise kontsentratsiooniga on klorit selles lahuses?
 
-Mitu grammi kloritit aktiveeritakse kokku pärast selle segu sissejoomist?
+Mitu grammi kloritit on aktiveeritud pärast MMS'i joomist ja kõhus oleva maohappe toimet?
+
+Vastavalt tabelile *Sodium Chlorite Solutions (SCS) Ingested Dosing vs CLO2 Content Comparison Chart* saavutatakse kolme tilgapaariga 20 * mg kloritit. Milline on protsessi saagis?
 
 Mitu protsenti kloritit aktiveeritakse kõhus?
 
-Suurim ohutu kogus kloriti inimese kehale on $1 \frac{mg}{kg \cdot p}$, milles mass on inimese keha mass. Vastavalt *Protocol 1000*le tarvitatakse kuni kolm tilgapaari korraga, niimoodi iga tund kaheksa tundi järjest iga päev 21 päeva järjest. Minu keha mass on umbes $70 \cdot kg$. Täpselt ei tea, pole ammu kaalunud. Mitu tilgapaari keskmiselt kõige rohkem on mul ohutu iga kord MMS1 tarbida?
+Vastavalt *Protocol 1000*le tarvitatakse kuni kolm tilgapaari korraga, niimoodi iga tund kaheksa tundi järjest iga päev 21 päeva järjest. Kui ma teeksin *Protocol 1000* ravikuuri läbi selle tilgapaaride arvuga, siis mitu grammi kloritit ma enda kehasse sisestan päevas ja mitu 21 päeva kestel?
+ 
+Minu keha mass on umbes $70 \cdot kg$. Täpselt ei tea, pole ammu kaalunud. Mitu tilgapaari keskmiselt kõige rohkem on mul sobilik iga kord MMS1 tarbida?
 
-Kui ma teeksin *Protocol 1000* ravikuuri läbi selle tilgapaaride arvuga, siis mitu grammi kloritit ma enda kehasse sisestan päevas ja mitu 21 päeva kestel?
+
+
+Surmav kloriti doos olevat umbes $3 \frac{\text{mg ClO_2}}{\text{kg keha} \cdot p}$[@Kalcker].
 
 #### Lahendus
 
 ##### Millise kontsentratsiooniga on klorit selles lahuses?
+
+###### Temaatika
+
+**Moolide arvu, massi, ruumala ja aineosakeste seoste kohta läbi reaktsiooni võrrandi**
+
+**Ülehulga ja saagise kohta mingi ühe ühendi mitme etapilises tootmisprotsessis**
 
 ###### Sisendid
 
@@ -465,57 +551,174 @@ z_hcl_rel * part_clo2_in_reaction * (MOLAR_MASS_CL + MOLAR_MASS_O * 2)
 
 ###### Lahend
 
-`r text` Klorit on MMS's kontsentratsiooniga `r ratio_clo2_to_mms`.
+`r text` Klorit on MMS's kontsentratsiooniga `r signif(ratio_clo2_to_mms, digits <- 5)`.
 
-###
+##### Mitu grammi kloritit on aktiveeritud pärast MMS'i joomist ja kõhus oleva maohappe toimet?
 
-MMS1 kokkusegamiseks on vaja võtta kolm tilka 23-% naatriumkloriti lahust ja kolm tilka 4-% maohappe lahust. Seejärel oodatakse pool minutit, kuni segu muutub tumekollaseks. Sellist värvumist nimetatakse naatriumkloriti aktiveerimiseks. Tulemusena eraldub 20 * mg kloritit. Keemik Tomas Horky olevat väitnud, et ühe tilga ruumiline maht olevat .042 * ml. Kontrollin arvutuslikult, kas see väide on tõese sisuga.
+###### Temaatika
 
-Esmalt kirjutan välja reaktsioonivõrrandi:
+**Prosendilise ja molaarse kontsentratsiooni omavahelise seose kohta**
 
-$${5}Na{Cl}O_2 + {4}H{Cl} \rightarrow {4Cl}O_2 + {5}Na{Cl} + 2H_2O$$
+###### Sisendid
 
-Lasen arvutada kloriti molaarmassi:
+$$z_{min} = z_{HCl, rel} = `r signif(z_hcl_rel, digits <- 6)` \cdot mol$$
 
-```{r}
-molar_mass_clo2 <- MOLAR_MASS_CL + MOLAR_MASS_O * 2 
+$$osa_{ClO_2, reaktsioon} = `r part_clo2_in_reaction`$$
+
+$$z_{NaClO_2, rel} = `r signif(z_naclo2_rel, digits <- 6)` \cdot mol$$
+
+$$z_{HCl, rel} = `r z_hcl_rel` \cdot mol$$
+
+###### Väljund
+
+$$m_{ClO_2, final} = ?$$
+
+###### Reeglistik
+
+Kloriti aktiveerimine pärast segu sissejoomist toimub, kuna naatriumkloriti jääb enne sissejoomist üle - kõik ei aktiveeru, sest hapet on selleks liiga vähe. Ülejäänud naatriumklorit aktiveerub maos, kus maomahla olevat viis kuni kümme promilli maohappes. Me ei tea, kui palju maomahla kehas parasjagu käepärast on iga kord, mistõttu eeldan, et seda on piisavalt kogu aktiveerimata naatriumkloriti aktiveerimiseks.
+
+Kui palju naatriumkloriti jääb esimesest reaktsioonist ehk sellest, mis on enne joomist, üle?
+
+$$z_{NaClO_2, rel, residue} = z_{NaClO_2, rel} - z_{HCl, rel}$$
+
+Edasi on juba tuttav kloriti massi arvutamine:
+```{=tex}
+\begin{equation}
+m_{ClO_2, after} = z_{NaClO_2, rel, residue} \cdot osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2)\\
+= (z_{NaClO_2, rel} - z_{HCl, rel}) \cdot osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2)
+(\#eq:additional-mass-clo2-in-stomach)
+\end{equation}
 ```
 
-Kloriti molaarmass on $`r molar_mass_clo2` \cdot \frac{g}{mol}$.
+Vaja veel vaid eelnevalt eralduva kloriti ja maos eralduva kloriti massid kokku liita. Kloriti joomiseelse massi valem \@ref(eq:mass-clo2) on varasemast olemas:
 
-Lasen arvutada kloriti ainehulga:
-
-```{r}
-moles_clo2 <- 20e-3 / molar_mass_clo2
+```{=tex}
+\begin{equation}
+m_{ClO_2, final} = m_{ClO_2} + m_{ClO_2, after} \\
+= z_{min} \cdot osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2) + (z_{NaClO_2, rel} - z_{HCl, rel}) \cdot osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2) \\
+= osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2) \cdot (z_{min} + z_{NaClO_2, rel} - z_{min})\\
+= osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2) \cdot (z_{NaClO_2, rel})
+(\#eq:final-mass-clo2)
+\end{equation}
 ```
 
-Kloriti moolide hulk on `r moles_clo2`.
-
-Vastavalt võrrandile on kasutatud maohapet sama palju kui on eraldunud kloritit. Seega on maohapet ka `r moles_clo2` * mooli.
-
-Lasen arvutada maohappe molaarmassi:
-
+###### Arvutamine
 ```{r}
-molar_mass_hcl <- MOLAR_MASS_H + MOLAR_MASS_CL
+m_clo2_final <- part_clo2_in_reaction * (MOLAR_MASS_CL + MOLAR_MASS_O * 2) * (z_naclo2_rel)
 ```
 
-Maohappe molaarmass on $`r molar_mass_hcl` \cdot \frac{g}{mol}$.
+###### Lahend
 
-Kuna inimesed segavad need ained kokku normaaltingimustel, siis lasen vastavalt normaaltingimustele arvutada maohappe massi:
+`r signif(m_clo2_final, digits <- 5)` * kg on lõplik kloriti mass.
 
-Lasen arvutada maohappe massi:
+##### Milline on protsessi saagis?
 
+###### Temaatika
+
+**Ülehulga ja saagise kohta mingi ühe ühendi mitme etapilises tootmisprotsessis.**
+
+###### Reeglistik
+
+$$saagis = \frac{m_{ClO_2, tegelik}}{m_{ClO_2, final}}$$
+
+###### Sisendid
+
+$$m_{ClO_2, tegelik} = 20 \cdot mg = 2 \cdot 10^{-5} \cdot kg$$
+
+$$m_{ClO_2, final} = `r  signif(m_clo2_final, digits <- 6)` \cdot kg$$
 ```{r}
-mass_hcl <- moles_clo2 * molar_mass_hcl
+m_clo2_real <- 2e-5
 ```
 
-Maohappe mass on `r mass_hcl` * g. See on lahusest 4%. Lasen arvutada
+###### Väljund
 
+$$saagis = ?$$
 
-Reaktsioonivõrrandis on kõiki aineid 100%. 
+###### Arvutamine
+```{r}
+yield <- m_clo2_real / m_clo2_final
+```
 
-### Prosendilise ja molaarse kontsentratsiooni omavahelise seose kohta
+###### Lahend
 
-### Moolide arvu, massi, ruumala ja aineosakeste seoste kohta läbi reaktsiooni võrrandi
+`r signif(yield, digits <- 5)` on protsessi saagis.
 
-### Ülehulga ja saagise kohta mingi ühe ühendi mitme etapilises tootmisprotsessis
+##### Mitu protsenti kloritit aktiveeritakse kõhus?
+
+###### Temaatika
+
+**Prosendilise ja molaarse kontsentratsiooni omavahelise seose kohta**
+
+###### Reeglistik
+
+Koostan kloriti massiprotsentide jaoks valemi kasutades kõhus aktiveeritava kloriti massi valemit \@ref(eq:additional-mass-clo2-in-stomach):
+
+```{=tex}
+\begin{equation}
+protsendid_{ClO_2, after} = \frac{m_{ClO_2, after} \cdot 100}{m_{ClO_2, final}}\\
+= \frac{((z_{NaClO_2, rel} - z_{HCl, rel}) \cdot osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2)) \cdot 100}{m_{ClO_2, final}}
+(\#eq:percentage-clo2-after)
+\end{equation}
+```
+
+###### Sisendid
+
+$$z_{NaClO_2, rel} = `r signif(z_naclo2_rel, digits <- 6)` \cdot mol$$
+
+$$z_{HCl, rel} = `r z_hcl_rel` \cdot mol$$
+
+$$osa_{ClO_2, reaktsioon} = `r part_clo2_in_reaction`$$
+
+$$m_{ClO_2, final} = `r  signif(m_clo2_final, digits <- 6)` \cdot kg$$
+
+###### Väljund
+
+$$protsendid_{ClO_2, after} = ?$$
+
+###### Arvutamine
+```{r}
+percentage_clo2_after <- ((z_naclo2_rel - z_hcl_rel) * part_clo2_in_reaction * (MOLAR_MASS_CL + MOLAR_MASS_O * 2) * 100) / m_clo2_final
+```
+
+###### Lahend
+
+`r signif(percentage_clo2_after, digits <- 5)`% kloritit aktiveeritakse kõhus.
+
+##### Sobilik tilgapaaride arv
+
+See järgnev lahendus on jama. Ehk kunagi täiendan ja teen selle ka korda.
+
+###### Reeglistik
+
+```{=tex}
+\begin{equation}
+tilku_{manustamine, max} = \frac{m_{ClO_2, suurim, p}}{n_{manustamisi, p}} * m_{body}
+(\#eq:max-allowance-of-drops-per-intake)
+\end{equation}
+```
+
+###### Sisendid
+
+$$m_{ClO_2, suurim, p} = 1 \cdot \frac{\text{mg ClO_2}}{\text{kg keha} \cdot p} = 1 \cdot 10^{-6} \cdot \frac{\text{kg ClO_2}}{\text{kg keha} \cdot p}$$
+
+$$n_{manustamisi, p} = 8$$
+
+$$m_{body} = 70 \cdot kg$$
+```{r}
+m_clo2_max_per_day <- 1e-6
+n_intakes_per_day <- 8
+m_body <- 70
+```
+
+###### Väljund
+
+$$tilku_{manustamine, max} = ?$$
+
+###### Arvutamine
+```{r}
+n_drops_max <- m_clo2_max_per_day / n_intakes_per_day * m_body
+```
+
+###### Lahend
+
+`r n_drops_max` tilka võin kõige enam tarbida keskmiselt manustamiskorra kohta.
