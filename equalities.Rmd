@@ -851,3 +851,7 @@ Ioniite regenereeritakse (hapete, leeliste või soolade lahustega) ja kasutataks
 
 Kvalitseetsete ioniitidega töödeldud vesi – peaaegu ekvivalentne
 dest. veega (DEIONISEERITUD VESI), kuid palju odavam (väike energiakulu).
+
+$$2C_2H_5OH + 2Na \rightarrow \underbrace{2C_2H_5ONa}_{naatriumetülaat} + H_2$$
+
+$$2NaOH + CO_2 \rightarrow Na_2CO_3 + H_2O$$

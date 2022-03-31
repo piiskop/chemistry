@@ -18,10 +18,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Reeglid
 
+$$M_{H} = 1.008 \cdot \frac{g}{mol} = 1.008 \cdot 10^{-3} \cdot \frac{kg}{mol}$$
+
+$$M_{O} = 15.999 \cdot \frac{g}{mol} = 1.5999 \cdot 10^{-4} \cdot \frac{kg}{mol}$$
+
+$$M_{Na} = 22.99 \cdot \frac{g}{mol} = 2.299 \cdot 10^{-4} \cdot \frac{kg}{mol}$$
+
+$$M_{Cl} = 35.45 \cdot \frac{g}{mol} = 3.545 \cdot 10^{-4} \cdot \frac{kg}{mol}$$
+
 ```{r}
-MOLAR_MASS_H <- 1.008
-MOLAR_MASS_O <- 15.999
-MOLAR_MASS_CL <- 35.45
+MOLAR_MASS_H <- 1.008e-3
+MOLAR_MASS_O <- 15.999e-4
+MOLAR_MASS_NA <- 2.299E-4
+MOLAR_MASS_CL <- 3.545e-4
 ```
 
 
@@ -41,17 +50,21 @@ Koosta 5 ülesandet, mille abil saaksid kontrollida:
 
 ## Lahendus
 
-### Teadmisi redoksprotsessi sisust arusaamise kohta
+### Sissejuhatus
 
 1996\. aastal avastas üks mees nimega Jim Humble, et üks toona ülemaailmselt kasutuses olnud veepuhastamise vahend aitas seljatada malaariat. Kui esimesed malaariahaiged inimesed olid tervenenud, töötas Jim välja valemi, segamaks seda vahendit söögiks sobiliku happega ning nimetas selle Master Mineral Solutioniks (MMS). Tänapäevas on see valem tuntud kui MMS1, mille kohaselt pannakse omavahel reageerima naatriumklorit ja inimese kõhus leiduv maohape, mille tulemusena eraldub klorit. Sellest saadik on sajad tuhanded inimesed saanud MMS'i abil oma tervise osaliselt või täielikult korda mitte ainult malaariast, vaid paljudest haigustest. MMS on nõrk oksüdeerija, mis õigesti kasutatuna liigub läbi inimese keha hävitades haigustekitajaid ja mürke, mida nad toodavad, inimese keha kahjustamata. [@MMS]
 
 Mina kasutasin MMS'i esmakordselt 2022. aastas välispidiselt saades ühe päevaga lahti valust põlves, hiljem reies, et saaksin taas joosta. Need valud ei naasnud. Hiljem hakkasin kasutama seda lahust hammastepuhastamiseks. Kui esinesid *Covid-19 omikron*i sümptomid, tegin läbi kolmandiku *Protocol 1000*, mille kohaselt tuli igapäevaselt lahust seesmiselt tarvitada iga tund kaheksa korda päevas 21 päeva järjest, millest mina pidasin vastu seitse ja pool päeva, enne kui selle lahuse tarbimine kasemahlaga mulle nii vastikuks muutus, et ma loobusin edasisest seespidisest tarvitamisest. Välispidiselt kasutasin seda ka siis ning juba ühe korra järel muutus nahk kestendavaks ja valuliseks, misjärel asendus see sileda ja puhta uue nahaga.
 
+Kõik ülesanded koostasin MMS'i kohta, et mõistaksin seda ise paremini ja et teised ka õpiksid seda keemiliselt tundma.
+
+### Teadmisi redoksprotsessi sisust arusaamise kohta
+
 Mind hakkas huvitama, kuidas MMS1 keemilist reaktsiooni võrrandina kirja panna. See reaktsioon on algebraliselt selline:
 
 $$\underbrace{NaClO_2}_{naatriumklorit} + \underbrace{HCl}_{maohape} \rightarrow \underbrace{ClO_2}_{klorit} + \underbrace{NaCl}_{lauasool} + \underbrace{H_2O}_{vesi}$$
 
-See võrrand ei ole tasakaalus. Selles reaktsioonis osalevate elementide oksüdatsiooniastmed muutuvad, mistõttu on tegemist redoksreaktsiooniga. Järgnevalt tuleb see võrrand tasakaalustada.
+See avaldis ei ole võrrand, st vasak ja parem pool ei ole tasakaalus. Selles reaktsioonis osalevate elementide oksüdatsiooniastmed muutuvad, mistõttu on tegemist redoksreaktsiooniga. Järgnevalt tuleb see avaldis tasakaalustada.
 
 Kirjutan selle reaktsiooni algebraliselt uuesti välja koos oksüdatsiooniastmetega:
 
@@ -83,51 +96,90 @@ Ka vesiniku ained on tasakaalus, millega on moodustatud reaktsioonivõrrand. See
 
 #### Ülesande püstitus
 
-MMS on naatriumkloriti 23-% lahus. Seda saab ise valmistada, kui on olemas naatriumkloriti pulber või helbed. Võetakse see pulber või helbed ja lahjendatakse vees, nii et tekitatakse 80-% naatriumkloriti lahus. Selle tegemise protsessi ma siinkohal lähemalt ei kirjelda, kuna pole seda ise läbi teinud. Meenub, et tuleb kasutada ahju. Igatahes see 80-% lahus säilivat paarkümmend aastat. [@MMS_making] Võiks muidugi kohe teha 23-% lahuse, aga selle jaoks oleks ju rohkem ruumi vaja!
+MMS'i ehk kloordioksiidi lahuse koostises on naatriumkloritit vastavalt Jim Humble'le 22.4%[@how-to-make-mms]. Eestis müüakse siiski 23-% lahust, nii et arvutuste jaoks kasutame edaspidi arvu 23. Lisaks on selles lahuses intertsoolasid. See lahus pannakse kokku happelise aktivaatoriga, milleks kasutatakse tavaliselt 50-% sidrunihappe või 4-% maohappe lahust. Mõlemat, nii naatriumkloriti 23-% lahust kui aktivaatorilahust saab ise valmistada, kui on olemas vajalikud komponendid. Üks vajalik komponent on 80-% naatriumkloriti pulber või helbed, milles on veel 19% lauasoola ja ülejäänu on erinevad jääkmineraalid, mille seas naatriumhüdroksiid stabiliseerib vees tekkiva kloriti, lisaks on selles veel naatriumkloraati ja kloraati[@thomas-hesselink]. See 80-% naatriumkloriti pulber või helbed segatakse destilleeritud veega, nii et lõplikus lahuses oleks naatriumkloritit 23%. Igatahes see 80-% lahus säilivat paarkümmend aastat. [@MMS_making] Võiks muidugi kohe teha 23-% lahuse, aga selle jaoks oleks ju rohkem ruumi vaja!
 
-MMS'i valmistamiseks lisatakse sellele 80-% lahusele vett, nii et tekiks 23-% lahus. Mitu protsenti on MMS's nimetatud 80-% naatriumkloriti lahust? Mitmekordne 80-% naatriumkloriti lahuse kogus vett tuleb sellele lahusele lisada, et saada 23-% naatriumkloriti lahus ehk MMS?
+Kui palju tuleb võtta protsentuaalselt naatriumkloriti 80-% pulbrit ja kui palju destilleeritud vett, et saada 23-% naatriumkloriti lahus?
 
-Kui mul oleks kasutada kilogramm 80-% naatriumkloriti lahust, siis kui palju tuleks sellele kilogrammisele lahusele lisada vett, et tekitada MMS, ja kui suur oleks selle MMS'i koguse mass? Kui suurt anumat ma vajaksin selle koguse MMS'i jaoks? Vähemalt kui suures anumas peaks olema see nimetatud 80-% naatriumkloriti lahus? Kui suur on MMS'i tihedus?
+Mitmekordne 80-% naatriumkloriti pulbri kogus vett tuleb sellele pulbrile lisada, et saada 23-% naatriumkloriti lahus?
+
+80-% naatriumkloritit saab osta nt Laboratoriumdiscounterist ning seal müüdava aine koostises on lisaks naatriumkloritile lauasool ja maohape[@80-percent-NaClO2]. Kui sealt osta 80-% naatriumkloritit 2.5 * Kg ja see kõik naatriumkloriti 23-% lahuseks konverteerida, siis kui palju on vaja lisada vett?
+
+Milline oleks peale vee lisamist 23-% lahuse koondmass?
+
+Jimi väitel on 22.4-% NaClO~2~ tihedus $\frac{122 \cdot g}{100 \cdot ml} \pm \frac{2 \cdot g}{100 \cdot ml}$[@how-to-make-mms]. Arvestagem, et 23-% lahuse tihedus on sarnane! Otse saaks seda mõõta, kui lahus oleks käepärast. On ka, aga ei tahaks seda raisata. Väärt kraam ikkagi. Süstla ja täppiskaaluga oleks säästvam mõõta, aga mitte kumbagi pole mul käepärast. Astra viiendal korrusel on üks vinge täppiskaal. Ehk saan seda neljapäevas kasutada ja mõõta ühe tilga massi. Seni tuginen andmetel, mis on teiste poolt välja mõõdetud. 
+
+Kui suurt anumat ma vajaksin selle koguse MMS'i jaoks?
 
 #### Lahendus
 
-##### Mitu protsenti on MMS's nimetatud 80-% naatriumkloriti lahust?
+##### Mitu protsenti on 23-% naatriumkloriti lahuses 80-% NaClO~2~ pulbrit?
 
 ###### Joonis
 
-![Vasakul on MMS, paremal 80-% NaClO2 lahus](naclo2-80-lahuse-protsendid-mms.svg)
+![Vasakul on 23-% naatriumkloriti lahus, paremal 80-% NaClO2 pulber](naclo2-80-lahuse-protsendid-mms.svg)
 
 ###### Algandmed
 
-esialgse 80-% naatriumkloriti lahuse osa lõpplahuses $naclo2\_protsente_{ll} = 23\%$
+$$osa_{NaClO_2, final} = 23\%$$
 
-esialgse lahuse naatriumkloriti sisalduse osa $naclo2\_protsente_{al} = 80\%$
+$$osa_{NaClO_2, original} = 80\%$$
+
+```{r percentage-powder-in-final-inputs}
+percentage_naclo2_in_final <- 23
+percentage_naclo2_in_original <- 80
+```
 
 ###### Mida arvutada?
 
-naatriumkloriti 80-% lahuse osa protsentides lõpplahuses $lahus\_80_{ll} = ?$
+$$osa_{pulber, final} = ?$$
 
 ###### Reegel
 
-Naatriumkloritit, mida on esialgses lahuses 80%, peab lõpplahuses olema 23%. Huvitab, kui palju seda 80-% lahust on kokku lõpplahuses protsendimäärana. Seega vastab esialgse lahuse 100%-le küsimärk ja saan lasta välja arvutada 80-% naatriumkloriti lahuse protsendimäära lõpplahuses:
+Kui pulbris on naatriumkloritit teatud osa, siis samasugune osa on naatriumkloritit sihtlahuse pulbriosas. Saan koostada võrrandi:
 
-$$lahus\_80_{ll} = \frac{100 \cdot naclo2\_protsente_{ll}}{naclo2\_protsente_{al}},$$
+$$\frac{osa_{NaClO_2, final}}{osa_{pulber, final}} = \frac{osa_{NaClO_2, original}}{100\%}$$
 
-kus *ll* on lõpplahus ja *al* alglahus.
+Avaldan pulbri osa sihtlahuses:
+
+$$osa_{pulber, final} = \frac{osa_{NaClO_2, final} \cdot 100\%}{osa_{NaClO_2, original}}$$
 
 ###### Arvutamine
 
 Lasen arvutada:
 
-```{r}
-solution_80_in_final_solution <- 100 * 23 / (80)
+```{r percentage-powder-in-final-calculation}
+percentage_powder_in_final <- percentage_naclo2_in_final * 100/ percentage_naclo2_in_original
 ```
 
 ###### Lahend
 
-Lõpplahuses on naatriumkloriti 80-% lahust `r solution_80_in_final_solution`%.
+Lõpplahuses on naatriumkloriti 80-% lahust `r percentage_powder_in_final`%.
 
-##### Mitmekordne 80-% naatriumkloriti lahuse kogus vett tuleb sellele lahusele lisada?
+##### Mitu protsenti on 23-% naatriumkloriti lahuses destilleeritud vett?
+
+###### Sisend
+
+$$osa_{pulber, final} = `r percentage_powder_in_final`\%$$
+
+###### Väljund
+
+$$osa_{vesi, final} = ?$$
+
+###### Reeglistik
+
+$$osa_{vesi, final} = 100\% - osa_{pulber, final}$$
+
+###### Arvutamine
+
+```{r}
+percentage_water_in_final <- 100 - percentage_powder_in_final
+```
+
+###### Lahend
+
+Sihtlahuses on vett `r percentage_water_in_final`%.
+
+##### Mitmekordne 80-% naatriumkloriti pulbri kogus vett tuleb lisada?
 
 ###### Joonis
 
@@ -135,31 +187,27 @@ Lõpplahuses on naatriumkloriti 80-% lahust `r solution_80_in_final_solution`%.
 
 ###### Algandmed
 
-naatriumkloriti 80-% lahuse osa lõpplahuses $lahus\_80_{ll} = `r solution_80_in_final_solution`\%$
+$$osa_{vesi, final} = `r percentage_water_in_final`\%$$
+
+$$osa_{pulber, final} = `r percentage_powder_in_final`\%$$
 
 ###### Mida arvutada?
 
-vee ja 80-% naatriumkloriti lahuse suhe lõpplahuses $vett\_esialgse\_lahuse\_kohta = ?$
-
-###### Reegel
-
-Küsimusele vastamiseks on vaja jagada lõpplahuse vee osamäär lõpplahuse põhiaine ehk 80-% naatriumkloriti lahuse osamääraga:
-
-$$vett\_esialgse\_lahuse\_kohta = \frac{100 - lahus\_80_{ll}}{lahus\_80_{ll}}$$
+$$\frac{osa_{vesi, final}}{osa_{pulber, final}} = ?$$
 
 ###### Arvutamine
 
 Lasen arvutada:
 
-```{r}
-water_ratio_to_starter_solution <- (100 - solution_80_in_final_solution) / solution_80_in_final_solution
+```{r ratio-water-to-powder-in-final-solution}
+ratio_water_to_powder_in_final_solution <- percentage_water_in_final / percentage_powder_in_final
 ```
 
 ###### Lahend
 
-`r signif(water_ratio_to_starter_solution, digits <- 4)` osa vett tuleb võtta ühe osa esialgse 80-% naatriumkloriti lahuse kohta.
+`r signif(ratio_water_to_powder_in_final_solution, digits <- 4)` osa vett tuleb võtta ühe osa esialgse 80-% naatriumkloriti lahuse kohta.
 
-##### Kui palju vett tuleb lisada kilogrammisele 80-% naatriumkloriti lahusele, et saada MMS?
+##### Kui palju vett tuleb lisada 2.5-Kg 80-% NaClO~2~ pulbrile, et saada 23-% NaClO~2~ lahus?
 
 ###### Joonis
 
@@ -167,204 +215,257 @@ water_ratio_to_starter_solution <- (100 - solution_80_in_final_solution) / solut
 
 ###### Algandmed
 
-80-% naatriumkloriti lahuse mass MMS's $mass_{80} = 1 \cdot kg$
+$$m_{pulber, final} = 2.5 \cdot Kg$$
 
-```{r}
-WEIGHT_80 <- 1
+$$\frac{osa_{vesi, final}}{osa_{pulber, final}} = `r signif(ratio_water_to_powder_in_final_solution, digits <- 5)`$$
+
+```{r water-to-powder-input}
+m_powder_in_final_solution <- 2.5
 ```
-
-vee kordaja lõpplahuses 80-% naatriumkloriti lahuse kohta $kordaja_{vesi} = `r signif(water_ratio_to_starter_solution, digits <- 5)`$
 
 ###### Mida arvutada?
 
-vee mass MMS's $mass_{vesi} = ?$
+$$m_{vesi, final} = ?$$
 
 ###### Reegel
 
 ```{=tex}
 \begin{equation}
-\frac{mass_{vesi}}{mass_{80}} === \frac{kordaja_{vesi}}{1}
-(\#eq:weight-of-water-ratio-to-weight-of-80-percent-solution)
+\frac{m_{vesi, final}}{m_{powder, final}} === \frac{\frac{osa_{vesi, final}}{osa_{pulber, final}}}{1}
+(\#eq:ratio-mass-water-to-powder-in-final-solution)
 \end{equation}
 ```
 
-Avaldan valemist \@ref(eq:weight-of-water-ratio-to-weight-of-80-percent-solution) vee massi:
+Avaldan valemist \@ref(eq:ratio-mass-water-to-powder-in-final-solution) vee massi:
 
 ```{=tex}
 \begin{equation}
-mass_{vesi} = mass_{80} \cdot kordaja_{vesi}
-(\#eq:weight-of-water-in-mms)
+m_{vesi, final} = m_{powder, final} \cdot \frac{osa_{vesi, final}}{osa_{pulber, final}}
+(\#eq:mass-water-in-final-solution)
 \end{equation}
 ```
 
 ###### Arvutamine
 
-```{r}
-weight_water <- WEIGHT_80 * water_ratio_to_starter_solution
+```{r mass-water}
+m_water_in_final_solution <- m_powder_in_final_solution * ratio_water_to_powder_in_final_solution
 ```
 
 ###### Lahend
 
-`r signif(weight_water, digits <- 4)` * kg vett tuleb lisada ühele kilogrammile 80-% naatriumkloriti lahusele, et saada MMS.
+`r signif(m_water_in_final_solution, digits <- 4)` * Kg vett tuleb lisada 2.5 * Kg'le 80-% naatriumkloriti lahusele, et saada 23-% naatriumkloriti lahus.
 
-##### Kui suur oleks MMS'i mass?
+Kasutada tuleks selleks umbes kümneliitrist anumat. Kui just pole plaanis massiliselt lahust levitama hakata, siis enda jaoks pole mõtet valmistada nii suurt kogust, vaid piisab sada korda väiksemast.
+
+##### Kui suur oleks 23-% NaClO~2~ lahuse mass?
 
 ###### Algandmed
 
-80-% naatriumkloriti lahuse mass $mass_{80} = 1 \cdot kg$
+$$m_{pulber, final} = 2.5 \cdot Kg$$
 
-vee mass MMS's $mass_{vesi} = `r signif(weight_water, digits <- 5)` \cdot kg$
+$$m_{vesi, final} = `r signif(m_water_in_final_solution, digits <- 5)` \cdot Kg$$
 
 ###### Mida arvutada?
 
-MMS'i mass $mass_{mms} = ?$
+$$m_{final} = ?$$
 
 ###### Reegel
 
-MMS'i massi arvutamises on vaja 80-% naatriumkloriti lahuse ja lisatud vee mass kokku liita:
+Koondmassi arvutamises on vaja 80-% naatriumkloriti lahuse ja lisatud vee mass kokku liita:
 
-$$mass_{mms} = mass_{80} + mass_{vesi}$$
+$$m_{final} = m_{pulber, final} + m_{vesi, final}$$
 
 ###### Arvutamine
 
-```{r}
-weight_mms <- WEIGHT_80 + weight_water
+```{r m-final}
+m_final <- m_powder_in_final_solution + m_water_in_final_solution
 ```
 
 ###### Lahend
 
-`r signif(weight_mms, digits <- 4)` * kg massib ühekilogrammisest 80-% naatriumkloriti lahusest tehtud MMS.
+`r signif(m_final, digits <- 4)` * Kg kaalub 2.5-Kg-st 80-% naatriumkloriti lahusest tehtud 23-% NaClO~2~ lahus.
 
-Seega on tõesti lihtsam hoiustada 80-% naatriumkloriti lahust ja vajadusel teha sellest MMS'i.
+Seega on tõesti lihtsam hoiustada 80-% naatriumkloriti lahust ja vajadusel seda lahustada.
 
-##### Vähemalt kui suures anumas peaks olema see nimetatud 80-% naatriumkloriti lahus?
+##### Vähemalt kui suures anumas peaks olema see nimetatud 23-% NaClO~2~ lahus?
 
 ###### Algandmed
 
-80-% naatriumkloriti lahuse mass $mass_{80} = 1 \cdot kg$
+$$m_{final} = `r signif(m_final, digits <- 5)` \cdot Kg$$
 
-naatriumkloriti osa 80-% naatriumkloriti lahuses $naclo2\_protsent_{al} = 80\%$
-
-```{r}
-PERCENTAGE_NACLO2_STARTER <- 80
-```
-
-Tihedused tuleb otsida internetist.
-
-naatriumkloriti tihedus $\rho_{NACLO2} = 2.5 \cdot \frac{g}{cm^3} === 2.5 \cdot 10^{3} \cdot \frac{kg}{m^3}$ [@NaClO2]
-
-vee tihedus nt temperatuuril 21°C, sest umbes sellise temperatuuriga keskkonnas segaksin ained kokku, $\rho_{VESI} = .99802 \cdot \frac{g}{cm^3} === 9.9802 \cdot 10^{2} \cdot \frac{kg}{m^3}$ [@water]
+$$\rho_{final} = \frac{122 \cdot g}{100 \cdot ml} = 1.22 \cdot 10^{3} \cdot \frac{kg}{m^3}$$
 
 ```{r}
-DENSITY_WATER <- 9.9802E2
+density_final <- 1.22e3
 ```
 
 ###### Mida arvutada?
 
-ühe kilogrammi 80-% naatriumkloriti lahuse ruumala $ruumala_{al} = ?$
+$$V_{final} = ?$$
 
 ###### Reeglid
 
-80-% naatriumkloriti lahuse ruumala arvutamiseks on vaja kokku liita selles lahuses oleva naatriumkloriti ruumala ja selles lahuses oleva vee ruumala.
-
-Tuleb välja selgitada naatriumkloriti osa 80-% lahuses grammides:
-
-```{=tex}
-\begin{equation}
-naclo2\_mass_{al} = mass_{80} \cdot \frac{naclo2\_protsent_{al}}{100}
-(\#eq:weight-of-naclo2-in-starter)
-\end{equation}
-```
-
-Järgmisena saan naatriumkloriti tiheduse kaudu välja arvutada naatriumkloriti ruumala kasutades naatriumkloriti massi valemist \@ref(eq:weight-of-naclo2-in-starter):
-
-```{=tex}
-\begin{equation}
-naclo2\_ruumala_{al} = \frac{mass_{80} \cdot naclo2\_protsent_{al}}{\rho_{NACLO2} \cdot 100}
-(\#eq:volume-of-naclo2-in-starter)
-\end{equation}
-```
-
-80-% naatriumkloriti lahuse vee ruumala tuleb liita naatriumkloriti ruumalale, mille jaoks lõin valemi \@ref(eq:volume-of-naclo2-in-starter):
-
-```{=tex}
-\begin{equation}
-ruumala_{al} = \frac{mass_{80} \cdot naclo2\_protsent_{al}}{\rho_{NACLO2} \cdot 100} + \frac{mass_{80} \cdot \frac{(100 - naclo2\_protsent_{al})}{100}}{\rho_{VESI}} ===\\
-\frac{mass_{80} \cdot naclo2\_protsent_{al}}{\rho_{NACLO2} \cdot 100} + \frac{mass_{80} \cdot (100 - naclo2\_protsent_{al})}{\rho_{VESI} \cdot 100}
-(\#eq:volume-of-starter)
-\end{equation}
-```
+$$V_{final} = \frac{m_{final}}{\rho_{final}}$$
 
 ###### Arvutamine
 
 ```{r}
-volume_naclo2_80 <- WEIGHT_80 * PERCENTAGE_NACLO2_STARTER / (2.5e3 * 100) + WEIGHT_80 * (100 - PERCENTAGE_NACLO2_STARTER) / (DENSITY_WATER * 100)
+v_final <- m_final / density_final
 ```
 
 ###### Lahend
 
-Ühe kilogrammi 80-% naatriumkloriti lahuse hoiustamiseks on vaja nõud suurusega `r signif(volume_naclo2_80, digits <- 5)` * m^3^.
+2.5 * Kg 23-% NaClO~2~ lahuse hoiustamiseks on vaja nõud suurusega `r signif(v_final, digits <- 5)` * m^3^.
 
-##### Kui suurt anumat ma vajaksin selle koguse MMS’i jaoks?
+### Tarvitamissegu valmistamine
 
-###### Algandmed
+#### Ülesande püstitus
 
-ühe kilogrammi 80-% naatriumkloriti lahuse ruumala $ruumala_{al} = `r signif(volume_naclo2_80, digits <- 6)` \cdot m^3$
+Vastavalt *Protocol 1000*le on MMS1 kokkusegamiseks vaja võtta kolm tilka MMS'i ja kolm tilka 4-% maohappe lahust [@Protocol-1000]. Seejärel oodatakse pool minutit, kuni segu muutub tumekollaseks. Sellist värvumist nimetatakse naatriumkloriti aktiveerimiseks. Keemik Tomas Horky olevat väitnud, et ühe tilga ruumiline maht olevat $.042 \cdot ml$ [@MMS-dosage]. Tumekollasele segule lisatakse $120 \cdot ml$ puhast vett. Võib ka kasutada teatud mahla, aga mitte igasugust. Puumahl sobib hästi. Kraanivett ei soovitata, kuna selles on palju lisaaineid sees. Destilleeritud vesi sobib ka väga hästi.
 
-MMS'i vee, mis on lisatud ühele kilogrammile 80-% naatriumkloriti lahusele, ruumala $mass_{vesi} = `r signif(weight_water, digits <- 5)` \cdot kg$
+Millise kontsentratsiooniga on klorit selles lahuses?
 
-vee tihedus nt temperatuuril 21°C, sest umbes sellise temperatuuriga keskkonnas segaksin ained kokku, $\rho_{VESI} = .99802 \cdot \frac{g}{cm^3} === 9.9802 \cdot 10^{2} \cdot \frac{kg}{m^3}$ [@water]
+Mitu grammi kloritit aktiveeritakse kokku pärast selle segu sissejoomist?
 
-###### Mida arvutada?
+Mitu protsenti kloritit aktiveeritakse kõhus?
 
-MMS'i ruumala $ruumala_{mms} = ?$
+Suurim ohutu kogus kloriti inimese kehale on $1 \frac{mg}{kg \cdot p}$, milles mass on inimese keha mass. Vastavalt *Protocol 1000*le tarvitatakse kuni kolm tilgapaari korraga, niimoodi iga tund kaheksa tundi järjest iga päev 21 päeva järjest. Minu keha mass on umbes $70 \cdot kg$. Täpselt ei tea, pole ammu kaalunud. Mitu tilgapaari keskmiselt kõige rohkem on mul ohutu iga kord MMS1 tarbida?
 
-###### Reeglid
+Kui ma teeksin *Protocol 1000* ravikuuri läbi selle tilgapaaride arvuga, siis mitu grammi kloritit ma enda kehasse sisestan päevas ja mitu 21 päeva kestel?
 
-Tuleb lisada MMS'i vee ruumala 80-% naatriumkloriti lahuse ruumalale MMS's, millest viimase arvutan valemiga \@ref(eq:volume-of-starter) ja esimese massi juba lasin arvutada valemi \@ref(eq:weight-of-water-in-mms) järgi:
+#### Lahendus
 
+##### Millise kontsentratsiooniga on klorit selles lahuses?
+
+###### Sisendid
+
+$$osa_{NaClO_2, final} = 23\%$$
+
+$$osa_{HCl, final} = 4\%$$
+
+$$V_{tilk} = .042 \cdot ml = 4.2 \cdot 10^{-8} \cdot m^3$$
+
+$$\rho_{final} = 1.22 \cdot 10^{3} \cdot \frac{kg}{m^3}$$
+
+$$\rho_{HCl, final} = 1.0181 \cdot \frac{Kg}{l} = 1.0181 \cdot 10^3 \frac{Kg}{m^3}$$[@HCl] 
+
+$$n_{tilk} = 3$$
+
+$$osa_{NaClO_2, reaktsioon} = 5$$
+
+$$osa_{HCl, reaktsioon} = 4$$
+
+$$osa_{ClO_2, reaktsioon} = 4$$
+
+$$osa_{NaCl, reaktsioon} = 5$$
+
+$$osa_{vesi, reaktsioon} = 2$$
+
+$$V_{vesi} = 120 \cdot ml = 1.2 \cdot 10^{-4} \cdot m^3$$
+
+Vee tiheduse otsin internetist [@water]:
+
+$$\rho_{vesi} = .99802 \cdot \frac{g}{cm^3} = 9.9802 \cdot 10^2 \cdot \frac{kg}{m^3}$$
+
+$$V_{tilk} = .042 \cdot ml = 4.2 \cdot 10^{-8} \cdot m^3$$
+
+```{r}
+n_drop <- 3
+part_naclo2_in_reaction <- 5
+part_hcl_in_reaction <- 4
+part_clo2_in_reaction <- 4
+part_nacl_in_reaction <- 5
+part_water_in_reaction <- 2
+v_water <- 1.2e-4
+density_water <- 9.9802e2
+density_hcl <- 1.0181e3
+v_drop <- 4.2e-8
+percentage_hcl <- 4
+```
+
+###### Väljund
+
+$$\frac{m_{ClO_2}}{m_{MMS}} = ?$$
+
+###### Reeglistik
+
+Vastavalt reaktsioonivõrrandile on saadused klorit, lauasool ja vesi. Et välja arvutada kloriti sisaldus lahuses, on vaja välja arvutada kloriti, lauasoola ja eralduva vee mass.
+
+Ühe tilga 23-% NaClO~2~ lahuse mass:
+
+$$m_{drop, NaClO_2} = V_{tilk} \cdot \rho_{final}$$
+
+Mitme tilga 23-% NaClO~2~ lahuse mass:
+
+$$m_{drops, NaClO_2} = m{drop, NaClO_2} \cdot n_{tilk} = V_{tilk} \cdot \rho_{final} \cdot n_{tilk}$$
+
+NaClO~2~ mass:
+
+$$m_{NaClO_2} = m_{drops, NaClO_2} \cdot osa_{NaClO_2, final} = V_{tilk} \cdot \rho_{final} \cdot n_{tilk} \cdot osa_{NaClO_2, final}$$
+
+NaClO~2~ täielik moolide arv:
+
+$$z_{NaClO_2, abs} = \frac{m_{NaClO_2}}{M_{Na} + M_{Cl} + M_O \cdot 2} = \frac{V_{tilk} \cdot \rho_{final} \cdot n_{tilk} \cdot osa_{NaClO_2, final}}{M_{Na} + M_{Cl} + M_O \cdot 2}$$
+
+NaClO~2~ suhteline moolide arv:
+
+$$z_{NaClO_2, rel} = \frac{z_{NaClO_2, abs}}{osa_{NaClO_2, reaktsioon}} = \frac{V_{tilk} \cdot \rho_{final} \cdot n_{tilk} \cdot osa_{NaClO_2, final}}{(M_{Na} + M_{Cl} + M_O \cdot 2) \cdot osa_{NaClO_2, reaktsioon}}$$
+
+Arvutada tuleb selle reageerija moolide arvuga, mille suhteline moolide arv on väiksem, sest see aine reageerib täielikult, muud võib üle jääda. Kuna reageerijaid on kaks, siis on vaja ka maohappe kohta avaldada suhteline moolide arv:
+
+$$z_{HCl, rel} = \frac{V_{tilk} \cdot \rho_{HCl, final} \cdot n_{tilk} \cdot osa_{HCl, final}}{(M_{H} + M_{Cl}) \cdot osa_{HCl, reaktsioon}}$$
+
+Väiksema suhtelise moolide arvu põhjal saan arvutada kloriti massi:
 ```{=tex}
 \begin{equation}
-ruumala_{ll} = ruumala_{al} + \frac{mass_{vesi}}{\rho_{VESI}}
-(\#eq:volume-of-mms)
+m_{ClO_2} = z_{min} \cdot osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2)
+(\#eq:mass-clo2)
 \end{equation}
 ```
 
-###### Arvutamine
-
-```{r}
-volume_mms <- volume_naclo2_80 + weight_water / DENSITY_WATER
+Vaja on ka teiste saaduste koondmassi:
+```{=tex}
+\begin{equation}
+m_{NaCl, H_2O} =  z_{min} \cdot (osa_{NaCl, reaktsioon} \cdot (M_{Na} + M_{Cl}) + osa_{vesi, reaktsioon} \cdot (M_{H} \cdot 2 + M_O))
+(\#eq:mass-nacl-water)
+\end{equation}
 ```
 
-###### Lahend
+Valemite \@ref(eq:mass-clo2) ja \@ref(eq:mass-nacl-water) põhjal kirjutan valemi kloriti kontsentratsiooni arvutamiseks joodavas sihtlahuses:
 
-Nõud, mille maht on vähemalt $`r signif(volume_mms, digits <- 5)` \cdot m^3$, on vaja ühest kilogrammist naatriumkloritist valmistatud MMS'i hoiustamiseks.
-
-##### Kui suur on MMS'i tihedus?
-
-###### Algandmed
-
-ühest kilogrammist 80-% naatriumkloriti lahusest tehtud MMS'i mass $mass_{mms} = `r signif(weight_mms, digits <- 5)` \cdot kg$
-
-ühest kilogrammist 80-% naatriumkloriti lahusest tehtud MMS'i ruumala $ruumala_{ll} = `r volume_mms` \cdot m^3$
-
-###### Mida arvutada?
-
-MMS'i tihedus $tihedus_{ll} = ?$
-
-###### Reegel
-
-$$tihedus_{ll} = \frac{mass_{mms}}{ruumala_{ll}}$$
+$$\frac{m_{ClO_2}}{m_{MMS}} \\
+= z_{min} \cdot osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2) \\
+/ {(z_{min} \cdot osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2) \\
++ z_{min} \cdot (osa_{NaCl, reaktsioon} \cdot (M_{Na} + M_{Cl}) + osa_{vesi, reaktsioon} \cdot (M_{H} \cdot 2 + M_O)) + V_{vesi} \cdot \rho_{vesi})} \\
+= {z_{min} \cdot osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2)}\\
+/ {(z_{min} \cdot (osa_{ClO_2, reaktsioon} \cdot (M_{Cl} + M_{O} \cdot 2) + (osa_{NaCl, reaktsioon} \cdot (M_{Na} + M_{Cl}) + osa_{vesi, reaktsioon} \cdot (M_{H} \cdot 2 + M_O)))\\
++ V_{vesi} \cdot \rho_{vesi})}$$
 
 ###### Arvutamine
 
 ```{r}
-density_mms <- weight_mms / volume_mms
+z_naclo2_rel = v_drop * density_final * n_drop * percentage_naclo2_in_final / (100 * (MOLAR_MASS_NA + MOLAR_MASS_CL + MOLAR_MASS_O * 2) * part_naclo2_in_reaction)
+v_drop * density_final
+v_drop * density_final * n_drop
+v_drop * density_final * n_drop * percentage_naclo2_in_final / 100
+(MOLAR_MASS_NA + MOLAR_MASS_CL + MOLAR_MASS_O * 2) * part_naclo2_in_reaction
+z_naclo2_rel
+z_hcl_rel = v_drop * density_hcl * n_drop * percentage_hcl / (100 * (MOLAR_MASS_H + MOLAR_MASS_CL) * part_hcl_in_reaction)
+z_hcl_rel
+
+if (z_naclo2_rel < z_hcl_rel) {
+  text <- "Naatriumklorit kasutatakse täielikult ära."
+  ratio_clo2_to_mms <- z_naclo2_rel * part_clo2_in_reaction * (MOLAR_MASS_CL + MOLAR_MASS_O * 2) / (z_naclo2_rel * (part_clo2_in_reaction * (MOLAR_MASS_CL + MOLAR_MASS_O * 2) + part_nacl_in_reaction * (MOLAR_MASS_NA + MOLAR_MASS_CL) + part_water_in_reaction * (MOLAR_MASS_H * 2 + MOLAR_MASS_O)) + v_water * density_water)
+} else {
+  text <- "Maohape kasutatakse täielikult ära. Naatriumkloritit jääb üle aktiveerumaks maos."
+  ratio_clo2_to_mms <- z_hcl_rel * part_clo2_in_reaction * (MOLAR_MASS_CL + MOLAR_MASS_O * 2) / (z_naclo2_rel * (part_clo2_in_reaction * (MOLAR_MASS_CL + MOLAR_MASS_O * 2) + part_nacl_in_reaction * (MOLAR_MASS_NA + MOLAR_MASS_CL) + part_water_in_reaction * (MOLAR_MASS_H * 2 + MOLAR_MASS_O)) + v_water * density_water)
+}
+z_hcl_rel * part_clo2_in_reaction * (MOLAR_MASS_CL + MOLAR_MASS_O * 2)
 ```
 
 ###### Lahend
 
-MMS'i tihedus on $`r signif(density_mms, digits <- 5)` \cdot \frac{kg}{m^3}$.
+`r text` Klorit on MMS's kontsentratsiooniga `r ratio_clo2_to_mms`.
 
 ###
 
