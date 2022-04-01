@@ -1,0 +1,12 @@
+name: "digipädevus-akadeemilised-väljendusoskused"
+navbar:
+  title: "Digipädevus ja akadeemilised väljendusoskused"
+  left:
+    - text: "milleks?"
+      href: index.html
+    - text: "Erinevate allikate viitamine"
+      href: erinevate-allikate-viitamine.html
+    - text: "Kursuse referaat"
+      href: kursuse-referaat.html
+    - text: "autor"
+      href: about.html

@@ -1,0 +1,76 @@
+---
+title: "Kursuse referaat"
+author: 'peacecop kalmer:'
+date: "4/1/2022"
+output:
+  bookdown::html_document2:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+bibliography: references.bib
+---
+
+# Ülesande püstitus
+
+Töö sisu pikkus on 7000 kuni 8000 tähemärki ilma tühikuteta (s.h. kirjanduse loetelu), lühireferaat koosneb järgmistest osadest:
+
+- Tiitelleht
+
+- Sisukord
+
+-Sissejuhatus
+
+Siin toote välja  ülevaate koostamise eesmärgi – mis on seotud akadeemilise suunaga ning toote välja missuguse LTI akadeemilise suuna alla teie õppekava kuulub. Akadeemilise suuna  väljatoomise puhul on mh vajalik viidata allikale mida kasutasite.
+
+- Lühikäsitlus akadeemilisest suunast (1 neljast akadeemilisest suunast LTI-s), milles te õpite
+
+See peatükk peaks olema liigendatud alapeatõkkideks ja siin te peaksite viitama mingitele riiklikele või strateegiadokumentidele, millega on teie akadeemiline suund seotud või mis on olulisemad aktuaalsed küsimused suunas laiemalt.  Enamus teist tegid viitamata lühikokkuvõtte eelneval semestril, nüüd on aeg samad asjad lisada lühireferaati juba korreltselt viidates- et vajaminev üles leida, saate kasutada infootsingu kompetentse.
+
+-          Õpitava eriala perspektiiv
+
+See osa peaks olema valdavalt teie autorimaterjal ning seostate õpitava eriala ja selle perspektiivi eeltoodud peatükis toodud üldise käsitlusega. Võib sisaldada viiteid (nt OSKA vastavale raportile, eriala arengukavadele vms).
+
+-          Kokkuvõte
+
+Lühikokkuvõte eelnevalt toodud teksti olulisematest punktidest
+
+- Kasutatud allikad
+
+Siin toote tekstis viidatud allikate täiskirjed. Viitamine peaks toimuma automaatselt, kasutades viitamisprogramme, mis võimaldavad lisada nii tekstiusisest kui allikate loetelu viidet (Mendeley, Zotero jt)
+
+NB! Referaat ei ole sõna-sõnaline lõikude copy-paste, vaid tudengi enda sõnadega viidatud ja edasiantud sisu kirjalikult avaldatud allikas avaldatud arvamustele, faktidele või seisukohtadele, millele järgneb nõuetekohane viide allikale. Kui kasutatakse sõna- sõnalist viitamist, siis seda esitatakse tsitaadina jutumärkides, millele järgneb viide selle sisu avaldamise allikale.
+
+Töö vormistamisel tuleb lähtuda kirjalike tööde juhenditest, mis tei leiate: https://www.tlu.ee/lti/opingud/dokumendid-ja-juhendid
+
+Lühireferaadis tuleb lähtuda eriala kirjalike tööde juhendis toodud formaadist ning see peab sisaldama lisaks tekstile ka vähemalt 1 korrektselt viidatud joonist, 1 korrektselt viidatud fotot, 1 korrektselt viidatud tabelit ja 1 korrektselt viidatud graafikut.
+
+Referaadi vormistamisel tuleb kasutada digipädevuste osas  toodud lahendusi, täpsema juhise avaldame loengute järgselt (automaatselt koostatud sisukord, pealkirjade ja tekstilaadide kasutamine, viitamise automaatne rakendamine jms)
+
+Referaadis peaks olema 8-10 kasutatud allikat, s.h erinevad allikad ning vormistatud APA reeglitele vastavalt:
+
+  raamat
+  mitme autoriga teadusajakirja artikkel
+  artikkel elektroonilises teadusajakirjas
+  Eesti ajakirjanduses ilmunud artikkel, autoriga
+  autorita materjal veebileheküljel (nt riiklik strateegia).
+Referaat peaks olema esitatud .doc, .docx või office  formaadis et oleks võimalik jälgida vajalike digipädevuste rakendamist.
+
+# Sissejuhatus
+
+Tallinna Ülikooli kursuse *digipädevus ja akadeemilised väljendusoskused* üks osa on lühireferaadi loomine looja õppekava instituudi akadeemilise õppesuuna kohta. Minu õppekava on *Integreeritud loodusteadused, BSc*[@akadeemilised-suunad] ja sellega näidatakse Loodus- ja terviseteaduste instituudi *loodusteaduste ja jätkusuutliku arengu* suunda[@int-loo].
+
+# Loodusteaduste ja jätkusuutliku arengu suund
+
+Jätkusuutlikkuse osa põhineb inimarengu 2020. aasta aruandel[@hdr-2020].
+
+Inimeste oodatav eluiga on veidi suurenenud ja püsib praegu paigal või näitab kerget langemist[@oodatav-eluiga]. See on vähemalt 74 aastat ja see tähendab vähemalt 74-aastast elukestvat õppimist.
+
+Jätkusuutlikkuse üks alus on terve vaimne tervis[@vaimse-tervise-roheline-raamat].
+
+Oluline on, et haridus oleks jätkusuutlik[@ai-ecosystem-creation].
+
+Samuti on tähtis vaadata, et ei tekiks liiga palju farmaatsiajäätmeid[@NABAVIPELESARAEI2022154416].
+
+Gaia metoodikast võib ka abi olla[@maailma-tants].
+
+# Õpitava eriala perspektiiv

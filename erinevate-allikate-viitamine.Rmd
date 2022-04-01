@@ -1,0 +1,52 @@
+---
+title: "Erinevate allikate viitamine"
+author: 'peacecop kalmer:'
+date: "4/1/2022"
+output:
+  bookdown::pdf_document2:
+    keep_tex: yes
+  bookdown::html_document2:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+bibliography: references.bib
+biblio-style: apalike
+link-citations: yes
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Ülesande püstitus
+
+Esitage dokument, .doc või .pdf formaadis, kus on APA reeglitele vastavad viitekirjed (kokku 5). kus alguses on lause või laused koos tekstisisese viitamisega ning lõpus on korrektne kirjanduse loetelu. Viitamisülesande ette lisage ka oma nimi ja õppegrupi tunnus.
+
+1.           raamat
+2.           mitme autoriga teadusajakirja artikkel
+3.            artikkel elektroonilises teadusajakirjas
+4.          Eesti ajakirjanduses ilmunud artikkel, autoriga
+5.         autorita materjal veebileheküljel (nt riiklik strateegia)
+
+Kasutage selleks viitamistarkvara.
+
+# Lahendus
+
+Olen ja mu nimi on peacecop kalmer: üliõpilaskoodiga *20210951MLLB.LT*.
+
+Järgnevalt esitan enda näite viitamisest:
+
+5.  Tallinna Ülikooli kursuse *digipädevus ja akadeemilised väljendusoskused* üks osa on lühireferaadi loomine looja õppekava instituudi akadeemilise õppesuuna kohta. Minu õppekava on *Integreeritud loodusteadused, BSc* [@akadeemilised-suunad] ja sellega näidatakse Loodus- ja terviseteaduste instituudi *loodusteaduste ja jätkusuutliku arengu* suunda [@int-loo].
+
+    Jätkusuutlikkuse osa põhineb inimarengu 2020. aasta aruandel [@hdr-2020].
+    
+    Inimeste oodatav eluiga on veidi suurenenud ja püsib praegu paigal või näitab kerget langemist [@oodatav-eluiga]. See on vähemalt 74 aastat ja see tähendab vähemalt 74-aastast elukestvat õppimist.
+
+4. Jätkusuutlikkuse üks alus on terve vaimne tervis [@vaimse-tervise-roheline-raamat].
+
+2. Oluline on, et haridus oleks jätkusuutlik [@ai-ecosystem-creation].
+
+3. Samuti on tähtis vaadata, et ei tekiks liiga palju farmaatsiajäätmeid [@NABAVIPELESARAEI2022154416].
+
+1. Gaia metoodikast võib ka abi olla [@maailma-tants].

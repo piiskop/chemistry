@@ -1,0 +1,11 @@
+---
+title: "Milleks?"
+author: 'peacecop kalmer:'
+output:
+  bookdown::html_document2:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+---
+
+Siia saiti loon enda akadeemilised väljendused väljendades enda digipädevust Tallinna Ülikooli kursuse *Digipädevus ja akadeemilised õpioskused* raames.
