@@ -8,6 +8,7 @@ output:
     toc_float: yes
     toc_depth: 5
 bibliography: references.bib
+link-citations: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -390,6 +391,10 @@ Naatriumi ained on tasakaalus. Kloori ained on tasakaalus. Et hapniku ained tasa
 $${\huge\color{green}{5}Na\color{green}{Cl}O_2 + \color{blue}{4}H\color{blue}{Cl} \rightarrow \color{blue}{4Cl}O_2 + \color{green}{5}Na\color{green}{Cl} + {\bf2H_2O}}$$
 
 Ka vesiniku ained on tasakaalus, millega on moodustatud reaktsioonivõrrand. Seesama võrrand on esitatud ka kirjutises [@ALIVENHEALTHY].
+
+#### Pärand
+
+Selle ülesande koostasin MathCityMappi rajale koodiga *398852* [@mathcitymap].
 
 ### Tarvitamissegu valmistamine ja tarbimine
 
