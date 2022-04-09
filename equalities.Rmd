@@ -13,7 +13,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Reeglid oksüdatsiooniastmete jaoks
+# Reaktsioonivõrrandid
+
+## Reeglid oksüdatsiooniastmete jaoks
 
 Oksüdatsiooniaste näitab elektronide loovutamise ja liitmise võimet:
 
@@ -41,11 +43,11 @@ Oksüdatsiooniaste näitab elektronide loovutamise ja liitmise võimet:
 
 12. $\text{Pyruvic acid} + NADH ↔ \text{lactic acid} + NAD^+$
 
-# Hapnik ja metall
+## Hapnik ja metall
 
 Metal oxides are formed, which are generally basic in nature.
 
-## Hapnik ja aluseline metall
+#### Hapnik ja aluseline metall
 
 1. $4Li + O_2 -> 2Li_2O$
 
@@ -55,7 +57,7 @@ Metal oxides are formed, which are generally basic in nature.
 
 4. 2 * Ca + O~2~ -> 2 * CaO
 
-## Hapnik ja mittealuseline metall
+#### Hapnik ja mittealuseline metall
 
 1. 2 * Mg + O~2~ -> 2 * MgO
 
@@ -73,11 +75,11 @@ Reaktsioon toimub kõrge temperatuuriga.
 
 4. $3 \cdot O_2 + 4 \cdot Fe \rightarrow 2 \cdot Fe_2O_3$
 
-# Metall ja elektron
+## Metall ja elektron
 
 $$Na^+ + e^- \rightarrow Na$$
 
-# Aluseline oksiid ja vesi
+## Aluseline oksiid ja vesi
 
 1. Li~2~O + H~2~O -> 2 * LiOH
 
@@ -91,19 +93,19 @@ Reaktsioon toimub osaliselt.
 
 5. CaO + H~2~O -> Ca(OH)~2~
 
-# Ülemineku järgse metalli oksiid ja vesi
+## Ülemineku järgse metalli oksiid ja vesi
 
 1. $Al_2O_3 (alumiiniumoksiid) + H_2O$
 
 Ei reageeri. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
 
-# Vesi ja metalloid
+## Vesi ja metalloid
 
 1. H~2~O + SiO~2~
 
 Reaktsioon ei toimu, sest kovalentne side räni ja hapniku vahel on liiga tugev.
 
-# Ülemineku metalli oksiid ja vesi
+## Ülemineku metalli oksiid ja vesi
 
 1. FeO + H~2~O
 
@@ -113,7 +115,7 @@ Ei reageeri.
 
 Ei reageeri.
 
-# Vesi ja metall
+## Vesi ja metall
 
 ![Reeglid metallide reageerimiseks veega](metals-reacting-with-water.png)
 
@@ -199,7 +201,7 @@ Reaktsioon ei toimu.
 
 Reaktsioon ei toimu.
 
-# Vesi ja elektron
+## Vesi ja elektron
 
 Katoodil -:
 
@@ -209,15 +211,15 @@ Anoodil +:
 
 $$2 \cdot H_2O - 4 \cdot e \rightarrow 4 \cdot H^+ + O_2$$
 
-# Mittemetall ja metall
+## Mittemetall ja metall
 
 1. $2 \cdot Na + S \rightarrow Na_2S$
 
 2. K + 2 * S -> K~2~S
 
-# Mittemetallid
+## Mittemetallid
 
-## Vesinik ja mittemetall
+#### Vesinik ja mittemetall
 
 Covalent hydrides are formed:
 
@@ -243,7 +245,7 @@ Hapnik tahab vesinikku rohkem kui teist hapnikku, sest eleketronegatiivsused on 
 
 5. H~2~ + S -> H~2~S
 
-## Vesinik ja vesinik
+#### Vesinik ja vesinik
 
 1. $H + H \rightarrow H_2$
 
@@ -254,7 +256,7 @@ Hapnik tahab vesinikku rohkem kui teist hapnikku, sest eleketronegatiivsused on 
 (väga endotermiline) – neelab soojust (vajab palju energiat);
 algab alles üle 2000°C; täielikult atomaarne  u 5000°C juures (elektrikaares)
 
-## Hapnik ja mittemetall
+#### Hapnik ja mittemetall
 
 Non – metal oxides are formed, which are generally acidic in nature:
 
@@ -280,13 +282,13 @@ Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovuta
 
 ![Vääveltrioksiidi kui aniooni Lewise struktuur](so3--2-lewis.svg)
 
-## Hapnik ja vesinik
+#### Hapnik ja vesinik
 
 1.  $2H_2 + O_2 \leftrightarrow 2H_2O$
 
     äärmiselt eksotermiline reaktsioon
 
-## Hapnik ja hapnik
+#### Hapnik ja hapnik
 
 1.  $O + O \rightarrow O_2$
 
@@ -294,7 +296,7 @@ Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovuta
 
     ![Kaks hapniku aatomit jagavad kummagi kaht elektroni.](o-o-6+2.svg)
 
-## Muud
+#### Muud
 
 1.  $Cl + Cl \rightarrow Cl_2$
 
@@ -312,7 +314,7 @@ Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovuta
 
 3. $2H^+ + 2e \rightarrow H_2$
 
-# Vesinik ja metall
+## Vesinik ja metall
 
 Reactive metals from ionic metal hydrides:
 
@@ -322,7 +324,7 @@ Reactive metals from ionic metal hydrides:
 
 3. H~2~ + Ca -> CaH~2~
 
-# Vesi ja mittemetall
+## Vesi ja mittemetall
 
 Generally, do not react:
 
@@ -334,7 +336,7 @@ See reaktsioon toimub auruga.
 
 See reaktsioon ei toimu.
 
-# Halogeen ja metall
+## Halogeen ja metall
 
 Metal chalogenides are formed which are ionic in nature:
 
@@ -352,27 +354,27 @@ Metal chalogenides are formed which are ionic in nature:
 
 6. $2 \cdot Fe + 3 \cdot Cl_2 \rightarrow 2 \cdot FeCl_3$
 
-# Aluseline oksiid ja metall
+## Aluseline oksiid ja metall
 
 $$4BaO + 2Al \rightarrow BaO \cdot Al_2O_3 + 3Ba$$
 
-# Aluseline oksiid ja mittemetall
+## Aluseline oksiid ja mittemetall
 
 1. $Zn^{II}O^{-II} + C \rightarrow Zn + C^{II}O^{-II}$
 
 Süsinik oksüdeerub. Tsink redutseerub.
 
-# Aluselised oksiidid
+## Aluselised oksiidid
 
 1. Li~2~O + CaO
 
 Reaktsioon ei toimu.
 
-# Happeline oksiid ja mittemetall
+## Happeline oksiid ja mittemetall
 
 1. $SiO_2 + 2 \cdot C → Si + 2 \cdot CO$
 
-# Happeline oksiid ja vesi
+## Happeline oksiid ja vesi
 
 1. $CO  +  H_2O  →  CO_2  + H_2$
 (moodustuv CO~2~ eraldatakse pesemisel veega rõhu all)
@@ -395,7 +397,7 @@ hingamine ja fotosüntees
 
 Reaktsioon ei toimu.
 
-# Happeline oksiid ja alus
+## Happeline oksiid ja alus
 
 1 $2 \cdot NaOH + SO_3 \rightarrow Na_2SO_4 + H_2O$
 
@@ -403,7 +405,7 @@ Reaktsioon ei toimu.
 
 3. Ca(OH)~2~ + CO~2~ → CaCO~3~ + H~2~O
 
-# Happeline oksiid ja hapnik
+## Happeline oksiid ja hapnik
 
 1. $2S^{IV}O_2^{-II} + O_2 → 2S^{VI}O_3^{-II}$
 
@@ -419,7 +421,7 @@ Hapnik on oksüdeerija, sest haagib elektrone:
 
 $$O + 2 \cdot e \rightarrow O^{-II}$$
 
-# Happeline oksiid ja aluseline oksiid
+## Happeline oksiid ja aluseline oksiid
 
 1. $SO_2 + Na_2O \rightarrow Na_2SO_3$
 
@@ -433,7 +435,7 @@ Reaktsioon toimub alati.
 
 5. $2Na_2O_2 + \underbrace{2CO_2}_{\text{väljahingatav}} \rightarrow 2Na_2CO_3 + \underbrace{O_2}_{sissehingatavaks}$
 
-# Hape ja metall
+## Hape ja metall
 
 $$Lm + hape →  sool  + H_2$$
 
@@ -521,45 +523,69 @@ Reaktsioon ei toimu, kuna vask on nõrgem kui vesinik.
 
 Reaktsioon ei toimu, kuna hõbe on vesinikust nõrgem.
 
-# Hape ja alus
+## Hape ja alus
 
-1. KOH + HCl -> KCl + H~2~O
+1.  $\mathrm{\underbrace{NaOH}_{aluseline} + \underbrace{HCl}_{happeline} \rightarrow \underbrace{NaCl}_{neutraalne} + \underbrace{H_2O}_{neutraalne}}$
 
-2. $Ca(OH)_2 + 2HCl → CaCl_2 + 2H_2O$
+    $$\mathrm{Na^+ + OH^- + H^+ + Cl^- \rightarrow Na^+ + Cl^- + H_2O}$$
+
+    $$\mathrm{OH^- + H^+ \rightarrow H_2O}$$
+
+2. KOH + HCl -> KCl + H~2~O
+
+3. $\mathrm{Ca(OH)_2 + 2HCl → CaCl_2 + 2H_2O}$
 
 Reaktsioon toimub alati.
 
-3. $Na^IO^{-II}H^I (naatriumhüdroksiid ehk seebikivi) + H^ICl^{-I} -> Na^ICl^{-I} + H_2^IO^{-II}$
+4. $\mathrm{Na^IO^{-II}H^I (naatriumhüdroksiid ehk seebikivi) + H^ICl^{-I} -> Na^ICl^{-I} + H_2^IO^{-II}}$
 
-4. $H_2SO_4 + 2 \cdot NaOH \rightarrow 2 \cdot H_2O + Na_2SO_4$
+5.  $\mathrm{FeSO_4}$ lahustub ja hüdrolüüsub, sest *Fe* on nõrk, $\mathrm{SO_4}$ on tugev:
 
-5. $2 \cdot KOH + H_2SO_4 \rightarrow \underbrace{K_2SO_4}_{kaaliumsulfaat} + 2 \cdot \underbrace{H_2O}_{vesi}$
+    Molekulaarne võrrand:
 
-6. $H_2SO_4 + Ca(OH)_2 \rightarrow CaSO_4 + 2 \cdot H_2O$
+    $$\mathrm{FeSO_4 + H_2O \leftrightarrow Fe(OH)_2 + H_2SO_4}$$
 
-7. 3 * NaOH + H~3~PO~4~ -> Na~3~PO~4~ + 3 * H~2~O
+    Ioonvõrrand:
 
-8. $2 \cdot H_3PO_4 + 3 \cdot Mg(OH)_2 \rightarrow 6 \cdot H_2O + Mg_3(PO_4)_2$
+    $$\mathrm{Fe^{2} + (SO_4)^{-2} + H_2O \leftrightarrow Fe(OH)_2 + H^+ + (HSO_4)^-}$$
 
-9. $3 \cdot Ca(OH)_2 + 2 \cdot H_3PO_4 \rightarrow \underbrace{Ca_3(PO_4)_2}_{kaltsiumfosfaat} + 6 \cdot \underbrace{H_2O}_{vesi}$
+6. $\mathrm{H_2SO_4 + 2 \cdot NaOH \rightarrow 2 \cdot H_2O + Na_2SO_4}$
 
-10. $H_2CO_3 + 2 \cdot NaOH \rightarrow Na_2CO_3 + 2 \cdot H_2O$
+7. $\mathrm{2 \cdot KOH + H_2SO_4 \rightarrow \underbrace{K_2SO_4}_{kaaliumsulfaat} + 2 \cdot \underbrace{H_2O}_{vesi}}$
 
-11.  $Cu(OH)_2 + H_2S → CuS + 2H_2O$
+8. $\mathrm{H_2SO_4 + Ca(OH)_2 \rightarrow CaSO_4 + 2 \cdot H_2O}$
 
-    Reaktsioon toimub alati.
+9.  $\mathrm{3NaOH + H_3PO_4 \rightarrow Na_3PO_4 + 3H_2O}$
 
-12. $Be(OH)_2 + 2HNO_3 \rightarrow Be(NO_3)_2 + 2H_2O$
+    Tuleb arvestada, et see on reaktsioonivõrrand ja tegelikult ilma veeta reaktsioon ei toimu. Reageerimises esineb ka vesi:
 
-13. $Be(OH)_2 + 2NaOH \rightarrow Na_2 \cdot Be(OH)_4$
+    $\mathrm{3NaOH + H_3PO_4 + H_2O \rightarrow Na_3PO_4 + 3H_2O + H_2O}$
 
-# Hape ja hapnik
+10. $\mathrm{2 \cdot H_3PO_4 + 3 \cdot Mg(OH)_2 \rightarrow 6 \cdot H_2O + Mg_3(PO_4)_2}$
+
+11. $\mathrm{3 \cdot Ca(OH)_2 + 2 \cdot H_3PO_4 \rightarrow \underbrace{Ca_3(PO_4)_2}_{kaltsiumfosfaat} + 6 \cdot \underbrace{H_2O}_{vesi}}$
+
+12. $\mathrm{H_2CO_3 + 2 \cdot NaOH \rightarrow Na_2CO_3 + 2 \cdot H_2O}$
+
+13.  $\mathrm{Cu(OH)_2 + H_2S → CuS + 2H_2O}$
+
+     Reaktsioon toimub alati.
+
+13. $\mathrm{Be(OH)_2 + 2HNO_3 \rightarrow Be(NO_3)_2 + 2H_2O}$
+
+14. $\mathrm{Be(OH)_2 + 2NaOH \rightarrow Na_2 \cdot Be(OH)_4}$
+
+15.  Soola hüdrolüüs:
+
+     $2NaOH + H_2S \leftrightarrow \overbrace{\underbrace{Na_2}_{tugev}\underbrace{S}_{\text{nõrk}}}^{\text{aluseline keskkond}} + 2H_2O$
+
+## Hape ja hapnik
 
 1. H~2~SO~3~ + O~2~ -> H~2~SO~4~
 
-# Hape ja aluseline oksiid
+## Hape ja aluseline oksiid
 
-$$LmO_2 + hape \rightarrow H_2O_2 + O_2$$
+$$\mathrm{LmO_2 + hape \rightarrow H_2O_2 + O_2}$$
 
 1. $2 \cdot HCl + MgO \rightarrow MgCl_2 + H_2O$
 
@@ -577,29 +603,33 @@ $$LmO_2 + hape \rightarrow H_2O_2 + O_2$$
 
 Reaktsioon toimub alati.
 
-# Happed
+## Hape ja vesi
+
+$$HCl (g)+H_2O (l)→(H_3O)^+(aq)+Cl^−(aq)$$
+
+## Happed
 
 1. $\underbrace{H_2S}_{vesiniksulfiid} + \underbrace{H_2CO_3}_{süsihape}$
 
 Reaktsioon ei toimu.
 
-# Happelised oksiidid
+## Happelised oksiidid
 
 1. CO~2~ + SO~3~
 
 Reaktsioon ei toimu.
 
-# Happeline oksiid ja alus
+## Happeline oksiid ja alus
 
 1. SO~2~ + Ca(OH)~2~ -> CaSO~3~ + H~2~O
 
-# Happeline ja aluseline oksiid
+## Happeline ja aluseline oksiid
 
 1. CaO (lubjakivi) + CO~2~ <-> CaCO~3~
 
 2. CaO + SO~2~ -> CaSO~3~
 
-# Sool ja metall
+## Sool ja metall
 
 More reactive metal displaces less reactive metal from its salt solution:
 
@@ -619,13 +649,13 @@ Reaktsioon ei toimu, kuna magneesium ei tõrju kaltsiumi kaltsiumkloriidist väl
 
 Reaktsioon ei toimu, sest raud ei tõrju aktiivsemat tsinki soolast välja.
 
-# Sool ja mittemetall
+## Sool ja mittemetall
 
 Non-metal that is more reactive displaces less reactive non-metal from its salt solution:
 
 1. Cl~2~ + 2 * NaBr -> 2 * NaCl + Br~2~
 
-# Sool ja alus
+## Sool ja alus
 
 1. $CuCl_2 + 2 \cdot NaOH → 2 \cdot NaCl + Cu(OH)_2 (vask(II)hüdroksiid) \downarrow$ 
 
@@ -647,23 +677,23 @@ Non-metal that is more reactive displaces less reactive non-metal from its salt 
 
     Reaktsioon ei toimu, kuna sadet ei teki.
 
-# Sool ja hapnik
+## Sool ja hapnik
 
 1. $2 \cdot ZnS + 3 \cdot O_2 \rightarrow 2 \cdot ZnO + 2 \cdot SO_2$
 
-# Sool ja aluseline oksiid
+## Sool ja aluseline oksiid
 
 1. CaO + NaCl
 
 Reaktsioon ei toimu.
 
-# Sool ja happeline oksiid
+## Sool ja happeline oksiid
 
 1. CO~2~ + Fe~2~SO~4~
 
 Reaktsioon ei toimu.
 
-# Sool ja hape
+## Sool ja hape
 
 1. Na~2~S + 2 * HCl -> 2 * NaCl + H~2~S
 
@@ -693,7 +723,7 @@ Reaktsioon ei toimu, sest HCl on lenduvam kui HNO~3~.
 
 Reaktsioon ei toimu, sest sadet ei teki ja vesinikkloriidhape pole väävelhappest nõrgem.
 
-# Soolad
+## Soolad
 
 1. $Cs_2SO_4 + Ba(NO_3)_2 \rightarrow 2 \cdot CsNO_3 + BaSO_4 \downarrow$
 
@@ -723,17 +753,17 @@ Reaktsioon ei toimu, kuna ei teki sadet.
 
 Reaktsioon ei toimu, kuna vähemalt vasksulfiid ei lahustu vees.
 
-# Leelis ja halogeen
+## Leelis ja halogeen
 
 $2NaOH + Cl_2 \rightarrow \underbrace{NaCl + NaClO + H_2O}_\text{Javelle’i vesi - pleegitusvahend, (žavelli vesi) – esimene kunstlik pleegitusvahend}$
 
-# Muu liitaine ja vesinik
+## Muu liitaine ja vesinik
 
 1. $HCO_3^- + H^+ \leftrightarrow H_2CO_3 \leftrightarrow CO_2 + H_2O$
 
 From left to right: the process of raising pH as more CO2 is made. From right to left: the reverse process: the lowering of pH as more bicarbonate is created.
 
-# Muu liitaine ja hapnik
+## Muu liitaine ja hapnik
 
 1. $CH_4 + 2 \cdot O_2 \rightarrow 2 \cdot H_2O + CO_2$
 
@@ -741,23 +771,76 @@ From left to right: the process of raising pH as more CO2 is made. From right to
 
 3. $C_3H_8 + 5 \cdot O_2 \rightarrow 3 \cdot CO_2 + 4 \cdot H_2O + kuumus$
 
-# Muu liitaine ja vesi
+## Muu liitaine ja vesi
 
 1. $ATP + H_2O \leftrightarrow ADP + P_i + \underbrace{\overbrace{\text{vaba energia}}}^{-305e2 \cdot \frac{J}{mol}}_{-57e3 \cdot \frac{J}{mol} rakus}$
 
-2. $CH_4 + H_2O → CO + 3H_2$
+2. $\mathrm{CH_4 + H_2O → CO + 3H_2}$
 
-3. $CH_4  +  2H_2O  →  CO_2  +  4H_2$
+3. $\mathrm{CH_4  +  2H_2O  →  CO_2  +  4H_2}$
 
-4. $\underbrace{CaH_2}_{1 \cdot mol === 42 \cdot g} + 2 \cdot H_2O \rightarrow Ca(OH)_2 + \underbrace{2 \cdot H_2}_{2 \cdot 22.4 \cdot l}$
+4. $\mathrm{\underbrace{CaH_2}_{1 \cdot mol === 42 \cdot g} + 2 \cdot H_2O \rightarrow Ca(OH)_2 + \underbrace{2 \cdot H_2}_{2 \cdot 22.4 \cdot l}}$
 
-5. $KH + H_2O \rightarrow KOH + H_2$
+5. $\mathrm{KH + H_2O \rightarrow KOH + H_2}$
 
-6. $H_2O + D_2O \leftrightarrow 2HDO$
+6. $\mathrm{H_2O + D_2O \leftrightarrow 2HDO}$
 
-# Lagunemised
+## Lagunemised
 
-$$2LmHCO_3 \rightarrow Lm_2CO_3 + H_2O + CO_2$$
+#### Elektrolüütide dissotsiatsioon vees:
+
+1.  $\mathrm{Ba(OH)_2 \rightarrow Ba^{2} + 2(OH)^-}$
+
+    Esimeses astmes:
+
+    $$\mathrm{Ba(OH)_2 \rightarrow (BaOH)^+ + (OH)^{-}}$$
+
+    Teises astmes:
+
+    $$\mathrm{BaOH^+ \rightarrow Ba^{2} + (OH)^-}$$
+
+
+2. $\mathrm{HCl \rightarrow H^+ + Cl^-}$
+
+3.  $\mathrm{H_3PO_4 \rightarrow 3 \cdot H^+ + (PO_4)^{-3}}$
+
+    90% esimeses astmes (pKA ehk dissotsiatsioonikonstant 2.12):
+
+    $$\mathrm{H_3PO_4 \rightarrow H^+ + (H_2PO_4)^-}$$
+
+    Teises astmes (pKa 7.21):
+
+    $$\mathrm{(H_2PO_4)^- \rightarrow H^+ + (HPO_4)^{-2}}$$
+
+    Kolmandas astmes (pKA 12.32 / 12.66):
+
+    $$\mathrm{(HPO_4)^{-2} \rightarrow H^+ + (PO_4)^{-3}}$$
+
+    Alternatiivselt esimeses astmes:
+
+    $$\mathrm{H_3PO_4 + H_2O \rightarrow (H_3O)^+ + (H_2PO_4)^-}$$
+
+    Alternatiivselt teises astmes:
+
+    $$\mathrm{(H_2PO_4)^- + H_2O \rightarrow (H_3O)^+ + (HPO_4)^{-2}}$$
+
+    Alternatiivselt kolmandas astmes:
+
+    $$\mathrm{(HPO_4)^{-2} + H_2O \rightarrow (H_3O)^+ + (PO_4)^{-3}}$$
+
+    Alternatiivselt summaarne:
+
+    $$\mathrm{H_3PO_4 + 3H_2O \rightarrow 3(H_3O)^+ + (PO_4)^{-3}}$$
+
+4. $\mathrm{K_2SO_{4}(s)→2K^{+}(aq)+(SO_4)^{2−}(aq)}$
+
+5.  $\mathrm{NaCl \rightarrow Na^+ + Cl^-}$
+
+    ![Positiivselt laetud osakesed liituvad negatiivselt laetud osakestega ja vastupidi.](nacl-vees.svg)
+
+#### Muu
+
+$$\mathrm{2LmHCO_3 \rightarrow Lm_2CO_3 + H_2O + CO_2}$$
 
 1.  $H_2O \leftrightarrow H^+ + OH^-$
 
@@ -807,7 +890,7 @@ $$2LmHCO_3 \rightarrow Lm_2CO_3 + H_2O + CO_2$$
 
 18. $Mg(HCO_3)_2 \rightarrow Mg(OH)_2 + 2CO_2$
     
-# Muu
+## Muu
 
 Leelismuldmetallid kuumutamisel  $N_2$-ga  (→ nitriidid),  $H_2$-ga  (→ hüdriidid),  C-ga    
 (→ karbiidid), Si-ga (→ silitsiidid).
@@ -855,3 +938,36 @@ dest. veega (DEIONISEERITUD VESI), kuid palju odavam (väike energiakulu).
 $$2C_2H_5OH + 2Na \rightarrow \underbrace{2C_2H_5ONa}_{naatriumetülaat} + H_2$$
 
 $$2NaOH + CO_2 \rightarrow Na_2CO_3 + H_2O$$
+
+#### Hüdrolüüs
+
+
+
+
+
+
+
+Molekulaarne võrrand:
+
+$$Na_2CO_3 + H_2O \leftrightarrow NaOH + NaHCO_3$$
+
+$$Na_2CO_3 + 2H_2O \leftrightarrow 2NaOH + H_2CO_3$$
+
+$$H_2CO_3 \rightarrow H_2O + CO_2$$
+
+Esimeses astmes:
+
+$$(NaCO_3)^- \rightarrow Na^+ + H^+ + (CO_3)^{-2}$$
+
+Ioonvõrrand:
+
+$$2Na^+ (CO_3)^{-2} + H_2O \leftrightarrow Na^+ + (OH)^- + Na^+ + (HCO_3)^-$$
+
+Taandatud ioonvõrrand:
+
+$$(CO_3)^{-2} + H_2O \leftrightarrow (HCO_3)^- + (OH)^-$$
+
+$$H_2CO_3 \rightarrow (HCO_3)^- + H^+$$
+
+
+$$\stackrel{NaOH}{\rightleftharpoons}$$
