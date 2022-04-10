@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 _site/
-_site/*
+*.log
+task-dissociations.tex

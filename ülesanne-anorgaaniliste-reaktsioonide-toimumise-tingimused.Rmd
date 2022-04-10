@@ -23,9 +23,6 @@ Töötage läbi kaasas olev materjal (["Keemia põhiteadmised"](https://nextclou
 
 3.  Määrake kõikides redoksreaktsioonides oksüdeerija ning redutseerija ja näidake elektronide üleminekud.
 
-```{=html}
-<!-- -->
-```
 1)  $Al + H_2O → (toatemperatuuril)$
 
 2)  $Fe + H_2O → (veeaur)$
@@ -176,9 +173,9 @@ Reaktsioon toimub alati.
 
 Reaktsioon ei toimu, sest HCl on lenduvam kui HNO~3~.
 
-19) $NaCl + H_2SO_4 →$
+19)  $\mathrm{NaCl + H_2SO_4 → HCl \uparrow + Na_2SO_4}$
 
-Reaktsioon ei toimu, sest sadet ei teki ja vesinikkloriidhape pole väävelhappest nõrgem.
+     Reaktsioon toimub, sest vesinikkloriidhape on väävelhappest lenduvam.
 
 20) $Ag + HCl →$
 

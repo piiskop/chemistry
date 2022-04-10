@@ -43,6 +43,10 @@ Oksüdatsiooniaste näitab elektronide loovutamise ja liitmise võimet:
 
 12. $\text{Pyruvic acid} + NADH ↔ \text{lactic acid} + NAD^+$
 
+## Lenduvus
+
+$$HCl \rightarrow HNO_3 \rightarrow H_2SO_4$$
+
 ## Hapnik ja metall
 
 Metal oxides are formed, which are generally basic in nature.
@@ -284,13 +288,13 @@ Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovuta
 
 #### Hapnik ja vesinik
 
-1.  $2H_2 + O_2 \leftrightarrow 2H_2O$
+1.  $\mathrm{2H_2 (g) + O_2 (g) \leftrightarrow 2H_2O (l)}$ [@mg-hcl]
 
     äärmiselt eksotermiline reaktsioon
 
 #### Hapnik ja hapnik
 
-1.  $O + O \rightarrow O_2$
+1.  $\mathrm{O + O \rightarrow O_2}$
 
     ![reaktsioonivõrrand](o+o-o2.svg)
 
@@ -298,7 +302,7 @@ Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovuta
 
 #### Muud
 
-1.  $Cl + Cl \rightarrow Cl_2$
+1.  $\mathrm{Cl + Cl \rightarrow Cl_}2$
 
     ![reaktsioonivõrrand](cl+cl-cl2.svg)
 
@@ -310,9 +314,9 @@ Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovuta
 
     Looduses esineb Cl~2~, mitte Cl, sest nii on stabiilsem.
 
-2. $prooton + H^+ + H_2O \rightarrow H_3O^2$
+2. $\mathrm{prooton + H^+ + H_2O \rightarrow H_3O^2}$
 
-3. $2H^+ + 2e \rightarrow H_2$
+3. $\mathrm{2H^+ + 2e \rightarrow H_2}$
 
 ## Vesinik ja metall
 
@@ -437,7 +441,7 @@ Reaktsioon toimub alati.
 
 ## Hape ja metall
 
-$$Lm + hape →  sool  + H_2$$
+$$\mathrm{Lm + hape →  sool  + H_2}$$
 
 Lahuste puhul toimub reaktsioon kõigepealt veega  →  leelis (mis võib edasi reageerida).
 
@@ -445,41 +449,43 @@ Metals more reactive than hydrogen displace hydrogen from dilute acids to form m
 
 1. 2 * HCl + 2 * Na -> 2 * NaCl + H~2~
 
-2. $Zn + 2 \cdot HCl → ZnCl_2 + H_2$
+2. $\mathrm{Mg (s) +  2HCl (aq) = MgCl_2 (aq) + H_2 (g)}$ [@mg-hcl]
 
-3. $H_2SO_4 + 2 \cdot Na \rightarrow Na_2SO_4 + H_2$
+3. $\mathrm{Zn + 2 \cdot HCl → ZnCl_2 + H_2}$
 
-4. $H_2SO_4 (väävelhape) + 2 * K -> K_2SO_4 + H_2$
+4. $\mathrm{H_2SO_4 + 2 \cdot Na \rightarrow Na_2SO_4 + H_2}$
 
-5. $H_2SO_4 + Mg \rightarrow MgSO_4 + H_2$
+5. $\mathrm{H_2SO_4 (\text{väävelhape}) + 2 * K -> K_2SO_4 + H_2}$
 
-6. 2 * H~2~SO~4~ + Cu -> CuSO~4~ + 2 * H~2~O + SO~2~
+6. $\mathrm{H_2SO_4 + Mg \rightarrow MgSO_4 + H_2}$
 
-$$2 \cdot Al + 6 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}(S^{VI}O_4^{-II})_3 + 3 \cdot S^{IV}O_2^{-II} + 6 \cdot H_2^IO^{-II}$$
+7.  2 * H~2~SO~4~ + Cu -> CuSO~4~ + 2 * H~2~O + SO~2~
 
-$$Al + 3 \cdot e \rightarrow Al_2^{III}$$
+    $$\mathrm{2 \cdot Al + 6 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}(S^{VI}O_4^{-II})_3 + 3 \cdot S^{IV}O_2^{-II} + 6 \cdot H_2^IO^{-II}}$$
 
-$$S^{VI} - 2 \cdot e \rightarrow S^{IV}$$
+    $$\mathrm{Al + 3 \cdot e \rightarrow Al_2^{III}}$$
+
+    $$\mathrm{S^{VI} - 2 \cdot e \rightarrow S^{IV}}$$
 
 Et saada võrdne arv elektronide liitmisi ja lahutamisi, on vaja alumiiniumile liidetavate elektronide arv korrutada kahega ja väävlilt eemaldatavate elektronide arv korrutada kolmega. See kaks rakendub alumiiniumi puhul kahele molekulile, kuna neid on kaks. Ühele järelikult üks.
 
-7. $Cu + 2 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} CuS^{VI}O_4^{-II} + S^{IV}O_2^{-II} \uparrow + 2 \cdot H_2^{I}O^{-II}$
+8. $\mathrm{Cu + 2 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} CuS^{VI}O_4^{-II} + S^{IV}O_2^{-II} \uparrow + 2 \cdot H_2^{I}O^{-II}}$
 
-$Zn + 2H_2S^{VI}O_4^{-II} → \text{(arvestada, et tekib happele vastav sool, SO_2 ja vesi)}Zn^{II}S^{VI}O_4^{-II} + S^{IV}O_2^{-II} + 2H_2O$
+9.  $\mathrm{Zn + 2H_2S^{VI}O_4^{-II} → \text{(arvestada, et tekib happele vastav sool, SO_2 ja vesi)}Zn^{II}S^{VI}O_4^{-II} + S^{IV}O_2^{-II} + 2H_2O}$
 
-Toatemperatuuril toimub reaktsioon mõõdukalt.
+    Toatemperatuuril toimub reaktsioon mõõdukalt. Väävelhappe kontsentratsioonist sõltub, mitu saadust tekib.
 
-See on redoksreaktsioon, sest oksüdatsiooniastmed muutuvad.
+    See on redoksreaktsioon, sest oksüdatsiooniastmed muutuvad.
 
-Tsink on redutseerija, sest loovutab elektrone:
+    Tsink on redutseerija, sest loovutab elektrone:
 
-$$Zn - 2 \cdot e \rightarrow Zn^{II}$$
+    $$\mathrm{Zn - 2 \cdot e \rightarrow Zn^{II}}$$
 
-Väävel on oksüdeerija, sest haagib elektrone:
+    Väävel on oksüdeerija, sest haagib elektrone:
 
-$$S^{VI} + 2 \cdot e \rightarrow S^{IV}$$
+    $$\mathrm{S^{VI} + 2 \cdot e \rightarrow S^{IV}}$$
 
-8. $2 \cdot Al + 6 \cdot (konts. H^IN^VO_3^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}O_3^{-II} + 6 \cdot N^{IV}O_2^{-II} + 3 \cdot H_2^IO^{-II}$
+9. $2 \cdot Al + 6 \cdot (konts. H^IN^VO_3^{-II}) \xrightarrow{t°} 1 \cdot Al_2^{III}O_3^{-II} + 6 \cdot N^{IV}O_2^{-II} + 3 \cdot H_2^IO^{-II}$
 
 $$Al - 3 \cdot e \xrightarrow{t°} Al^{III}$$
 
@@ -657,29 +663,29 @@ Non-metal that is more reactive displaces less reactive non-metal from its salt 
 
 ## Sool ja alus
 
-1. $CuCl_2 + 2 \cdot NaOH → 2 \cdot NaCl + Cu(OH)_2 (vask(II)hüdroksiid) \downarrow$ 
+1. $\mathrm{CuCl_2 + 2 \cdot NaOH → 2 \cdot NaCl + Cu(OH)_2 (vask(II)hüdroksiid) \downarrow}$ 
 
-1. 2 * KOH + Cu(NO~3~)~2~ -> Cu(OH)~2~ + 2 * KNO~3~
+2. 2 * KOH + Cu(NO~3~)~2~ -> Cu(OH)~2~ + 2 * KNO~3~
 
-2. 2 * NaOH + CuSO~4~ -> Na~2~SO~4 + Cu(OH)~2~ (sade)
+3.  $\mathrm{2NaOH (aq) + CuSO_4 (aq) -> Na_2SO_4 (aq) + Cu(OH)_2 (sade) \downarrow}$ [@naoh-cuso4]
 
-3. $\underbrace{Na_2CO_3 + Ca(OH)_2}_{sooda} \rightarrow 2NaOH + \underbrace{CaCO_3 \downarrow}_{lubi}$
+4. $\mathrm{\underbrace{Na_2CO_3 + Ca(OH)_2}_{sooda} \rightarrow 2NaOH + \underbrace{CaCO_3 \downarrow}_{lubi}}$
 
-4. $(NH_4)_2SO_4 + Mg(OH)_2 \rightarrow MgSO_4 + 2NH_3 + 2H_2O$
+5. $\mathrm{(NH_4)_2SO_4 + Mg(OH)_2 \rightarrow MgSO_4 + 2NH_3 + 2H_2O}$
 
-5. Ca(OH)~2~ + K~2~SO~4 -> 
+6. Ca(OH)~2~ + K~2~SO~4 -> 
 
-6.  $Zn(OH)_2 + NaCl →$
+7.  $\mathrm{Zn(OH)_2 + NaCl →}$
 
     Tsinkhüdroksiid ei lahustu vees, mistõttu reaktsioon ei toimu.
 
-7.  NaOH + BaCl~2~
+8.  NaOH + BaCl~2~
 
     Reaktsioon ei toimu, kuna sadet ei teki.
 
 ## Sool ja hapnik
 
-1. $2 \cdot ZnS + 3 \cdot O_2 \rightarrow 2 \cdot ZnO + 2 \cdot SO_2$
+1. $\mathrm{2 \cdot ZnS + 3 \cdot O_2 \rightarrow 2 \cdot ZnO + 2 \cdot SO_2}$
 
 ## Sool ja aluseline oksiid
 
@@ -694,6 +700,8 @@ Reaktsioon ei toimu.
 Reaktsioon ei toimu.
 
 ## Sool ja hape
+
+1. $\mathrm{Ba(NO_3)_2 + H_2SO_4 \rightarrow BaSO_4 \downarrow + 2HNO_3}$
 
 1. Na~2~S + 2 * HCl -> 2 * NaCl + H~2~S
 
@@ -719,7 +727,7 @@ Reaktsioon ei toimu.
 
 Reaktsioon ei toimu, sest HCl on lenduvam kui HNO~3~.
 
-12. $NaCl + H_2SO_4 →$
+13. $NaCl + H_2SO_4 →$
 
 Reaktsioon ei toimu, sest sadet ei teki ja vesinikkloriidhape pole väävelhappest nõrgem.
 
@@ -737,19 +745,27 @@ Reaktsioon toimub alati.
 
 5. $CuSO_4\cdot5H_2O + Na_2S \rightarrow CuS \downarrow + Na_2SO_4 + 5H_2O$
 
-6. Li~2~S + BaCl~2~
+6.  $\mathrm{AgF + Mg(NO_2)_2 \rightarrow}$
+
+    Ei toimu, sest fluor on erandlik.
+
+7.  $\mathrm{BaS \downarrow + FeSO_4 \rightarrow BaSO_4 \downarrow + FeS \downarrow}$
+
+    Ei toimu, sest *BaS* ei lahustu, mistõttu ei saa selle tükid liituda lahustuva aine tükkidega.
+
+8. Li~2~S + BaCl~2~
 
 Reaktsioon ei toimu, kuna baariumsulfiid on vähelahustuv.
 
-7. $NaI + CaCl_2 →$
+9. $NaI + CaCl_2 →$
 
 Reaktsioon ei toimu, kuna ei teki sadet.
 
-8. NaCl + K~2~SO~4~
+10. NaCl + K~2~SO~4~
 
 Reaktsioon ei toimu, kuna ei teki sadet.
 
-9. CuS + Na~2~CO~3
+11. CuS + Na~2~CO~3
 
 Reaktsioon ei toimu, kuna vähemalt vasksulfiid ei lahustu vees.
 
@@ -935,9 +951,11 @@ Ioniite regenereeritakse (hapete, leeliste või soolade lahustega) ja kasutataks
 Kvalitseetsete ioniitidega töödeldud vesi – peaaegu ekvivalentne
 dest. veega (DEIONISEERITUD VESI), kuid palju odavam (väike energiakulu).
 
-$$2C_2H_5OH + 2Na \rightarrow \underbrace{2C_2H_5ONa}_{naatriumetülaat} + H_2$$
+$$\mathrm{2C_2H_5OH + 2Na \rightarrow \underbrace{2C_2H_5ONa}_{naatriumetülaat} + H_2}$$
 
-$$2NaOH + CO_2 \rightarrow Na_2CO_3 + H_2O$$
+$$\mathrm{2NaOH + CO_2 \rightarrow Na_2CO_3 + H_2O}$$
+
+$$\mathrm{NH_3 (g) +  HCl (gas) = NH_4Cl (s)}$$ [@hcl-nh3]
 
 #### Hüdrolüüs
 

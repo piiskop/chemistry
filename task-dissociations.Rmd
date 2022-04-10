@@ -1,0 +1,185 @@
+---
+title: ELEKTROLÜÜDID JA ELEKTROLÜÜTILINE DISSOTSIATIOON SOOLADE HÜDROLÜÜS
+author: 'peacecop kalmer:'
+date: "4/10/2022"
+output:
+  bookdown::pdf_book:
+    latex_engine: xelatex
+    citation_package: natbib
+    keep_tex: yes
+  bookdown::html_document2:
+    toc: yes
+    toc_float: yes
+    toc_depth: 5
+    toolbar:
+      position: fixed
+      download: ["pdf"]
+      search: yes
+bibliography: references.bib
+link-citations: yes
+csl: csl/apa.csl
+lot: false
+lof: false
+classoption: twoside
+lang: et
+subtitle: Iseseisev töö nr 3
+---
+
+# ELEKTROLÜÜDID JA ELEKTROLÜÜTILINE DISSOTSIATIOON SOOLADE HÜDROLÜÜS Iseseisev
+  töö nr 3
+
+## Tugevad elektrolüüdid
+
+### Ülesande püstitus
+
+Tõmmake tugevatele elektrolüütidele joon alla: $KNO_3$, $MgCO_3$, $H_2O$, $HNO_3$, $H_2S$, $Al(OH)_3$, $H_2SO_4$, LiOH, etanool, suhkur (sahharoos), $SO_3$.
+
+### Lahendus
+
+$\underline{KNO_3}$, $MgCO_3$, $H_2O$, $\underline{HNO_3}$, $H_2S$, $Al(OH)_3$ [@aloh3], $\underline{H_2SO_4}$, $\underline{LiOH}$ [@lioh], etanool [@ethanol], suhkur (sahharoos) [@saccharose], $SO_3$ [@pka]
+
+## Soolade hüdrolüüs
+
+### Ülesande püstitus
+
+Millised järgmistest sooladest hüdrolüüsuvad? Kirjutage nendele sooladele hüdrolüüsi täielik-, ioon- ja taandatud ioonvõrrandid. Põhjendage hüdrolüüsi toimumist ja märkige ka tekkiv keskkond (happeline või aluseline). 
+
+$$\mathrm{Na_2CO_3 + H_2O →}$$
+
+
+$$\mathrm{K_2SO_4 + H_2O →}$$
+
+
+$$\mathrm{ZnCl_2 + H_2O →}$$
+
+
+$$\mathrm{LiCl + H_2O →}$$
+
+
+$$\mathrm{CuCl_2 + H_2O →}$$
+
+### Lahendus
+
+$$\mathrm{Na_2CO_3 + 2H_2O → 2\underbrace{NaOH}_\text{tugev alus} + \underbrace{H_2CO_3}_\text{nõrk hape}}$$
+
+$$\mathrm{2Na^+ + (CO_3)^- + 2H_2O \leftrightharpoons 2Na^+ + 2(OH)^- + H_2CO_3}$$
+
+$$\mathrm{(CO_3)^- + 2H_2O \leftrightharpoons2(OH)^- + H_2CO_3}$$
+
+Tekkiv keskkond on aluseline.
+
+$$\mathrm{K_2SO_4 + H_2O → \underbrace{2KOH}_\text{tugev alus} + \underbrace{H_2SO_4}_\text{tugev hape}}$$
+
+Hüdrolüüs ei toimu.
+
+$$\mathrm{ZnCl_2 + 2H_2O → 2\underbrace{HCl}_\text{tugev hape} + \underbrace{Zn(OH)_2}_\text{nõrk alus}}$$
+
+$$\mathrm{Zn^{2} + 2Cl^- + H_2O \leftrightharpoons 2H^+ + 2Cl^- + Zn(OH)_2}$$
+
+$$\mathrm{Zn^{2} + H_2O \leftrightharpoons 2H^+ + Zn(OH)_2}$$
+
+Tekkiv keskkond on happeline.
+
+$$\mathrm{LiCl + H_2O → \underbrace{LiOH}_\text{tugev alus} + \underbrace{HCl}_\text{tugev hape}}$$
+
+Hüdrolüüs ei toimu.
+
+$$\mathrm{CuCl_2 + 2H_2O → \underbrace{Cu(OH)_2}_\text{nõrk alus} + \underbrace{2HCl}_\text{tugev hape}}$$
+
+$$\mathrm{Cu^{2} + 2Cl^- + 2H_2O \leftrightharpoons Cu(OH)_2 + 2H^+ + 2Cl^-}$$
+
+$$\mathrm{Cu^{2} + 2H_2O \leftrightharpoons Cu(OH)_2 + 2H^+}$$
+
+Tekkiv keskkond on happeline.
+
+## Dissotsiatsiooni võrrandid
+
+### Ülesande püstitus
+
+Kirjutage järgmistele elektrolüütidele dissotsiatsiooni võrrandid.
+
+LiOH →
+
+$$\mathrm{AlCl_3 →}$$
+
+$$\mathrm{H_2SO_4 →}$$
+
+$$\mathrm{Ba(OH)_2 →}$$ 
+
+$$\mathrm{Li_3PO_4 →}$$
+
+$$\mathrm{KNO_3 →}$$
+
+$$\mathrm{H_3PO_4 →}$$
+
+### Lahendus
+
+$$\mathrm{LiOH \rightarrow Li^+ + (OH)^-}$$
+
+$$\mathrm{2AlCl_3 → 2Al^{3} + 3Cl_2^-}$$ [@alcl3]
+
+$$\mathrm{2 H_2SO_4 ⇌ H_3SO_4^+ + HSO_4^-}$$
+
+[@sulfuric-acid]
+
+$$\mathrm{Ba(OH)_2 → Ba^{2} + 2(OH)^-}$$ 
+
+$$\mathrm{Li_3PO_4 → 3Li^+ + (PO_4)^{-3}}$$
+
+$$\mathrm{KNO_3 → K^+ + (NO_3)^{-}}$$
+
+$$\mathrm{H_3PO_4 → 3H^+ + (PO_4)^{-3}}$$
+
+## Molekul- ja ioonvõrrandid
+
+### Ülesande püstitus
+
+Kirjutage järgmistele reaktsioonidele molekulvõrrandid, ioonvõrrandid ja taandatudioonvõrrandid juhul kui reaktsioon toimub. 
+
+
+a)	$\mathrm{H_2S + NaOH →}$
+
+
+b)	$\mathrm{Fe(NO_3)_2 + NaOH →}$
+
+
+c)	$\mathrm{KNO_3 + AlCl_3 →}$
+
+
+d)	$\mathrm{H_2SO_4 + Fe(OH)_2 →}$
+
+
+e)	$\mathrm{KOH + Cu(NO_3)_2 →}$
+
+
+f)	$\mathrm{NaNO_3 + Al_2(SO_4)_3 →}$
+
+### Lahendus
+
+a)  $\mathrm{H_2S + 2NaOH → Na_2S + 2H_2O}$
+    
+    $\mathrm{H_2S + 2Na^+ + 2(OH)^- \leftrightharpoons 2Na^+ + S^- + 2H_2O}$
+    
+    $\mathrm{H_2S + 2(OH)^- \leftrightharpoons S^- + 2H_2O}$
+    
+b)  $\mathrm{Fe(NO_3)_2 (aq) + 2NaOH (aq) → Fe(OH)_2 (s) + 2NaNO_3 (aq)}$ [@feno33-naoh]
+
+    $\mathrm{Fe^2 + 2(NO_3)^{-} + 2Na^+ + 2(OH)^- → Fe(OH)_2 (s) + 2Na^+ + 2(NO_3)^-}$
+    
+    $\mathrm{Fe^2 (aq) + 2(OH)^- (aq) → Fe(OH)_2 (s)}$
+    
+c) Reaktsioon ei toimu.
+
+d)  $\mathrm{H_2SO_4 (aq) + Fe(OH)_2 (s) → 2H_2O (l) + FeSO_4 (s) \downarrow}$
+
+    $\mathrm{2H^+ + (SO_4)^{-2} + Fe(OH)_2 (s) \leftrightharpoons 2H_2O (l) + FeSO_4 (s)}$
+    
+e)	$\mathrm{2KOH (aq) + Cu(NO_3)_2 (aq) → Cu(OH)_2 (s) \downarrow + 2KNO_3 (aq)}$ [@koh-cuno32]
+
+    $\mathrm{2K^+ + 2(OH)^- + Cu^{2} + 2(NO_3)^- \leftrightharpoons Cu(OH)_2 (s) \downarrow + 2K^+ + 2(NO_3)^-}$
+    
+    $\mathrm{2(OH)^- (aq) + Cu^2 (aq) \leftrightharpoons Cu(OH)_2 (s) \downarrow}$
+    
+f)	$\mathrm{NaNO_3 (aq) + Al_2(SO_4)_3 (aq) →}$
+
+    Reaktsioon ei toimu.
