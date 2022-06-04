@@ -15,4 +15,6 @@ rmd_files: [
   "parts.Rmd",
   "ülesanne-anorgaaniliste-reaktsioonide-toimumise-tingimused.Rmd",
   "teadmiste-kontrolli-koostamine.Rmd",
-  "task-dissociations.Rmd"]
+  "task-dissociations.Rmd",
+  "practical-inorganic-chemistry-i.Rmd",
+  "references.Rmd"]

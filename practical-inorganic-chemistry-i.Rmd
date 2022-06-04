@@ -1,0 +1,210 @@
+# Anorgaanilise keemia esimese osa praktikumide raportid
+
+## Metalli aatommassi määramine
+
+### Ülesande püstitus
+
+"Kalorimeetria on füüsika haru, mis tegeleb soojushulkade mõõtmisega.
+Kalorimeetriliselt määratakse ainete erisoojust, sulamissoojust,
+siirdesoojust, keemiliste reaktsioonide soojusefekte,
+elektromagnetkiirguse energiat jm. Mõõtmiseks kasutatakse
+kalorimeetreid, mille töö põhineb ühelt kehalt teisele kanduva
+soojushulga mõõtmisel. Seejuures lähtutakse soojusliku tasakaalu
+võrrandist: ühe keha või aine poolt ära antav soojushulk $Q_1$ võrdub
+teise keha või aine (tavaliselt vee) poolt vastuvõetava soojushulgaga
+$Q_2$. Võrdus $Q_1 = Q_2$ on kehtiv ainult siis, ku isoojusvahetust
+kalorimeetrit ümbritseva keskkonnaga ei toimu. Kalorimeetrites ongi
+soojusvahetus ümbritseva keskkonnaga püütud viia miinimumini. Sellest ka
+kalorimeetri eriline konstruktsioon (joonis *\@ref(fig:atomic-mass-of-metal-calorimeter)*).
+Kalorimeetri sisemine anum (*1*) asub ühe või mitme anuma (*2*) ja (*3*)
+sees ja on pealt suletav kaanega (*4*). Sisemine anum asub vildist või
+korgist alusel *5* ja on läikiva pinnaga. Kalorimeetri anumas oleva
+vedeliku temperatuuri mõõtmiseks kasutatakse termomeetrit (*6*) ja
+temperatuuri ühtlustamiseks kogu vedeliku ulatuses segajat (*7*).
+Täppismõõtmises täidetakse anumate *2* ja *3* vaheline ruum veel
+toatemperatuuril oleva veega, mille hilisemat temperatuuri muutust
+samuti arvestatakse." [@peacecopkalmer]
+
+```{r label = "atomic-mass-of-metal-calorimeter", fig.cap = "**Kalorimeeter.** Soojusisolatsiooniga varustatud 200 kuni 300 cm^3^ keeduklaas, millesse on asetatud teine, 100 cm^3^ keeduklaas. Siseklaasi  on asetatud  termomeeter. [@peacecopkalmer:]", echo = FALSE, out.width = "100%"}
+include_svg("calorimeter.svg")
+```
+
+Ülesande sooritamine:
+
+a) Kaalusime liisa kasemaga $0.01 \times \mathrm{g}$ täpsusega 30 kuni 50 grammi raskuse metallitüki, sidusime selle niidi otsa ja riputasime kümneks kuni 15 minutiks keevasse vette.
+
+b) Kaalusime kalorimeetri sisemise klaasi, valasime sellesse umbes $100 \cdot \mathrm{cm^3}$ vett, kaalusime uuesti ja asetasime klaasi veega tagasi kalorimeetrisse.
+
+c) Mõõtsime kalorimeetri siseklaasis oleva vee temperatuuri.
+
+d) Kiiresti võtsime keevast veest metalli ja asetasime kalorimeetri siseklaasi.
+
+e) Kalorimeetri katsime kaanega, segasime termomeetriga ettevaatlikult vett ja märkisime vee kõrgeima temperatuuri.
+
+Kasutades katseliselt leitud metalli erisoojusmahtuvust, arvutasime Dulong-Petit’ seaduse põhjal metalli ligikaudse aatommassi.
+
+### Sisendid
+
+metalli mass $m_1 := 29.92 \times \mathrm{g} \times \mathrm{\frac{1 \cdot kg}{1000 \times g}}= 2.992 \times 10^{-2} \times \mathrm{kg}$
+
+```{r label = "atomic-mass-of-metal-mass-of-metal"}
+m_1 <- 29.92e-3
+```
+
+kalorimeetri siseklaasi mass $m_3 := \mathrm{45.13 \times g \times \frac{1 \times kg}{1000 \times g} = 4.513 \times 10^{-2} \times kg}$
+```{r label = "atomic-mass-of-metal-mass-of-inner-glass-of-calorimeter"}
+m_3 <- 45.13e-3
+```
+
+kalorimeetri siseklaasi mass koos veega $m_4 := \mathrm{132.53 \times g \times \frac{1 \times kg}{1000 \times g} = 1.3253 \times 10^{-1} \times kg}$
+```{r label = "atomic-mass-of-metal-mass-of-glass-with-h2_o"}
+m_4 <- 132.53e-3
+```
+
+```{r label = "atomic-mass-of-metal-conversion-from-celsius-to-kelvin"}
+celsius_to_kelvin = function(celsius) {
+  celsius + 2.7315e2
+}
+```
+```{r label = "atomic-mass-of-metal-temperature-of-metal-in-boiling-water"}
+T_H2O_BOILING_C <- 99.947
+T_H2O_BOILING_K <- celsius_to_kelvin(T_H2O_BOILING_C)
+```
+
+metalli temperatuur keevas vees $T(\mathrm{H_2O, boiling}) := \mathrm{`r T_H2O_BOILING_C`°C = `r celsius_to_kelvin(T_H2O_BOILING_C)` \times K}$
+
+[@haynes_2014_crc, p. 6-9]
+```{r label = "atomic-mass-of-metal-temperature-of-water-initially"}
+T_H2O_INITIAL_C <- 21
+T_H2O_INITIAL_K <- celsius_to_kelvin(T_H2O_INITIAL_C)
+```
+
+vee algtemperatuur $t_1 := \mathrm{`r T_H2O_INITIAL_C`°C = `r T_H2O_INITIAL_K` \times K}$
+```{r label = "atomic-mass-of-metal-temperature-of-metal-in-boiling-final"}
+T_H2O_FINAL_C <- 23
+T_H2O_FINAL_K <- celsius_to_kelvin(T_H2O_FINAL_C)
+```
+
+vee kõrgeim temperatuur $t_2 := \mathrm{`r T_H2O_FINAL_C`°C = `r T_H2O_FINAL_K` \times K}$
+
+```{r label = "atomic-mass-of-metal-specific-heat-of-water-at-start"}
+C_p_H2O_AT_20_DEGREES_C <- 4.1841E3
+T_20_DEGREES_C_IN_K <- celsius_to_kelvin(20)
+```
+
+vee erisoojusmahtuvus temperatuuril $20°C = `r T_20_DEGREES_C_IN_K` \times K$ $C_p(\mathrm{H_2O, `r T_20_DEGREES_C_IN_K` \times K}) := 4.1841 \frac{kJ}{kg \times K} \times {1000 \times J}{1 \times kJ} = `r C_p_H2O_AT_20_DEGREES_C` \frac{J}{kg \times K}$
+
+klaasi erisoojusmahtuvus $c_{klaas} := \mathrm{0.8 \times 10^3 \times \frac{J}{kg \times K} = 8 \times 10^2 \frac{J}{kg \times K}}$
+```{r label = "atomic-mass-of-metal-specific-heat-of-glass"}
+c_klaas <- .8e3
+```
+
+## Väljund
+
+metalli erisoojusmahtuvus $c_{metall} := \ldots$
+
+## Reeglistik
+
+$${soojus}_{soojendamiseks} = erisoojus * mass * \Delta(temperatuur)$$
+
+Soojuslik tasakaal:
+
+```{=tex}
+\begin{align}
+\sum_{i := 1}^n{Q_i} = 0
+(\#eq:thermal-equilibrium)
+\end{align}
+```
+
+Eralduv soojushulk metallist:
+
+```{=tex}
+\begin{align}
+Q_1 := m_1 \times c_{metall} \times (t_2 - T(\mathrm{H_2O, boiling}))
+(\#eq:atomic-mass-of-metal-q1)
+\end{align}
+```
+
+Sisendsoojushulk vee temperatuuri suurendamiseks:
+
+```{=tex}
+\begin{align}
+Q_2 := (m_4 - m_3) \times C_p(\mathrm{H_2O, `r T_20_DEGREES_C_IN_K` \times K}) \times (t_2 - t_1)
+(\#eq:atomic-mass-of-metal-q2)
+\end{align}
+```
+
+Sisendsoojushulk klaasi temperatuuri suurendamiseks:
+
+```{=tex}
+\begin{align}
+Q_3 := m_3 \times c_{klaas} \times (t_2 - t_1)
+(\#eq:atomic-mass-of-metal-q3)
+\end{align}
+```
+
+Paigutan metalli jahtumisel eralduva soojushulga \@ref(eq:atomic-mass-of-metal-q1), klaasi \@ref(eq:atomic-mass-of-metal-q3) ja vee soojendamiseks \@ref(eq:atomic-mass-of-metal-q2) vajaliku soojushulga valemid soojusliku tasakaalu võrrandisse \@ref(eq:thermal-equilibrium):
+
+```{=tex}
+\begin{align}
+\sum_{i := 1}^n{Q_i} = Q_1 + Q_2 + Q_3 &= m_1 \times c_{metall} \times (t_2 - T(\mathrm{H_2O, boiling}))\\
+&+ (m_4 - m_3) \times C_p(\mathrm{H_2O, `r T_20_DEGREES_C_IN_K` \times K}) \times (t_2 - t_1)\\
+&+ m_3 \times c_{klaas} \times (t_2 - t_1) = 0
+(\#eq:atomic-mass-of-metal-thermal-equilibrium-expanded)
+\end{align}
+```
+
+Avaldan laiendatud soojushulga valemist \@ref(eq:atomic-mass-of-metal-thermal-equilibrium-expanded) metalli erisoojuse:
+
+```{=tex}
+\begin{align}
+c_{metall} :&= \frac{(m_4 - m_3) \times C_p(\mathrm{H_2O, `r T_20_DEGREES_C_IN_K` \times K}) \times (t_1 - t_2) + m_3 \times c_{klaas} \times (t_1 - t_2)}{m_1 \times (t_2 - T(\mathrm{H_2O, boiling})}\\
+&= \frac{(t_1 - t_2) \times ((m_4 - m_3) \times C_p(\mathrm{H_2O, `r T_20_DEGREES_C_IN_K` \times K}) + m_3 \times c_{klaas})}{m_1 \times (t_2 - T(\mathrm{H_2O, boiling}))}
+(\#eq:atomic-mass-of-metal-c-metal)
+\end{align}
+```
+
+$$R = 8.314472 \times \frac{\mathrm{Pa} \times \mathrm{m^3}}{\mathrm{K} \times \mathrm{mol}}$$ [@haynes_2014_crc, p. 1-46]
+
+```{r R}
+R <- 8.314472
+```
+
+Dulong-Petit' seadus:
+
+```{=tex}
+\begin{align}
+c :&= 3 \cdot R
+C \cdot M :&= 3 \cdot R
+(\#eq:dulong-petit)
+\end{align}
+```
+
+Avaldan Dulong-Petit' seaduses \@ref(eq:dulong-petit) molaarmassi:
+
+```{=tex}
+\begin{align}
+M :&= \frac{3 \cdot R}{C}
+(\#eq:dulong-petit-m)
+\end{align}
+```
+
+Pistan erisoojuse metalli erisoojuse valemist \@ref(eq:atomic-mass-of-metal-c-metal) Dulong-Petit' seaduse molaarmassi valemisse \@ref(eq:dulong-petit-m):
+
+```{=tex}
+\begin{align}
+M :&= \frac{3 \times R}{\frac{(t_1 - t_2) \times ((m_4 - m_3) \times C_p(\mathrm{H_2O, `r T_20_DEGREES_C_IN_K` \times K}) + m_3 \times c_{klaas})}{m_1 \times (t_2 - T(\mathrm{H_2O, boiling}))}}\\
+&= \frac{3 \times R \times m_1 \times (t_2 - T(\mathrm{H_2O, boiling}))}{(t_1 - t_2) \times ((m_4 - m_3) \times C_p(\mathrm{H_2O, `r T_20_DEGREES_C_IN_K` \times K}) + m_3 \times c_{klaas})}
+(\#eq:atomic-mass-of-metal-m)
+\end{align}
+```
+
+
+## Arvutamine
+```{r label = "atomic-mass-of-metal-calculation"}
+M <- (3 * R * m_1 * (T_H2O_FINAL_K - T_H2O_BOILING_K)) /  ((T_H2O_INITIAL_K - T_H2O_FINAL_K) * ((m_4 - m_3) * C_p_H2O_AT_20_DEGREES_C + m_3 * c_klaas))
+```
+
+## Lahend
+
+$`r signif(M, digits = 5)` \times \mathrm{\frac{kg}{mol}}$ on metalli molaarmass.
