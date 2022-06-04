@@ -1,30 +1,3 @@
----
-title: ELEKTROLÜÜDID JA ELEKTROLÜÜTILINE DISSOTSIATIOON SOOLADE HÜDROLÜÜS
-author: 'peacecop kalmer:'
-date: "4/10/2022"
-output:
-  bookdown::pdf_book:
-    latex_engine: xelatex
-    citation_package: natbib
-    keep_tex: yes
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
-    toolbar:
-      position: fixed
-      download: ["pdf"]
-      search: yes
-bibliography: references.bib
-link-citations: yes
-csl: csl/apa.csl
-lot: false
-lof: false
-classoption: twoside
-lang: et
-subtitle: Iseseisev töö nr 3
----
-
 # ELEKTROLÜÜDID JA ELEKTROLÜÜTILINE DISSOTSIATIOON SOOLADE HÜDROLÜÜS Iseseisev
   töö nr 3
 
@@ -67,6 +40,14 @@ $$\mathrm{2Na^+ + (CO_3)^- + 2H_2O \leftrightharpoons 2Na^+ + 2(OH)^- + H_2CO_3}
 $$\mathrm{(CO_3)^- + 2H_2O \leftrightharpoons2(OH)^- + H_2CO_3}$$
 
 Tekkiv keskkond on aluseline.
+
+See on vale. Õige:
+
+$$Na_2CO_3 + H_2O \rightarrow NaHCO_3 + NaOH$$
+
+$$2 Na^+ + CO_3^{2-} + H_2O \rightarrow Na^+ + HCO_3^- + Na^+ + (OH)^-$$
+
+$$CO_3^{2-} + H_2O \rightarrow HCO_3^- + (OH)^-$$
 
 $$\mathrm{K_2SO_4 + H_2O → \underbrace{2KOH}_\text{tugev alus} + \underbrace{H_2SO_4}_\text{tugev hape}}$$
 
@@ -118,17 +99,36 @@ $$\mathrm{LiOH \rightarrow Li^+ + (OH)^-}$$
 
 $$\mathrm{2AlCl_3 → 2Al^{3} + 3Cl_2^-}$$ [@alcl3]
 
+$$AlCl_3 \rightarrow Al^{3+} + 3Cl^-$$
+
 $$\mathrm{2 H_2SO_4 ⇌ H_3SO_4^+ + HSO_4^-}$$
 
 [@sulfuric-acid]
 
+esimene aste:
+
+$$HSO_4^- + H^+$$
+
+teine aste
+
+$$(SO)^{2-} + H^+$$
+
 $$\mathrm{Ba(OH)_2 → Ba^{2} + 2(OH)^-}$$ 
+Kahes astmes. Esimene aste:
+
+$$BaOH^+ + OH^-$$
+
+teine aste:
+
+$$Ba^{2+} + OH^-$$
 
 $$\mathrm{Li_3PO_4 → 3Li^+ + (PO_4)^{-3}}$$
 
 $$\mathrm{KNO_3 → K^+ + (NO_3)^{-}}$$
 
 $$\mathrm{H_3PO_4 → 3H^+ + (PO_4)^{-3}}$$
+
+kolmes astmes
 
 ## Molekul- ja ioonvõrrandid
 
@@ -158,9 +158,9 @@ f)	$\mathrm{NaNO_3 + Al_2(SO_4)_3 →}$
 
 a)  $\mathrm{H_2S + 2NaOH → Na_2S + 2H_2O}$
     
-    $\mathrm{H_2S + 2Na^+ + 2(OH)^- \leftrightharpoons 2Na^+ + S^- + 2H_2O}$
+    $\mathrm{H_2S + 2Na^+ + 2(OH)^- \leftrightharpoons 2Na^+ + S^-2 + 2H_2O}$
     
-    $\mathrm{H_2S + 2(OH)^- \leftrightharpoons S^- + 2H_2O}$
+    $\mathrm{H_2S + 2(OH)^- \leftrightharpoons S^-2 + 2H_2O}$
     
 b)  $\mathrm{Fe(NO_3)_2 (aq) + 2NaOH (aq) → Fe(OH)_2 (s) + 2NaNO_3 (aq)}$ [@feno33-naoh]
 
@@ -172,8 +172,10 @@ c) Reaktsioon ei toimu.
 
 d)  $\mathrm{H_2SO_4 (aq) + Fe(OH)_2 (s) → 2H_2O (l) + FeSO_4 (s) \downarrow}$
 
-    $\mathrm{2H^+ + (SO_4)^{-2} + Fe(OH)_2 (s) \leftrightharpoons 2H_2O (l) + FeSO_4 (s)}$
+    $\mathrm{2H^+ + (SO_4)^{-2} + Fe(OH)_2 (s) \leftrightharpoons 2H_2O (l) + Fe^{2+} + (SO_4)^{2-}}$
     
+    $\mathrm{2H^+ + Fe(OH)_2 (s) \leftrightharpoons 2H_2O (l) + Fe^{2+}}$
+
 e)	$\mathrm{2KOH (aq) + Cu(NO_3)_2 (aq) → Cu(OH)_2 (s) \downarrow + 2KNO_3 (aq)}$ [@koh-cuno32]
 
     $\mathrm{2K^+ + 2(OH)^- + Cu^{2} + 2(NO_3)^- \leftrightharpoons Cu(OH)_2 (s) \downarrow + 2K^+ + 2(NO_3)^-}$

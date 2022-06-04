@@ -1,47 +1,36 @@
----
-title: "Happed"
-author: 'peacecop kalmer:'
-date: "1/3/2022"
-output:
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
----
+# Happed
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Lämmastikhape
 
-# Lämmastikhape
-
-## Valem
+### Valem
 
 HNO~3~
 
-## Molekul
+### Molekul
 
-![Lämmastikhappe molekul](https://www.be-atex.com/sites/be-atex.com/www.be-atex.com/files/styles/300x300/public/images/gaz/Acide-nitrique-HNO3-image.png?itok=RmJhp9uI)
+```{r label = "h-no3", fig.cap = "Lämmastikhappe molekul", echo = FALSE, out.width = "100%"}
+include_svg("Acide-nitrique-HNO3-image.png")
+```
 
-## Temperatuurid
+### Temperatuurid
 
 ```{r}
 TEMPERATURE_VAPORISING_NITRICACID <- 83 + 273.15
 ```
 
-## Tugevus
+### Tugevus
 
 tugev
 
-## Lõhn
+### Lõhn
 
 kibe
 
-## Reageerimine
+### Reageerimine
 
 suure hulga orgaaniliste ja mineraalsete ühenditega, samuti põlevmaterjalidega ja pulbriliste metallidega
 
-## Kasutus
+### Kasutus
 
 1. lämmastikväetiste, mineraalnitraatide ja nitroühendite valmistamiseks
 

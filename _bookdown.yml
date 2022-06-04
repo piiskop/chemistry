@@ -1,0 +1,18 @@
+delete_merged_file: true
+#language:
+#  ui:
+#    chapter_name: "Chapter "
+rmd_files: [
+  "index.Rmd",
+  "metals.Rmd",
+  "nonmetals.Rmd",
+  "water.Rmd",
+  "salts.Rmd",
+  "bases.Rmd",
+  "acids.Rmd",
+  "gases.Rmd",
+  "equalities.Rmd",
+  "parts.Rmd",
+  "ülesanne-anorgaaniliste-reaktsioonide-toimumise-tingimused.Rmd",
+  "teadmiste-kontrolli-koostamine.Rmd",
+  "task-dissociations.Rmd"]

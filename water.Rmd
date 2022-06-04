@@ -1,55 +1,42 @@
----
-title: "Vesi"
-author: 'peacecop kalmer:'
-date: "1/1/2022"
-output:
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
----
+# Vesi
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-# Valem
+## Valem
 
 H~2~O
 
-# Täpne nimetus
+## Täpne nimetus
 
 divesinikoksiid
 
-# Molekul
+## Molekul
 
 ![Veemolekul](Watermolecule.png)
 
-# Tihedus
+## Tihedus
 
 ```{r}
 DENSITY_WATER <- .998E-3 / 1E-6
 ```
 
-# Sulamistemperatuur
+## Sulamistemperatuur
 
 ```{r}
 MELTING_TEMPERATURE_WATER <- 273.15
 ```
 
-# Aurustumistemperatuur
+## Aurustumistemperatuur
 
 ```{r}
 VAPORISING_TEMPERATURE_WATER <- 100 + 273.15
 ```
 
-# Isomeerid
+## Isomeerid
 
 1. paravesi
 
 2. ortovesi
 
-# Isomeerid
+## Isomeerid
 
 1. H~2~O
 
@@ -59,11 +46,11 @@ VAPORISING_TEMPERATURE_WATER <- 100 + 273.15
 
 4. T~2~O
 
-# Looduses
+## Looduses
 
 Looduslikult puhast vett esineb harva. Enamasti sisaldab see gaase, soolasid ja orgaanilisi ühendeid.
 
-# Saamine
+## Saamine
 
 1. vesiniku ja õhu segu plahvatades
 
@@ -71,7 +58,7 @@ Looduslikult puhast vett esineb harva. Enamasti sisaldab see gaase, soolasid ja 
 
 $$18 \cdot H_2S + 6 \cdot CO_2 \xrightarrow{valgus} C_6H_{12} + 12 \cdot H_2O + 18 \cdot S$$
 
-# Reageerimine
+## Reageerimine
 
 1. Sinibakterid ja kõik autotroofsetele prokarüootsetele väävlibakteritele järgnevad autotroofsed eukarüoodid toodavad glükoosi ning rikastavad nii vett kui atmosfääri hapnikuga:
 
@@ -81,7 +68,7 @@ $$6 \cdot CO_2 + 12 \cdot H_2O \xrightarrow{valgus} C_6H_{12}O_6 + 6 \cdot O_2 +
 
 C~6~H~12~O~6~ + 6 * O~2~ -> 6 * H~2~O + 6 * CO~2~
 
-# Kasutus
+## Kasutus
 
 1. vesinik kui energiaallikas:
 

@@ -1,45 +1,34 @@
----
-title: "Leelised"
-author: 'peacecop kalmer:'
-date: "12/31/2021"
-output:
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
----
+# Leelised
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Kustutatud lubi
 
-# Kustutatud lubi
-
-## Valem
+### Valem
 
 Ca(OH)~2~
 
-## Täpne nimetus
+### Täpne nimetus
 
 kaltsiumhüdroksiid
 
-## Väljanägemine
+### Väljanägemine
 
-![Kustutatud lubja väljanägemine](https://5.imimg.com/data5/SELLER/Default/2021/7/NL/DO/LJ/132686986/calcium-hydroxide-500x500.jpg)
+```{r label = "ca-oh-2", fig.cap = "Kustutatud lubja väljanägemine", echo = FALSE, out.width = "100%"}
+include_svg("calcium-hydroxide-500x500.jpg")
+```
 
-## Tihedus
+### Tihedus
 
 ```{r}
 DENSITY_CAOH2 = 2.211E-3 / 1E-6
 ```
 
-## Sulamistemperatuur
+### Sulamistemperatuur
 
 852 * K
 
 Sulamistemperatuuri lähenedes kipub kaotama vett ja lagunema.
 
-## Saamine
+### Saamine
 
 CaO + H~2~O -> Ca(OH)~2~
 
@@ -47,7 +36,7 @@ CaCl~2~ + 2 * NaOH -> Ca(OH)~2~ + 2 * NaCl
 
 molluskite põletamise kaudu
 
-## Lahustuvus
+### Lahustuvus
 
 Vees hästi ei lahustu. Lahustuvus suureneb temperatuuri alanemisel. Lahustuvused:
 
@@ -62,7 +51,7 @@ Ca(OH)~2~ + CO~2~ -> CaCO~3~ + H~2~O
 
 See protsess on karboneerimine.
 
-## Kasutus
+### Kasutus
 
 1. paberitööstuses puidu muutmiseks puidumassiks
 
@@ -96,40 +85,42 @@ See protsess on karboneerimine.
 
 16. mudamajade värvimises
 
-# Alkohol
+## Alkohol
 
-## Struktuurivalem
+### Struktuurivalem
 
-![Alkoholi struktuurivalem](Ethanol_Lewis.svg)
+```{r label = "ch3-ch2-oh", fig.cap = "Alkoholi struktuurivalem", echo = FALSE, out.width = "100%"}
+include_svg("Ethanol_Lewis.svg")
+```
 
-## Temperatuurid
+### Temperatuurid
 
 ```{r}
 MELTING_TEMPERATURE_ALCOHOL <- 159.15
 BOILING_TEMPERATURE_ALCOHOL <- 351.15
 ```
 
-## Tihedus
+### Tihedus
 
 ```{r}
 DENSICTY_ALCOHOL <- .789
 ```
 
-## Looduses
+### Looduses
 
 Etanooli leidub looduses nii vabalt (mõnedes taimedes, käärinud puuviljades ja marjades, hapupiimas) kui ka seotult taimede eeterlikes õlides. Samas esineb seda looduses vähe, kuna madala keemistemperatuuri tõttu lendub etanool kergesti. Seetõttu tuleb etanooli säilitada kinnises anumas.
 
-## Lahustuvus
+### Lahustuvus
 
 Lahustub hästi igas vahekorras.
 
-## Reageerimine
+### Reageerimine
 
 Põlemine:
 
 CH~3~CH~2~OH + 3 * O~2~ -> 2 * CO~2~ + 3 * H~2~O
 
-## Saamine
+### Saamine
 
 1. kääritamises: Pärmseente elutegevuse mõjul muundub glükoos etanooliks ja süsinikdioksiidiks:
 
@@ -141,7 +132,7 @@ C~6~H~12~O~6~ -> 2 * CH~3~CH~2~OH + 2 * CO~2~
 
 CH~2~ = CH ~2~ + H~2~0 -> CH~3~-CH~2~OH
 
-## Kasutus
+### Kasutus
 
 1. alkohoolsete jookide toomises
 

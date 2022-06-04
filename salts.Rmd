@@ -1,94 +1,87 @@
----
-title: "Soolad"
-author: 'peacecop kalmer:'
-date: "12/31/2021"
-output:
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-# Sool
+# Soolad
 
 ## Lahustuvus
 
 Paljud soolad lahustuvad vees hästi. Hästi lahustuvad aktiivsete metallide soolad.
 
-# Tsinknitraat
+## Tsinknitraat
 
-## Valem
+### Valem
 
 Zn(NO~3~)~2~
 
-## Väljanägemine
+### Väljanägemine
 
-![Tsinknitraadi väljanägemine](https://3.imimg.com/data3/OD/YW/GLADMIN-41582/zinc-nitrate-250x250.jpg)
+```{r label = "zn-no3-2", fig.cap = "Tsinknitraadi väljanägemine", echo = FALSE, out.width = "100%"}
+include_svg("zinc-nitrate-250x250.jpg")
+```
 
-## Temperatuurid
+### Temperatuurid
 
 ```{r}
 MELTING_TEMPERATURE_ZNNITRATE <- 110 + 273.15
 ```
 
-# Vasksulfaat
+## Vasksulfaat
 
-## Valem
+### Valem
 
 CuSO~4~
 
-## Väljanägemine
+### Väljanägemine
 
-![Vasksulfaadi väljanägemine](Copper-Sulfate-CuSo4-CAS-7758-98-7.webp)
+```{r label = "cu-so4", fig.cap = "Vasksulfaadi väljanägemine", echo = FALSE, out.width = "100%"}
+include_svg("Copper-Sulfate-CuSo4-CAS-7758-98-7.webp")
+```
 
-# Vaskvitriol
+## Vaskvitriol
 
-## Valem
+### Valem
 
 $CuSO_4 \cdot 5 \cdot H_{2}O$
 
-## Täpne nimetus
+### Täpne nimetus
 
 Copper(II) sulfate pentahydrate
 
-## Väljanägemine
+### Väljanägemine
 
-![Vaskvitrioli väljanägemine](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Copper_sulphate_%2848723911792%29.jpg/800px-Copper_sulphate_%2848723911792%29.jpg)
+```{r label = "cu-so4-5h20", fig.cap = "Vaskvitrioli väljanägemine", echo = FALSE, out.width = "100%"}
+include_svg("copper_sulphate.jpg")
+```
 
-## Kasutus
+### Kasutus
 
 patareide valmistamine
 
-# Glaubrisool
+## Glaubrisool
 
-## Valem
+### Valem
 
 Na~2~SO~4~ * 10 * H~2~O
 
-## Täpne nimetus
+### Täpne nimetus
 
 naatriumsulfaadi dekahüdraat
 
-## Väljanägemine
+### Väljanägemine
 
-![Glaubrisoola välimus](Mangxiao.jpg)
+```{r label = "na2-so4-10h2o", fig.cap = "Glaubrisoola välimus", echo = FALSE, out.width = "100%"}
+include_svg("Mangxiao.jpg")
+```
 
-## Looduses
+### Looduses
 
 1. soolavee allikad
 
 2. kuivanud soolaste järvede ääres
 
-## Reageerimine
+### Reageerimine
 
 Laguneb kuivas õhus:
 
 Na~2~SO~4~ * 10 * H~2~O <-> Na~2~SO~4~ + 10 * H~2~O
 
-## Kasutus
+### Kasutus
 
 1. seedetegevuse hoogustamine

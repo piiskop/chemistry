@@ -1,31 +1,18 @@
----
-title: "Metallid"
-author: 'peacecop kalmer:'
-date: "12/31/2021"
-output:
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
----
+# Metallid
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Aluselised metallid
 
-# Aluselised metallid
+### Naatrium
 
-## Naatrium
-
-### Väljanägemine
+#### Väljanägemine
 
 ![Naatriumi väljanägemine](sodium.jpg)
 
-### Reageerimine
+#### Reageerimine
 
 2 * Na + 2 * H~2~O -> 2 * Na(OH) + H~2~
 
-### Kasutus
+#### Kasutus
 
 1. liha säilitamine, maitsestamine ja värvimine
 
@@ -39,26 +26,26 @@ knitr::opts_chunk$set(echo = TRUE)
 
 6. toiduainete säilitamine
 
-# Leelismuldmetallid
+## Leelismuldmetallid
 
-## Kaltsium
+### Kaltsium
 
-### Väljanägemine
+#### Väljanägemine
 
 ![Kaltsium inertses ehk püsivas keskkonnas](Calcium_unter_Argon_Schutzgasatmosphäre.jpg)
 
-### Maitse
+#### Maitse
 
 pisut soolane ja hapukas
 
-### Tihedus
+#### Tihedus
 
 ```{r}
 DENSITY_CA <- 1.55E-3 / 1E-6
 DENSITY_CA
 ```
 
-### Temperatuurid
+#### Temperatuurid
 
 ```{r}
 MELTING_TEMPERATURE_CA = 842 + 273.15
@@ -66,13 +53,13 @@ MELTING_TEMPERATURE_CA
 BOILING_TEMPERATURE_CA = 1757.15
 ```
 
-### Allotroobid
+#### Allotroobid
 
 1. tahktsentreeritud kuubiline kuni 737.15 * K
 
 2. ruumtsentreeritud kuubiline süngoonia [737.15 * K, 1115.15 * K]
 
-### Isotoobid
+#### Isotoobid
 
 stabiilsed: 40 (.97 looduses), 42, 43, 44 ja 46
 
@@ -82,11 +69,11 @@ radioaktiivne kosmiline: 41 (poolestusaeg 103000 * a); tekib ka 40 neutronaktiva
 
 lühikese poolestusajaga: [34, 57] (poolestusaeg [35 * ns, 163 p]
 
-### Looduses
+#### Looduses
 
 Looduses vabalt ei esine, ainult komponendina: settekivimites olevate mineraalide koostises, süva- ja moondekivimites.
 
-### Saamine
+#### Saamine
 
 kaltsiumkloriidist elektrolüüsis:
 
@@ -94,7 +81,7 @@ CaCl~2~ -> Ca + Cl~2~
 
 Supernoovas tekib C reaktsioonist mitmete α-osakestega (He tuumadega).
 
-### Reageerimine
+#### Reageerimine
 
 Õhuga moodustab oksiidi- ja nitriidikihi.
 
@@ -108,7 +95,7 @@ Ookeanis reageerivad lahustunud süsihappegaasiga (CO2) moodustades lubjakivi p�
 
 Ca + 2 * HCO~3~ (CO~2~ on merevees sellisel kujul pH tõttu) → CaCO~3~ (lubjakivi) + CO~2~ + H~2~O
 
-### Kasutus
+#### Kasutus
 
 1. divesiniku tootmiseks
 
@@ -124,23 +111,23 @@ Ca + 2 * HCO~3~ (CO~2~ on merevees sellisel kujul pH tõttu) → CaCO~3~ (lubjak
 
 7. juustu tootmises, kus kaltsiumiioonid mõjutavad laabi aktiivsust, põhjustades omakorda piimavalkude kalgendumise
 
-### Ühendid
+#### Ühendid
 
 CaO, CaCO~3~, [Ca(OH)~2~](bases.html#Kustutatud%20lubi), Ca~3~(AsO~4~)~2~, CaC~2~, CaCl~2~, Ca(C~6~H~11~O~7~)~2~, Ca(OCl)~2~, Ca(MnO~4~)~2~, Ca~3~(PO~4~)~2~, Ca~3~P~2~, Ca(C~18~H~35~O~2~)~2~, $CaSO_4 \cdot 3 \cdot H_2O$, CaWO~4~, Ca~5~(PO~4~)(OH)
 
-# Ülemineku metallid
+## Ülemineku metallid
 
-## Vask
+### Vask
 
-### Väljanägemine
+#### Väljanägemine
 
 ![Vask](Vask-scaled.jpg)
 
-### Ioonid
+#### Ioonid
 
 1, 2
 
-### Kasutus
+#### Kasutus
 
 1. hemoglobiini sünteesis ja raua omastamise soodustamises erütrotsüütide kujunemisel
 
@@ -152,16 +139,16 @@ CaO, CaCO~3~, [Ca(OH)~2~](bases.html#Kustutatud%20lubi), Ca~3~(AsO~4~)~2~, CaC~2
 
 6. aitab toota melaniini, mis kaitseb juukseid halliks muutumise eest
 
-## Tsink
+### Tsink
 
-## Väljanägemine
+### Väljanägemine
 
 ![Tsingi väljanägemine](Zinc_fragment_sublimed_and_1cm3_cube.jpg)
 
-## Looduses
+### Looduses
 
 taimedes ja loomades
 
-### Kasutus
+#### Kasutus
 
 1. üks keskseid mineraalaineid organismi rakkude arengus, kasvus ja paljunemises

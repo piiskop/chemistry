@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="39.348mm" height="56.946mm" version="1.1" viewBox="0 0 39.348 56.946" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <marker id="marker35327" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="context-stroke" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+  <marker id="Arrow2Mend" overflow="visible" orient="auto">
+   <path transform="scale(-.6)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill-rule="evenodd" stroke="context-stroke" stroke-linejoin="round" stroke-width=".625"/>
+  </marker>
+ </defs>
+ <g transform="translate(-45.646 -54.878)">
+  <g fill="#000000" font-family="sans-serif" font-size="10.583px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px">
+   <text x="45.392231" y="87.173401" style="line-height:1.25" xml:space="preserve"><tspan x="45.392231" y="87.173401" stroke-width=".26458">O</tspan></text>
+   <text x="45.051373" y="111.67361" style="line-height:1.25" xml:space="preserve"><tspan x="45.051373" y="111.67361" stroke-width=".26458">O<tspan baseline-shift="super" font-size="65%">-II</tspan></tspan></text>
+   <text x="69.204666" y="86.967682" style="line-height:1.25" xml:space="preserve"><tspan x="69.204666" y="86.967682" stroke-width=".26458">H<tspan baseline-shift="sub" font-size="65%">2</tspan></tspan></text>
+   <text x="68.948303" y="64.125809" style="line-height:1.25" xml:space="preserve"><tspan x="68.948303" y="64.125809" stroke-width=".26458">2H<tspan baseline-shift="super" font-size="65%">I</tspan></tspan></text>
+  </g>
+  <g fill="none" stroke="#000">
+   <path d="m49.478 92.058-0.09186 7.6485" marker-end="url(#marker35327)" stroke-width=".265"/>
+   <g stroke-width=".26458px">
+    <path d="m72.675 74.722-0.09793-8.0633" marker-end="url(#Arrow2Mend)"/>
+    <path d="m64.941 74.797-10.558 14.195"/>
+    <path d="m66.325 74.722-10.558 14.195"/>
+   </g>
+  </g>
+ </g>
+</svg>

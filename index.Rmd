@@ -1,21 +1,34 @@
 ---
-title: "Milleks?"
-author: 'peacecop kalmer:'
-output:
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
+title: "Keemia"
+author: 'peacecop kalmer: üliõpilaskoodiga *210951MLLB.LT*'
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+format:
+  html:
+    page-layout: article
+bibliography: references.bib
+number-sections: true
+csl: apa.csl
+lang: et
+link-citations: yes
+github-repo: piiskop/chemistry
 ---
 
-kõige
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-ehtsamad
+# Üldfunktsionaalsus
 
-enda
-
-meisterdatud
-
-isuäratavad
-
-artiklid
+```{r functions}
+include_svg = function(path) {
+  if (knitr::is_latex_output()) {
+    output = xfun::with_ext(path, 'pdf')
+    system(paste('gm convert ', path, ' ', output), intern = FALSE, ignore.stdout = FALSE, ignore.stderr = FALSE, wait = TRUE)
+  } else {
+    output = path
+  }
+  knitr::include_graphics(output)
+}
+```

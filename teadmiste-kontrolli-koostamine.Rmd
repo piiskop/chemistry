@@ -1,20 +1,3 @@
----
-title: "Teadmiste kontrolli koostamine"
-author: 'peacecop kalmer:'
-date: "3/12/2022"
-output:
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
-bibliography: references.bib
-link-citations: yes
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Teadmiste kontrolli koostamine
 
 ## Konstandid
@@ -127,7 +110,9 @@ Naatriumkloriti protsentuaalne koostis:
 
 ###### Joonis
 
-![Vasakul on 23-% naatriumkloriti lahus, paremal 80-% NaClO2 pulber](naclo2-80-lahuse-protsendid-mms.svg)
+```{r label = "na-cl-o2-80-solution-percentages-mms", fig.cap = "Vasakul on 23-% naatriumkloriti lahus, paremal on 80-% $NaClO_2$ pulber.", echo = FALSE, out.width = "100%"}
+include_svg("naclo2-80-lahuse-protsendid-mms.svg")
+```
 
 ###### Algandmed
 
@@ -202,7 +187,9 @@ Sihtlahuses on vett `r percentage_water_in_final`%.
 
 ###### Joonis
 
-![Kui palju vett on vaja võtta ühe osa 80-% NaClO2 lahuse kohta?](vee-suhe-80-lahusesse-mms.svg)
+```{r label = "h2-o-ratio-to-80-solution", fig.cap = "Kui palju vett on vaja võtta ühe osa 80-% $NaClO_2$ lahuse kohta?", echo = FALSE, out.width = "100%"}
+include_svg("vee-suhe-80-lahusesse-mms.svg")
+```
 
 ###### Algandmed
 
@@ -234,7 +221,9 @@ ratio_water_to_powder_in_final_solution <- percentage_water_in_final / percentag
 
 ###### Joonis
 
-![Helesiniselt on tähistatud küsitav osa.](vee-lisamine-80-lahusele.svg)
+```{r label = "adding-h2-o-to-80-solution", fig.cap = "Helesiniselt on tähistatud küsitav osa.", echo = FALSE, out.width = "100%"}
+include_svg("vee-lisamine-80-lahusele.svg")
+```
 
 ###### Algandmed
 
@@ -400,7 +389,7 @@ Selle ülesande koostasin MathCityMappi rajale koodiga *398852* [@mathcitymap].
 
 #### Ülesande püstitus
 
-Vastavalt THOMAS Hesselinkile on sobilik kogus naatriumkloritit inimese kehale on $1 \frac{\text{mg NaClO_2}}{\text{kg keha} \cdot p}$[@thomas-hesselink]. Vastavalt *Protocol 1000*le on MMS1 kokkusegamiseks vaja võtta kolm tilka MMS'i ja kolm tilka 4-% maohappe lahust [@Protocol-1000]. Seejärel oodatakse pool minutit, kuni segu muutub tumekollaseks. Sellist värvumist nimetatakse naatriumkloriti aktiveerimiseks. Keemik Tomas Horky olevat väitnud, et ühe tilga ruumiline maht olevat $.042 \cdot ml$ [@MMS-dosage]. Tumekollasele segule lisatakse $120 \cdot ml$ puhast vett. Võib ka kasutada teatud mahla, aga mitte igasugust. Puumahl sobib hästi. Kraanivett ei soovitata, kuna selles on palju lisaaineid sees. Destilleeritud vesi sobib ka väga hästi.
+Vastavalt THOMAS Hesselinkile on sobilik kogus naatriumkloritit inimese kehale on $\mathrm{1 \frac{\text{mg }NaClO_2}{\textrm{(kg keha)} \cdot d}}$[@thomas-hesselink]. Vastavalt *Protocol 1000*le on MMS1 kokkusegamiseks vaja võtta kolm tilka MMS'i ja kolm tilka 4-% maohappe lahust [@Protocol-1000]. Seejärel oodatakse pool minutit, kuni segu muutub tumekollaseks. Sellist värvumist nimetatakse naatriumkloriti aktiveerimiseks. Keemik Tomas Horky olevat väitnud, et ühe tilga ruumiline maht olevat $.042 \cdot ml$ [@MMS-dosage]. Tumekollasele segule lisatakse $120 \cdot ml$ puhast vett. Võib ka kasutada teatud mahla, aga mitte igasugust. Puumahl sobib hästi. Kraanivett ei soovitata, kuna selles on palju lisaaineid sees. Destilleeritud vesi sobib ka väga hästi.
 
 Millise kontsentratsiooniga on klorit selles lahuses?
 
@@ -416,7 +405,7 @@ Minu keha mass on umbes $70 \cdot kg$. Täpselt ei tea, pole ammu kaalunud. Mitu
 
 
 
-Surmav kloriti doos olevat umbes $3 \frac{\text{mg ClO_2}}{\text{kg keha} \cdot p}$[@Kalcker].
+Surmav kloriti doos olevat umbes $\mathrm{3 \frac{\text{mg }ClO_2}{\text{kg keha} \cdot d}}$[@Kalcker].
 
 #### Lahendus
 
@@ -704,11 +693,11 @@ tilku_{manustamine, max} = \frac{m_{ClO_2, suurim, p}}{n_{manustamisi, p}} * m_{
 
 ###### Sisendid
 
-$$m_{ClO_2, suurim, p} = 1 \cdot \frac{\text{mg ClO_2}}{\text{kg keha} \cdot p} = 1 \cdot 10^{-6} \cdot \frac{\text{kg ClO_2}}{\text{kg keha} \cdot p}$$
+$$m_{ClO_2, suurim, p} = 1 \cdot \frac{\text{mg }ClO_2}{\text{kg keha} \cdot p} = 1 \cdot 10^{-6} \cdot \frac{\text{kg }ClO_2}{\text{kg keha} \cdot p}$$
 
 $$n_{manustamisi, p} = 8$$
 
-$$m_{body} = 70 \cdot kg$$
+$$m_{body} = 70 \cdot Kg$$
 ```{r}
 m_clo2_max_per_day <- 1e-6
 n_intakes_per_day <- 8
@@ -727,3 +716,20 @@ n_drops_max <- m_clo2_max_per_day / n_intakes_per_day * m_body
 ###### Lahend
 
 `r n_drops_max` tilka võin kõige enam tarbida keskmiselt manustamiskorra kohta.
+
+## Tilgad
+
+```{r}
+drop_naclo2_1 <- (.4349 - .3243) / 2
+drop_naclo2_2 <- .507 - .4349
+drop_naclo2_3 <- (.5879 - .507) / 2
+drops_naclo2 <- c(drop_naclo2_1, drop_naclo2_2, drop_naclo2_3)
+drops_naclo2
+drops_hcl <- c(.3816 - .319, .4487 - .3816, .5084 - .4487)
+drops_hcl
+mean(drops_naclo2)
+sd(drops_naclo2)
+mean(drops_hcl)
+sd(drops_hcl)
+```
+

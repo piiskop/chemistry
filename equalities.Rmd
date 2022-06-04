@@ -1,18 +1,3 @@
----
-title: "Reaktsioonivõrrandid"
-author: 'peacecop kalmer:'
-date: "1/15/2022"
-output:
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # Reaktsioonivõrrandid
 
 ## Reeglid oksüdatsiooniastmete jaoks
@@ -39,13 +24,19 @@ Oksüdatsiooniaste näitab elektronide loovutamise ja liitmise võimet:
 
 10. Group 17(7A) = -1 except with Oxygen and other halogens lower in the group
 
-11. $\underbrace{RH}_{\text{reducing agent}} + \underbrace{NAD^+}_{\text{oxidizing agent}} → \underbrace{NADH}_{\text{reduced}}+\underbrace{R^+}_{oxidized}$
+11. $\mathrm{\underbrace{RH}_{\text{reducing agent}} + \underbrace{NAD^+}_{\text{oxidizing agent}} → \underbrace{NADH}_{\text{reduced}}+\underbrace{R^+}_{oxidized}}$
 
-12. $\text{Pyruvic acid} + NADH ↔ \text{lactic acid} + NAD^+$
+12. $\mathrm{\text{Pyruvic acid} + NADH ↔ \text{lactic acid} + NAD^+}$
 
 ## Lenduvus
 
-$$HCl \rightarrow HNO_3 \rightarrow H_2SO_4$$
+$$\mathrm{HCl \rightarrow HNO_3 \rightarrow H_2SO_4}$$
+
+## Aatomite paiknemine
+
+Süsiniku aatomeid võib lõputult üksteise külge liita: *-C-C-C-C-...*.
+
+Räni aatomeid võib üksteisele liita kokku kuni seitse. Ühtlasi, kui seal on muud liiki aatomeid, siis võib lõputult: *Si-O-Si-O-Si-*.
 
 ## Hapnik ja metall
 
@@ -53,7 +44,7 @@ Metal oxides are formed, which are generally basic in nature.
 
 #### Hapnik ja aluseline metall
 
-1. $4Li + O_2 -> 2Li_2O$
+1. $\mathrm{4Li + O_2 \rightarrow 2Li_2O}$
 
 2. 4 * Na + O~2~ -> 2 * Na~2~O
 
@@ -71,7 +62,9 @@ Reaktsioon toimub kõrge temperatuuriga.
 
 Reaktsioon toimub kõrge temperatuuriga.
 
-![Iooniline side on alumiiniumi ja hapniku ioonide vahel](al2o3-lewis.svg)
+```{r label = "al2-o3", fig.cap = "Iooniline side on alumiiniumi ja hapniku ioonide vahel", echo = FALSE, out.width = "100%"}
+include_svg("al2o3-lewis.svg")
+```
 
 3. 2 * Zn + O~2~ -> 2 * ZnO
 
@@ -95,11 +88,11 @@ Reaktsioon toimub osaliselt.
 
 4. K~2~O + H~2~O -> 2 * KOH
 
-5. CaO + H~2~O -> Ca(OH)~2~
+5. $\mathrm{\stackrel{quicklime}{CaO (s)} + H_2O (l) \leftrightharpoons \stackrel{\text{slaked lime}}{Ca(OH)_2 (s)} + heat}$ [@Petrucci2011-sc, p. 249]
 
 ## Ülemineku järgse metalli oksiid ja vesi
 
-1. $Al_2O_3 (alumiiniumoksiid) + H_2O$
+1. $\mathrm{Al_2O_3 (alumiiniumoksiid) + H_2O}$
 
 Ei reageeri. Kui alumiiniumpakend on auruga piiratud söögi ümber, siis ei teki alust, mis võiks söögiga seguneda.
 
@@ -217,9 +210,11 @@ $$2 \cdot H_2O - 4 \cdot e \rightarrow 4 \cdot H^+ + O_2$$
 
 ## Mittemetall ja metall
 
-1. $2 \cdot Na + S \rightarrow Na_2S$
+1. $\mathrm{Cl_2 + 2Ag \stackrel{pimedas}{\rightarrow} 2AgCl}$
 
-2. K + 2 * S -> K~2~S
+2. $\mathrm{2 \cdot Na + S \rightarrow Na_2S}$
+
+3. K + 2 * S -> K~2~S
 
 ## Mittemetallid
 
@@ -227,21 +222,39 @@ $$2 \cdot H_2O - 4 \cdot e \rightarrow 4 \cdot H^+ + O_2$$
 
 Covalent hydrides are formed:
 
-1. $2H_2 + O_2 \rightarrow 2H_2^IO^{-II}$
+1.  Kulgeb pöörduv reaktsioon: $\mathrm{stackrel{endotermiline}{H_2 (g) + I_2 (g)} \leftrightharpoons \stackrel{eksotermiline}{2HI (g)}; \Delta(H) < 0}$.
+
+    Temperatuuri tõstmine nihutab reaktsiooni tasakaalu lähteainete tekke suunas. Seal on soojust vähem.
+    
+    Rõhu alandamine nihutab reaktsiooni ei kummaski suunas, sest moole mõlemal poolel võrdselt.
+    
+    Vesiniku lisamine nihutab reaktsiooni tasakaalu saaduse tekke suunas, sest seal on vaba vesinikku vähem.
+    
+    Joodi kontsentratsiooni tõstmine ei mõjuta reaktsiooni kiirust pärisuunas, sest kogu vesinik on juba kasutatud.
+    
+    Temperatuuri tõstmine suurendab reaktsiooni kiirust ainult lähteainete ehk endotermilises suunas, kuna tasakaal ka sinnapoole nihkub.
+
+2. $\mathrm{2H_2 + O_2 \rightarrow 2H_2^IO^{-II}}$
 
 H - 1 * e -> H^+^
 
 H~2~ - 2 * e -> 2H^+^
 
-![Hapnik saab kaks elektroni ja redutseerub, kaks vesinikku loovutavad kumbki ühe elektroni ja oksüdeeruvad.](o--ii-h2-2hi.svg)
+```{r label = "o--ii-h2-2hi", fig.cap = "Hapnik saab kaks elektroni ja redutseerub, kaks vesinikku loovutavad kumbki ühe elektroni ja oksüdeeruvad.", echo = FALSE, out.width = "100%"}
+include_svg("o-ii-h2-2hi.svg")
+```
 
 Hapnik tahab vesinikku rohkem kui teist hapnikku, sest eleketronegatiivsused on erinevamad.
 
-![Hapniku aatomi ja vesiniku aatomi vahel on polaarne kovalentne side. Vee molekulide vahel on vesinikside.](h20-vesinikside.svg)
+```{r label = "h20-h-bond", fig.cap = "Hapniku aatomi ja vesiniku aatomi vahel on polaarne kovalentne side. Vee molekulide vahel on vesinikside.", echo = FALSE, out.width = "100%"}
+include_svg("h20-vesinikside.svg")
+```
 
 2. $H_2 + F_2 \rightarrow 2HF$
 
-![Vesinikfluoriidi Lewise struktuur](hf-lewis.svg)
+```{r label = "h-f", fig.cap = "Vesinikfluoriidi Lewise struktuur", echo = FALSE, out.width = "100%"}
+include_svg("hf-lewis.svg")
+```
 
 3. H~2~ + Cl~2~ -> 2 * HCl
 
@@ -249,13 +262,17 @@ Hapnik tahab vesinikku rohkem kui teist hapnikku, sest eleketronegatiivsused on 
 
 5. H~2~ + S -> H~2~S
 
+6. $\mathrm{3H + As \rightarrow AsH_3}$
+
 #### Vesinik ja vesinik
 
 1. $H + H \rightarrow H_2$
 
-![reaktsioonivõrrand](h+h.svg)
+```{r label = "h-h", fig.cap = "reaktsioonivõrrand", echo = FALSE, out.width = "100%"}
+include_svg("h+h.svg")
+```
 
-2. $H_2 \leftrightarrow 2 \cdot H$
+2. $\mathrm{H_2 \leftrightarrow 2 \cdot H}$
 
 (väga endotermiline) – neelab soojust (vajab palju energiat);
 algab alles üle 2000°C; täielikult atomaarne  u 5000°C juures (elektrikaares)
@@ -264,27 +281,35 @@ algab alles üle 2000°C; täielikult atomaarne  u 5000°C juures (elektrikaares
 
 Non – metal oxides are formed, which are generally acidic in nature:
 
-1. 2 * C + O~2~ -> 2 * CO
+1.  2 * C (s) + O~2~ (g) -> 2 * CO (g) + heat
 
-See reaktsioon toimub vähese hapnikuga.
+    See reaktsioon toimub vähese hapnikuga.
 
-2. C + O~2~ -> CO~2~
+2. $\mathrm{N_2 + O_2 \leftrightharpoons 2NO}$
 
-See reaktsioon toimub rohke hapnikuga.
+3.  C + O~2~ -> CO~2~
 
-2. 4 * P + 5 * O~2~ -> P~4~O~10~
+    See reaktsioon toimub rohke hapnikuga.
 
-3. $S + O_2 \rightarrow S^{IV}O_2^{-II}$
+4. 4 * P + 5 * O~2~ -> P~4~O~10~
 
-Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovutab neli elektroni olles redutseerija ja oksüdeerub.
+5.  $\mathrm{S + O_2 \rightarrow S^{IV}O_2^{-II}}$
 
-![Vääveldioksiidi Lewise struktuur](so2-lewis.svg)
+    Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovutab neli elektroni olles redutseerija ja oksüdeerub.
 
-4. 2 * S + 3* O~2~ (erinev *3*'st) -> 2 * SO~3~
+    ```{r label = "s-o2", fig.cap = "Vääveldioksiidi Lewise struktuur", echo = FALSE, out.width = "100%"}
+    include_svg("so2-lewis.svg")
+    ```
 
-![Vääveltrioksiidi Lewise struktuur](so3-lewis.svg)
+4.  2 * S + 3* O~2~ (erinev *3*'st) -> 2 * SO~3~
 
-![Vääveltrioksiidi kui aniooni Lewise struktuur](so3--2-lewis.svg)
+    ```{r label = "s-o3", fig.cap = "Vääveltrioksiidi Lewise struktuur", echo = FALSE, out.width = "100%"}
+    include_svg("so3-lewis.svg")
+    ```
+
+    ```{r label = "s-o3-anion", fig.cap = "Vääveltrioksiidi kui aniooni Lewise struktuur", echo = FALSE, out.width = "100%"}
+    include_svg("so3--2-lewis.svg")
+    ```
 
 #### Hapnik ja vesinik
 
@@ -296,19 +321,29 @@ Hapnik võtab kaks elektroni olles oksüdeerija ja redutseerub. Väävel loovuta
 
 1.  $\mathrm{O + O \rightarrow O_2}$
 
-    ![reaktsioonivõrrand](o+o-o2.svg)
+    ```{r label = "o2", fig.cap = "reaktsioonivõrrand", echo = FALSE, out.width = "100%"}
+    include_svg("o+o-o2.svg")
+    ```
 
-    ![Kaks hapniku aatomit jagavad kummagi kaht elektroni.](o-o-6+2.svg)
+    ```{r label = "o2-sharing", fig.cap = "Kaks hapniku aatomit jagavad kummagi kaht elektroni.", echo = FALSE, out.width = "100%"}
+    include_svg("o-o-6+2.svg")
+    ```
 
 #### Muud
 
-1.  $\mathrm{Cl + Cl \rightarrow Cl_}2$
+1.  $\mathrm{Cl + Cl \rightarrow Cl_2}$
 
-    ![reaktsioonivõrrand](cl+cl-cl2.svg)
+    ```{r label = "cl-cl-cl2", fig.cap = "reaktsioonivõrrand", echo = FALSE, out.width = "100%"}
+    include_svg("cl+cl-cl2.svg")
+    ```
 
-    ![Kaks kloori aatomit jagamas ühist elektroni](cl-cl.svg)
+    ```{r label = "cl-cl", fig.cap = "Kaks kloori aatomit jagamas ühist elektroni", echo = FALSE, out.width = "100%"}
+    include_svg("cl-cl.svg")
+    ```
 
-    ![Kummalgi kloori aatomil on enda seitse elektroni ja üks teise kloori aatomi elektron](cl-cl-7-1.svg)
+    ```{r label = "cl-cl-7-1", fig.cap = "Kummalgi kloori aatomil on enda seitse elektroni ja üks teise kloori aatomi elektron", echo = FALSE, out.width = "100%"}
+    include_svg("cl-cl-7-1.svg")
+    ```
 
     tugev mittepolaarne kovalentne side
 
@@ -344,9 +379,11 @@ See reaktsioon ei toimu.
 
 Metal chalogenides are formed which are ionic in nature:
 
-1. $2 \cdot K + Cl_2 \rightarrow 2 \cdot KCl$
+1.  $2 \cdot K + Cl_2 \rightarrow 2 \cdot KCl$
 
-![Iooniline side naatriumi ja kloori aatomite vahel](nacl-lewis.svg)
+    ```{r label = "na-cl-lewis", fig.cap = "Iooniline side naatriumi ja kloori aatomite vahel", echo = FALSE, out.width = "100%"}
+    include_svg("nacl-lewis.svg")
+    ```
 
 2. 2 * Na + Cl~2~ -> 2 * NaCl
 
@@ -374,36 +411,43 @@ Süsinik oksüdeerub. Tsink redutseerub.
 
 Reaktsioon ei toimu.
 
+## Happeline oksid ja metall
+
+$$\mathrm{\stackrel{liiv}{SiO_2} + 2Mg \rightarrow Si + 2MgO}$$
+
 ## Happeline oksiid ja mittemetall
 
-1. $SiO_2 + 2 \cdot C → Si + 2 \cdot CO$
+$$\mathrm{SiO_2 + 2 \cdot C → Si + 2 \cdot CO}$$
 
 ## Happeline oksiid ja vesi
 
-1. $CO  +  H_2O  →  CO_2  + H_2$
-(moodustuv CO~2~ eraldatakse pesemisel veega rõhu all)
+1.  $\mathrm{CO  +  H_2O  →  CO_2  + H_2}$ 
 
-2. H~2~O + CO~2~ <-> H~2~CO~3~
+    (moodustuv CO~2~ eraldatakse pesemisel veega rõhu all)
 
-Kui lisada süsihappe gaasi vette, siis tuleb see anum sättida suure rõhu alla, sest kui sellest me vabastame, laguneb süsihape. Karastusjoogid.
+2.  H~2~O + CO~2~ <-> H~2~CO~3~
 
-3. $C_6H_{12}O_6 + 6O_2 \leftrightarrow 6CO_2 + 6H_2O + (energia: 18ATP + 12NADPH(3ATP)) + kuumus$
+    Kui lisada süsihappe gaasi vette, siis tuleb see anum sättida suure rõhu alla, sest kui sellest me vabastame, laguneb süsihape. Karastusjoogid.
 
-hingamine ja fotosüntees
+3.  $\mathrm{C_6H_{12}O_6 (aq) + 6O_2 (g) \leftrightarrow 6CO_2 (g) + 6H_2O (l) + (energia: 18ATP + 12NADPH(3ATP)) + kuumus}$
 
-4. H~2~O + SO~2~ -> H~2~SO~3~
+    hingamine ja fotosüntees
 
-5. SO~3~ + H~2~O -> H~2~SO~4~
+4. $\mathrm{2NO_2 + H_2O \rightarrow HNO_2 + HNO_3}$
 
-6. 6 * H~2~O + P~4~O~10~ -> 4 * H~3~PO~4~
+5. H~2~O + SO~2~ -> H~2~SO~3~
 
-7. $SiO_2 + H_2O$
+6. SO~3~ + H~2~O -> H~2~SO~4~
 
-Reaktsioon ei toimu.
+7. 6 * H~2~O + P~4~O~10~ -> 4 * H~3~PO~4~
+
+8.  $\mathrm{SiO_2 + H_2O}$
+
+    Reaktsioon ei toimu.
 
 ## Happeline oksiid ja alus
 
-1 $2 \cdot NaOH + SO_3 \rightarrow Na_2SO_4 + H_2O$
+1 $\mathrm{2 \cdot NaOH + SO_3 \rightarrow Na_2SO_4 + H_2O}$
 
 2. $CO_2 + 2 \cdot NaOH \rightarrow Na_2CO_3 + H_2O$
 
@@ -471,7 +515,9 @@ Et saada võrdne arv elektronide liitmisi ja lahutamisi, on vaja alumiiniumile l
 
 8. $\mathrm{Cu + 2 \cdot (konts. H_2^IS^{VI}O_4^{-II}) \xrightarrow{t°} CuS^{VI}O_4^{-II} + S^{IV}O_2^{-II} \uparrow + 2 \cdot H_2^{I}O^{-II}}$
 
-9.  $\mathrm{Zn + 2H_2S^{VI}O_4^{-II} → \text{(arvestada, et tekib happele vastav sool, SO_2 ja vesi)}Zn^{II}S^{VI}O_4^{-II} + S^{IV}O_2^{-II} + 2H_2O}$
+9.  $\mathrm{Zn + 2H_2S^{VI}O_4^{-II}} → \mathrm{Zn^{II}S^{VI}O_4^{-II} + S^{IV}O_2^{-II} + 2H_2O}$
+
+    arvestada, et tekib happele vastav sool, $SO_2$ ja vesi
 
     Toatemperatuuril toimub reaktsioon mõõdukalt. Väävelhappe kontsentratsioonist sõltub, mitu saadust tekib.
 
@@ -555,33 +601,37 @@ Reaktsioon toimub alati.
 
     $$\mathrm{Fe^{2} + (SO_4)^{-2} + H_2O \leftrightarrow Fe(OH)_2 + H^+ + (HSO_4)^-}$$
 
-6. $\mathrm{H_2SO_4 + 2 \cdot NaOH \rightarrow 2 \cdot H_2O + Na_2SO_4}$
+6.  $\mathrm{3H_2SO_4 (aq) + 2Fe(OH)_3 (s) = Fe_2(SO_4)_3 (s) + 6H_2O (l) (\text{Iron (III) hydroxide + Sulfuric acid})}$
 
-7. $\mathrm{2 \cdot KOH + H_2SO_4 \rightarrow \underbrace{K_2SO_4}_{kaaliumsulfaat} + 2 \cdot \underbrace{H_2O}_{vesi}}$
+    $$\mathrm{6H^+ + 3SO_4^{-2} + 2Fe(OH)_3 \leftrightharpoons Fe_2(So_4)_3 + 6H_2O}$$ [@h2so4-feoh3]
 
-8. $\mathrm{H_2SO_4 + Ca(OH)_2 \rightarrow CaSO_4 + 2 \cdot H_2O}$
+7. $\mathrm{H_2SO_4 + 2 \cdot NaOH \rightarrow 2 \cdot H_2O + Na_2SO_4}$
 
-9.  $\mathrm{3NaOH + H_3PO_4 \rightarrow Na_3PO_4 + 3H_2O}$
+8. $\mathrm{2 \cdot KOH + H_2SO_4 \rightarrow \underbrace{K_2SO_4}_{kaaliumsulfaat} + 2 \cdot \underbrace{H_2O}_{vesi}}$
 
-    Tuleb arvestada, et see on reaktsioonivõrrand ja tegelikult ilma veeta reaktsioon ei toimu. Reageerimises esineb ka vesi:
+9. $\mathrm{H_2SO_4 + Ca(OH)_2 \rightarrow CaSO_4 + 2 \cdot H_2O}$
 
-    $\mathrm{3NaOH + H_3PO_4 + H_2O \rightarrow Na_3PO_4 + 3H_2O + H_2O}$
+10.  $\mathrm{3NaOH + H_3PO_4 \rightarrow Na_3PO_4 + 3H_2O}$
 
-10. $\mathrm{2 \cdot H_3PO_4 + 3 \cdot Mg(OH)_2 \rightarrow 6 \cdot H_2O + Mg_3(PO_4)_2}$
+     Tuleb arvestada, et see on reaktsioonivõrrand ja tegelikult ilma veeta reaktsioon ei toimu. Reageerimises esineb ka vesi:
 
-11. $\mathrm{3 \cdot Ca(OH)_2 + 2 \cdot H_3PO_4 \rightarrow \underbrace{Ca_3(PO_4)_2}_{kaltsiumfosfaat} + 6 \cdot \underbrace{H_2O}_{vesi}}$
+     $$\mathrm{3NaOH + H_3PO_4 + H_2O \rightarrow Na_3PO_4 + 3H_2O + H_2O}$$
 
-12. $\mathrm{H_2CO_3 + 2 \cdot NaOH \rightarrow Na_2CO_3 + 2 \cdot H_2O}$
+11. $\mathrm{2 \cdot H_3PO_4 + 3 \cdot Mg(OH)_2 \rightarrow 6 \cdot H_2O + Mg_3(PO_4)_2}$
 
-13.  $\mathrm{Cu(OH)_2 + H_2S → CuS + 2H_2O}$
+12. $\mathrm{3 \cdot Ca(OH)_2 + 2 \cdot H_3PO_4 \rightarrow \underbrace{Ca_3(PO_4)_2}_{kaltsiumfosfaat} + 6 \cdot \underbrace{H_2O}_{vesi}}$
+
+13. $\mathrm{H_2CO_3 + 2 \cdot NaOH \rightarrow Na_2CO_3 + 2 \cdot H_2O}$
+
+14.  $\mathrm{Cu(OH)_2 + H_2S → CuS + 2H_2O}$
 
      Reaktsioon toimub alati.
 
-13. $\mathrm{Be(OH)_2 + 2HNO_3 \rightarrow Be(NO_3)_2 + 2H_2O}$
+15. $\mathrm{Be(OH)_2 + 2HNO_3 \rightarrow Be(NO_3)_2 + 2H_2O}$
 
-14. $\mathrm{Be(OH)_2 + 2NaOH \rightarrow Na_2 \cdot Be(OH)_4}$
+16. $\mathrm{Be(OH)_2 + 2NaOH \rightarrow Na_2 \cdot Be(OH)_4}$
 
-15.  Soola hüdrolüüs:
+17.  Soola hüdrolüüs:
 
      $2NaOH + H_2S \leftrightarrow \overbrace{\underbrace{Na_2}_{tugev}\underbrace{S}_{\text{nõrk}}}^{\text{aluseline keskkond}} + 2H_2O$
 
@@ -671,15 +721,17 @@ Non-metal that is more reactive displaces less reactive non-metal from its salt 
 
 4. $\mathrm{\underbrace{Na_2CO_3 + Ca(OH)_2}_{sooda} \rightarrow 2NaOH + \underbrace{CaCO_3 \downarrow}_{lubi}}$
 
-5. $\mathrm{(NH_4)_2SO_4 + Mg(OH)_2 \rightarrow MgSO_4 + 2NH_3 + 2H_2O}$
+5. $\mathrm{Ba(OH)_2 \bullet 8 H_2O(s) + 2 NH_4Cl(s) + heat \leftrightharpoons BaCl_2 \bullet 2H_2O(s) + 2 NH_3(aq) + 8 H_2O( l )}$ [@Petrucci2011-sc, p. 249]
 
-6. Ca(OH)~2~ + K~2~SO~4 -> 
+6. $\mathrm{(NH_4)_2SO_4 + Mg(OH)_2 \rightarrow MgSO_4 + 2NH_3 + 2H_2O}$
 
-7.  $\mathrm{Zn(OH)_2 + NaCl →}$
+7. Ca(OH)~2~ + K~2~SO~4 -> 
+
+8.  $\mathrm{Zn(OH)_2 + NaCl →}$
 
     Tsinkhüdroksiid ei lahustu vees, mistõttu reaktsioon ei toimu.
 
-8.  NaOH + BaCl~2~
+9.  NaOH + BaCl~2~
 
     Reaktsioon ei toimu, kuna sadet ei teki.
 
@@ -703,27 +755,29 @@ Reaktsioon ei toimu.
 
 1. $\mathrm{Ba(NO_3)_2 + H_2SO_4 \rightarrow BaSO_4 \downarrow + 2HNO_3}$
 
-1. Na~2~S + 2 * HCl -> 2 * NaCl + H~2~S
-
-2. $\underbrace{CaCO_3}_{pulbrina} + 2 \cdot HCl \xrightarrow{t°} CaCl_2 + H_2CO_3$
+2. $\mathrm{\underbrace{CaCO_3}_{pulbrina} + 2 \cdot HCl \xrightarrow{t°} CaCl_2 + H_2CO_3}$
 
 3. Na~2~CO~3~ + H~2~SO~4~ -> Na~2~SO~4 + H~2~CO~3~ -> Na~2~SO~4~ + H~2~O + CO~2~
 
-4. $2 \cdot NaCl + H_2SO_4 \rightarrow Na_2SO_4 + 2 \cdot HCl \uparrow$
+4. Na~2~S + 2 * HCl -> 2 * NaCl + H~2~S
 
-5. $Na_2S + H_2SO_4 \rightarrow Na_2SO_4 + H_2S$
+5. $\mathrm{Na_4SiO_4 + 4HCl \rightarrow H_4SiO_4 + 4NaCl}$
 
-6. CaCl~2~ + H~2~SO~4~ -> CaSO~4~ (mingil määral sadestub) + 2 * HCl 
+6. $\mathrm{2 \cdot NaCl + H_2SO_4 \rightarrow Na_2SO_4 + 2 \cdot HCl \uparrow}$
 
-7. $CaCO_3 + H_2SO_4 \rightarrow CaSO_4 + H_2 + CO_2$
+7. $\mathrm{Na_2S + H_2SO_4 \rightarrow Na_2SO_4 + H_2S}$
 
-8. $FeS + H_2SO_4 → H_2S \uparrow + FeSO_4$
+8. CaCl~2~ + H~2~SO~4~ -> CaSO~4~ (mingil määral sadestub) + 2 * HCl 
 
-9. CaS + H~2~SO~3~ -> H~2~S + CaSO~3~
+9. $\mathrm{CaCO_3 + H_2SO_4 \rightarrow CaSO_4 + H_2 + CO_2}$
 
-10. $FeSO_4 + H_2S \rightarrow FeS \downarrow + H_2SO_r$
+10. $\mathrm{FeS + H_2SO_4 → H_2S \uparrow + FeSO_4}$
 
-11. $Ba(NO_3)_2 + 2HCl → BaCl_2 + 2HNO_3$
+11. CaS + H~2~SO~3~ -> H~2~S + CaSO~3~
+
+12. $\mathrm{FeSO_4 + H_2S \rightarrow FeS \downarrow + H_2SO_4}$
+
+13. $\mathrm{Ba(NO_3)_2 + 2HCl → BaCl_2 + 2HNO_3}$
 
 Reaktsioon ei toimu, sest HCl on lenduvam kui HNO~3~.
 
@@ -852,27 +906,35 @@ From left to right: the process of raising pH as more CO2 is made. From right to
 
 5.  $\mathrm{NaCl \rightarrow Na^+ + Cl^-}$
 
-    ![Positiivselt laetud osakesed liituvad negatiivselt laetud osakestega ja vastupidi.](nacl-vees.svg)
+    ```{r label = "na-cl-in-water", fig.cap = "Positiivselt laetud osakesed liituvad negatiivselt laetud osakestega ja vastupidi.", echo = FALSE, out.width = "100%"}
+    include_svg("nacl-vees.svg")
+    ```
 
 #### Muu
 
 $$\mathrm{2LmHCO_3 \rightarrow Lm_2CO_3 + H_2O + CO_2}$$
 
-1.  $H_2O \leftrightarrow H^+ + OH^-$
+1. $\mathrm{2 \cdot AgBr \xrightarrow{valgus} 2 \cdot Ag + Br_2}$
+
+2. $\mathrm{2AgCl \stackrel{valguses}{\rightarrow} 2Ag + Cl_2}$
+
+3. $\mathrm{2AsH_3 + heat \rightarrow 2As + 3H_2}$
+
+4.  $\mathrm{H_2O \leftrightarrow H^+ + OH^-}$
 
     katoodil
 
     Vaid tühine osa vee molekule (25°C juures: üks  $5 \cdot 10^9$ kohta) on dissotsieerunud nii.
 
-2. $2H_2O_2 \rightarrow 2H_2O + O_2$
+5. $\mathrm{2H_2O_2 \rightarrow 2H_2O + O_2}$
 
-3. $2 \cdot KCl \rightarrow Cl_2 + 2 \cdot K$
+6. $\mathrm{2 \cdot KCl \rightarrow Cl_2 + 2 \cdot K}$
 
-4. $2 \cdot AgBr \xrightarrow{valgus} 2 \cdot Ag + Br_2$
+7. $\mathrm{2 KClO_3 (s) - 2 KCl (s) + 3 O_2 (g)}$ [@Petrucci2011-sc, p. 252]
 
-5. $2 \cdot NaCl \xrightarrow{elekter} 2 \cdot Na + Cl_2$
+8. $\mathrm{2 \cdot NaCl \xrightarrow{elekter} 2 \cdot Na + Cl_2}$
 
-6. $H_2SO_4 \rightarrow H_2O + SO_3 \rightarrow 2 \cdot H + S + 4 \cdot O$
+9. $H_2SO_4 \rightarrow H_2O + SO_3 \rightarrow 2 \cdot H + S + 4 \cdot O$
 
 7. $H_2SiO_3 \xrightarrow{t°} SiO_2 + H_2O$
 
@@ -989,3 +1051,109 @@ $$H_2CO_3 \rightarrow (HCO_3)^- + H^+$$
 
 
 $$\stackrel{NaOH}{\rightleftharpoons}$$
+
+## Elektrülüüs
+
+Aine lagunemine elektrivoolu toimel. Tekivad keemilised sidemed.
+
+Toimub kas vedelikus (lahuses) või sulas elektrolüüdis.
+
+$$Na-Cl (sula) \stackrel{elektrivool}{\rightarrow} Na^+ + Cl^-$$
+
+$$2NaCl \rightarrow 2Na (katood) + Cl_2 (anood)$$
+
+Katood (liiguvad katioonid (-)) ja anood (liiguvad anioonid(+)).
+
+$$2H_2O \stackrel{elektrolüüs}{\rightarrow} 2H_2(katood) + O_2(anood)$$
+
+Kasutusvaldkond: katmine metallidega.
+
+## Tasakaal
+
+$$CO_2 + H_2O (pudel on lahti) \leftrightharpoons H_2CO_3 \text(pudel on kinni, rõhk on suurem)$$
+
+$$C_2H_2 + 4 H_2= \leftrightharpoons 2 CO_2 + 5 H_2 + 5 H_2, \Delta(H) < 0$$
+
+eksotermiline reaktsioon
+
+temperatuuri tõstmine lähteainete suunas
+
+segamine tasakaalu ei mõjuta
+
+rõhu vähendamine: tasakaal nihkub saaduste suunas, sest seal on rõhku rohkem
+
+süsihappegaasi lisamine: lähteainete suunas
+
+$$Mg + H_2SO_4 \rightarrow MgSo_4 + H_2, \Delta(H), < 0$$
+
+eksotermiline
+
+temperatuuri tõstmine: kiirus kasvab, tasakaalu ei teki, läheb ühes suunas edasi
+
+rõhu tõstmine: kiirus väheneb, sest ei lase vesinikul eralduda
+
+happe kontsentratsiooni suurendamine: kiirus kasvab, aga kui väävelhape on täiskontsentraat, siis ei juhtu mitte miski
+
+vee lisamine: kiirus väheneb, sest vähendab kontsentratsiooni, aga mitte siis, kui täiskontsentraadist
+
+metalli peenestamine: kiirus suureneb
+
+$$N_2(g) + 3 H_2(g) \leftrightharpoons 2 NH_3(g), \Delta(H) < 0$$
+
+Rõhu tõstmisel nihkub tasakaal saaduste tekke suunas, sest seal on vähem moole.
+
+Temperatuuri alandamisel reaktsiooni tasakaal nihkub saaduste suunas.
+
+Ammoniaagi kontsentratsiooni vähendamisel nihkub tasakaal saaduste suunas.
+
+Selles reaktsioonis käitub lämmastik oksüdeerijana, sest selle oksüdatsiooniaste kasvab.
+
+## Anorgaanika
+
+Neutron on laenguta tuumaosake.
+
+Element 33: s2p6, neljas periood, väliskihil viis elektroni, suurim oksüdatsiooniaste III, väikseim oksüdatsiooniaste -V.
+
+söe peenestamine, 
+
+$$HCl \leftrightharpoons H^+ + Cl^-$$
+
+$$NaOH \leftrightharpoons Na^+ + (OH)^-$$
+
+$$2ZnO \leftrightharpoons 2 Zn^{2+} + O_2^{2-}$$
+
+$$HCO_3 \leftrightharpoons H^+ + (CO_3)^-$$
+
+$$2 Ba + Cl_2 \rightarrow BaCl_2$$
+
+$$Ba(OH)_2 + HCl \rightarrow BaCl_2 + 2 H_2O$$
+
+$$BaO + 2 HCl \rightarrow BaCl_2 + H_2O$$
+
+$$2 BaI + 2 Cl_2 \rightarrow 2 BaCl_2 + I_2$$
+
+$$2 H_2 + O_2 \rightarrow 2 H_2O$$
+
+$$2K + 2H_2O \rightarrow 2KOH + H_2$$
+
+$$Cu + Cl_2 \rightarrow CuCl_2$$
+
+$$2 KOH + CuCl_2 \rightarrow Cu(OH)_2 + 2 KCl$$
+
+$$2 Cu + O_2 \rightarrow 2 CuO$$
+
+$$H_2 + Cl_2 \rightarrow 2HCl$$
+
+$$CuO + 2 HCl \rightarrow CuCl_2 + H_2O$$
+
+Energia eraldub: eksotermiline reaktsioon.
+
+$$NaCl + AgNO_3 \rightarrow AgCl (valge sade) + NaNO_3$$
+
+$$Na_2SO_4 + BaCl_2 \rightarrow BaSO_4 (valge sade) + 2 NaCl$$
+
+$$Na_2S + H_2SO_4 \rightarrow Na_2SO_4 + H_2S(g)$$
+
+$$NaCl + H_2SO_4 \rightarrow HCl + Na_2SO_4$$
+
+$H_2O$ on väga hea lahusti.

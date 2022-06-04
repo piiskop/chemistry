@@ -1,19 +1,6 @@
----
-title: 'ÜLESANNE: Anorgaaniliste reaktsioonide toimumise tingimused'
-author: 'peacecop kalmer:'
-date: "2/15/2022"
-output:
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
----
+# ÜLESANNE: Anorgaaniliste reaktsioonide toimumise tingimused
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-# Ülesande püstitus
+## Ülesande püstitus
 
 Töötage läbi kaasas olev materjal (["Keemia põhiteadmised"](https://nextcloud.tennis24.ee/index.php/s/tJbQDL75kQMQbc7)) ning interpreteerige järgnevad reaktsioonivõrrandid lähtudes allpool esitatud küsimustest:
 
@@ -63,7 +50,7 @@ Töötage läbi kaasas olev materjal (["Keemia põhiteadmised"](https://nextclou
 
 20) $Ag + HCl →$
 
-# Lahendus
+## Lahendus
 
 1)  Alumiinium ei reageeri veega toatemperatuuril.
 
@@ -79,41 +66,43 @@ Vesinik on oksüdeerija, sest haagib elektrone:
 
 $$H^I + e \rightarrow H$$
 
-3)  $Cu(OH)_2 + H_2S → CuS + 2H_2O$
+3)  $\mathrm{Cu(OH)_2 + H_2S → CuS + 2H_2O}$
 
-Reaktsioon toimub alati.
+    Reaktsioon toimub alati.
 
-4)  $Zn + 2H_2S^{VI}O_4^{-II} → \text{(arvestada, et tekib happele vastav sool, SO_2 ja vesi)}Zn^{II}S^{VI}O_4^{-II} + S^{IV}O_2^{-II} + 2H_2O$
+4)  $\mathrm{Zn + 2H_2S^{VI}O_4^{-II} → Zn^{II}S^{VI}O_4^{-II} + S^{IV}O_2^{-II} + 2H_2O}$
 
-Toatemperatuuril toimub reaktsioon mõõdukalt.
+    arvestada, et tekib happele vastav sool, SO_2 ja vesi
 
-See on redoksreaktsioon, sest oksüdatsiooniastmed muutuvad.
+    Toatemperatuuril toimub reaktsioon mõõdukalt.
 
-Tsink on redutseerija, sest loovutab elektrone:
+    See on redoksreaktsioon, sest oksüdatsiooniastmed muutuvad.
 
-$$Zn - 2 \cdot e \rightarrow Zn^{II}$$
+    Tsink on redutseerija, sest loovutab elektrone:
 
-Väävel on oksüdeerija, sest haagib elektrone:
+    $$\mathrm{Zn - 2 \cdot e \rightarrow Zn^{II}}$$
 
-$$S^{VI} + 2 \cdot e \rightarrow S^{IV}$$
+    Väävel on oksüdeerija, sest haagib elektrone:
 
-5)  $Zn(OH)_2 + NaCl →$
+    $$\mathrm{S^{VI} + 2 \cdot e \rightarrow S^{IV}}$$
 
-Tsinkhüdroksiid ei lahustu vees, mistõttu reaktsioon ei toimu.
+5)  $\mathrm{Zn(OH)_2 + NaCl →}$
 
-6)  $Mg + CaCl_2 →$
+    Tsinkhüdroksiid ei lahustu vees, mistõttu reaktsioon ei toimu.
 
-Reaktsioon ei toimu, kuna magneesium ei tõrju kaltsiumi kaltsiumkloriidist välja.
+6)  $\mathrm{Mg + CaCl_2 →}$
 
-7)  $2S^{IV}O_2^{-II} + O_2 → 2S^{VI}O_3^{-II}$
+    Reaktsioon ei toimu, kuna magneesium ei tõrju kaltsiumi kaltsiumkloriidist välja.
 
-Reaktsioon toimub alati.
+7)  $\mathrm{2S^{IV}O_2^{-II} + O_2 → 2S^{VI}O_3^{-II}}$
 
-See on redoksreaktsioon, sest elementide oksüdatsiooniastmed muutuvad.
+    Reaktsioon toimub alati.
 
-Väävel on redutseerija, sest loovutab elektrone:
+    See on redoksreaktsioon, sest elementide oksüdatsiooniastmed muutuvad.
 
-$$S^{IV} - 2 \cdot e \rightarrow S^{VI}$$
+    Väävel on redutseerija, sest loovutab elektrone:
+
+    $$\mathrm{S^{IV} - 2 \cdot e \rightarrow S^{VI}}$$
 
 Hapnik on oksüdeerija, sest haagib elektrone:
 

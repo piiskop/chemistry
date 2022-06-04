@@ -1,38 +1,25 @@
----
-title: "Gaasid"
-author: 'peacecop kalmer:'
-date: "1/3/2022"
-output:
-  bookdown::html_document2:
-    toc: yes
-    toc_float: yes
-    toc_depth: 5
----
+# Gaasid
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Lämmastikoksiid
 
-# Lämmastikoksiid
-
-## Valem
+### Valem
 
 NO
 
-## Tihedus
+### Tihedus
 
 ```{r}
 DENSITY_NO <- 1.3402
 ```
 
-## Temperatuurid
+### Temperatuurid
 
 ```{r}
 MELTING_TEMPERATURE_NO <- 109
 VAPORISING_TEMPERATURE_NO <- 121
 ```
 
-## Saamine
+### Saamine
 
 Moodustub põlemissüsteemides ja võib tekkida äikesetormide korral.
 
@@ -56,7 +43,7 @@ Alternatiivne viis hõlmab dilämmastikhappe redutseerimist naatriumnitriti või
 
 3 * KNO~2~ + KNO~3~ + Cr~2~O~3~ -> 2 * K~2~CrO~4~ + 4 * NO
 
-## Reageerimine
+### Reageerimine
 
 Kuna ^•^NO tekkesoojus on endotermiline, saab NO elementideks lagundada. Autode katalüüsmuundurid kasutavad seda reaktsiooni:
 
@@ -82,54 +69,58 @@ Lämmastikoksiid reageerib osooniga, tekitades hapnikku ja lämmastikdioksiidi, 
 
 NO + O~3~ -> NO~2~ + O~2~ + *hv*
 
-## Kasutamine
+### Kasutamine
 
 1. tööstusliku keemia oluline vaheühend
 
 2. Imetajatel, sealhulgas inimestel, on lämmastikoksiid signaalmolekuliks paljudes füsioloogilistes ja patoloogilistes protsessides.
 
-# Naerugaas
+## Naerugaas
 
-## Valem
+### Valem
 
 N~2~O
 
-## Täpne nimetus
+### Täpne nimetus
 
 lämmastikoksiid
 
-## Molekul
+### Molekul
 
-![Naerugaasi molekul](https://upload.wikimedia.org/wikipedia/commons/1/1a/Nitrous-oxide-dimensions-3D-balls.png)
+```{r label = "n-o-molecule", fig.cap = "Naerugaasi molekul", echo = FALSE, out.width = "100%"}
+include_svg("Nitrous-oxide-dimensions-3D-balls.png")
+```
 
-## Tihedus
+### Tihedus
 
 ```{r}
 DENSITY_SWEETAIR <- 1.977
 ```
 
-## Temperatuurid
+### Temperatuurid
 
 ```{r}
 MELTING_TEMPERATURE_SWEETAIR <- 182.29
 VAPORISING_TEMPERATURE_SWEETAIR <- 184.67
 ```
 
-## Maitse
+### Maitse
 
 kergelt metalne
 
-## Lõhn
+### Lõhn
 
 kergelt metalne
 
-## Saamine
+### Saamine
 
 Dilämmastikoksiidi valmistatakse tööstuslikus mastaabis ammooniumnitraadi ettevaatlikul kuumutamisel umbes 525.15 * K juures, mis laguneb dilämmastikoksiidiks ja veeauruks:
 
 NH~4~NO~3~ -> 2 * H~2~O + N~2~O
 
-![Naerugaasi tootmine](https://upload.wikimedia.org/wikipedia/commons/6/60/Nitrous_oxide_production.png)
+```{r label = "n-o-production", fig.cap = "Naerugaasi tootmine", echo = FALSE, out.width = "100%"}
+include_svg("Nitrous_oxide_production.png")
+```
 
 Samaväärselt võib seda saada naatriumnitraadi ja ammooniumsulfaadi segu kuumutamisel:
 
@@ -155,11 +146,11 @@ Hüponitrooshape laguneb N~2~O'ks ja veeks poolväärtusajaga 16 päeva temperat
 
 H~2~N~2~O~2~ -> H~2~O + N~2~O
 
-## Reageerimine
+### Reageerimine
 
 Kõrgendatud temperatuuril on dilämmastikoksiid võimas oksüdeerija, mis sarnaneb molekulaarse hapnikuga.
 
-## Kasutus
+### Kasutus
 
 1. Dilämmastikoksiidil on selle anesteetilise ja valuvaigistava toime tõttu märkimisväärne meditsiiniline kasutus, eriti kirurgias ja hambaravis.
 
