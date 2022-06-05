@@ -346,3 +346,77 @@ ggplot(solutions, aes(x = factor(t_in_k), y = v, fill = proportion)) +
 ### Lahend
 
 Tabelist \@ref(tab:reaction-speed-of-temperature-input) ja jooniselt \@ref(fig:reaction-speed-of-temperature-output) on näha, et mida suurem on temperatuur, seda kiiremini reaktsioon kulgeb.
+
+## Keemiline tasakaal
+
+### Ülesande püstitus
+
+Pöörduva reaktsiooni näitena vaatlesime reaktsiooni raud(III)kloriidi ja ammooniumtiotsüanaadi vahel:
+
+$$\mathrm{FeCl_3 + NH_4SCN \leftrightharpoons [FeNCS]Cl_2 + NH_4Cl},$$
+
+mille puhul tekib punase värvusega isotiotsüanaatkompleks.
+
+Keeduklaasi valasin liisa kasemaga $20 \cdot \mathrm{cm^3}$ destilleeritud vett ning lisasime ühe tilga küllastatud raud(III)kloriidi ja ühe tilga küllastatud ammooniumtiotsüanaadi lahust. Saadud punase lahuse korralikult segasime ja jagasime võrdselt nelja katseklaasi.
+
+Esimese katseklaasi jätsime võrdluseks.
+
+Teise katseklaasi lisasime kaks kuni kolm tilka küllastatud raud(III)kloriidi lahust. Mida võib seejuures tähele panna? Kummas suunas nihkub tasakaal?
+
+Kolmandasse katseklaasi lisasime kaks kuni kolm tilka küllastatud ammooniumtiotsüanaadi lahust. Mida võib seejuures tähele panna? Kummas suunas nihkub tasakaal?
+
+Neljandasse katseklaasi lisasime tahket ammooniumkloriidi ja loksutasime tugevasti. Kuidas muutus lahuse värvus? Kirjutasin reaktsiooni tasakaalu konstandi avalduse ja andsin seletuse tasakaalu nihkumise kohta teises, kolmandas ja neljandas katseklaasis.
+
+### Sisendid
+
+Neli katseklaasi lahust:
+
+$$\mathrm{FeCl_3(aq) + NH_4SCN(aq) \leftrightharpoons [FeNCS]Cl_2 + NH_4Cl(s)}$$
+
+$$\mathrm{[FeCl_3](2) > [FeCl_3](1)}$$
+
+$$\mathrm{[NH_4SCN](3) > [NH_4SCN](1)}$$
+
+$$\mathrm{[NH_4Cl](4) > [NH_4Cl](1)}$$
+
+### Väljundid
+
+$$K := \ldots$$
+
+### Reeglistik
+
+Reaktsioonivõrrandi üldkuju:
+
+```{=tex}
+\begin{align}
+a A + b B \leftrightharpoons c C + d D
+(\#eq:reaction-equation)
+\end{align}
+```
+
+Massilise tegevuse seadus:
+
+```{=tex}
+\begin{align}
+K := \frac{[C]^c \cdot [D]^d}{[A]^a \cdot [B]^b}
+(\#eq:law-of-mass-action)
+\end{align}
+```
+
+Tasakaalu võimalik nihkumine ja selle suund on esitatud joonisel \@ref(fig:k-equilibrium-direction):
+
+```{r label = "k-equilibrium-direction", fig.cap = "Suhe tasakaaluolekus oleva segu koostise ja tasakaalukonstandi suuruse vahel. Mida suurem on *K*, seda kaugemale kulgeb reaktsioon paremale enne tasakaalu saavutamist ja seda suurem on tasakaalus olevate produktide ja reagentide suhe.", echo = FALSE, out.width = "100%"}
+include_svg("k.jpg")
+```
+
+### Lahend
+
+Reaktsiooni tasakaalu konstandi avaldus:
+
+$$K := \mathrm{\frac{[[FeNCS]Cl_2]}{[FeCl_3] \cdot [NH_4SCN]}}$$
+
+Teises katseklaasis oli lõpplahus oluliselt tumedam ja kollakam kui esimeses katseklaasis. Tasakaal nihkus saaduste suunas, mis tingis ka tumedama värvuse.
+
+Kolmandas katseklaasis oli lõpplahus veidi tumedam ja punakam kui esimeses katseklaasis ning märgas klaasi enam. Tasakaal nihkus saaduste suunas, mis tingis ka tumedama värvuse.
+
+Mida enam pulbrit neljandasse katseklaasi panime, seda heledamaks lahus muutus. Tasakaal nihkus reagentide suunas, mis tingis ka heledama värvuse.
