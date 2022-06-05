@@ -99,11 +99,11 @@ klaasi erisoojusmahtuvus $c_{klaas} := \mathrm{0.8 \times 10^3 \times \frac{J}{k
 c_klaas <- .8e3
 ```
 
-## Väljund
+### Väljund
 
 metalli erisoojusmahtuvus $c_{metall} := \ldots$
 
-## Reeglistik
+### Reeglistik
 
 $${soojus}_{soojendamiseks} = erisoojus * mass * \Delta(temperatuur)$$
 
@@ -200,11 +200,149 @@ M :&= \frac{3 \times R}{\frac{(t_1 - t_2) \times ((m_4 - m_3) \times C_p(\mathrm
 ```
 
 
-## Arvutamine
+### Arvutamine
 ```{r label = "atomic-mass-of-metal-calculation"}
 M <- (3 * R * m_1 * (T_H2O_FINAL_K - T_H2O_BOILING_K)) /  ((T_H2O_INITIAL_K - T_H2O_FINAL_K) * ((m_4 - m_3) * C_p_H2O_AT_20_DEGREES_C + m_3 * c_klaas))
 ```
 
-## Lahend
+### Lahend
 
 $`r signif(M, digits = 5)` \times \mathrm{\frac{kg}{mol}}$ on metalli molaarmass.
+
+## Reaktsiooni kiiruse sõltuvus reageerivate ainete kontsentratsioonist
+
+### Ülesande püstitus
+
+Nelja katseklaasi mõõtsin liisa kasemaga igaühte $6 \cdot \mathrm{cm^3}$ 2% väävelhapet. Naatriumtiosulfaadi lahuste valmistamiseks võtsime neli katseklaasi ja nummerdasime need ühest neljani. Vastavalt tabelile \@ref(tab:reaction-speed-of-concentration-input) mõõtsime katseklaasidesse naatriumtiosulfaadi 2% lahust ja vett erinevates vahekordades saades niiviisi neli erineva kontsentratsiooniga naatriumtiosulfaadi lahust. Esimesele naatriumtiosulfaadi lahusele (katseklaas *1*) valasime varem väljamõõdetud koguse ($6 \cdot \mathrm{cm^3}$) väävelhappe lahust, sulgesime katseklaasi korgiga ja segasime kiiresti katseklaasi, seda kahel korral ümber pöörates. Mõõtsime aja lahuste kokkuvalamise hetkest kuni hägu tekkimiseni. Hägu ilmumiseks kulunud aja (sekundites) kandsime tabelisse. Samuti toimisime teiste naatriumtiosulfaadi lahustega (katseklaasid *2*, *3* ja *4*).
+
+Katseandmete põhjal koostasin graafiku. Ordinaatteljele märkisin reaktsiooni kiiruse *v* mõõdetud aja pöördväärtusena (1 / *t*) ja abstsissteljele naatriumtiosulfaadi kontsentratsiooni. Soovitav mastaap: minimaalne $\mathrm{Na_2S_2O_3}$ sisaldus lahuses - $3 \cdot \mathrm{cm}$ ja maksimaalne kiirus - $8 \cdot \mathrm{cm}$.
+
+Saadud tulemuste põhjal koostasin järelduse reaktsiooni kiiruse sõltuvuse kohta reageerivate ainete kontsentratsioonist.
+
+### Lahendamine
+
+```{r label = "reaction-speed-of-concentration-input"}
+#| code-line-numbers: true
+a <- c(
+  6, # kodu
+  4, # Harku
+  3, # Pakri
+  2
+)
+
+b <- c(
+  0, # kodu
+  2, # Harku
+  3, # Pakri
+  4
+)
+
+t <- c(
+  17, # kodu
+  31, # Harku
+  37, # Pakri
+  71
+)
+
+proportion <- a / (a + b)
+v <- 1 / t
+solutions <- data.frame("index" = c(1:length(a)), "a" = a, "b" = b, proportion, "t" = t, v)
+colnames(solutions) <- c("Katseklaasi nr", "$\\frac{\\mathrm{Na_2S_2O_3}\\text{ lahus a}}{\\mathrm{cm^3}}$", "$\\frac{\\mathrm{H_2O}\\text{ b}}{\\mathrm{cm^3}}$", "$\\mathrm{Na_2S_2O_3}\\text{ lahuses }\\frac{a}{a + b}$", "$\\frac{\\text{Aeg }t}{\\mathrm{s}}$", "$\\frac{\\text{Kiirus }\\frac{1}{t}}{\\mathrm{s^{-1}}}$")
+
+      librarian::shelf("kableExtra")
+
+print_table(solutions, caption = "Naatriumtiosulfaadi lahuste reageerimiskiirused väävelhappega") %>% kable_styling(    bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
+    latex_options = "scale_down",
+    full_width = TRUE
+      )
+```
+
+Joonisel \@ref(fig:reaction-speed-of-concentration-output) on graafiliselt näha, kuidas reaktsiooni kiirus võib sõltuda reageeriva lahuse kontsentratsioonist.
+
+```{r label = "reaction-speed-of-concentration-output", fig.cap = "Naatriumtiosulfaadi lahuste reageerimiskiirused väävelhappega"}
+librarian::shelf("ggplot2")
+librarian::shelf("latex2exp")
+
+ggplot(solutions, aes(x = factor(signif(proportion, digits = 1)), y = v, fill = proportion)) +
+  stat_boxplot(geom = "errorbar", width = 0.5) +
+  geom_boxplot(fill = "light blue") + 
+  stat_summary(fun = mean, geom = "point", shape = 10, size = 3.5, color = "black") + 
+  labs(x = "Naatriumtiosulfaadi kontsentratsioon", y = TeX("$\\frac{v}{s^{-1}}$")) + 
+  theme_bw() + theme(legend.position = "none")
+```
+
+### Lahend
+
+Tabelist \@ref(tab:reaction-speed-of-concentration-input) ja jooniselt \@ref(fig:reaction-speed-of-concentration-output) on näha, et mida suurem on naatriumtiosulfaadi osa lahuses, seda kiiremini reaktsioon kulgeb.
+
+## Reaktsiooni kiiruse sõltuvus temperatuurist
+
+### Ülesande püstitus
+
+Nelja nummerdatud katseklaasi (*1*, *2*, *3*, *4*) mõõtsin liisa kasemaga igaühte $4 \cdot \mathrm{cm^3}$ naatriumtiosulfaadi 2% lahust ja teise nelja (*1\**, *2\**, *3\**, *4\**) igaühte $4 \cdot \mathrm{cm^3}$ väävelhappe 2% lahust. Keeduklaasi valasime vett ja asetasime sellesse kõik katseklaasid. Viie minuti pärast valasime katseklaasist *1\** väävelhappe naatriumtiosulfaadi lahusesse katseklaasis *1*. Lahused segasime kiiresti ja mõõtsime aja lahuste kokkuvalamise hetkest hägu tekkimiseni. Mõõtsime vee temperatuuri.
+
+Keeduklaasis oleva vee temperatuuri tõstsime 10°C võrra ning kordasime katseid teise katseklaaside paariga (*2\** ja *2*). Analoogiliselt viisime läbi katsed kolmanda ja neljanda katseklaaside paariga, kusjuures iga kord tõstsime vee temperatuuri 10°C võrra.
+
+Katseandmed kandsime tabelisse \@ref(tab:reaction-speed-of-temperature-input).
+
+### Sooritamine
+
+```{r label = "reaction-speed-of-temperature-input"}
+#| code-line-numbers: true
+beakers <- c(
+  "1 ja 1*",
+  "2 ja 2*",
+  "3 ja 3*",
+  "4 ja 4*"
+)
+
+temperature <- c(
+  54, # kodu
+  64, # Harku
+  74, # Pakri
+  84
+)
+
+t_in_k <- celsius_to_kelvin(temperature)
+
+t <- c(
+  3, # kodu
+  2, # Harku
+  1, # Pakri
+  1
+)
+
+v <- 1 / t
+reactions <- data.frame(beakers, temperature, t_in_k, "t" = t, v)
+colnames(reactions) <- c(
+  "Katseklaaside nr-d",
+  "$\\frac{\\text{Katse temperatuur}}{\\mathrm{°C}}$",
+  "$\\frac{\\text{Katse temperatuur}}{\\mathrm{K}}$",
+  "$\\frac{\\text{Aeg }t}{\\mathrm{s}}$",
+  "$\\frac{\\text{Kiirus }\\frac{1}{t}}{\\mathrm{s^{-1}}}$")
+
+      librarian::shelf("kableExtra")
+
+print_table(reactions, caption = "Naatriumtiosulfaadi ja väävelhappe reageerimine eri temperatuuril") %>% kable_styling(    bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
+    latex_options = "scale_down",
+    full_width = TRUE
+      )
+```
+
+Joonisel \@ref(fig:reaction-speed-of-temperature-output) on graafiliselt näha, kuidas reaktsiooni kiirus võib sõltuda reageerivate lahuste temperatuurist.
+
+```{r label = "reaction-speed-of-temperature-output", fig.cap = "Naatriumtiosulfaadi ja väävelhappe lahuste reageerimiskiirused eri temperatuuridel"}
+librarian::shelf("ggplot2")
+librarian::shelf("latex2exp")
+
+ggplot(solutions, aes(x = factor(t_in_k), y = v, fill = proportion)) +
+  stat_boxplot(geom = "errorbar", width = 0.5) +
+  geom_boxplot(fill = "light blue") + 
+  stat_summary(fun = mean, geom = "point", shape = 10, size = 3.5, color = "black") + 
+  labs(x = TeX("$\\frac{temperatuur}{K}"), y = TeX("$\\frac{v}{s^{-1}}$")) + 
+  theme_bw() + theme(legend.position = "none")
+```
+
+### Lahend
+
+Tabelist \@ref(tab:reaction-speed-of-temperature-input) ja jooniselt \@ref(fig:reaction-speed-of-temperature-output) on näha, et mida suurem on temperatuur, seda kiiremini reaktsioon kulgeb.

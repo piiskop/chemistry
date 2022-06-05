@@ -31,4 +31,15 @@ include_svg = function(path) {
   }
   knitr::include_graphics(output)
 }
+
+print_table <- function(data_frame, caption) {
+    if (!is.null(knitr::opts_knit$get('rmarkdown.pandoc.to')) && (knitr::opts_knit$get('rmarkdown.pandoc.to') == "docx")) {
+      librarian::shelf("flextable")
+      table <- (flextable(data_frame))
+    } else {
+      librarian::shelf("kableExtra")
+      table <- (kable(data_frame, format = "html", booktabs = TRUE, escape = FALSE, caption = caption, digits = 2))
+    } 
+  return(table)
+}
 ```
