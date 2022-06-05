@@ -385,6 +385,39 @@ $$K := \ldots$$
 
 ### Reeglistik
 
+Aine kogus:
+
+```{=tex}
+\begin{align}
+n_B := \frac{N_B}{N_A}
+(\#eq:amount-of-substance)
+\end{align}
+```
+
+[@haynes_2014_crc, p. 2-8]
+
+Kogusekontsentratioon:
+
+```{=tex}
+\begin{align}
+c_B := \frac{n_B}{V}
+(\#eq:concentration-of-amount)
+\end{align}
+```
+
+[@haynes_2014_crc, p. 2-8]
+
+Kontsentratsioonil põhinev tasakaalu konstant:
+
+```{=tex}
+\begin{align}
+K_c := \prod_B{c_B^{\nu_B}}
+(\#eq:equilibrium-constant-concentration-basis)
+\end{align}
+```
+
+[@haynes_2014_crc, p. 2-9]
+
 Reaktsioonivõrrandi üldkuju:
 
 ```{=tex}
@@ -394,6 +427,8 @@ a A + b B \leftrightharpoons c C + d D
 \end{align}
 ```
 
+[@haynes_2014_crc, p. 2-52]
+
 Massilise tegevuse seadus:
 
 ```{=tex}
@@ -402,6 +437,8 @@ K := \frac{[C]^c \cdot [D]^d}{[A]^a \cdot [B]^b}
 (\#eq:law-of-mass-action)
 \end{align}
 ```
+
+[@haynes_2014_crc, p. 2-52]
 
 Tasakaalu võimalik nihkumine ja selle suund on esitatud joonisel \@ref(fig:k-equilibrium-direction):
 
