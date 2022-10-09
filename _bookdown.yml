@@ -17,4 +17,5 @@ rmd_files: [
   "teadmiste-kontrolli-koostamine.Rmd",
   "task-dissociations.Rmd",
   "practical-inorganic-chemistry-i.Rmd",
+  "elements.Rmd",
   "references.Rmd"]

@@ -1,5 +1,42 @@
 # Anorgaanilise keemia esimese osa praktikumide raportid
 
+## Molaarmassid
+$$M(\mathrm{H}) := \mathrm{1.00783 \times u = 1.00783 \times \frac{g}{mol} \times \frac{10^{-3} \times kg}{1 \times g} = 1.00783 \times 10^{-3} \times \frac{kg}{mol}}$$
+[@haynes_2014_crc, p. 8-68]
+```{r label = "coefficient-of-water-m-h"}
+M_H <- 1.00783e-3
+```
+$$M(\mathrm{O}) := \mathrm{15.99491 \times u = 15.99491 \times \frac{g}{mol} \times \frac{10^{-3} \times kg}{1 \times g} = 1.599491 \times 10^{-2} \times \frac{kg}{mol}}$$
+[@haynes_2014_crc, p. 8-68]
+```{r label = "coefficient-of-water-m-o"}
+M_O <- 15.99491e-3
+```
+
+```{=tex}
+\begin{align}
+M(\mathrm{Na}) :&= \mathrm{22.9897692820(19) \times u}\\
+&= \mathrm{22.9897692820(19) \times \frac{g}{mol} \times \frac{10^{-3} \times kg}{1 \times g}}\\
+&= \mathrm{2.29897692820(19) \times 10^{-2} \times \frac{kg}{mol}}
+\end{align}
+```
+
+[@haynes_2014_crc, p. 1-13]
+
+```{r label = "molar-masses-na"}
+M_Na <- 22.989769282019e-3
+```
+
+Aine moolide arvu leiame valemi abil:
+```{=tex}
+\begin{align}
+\frac{n_B}{\mathrm{mol}} := \frac{m}{M_B}
+(\#eq:amount-of-substance)
+\end{align}
+```
+[@haynes_2014_crc, p. 2-8]
+
+
+
 ## Metalli aatommassi määramine
 
 ### Ülesande püstitus
@@ -26,7 +63,7 @@ toatemperatuuril oleva veega, mille hilisemat temperatuuri muutust
 samuti arvestatakse." [@peacecopkalmer]
 
 ```{r label = "atomic-mass-of-metal-calorimeter", fig.cap = "**Kalorimeeter.** Soojusisolatsiooniga varustatud 200 kuni 300 cm^3^ keeduklaas, millesse on asetatud teine, 100 cm^3^ keeduklaas. Siseklaasi  on asetatud  termomeeter. [@peacecopkalmer:]", echo = FALSE, out.width = "100%"}
-include_svg("calorimeter.svg")
+#include_svg("calorimeter.svg")
 ```
 
 Ülesande sooritamine:
@@ -457,3 +494,1488 @@ Teises katseklaasis oli lõpplahus oluliselt tumedam ja kollakam kui esimeses ka
 Kolmandas katseklaasis oli lõpplahus veidi tumedam ja punakam kui esimeses katseklaasis ning märgas klaasi enam. Tasakaal nihkus saaduste suunas, mis tingis ka tumedama värvuse.
 
 Mida enam pulbrit neljandasse katseklaasi panime, seda heledamaks lahus muutus. Tasakaal nihkus reagentide suunas, mis tingis ka heledama värvuse.
+
+## Naatriumtiosulfaadi sulamistemperatuuri määramine
+
+### Ülesande püstitus
+
+Õhukeseseinalisest viie kuni kaheksa millimeetrise läbimõõduga klaastorust pidime tõmbama kaks $50 \cdot \mathrm{mm}$ pikkust ja ühe kuni kahe millimeetrise läbimõõduga kapillaari. Klaasi ühtlasemaks sulatamiseks pidime varustama põleti kalasabaotsikuga. Klaasi sulamine algas, kui gaasipõleti leek värvus naatriumsoolade lendumise tõttu kollaseks. Kapillaari ühe otsa pidime kinni sulatama. Juhendaja Kert Martma näitas, kuidas seda teha ja kuidas toru lõigata. meie - mina ja iti nurk - kasutasime juba valmisolevaid torusid.
+
+Kapillaari täitmiseks puistasime uhmris hästi peenestatud naatriumtiosulfaati paberlehekesele ja torkasime kapillaari otsa ainesse, nii et kapillaari sattus veidi ainet. Kapillaari lasksime umbes $30 \cdot \mathrm{cm}$ pikkuses klaastorus kukkuda viis kuni kuus korda lauale, et põrutada aine kapillaari põhja. Kinnitasime kapillaari, mille põhjas on paari millimeetri kõrguselt ainet, termomeetri külge ja asetasime koos termomeetriga veega täidetud keeduklaasi (joonis \@ref(fig:temperature-of-fusion-burner-with-fish)), nii et vesi ei ulatunud kõrgemale poolest kapillaari kõrgusest.
+
+```{r label = "temperature-of-fusion-burner-with-fish", fig.cap = "Seade aine sulamistemperatuuri väljaselgitamiseks", echo = FALSE, out.width = "100%"}
+include_svg("burner-with-fish.png")
+```
+
+Vesi ei tohi pääseda kapillaari sisse! Keeduklaasi soojendasime, kuni oil märgata aine kristallide sulamist. Märkisime termomeetrilt aine orienteeruva sulamistemperatuuri. Korduskatsel alustasime soojendamist saadud sulamistemperatuurist 10°C madalamalt ning pidime soojendama kiirusega 1°C minutis. Seda kiirust oli keeruline järgida, mistõttu Kerdi soovitusel seda nõuet eirasime. Korduskatsel leitud sulamistemperatuuri märkisime protokolli ja võrreldes saadud sulamistemperatuuri $\mathrm{Na_2S_2O_3 \bullet 5H_2O}$ tegeliku sulamistemperatuuriga ($t = \mathrm{48°C}$), tegin järelduse aine puhtuse kohta.
+
+### Sisendid
+```{r label = "temperature-of-fusion-t"}
+t <- 48
+T <- celsius_to_kelvin(t)
+```
+
+$$T := \mathrm{`r t`°C + 273.15 = `r T` \times K}$$
+```{r label = "temperature-of-fusion_t_real"}
+t_real <- 51
+T_real <- celsius_to_kelvin(51)
+```
+
+$$T_{real} := \mathrm{`r t_real`°C + 273.15 \times K = `r T_real` \times K}$$
+
+### Väljund
+
+järeldus aine puhtuse kohta
+
+### Arvutamine
+
+```{r label = "temperature-of-fusion-calculation"}
+delta_t <- t_real - t
+```
+
+### Lahend
+
+Võimalik, et me ei tabanud täpset sulamistemperatuuri, ent kui tabasime, siis aine ei olnud väga puhas, kuigi siiski ehk puhas, sest kui arvestada üheliste kohta Celsiuse skaalal, oli erinevus $`r delta_t` \times K$, kui ümardada kümnelisteni, erinevust ei olnud.
+
+## Tetraklorometaani keemistemperatuuri määramine
+
+### Ülesande püstitus
+
+Kuiva katseklaasi valasin iti nurgaga kolm kuni neli kuupsentimeetrit tetraklorometaani ja sinna panime mõne väikese ühest otsast kinnisulatatud klaaskapillaari tükikese (ühtlase keemise saavutamiseks). Katseklaasi sulgesime küljelt avatud korgiga, mida läbis termomeeter. Termomeetri alumine ots jäi vedelikust $3 \cdot \mathrm{cm}$ kõrgusele. Katseklaasi kinnitasime väikese nurga all (joonis \@ref(fig:measuring-boiling-temperature-angle)) statiivi külge ja soojendasime katseklaasi väikesel põletileegil.
+
+```{r label = "measuring-boiling-temperature-angle", fig.cap = "Seade keemistemperatuuri määramiseks", echo = FALSE, out.width = "100%"}
+include_svg("measure-boiling-temperature-angle.png")
+```
+
+Lugesime termomeetrilt temperatuuri, kui selle alumisse otsa hakkas kogunema ja sealt tilkuma vedeliku kondensaat. Loetud temperatuuri märkisime, katseklaasi jahutasime ja katset kordasime veel kaks korda. Keemistemperatuurina võtsime kolme katse puhul saadud keskmise temperatuuri. Mida nimetatakse keemistemperatuuriks?
+
+### Sisendid
+
+Ootasime, kuni mulises ja temperatuuri tõus stabiliseerus. Kummi tõttu oli ülerõhk.
+
+```{r label = "measuring-boiling-temperature-t1"}
+t_1 <- 75
+T_1 <- celsius_to_kelvin(t_1)
+```
+
+$$T_1 :=  \mathrm{`r t_1`°C + 273.15 = `r T_1` \times K}$$
+
+Pressis sisinal välja:
+
+```{r label = "measuring-boiling-temperature-t2"}
+t_2 <- 77
+T_2 <- celsius_to_kelvin(t_2)
+```
+
+$$T_2 :=  \mathrm{`r t_2`°C + 273.15 = `r T_2` \times K}$$
+
+Passis 76°C peal ja hüppas 78°C peale, kui sisisema hakkas.
+
+```{r label = "measuring-boiling-temperature-t3"}
+t_3 <- 76
+T_3 <- celsius_to_kelvin(t_3)
+```
+
+$$T_3 :=  \mathrm{`r t_3`°C + 273.15 = `r T_3` \times K}$$
+
+### Väljund
+
+$$\overline{T} := \ldots$$
+
+keemistemperatuur
+: $\ldots$
+
+### Reeglistik
+
+$$\overline{T} := \frac{\sum_i^n{T_i}}{n}$$
+
+### Arvutamine
+
+```{r label = "measuring-boiling-temperature-calculation"}
+T_mean <- mean(c(T_1, T_2, T_3))
+```
+
+### Lahend
+
+$`r T_mean` \times K$ oli keskmine tetraklorometaani keemistemperatuur.
+
+keemistemperatuur
+: temperatuur, mille juures aine keeb või kondenseerub
+
+## HCl ja NaOH vahelise neutralisatsioonireaktsiooni soojusefekti määramine
+
+### Ülesande püstitus
+
+Kuiva keeduklaasi mõõtsin liisa kasemaga ja iti nurgaga $100 \cdot \mathrm{cm^3}$ $1 \cdot \mathrm{M}$ HCl lahust. Teise kuiva, soojusisolatsiooniga varustatud $250 \cdot \mathrm{cm^3}$ keeduklaasi mõõtsime $100 \cdot \mathrm{cm^3}$ $1 \cdot \mathrm{M}$ NaOH lahust ja mõõtsime selle temperatuuri. Valasime kiiresti vesinikkloriidhappe naatriumhüdroksiidi lahusesse ja termomeetriga segades määrasime lahuse kõrgeima temperatuuri. Saadud $0.5 \cdot \mathrm{M}$ NaCl lahuse tiheduse ja erisoojusmahtuvuse võib lugeda võrdseks vee vastavate parameetritega: $c := \mathrm{4.18 \times \frac{J}{g \times K}}$ ja $\rho := \mathrm{1 \cdot \frac{g}{cm^3}}$. Saadud lahuse mass on seega $200 \cdot \mathrm{g}$. Nende andmete põhjal on võimalik arvutada reaktsioonil eraldunud soojushulka $\frac{q}{\mathrm{J}}$:
+
+$$q_r := \mathrm{4.18 \times \frac{J}{g \times K} \times 200 \times g \times} \frac{\Delta{t}}{\mathrm{K}}$$
+
+Saadud andmetest arvutasin neutralisatsioonireaktsioonientalpia $\frac{\Delta_r(H)}{\mathrm{\frac{kJ}{mol}}}$, tekkiva vee moolide hulka arvestades. Arvutasin tugeva happe ja aluse vahelise reaktsiooni ioonvõrrandile vastava soojusefekti, kui olid teada järgmised tekkeentalpiad:
+
+$$\Delta_f(H(\mathrm{OH^-})) := -230.0 \mathrm{\frac{kJ}{mol}}$$
+
+$$\Delta_f(H(\mathrm{H_2O, v})) := -285.8 \mathrm{\frac{kJ}{mol}}$$
+
+Kasutasin arvutamisel Hessi seadusest tulenevat kolmandat järeldust: Reaktsioonientalpia võrdub saaduste tekkeentalpiate summaga, millest on lahutatud lähteainete tekkeentalpiate summa. Tekkesoojuse all mõeldakse 1 mooli aine moodustumisel lihtainetest esineva reaktsiooni soojusefekti. Standardtingimustes püsivate lihtainete tekkeentalpiad võrduvad nulliga.
+
+Võrdlesin arvutatud ja katselist tulemust. Leidsin katse vea.
+
+### Sisendid
+
+$$c(\mathrm{HCl}):= \mathrm{1 \cdot M \cdot \frac{1 \cdot \frac{mol}{l}}{1 \cdot M} \cdot \frac{1 \cdot l}{10^{-3} \cdot m^3} = 10^3 \cdot \frac{mol}{m^3}}$$
+[@haynes_2014_crc, p. 2-59]
+
+$$V(\mathrm{HCl}):= 100 \cdot \mathrm{cm^3 \cdot \frac{(10^{-2} \cdot m)^3}{1 \cdot cm^3} = 10^{-4} \cdot m^3}$$
+
+$$V(\text{keeduklaas}) := \mathrm{250 \times cm^3 \times \frac{(10^{-2} \times m)^3}{1 \times cm^3} = 2.5 \times 10^{-4} \times m^3}$$
+
+$$c(\mathrm{NaOH}):= \mathrm{1 \cdot M \cdot \frac{1 \cdot \frac{mol}{l}}{1 \cdot M} \cdot \frac{1 \cdot l}{10^{-3} \cdot m^3} = 10^3 \cdot \frac{mol}{m^3}}$$
+```{r label = "neutralisation-reaction-heat-c-naoh"}
+c_naoh <- 1e3
+```
+
+$$V(\mathrm{NaOH}):= 100 \cdot \mathrm{cm^3 \cdot \frac{(10^{-2} \cdot m)^3}{1 \cdot cm^3} = 10^{-4} \cdot m^3}$$
+
+```{r label = "neutralisation-reaction-heat-v-naoh"}
+v_naoh <- 1e-4
+```
+
+$$c := \mathrm{4.18 \times \frac{J}{g \times K} \times \frac{1 \times g}{10^{-3} \times kg} = 4.18 \times 10^3 \times \frac{J}{kg \times K}}$$
+```{r label = "neutralisation-reaction-heat-c"}
+c <- 4.18e3
+```
+
+
+$$\rho := \mathrm{1 \cdot \frac{g}{cm^3} \cdot \frac{10^{-3} \cdot kg}{1 \cdot g} \cdot \frac{1 \cdot cm^3}{(10^{-2} \cdot m)^3} = 10^3 \cdot \frac{kg}{m^3}}$$
+```{r label = "neutralisation-reaction-heat-rho"}
+rho <- 1e3
+```
+```{r label = "neutralisation-reaction-heat-t-naoh"}
+T_naoh <- celsius_to_kelvin(21)
+```
+
+
+$$T(\mathrm{NaOH}) := \mathrm{`r T_naoh` \times K}$$
+```{r label = "neutralisation-reaction-heat-t-solution"}
+T_solution <- celsius_to_kelvin(27)
+```
+
+$$T(\mathrm{solution}) := \mathrm{`r T_solution` \times K}$$
+$$\Delta_f(H(\mathrm{OH^-})) := -230.0 \mathrm{\frac{kJ}{mol} \times \frac{10^3 \times J}{1 \times kJ} = -2.3 \times 10^5 \times \frac{J}{mol}}$$
+```{r label = "neutralisation-reaction-heat-delta-f-h-oh"}
+delta_f_h_oh <- -230.0e3
+```
+
+$$\Delta_f(H(\mathrm{H_2O, v})) := -285.8 \mathrm{\frac{kJ}{mol} \times \frac{10^3 \times J}{1 \times kJ} = -2.858 \times 10^5 \times \frac{J}{mol}}$$
+```{r label = "neutralisation-reaction-heat-delta-f-h-h2o"}
+delta_f_h_h2o <- -285.8e3
+```
+
+### Väljundid
+
+$$\frac{\Delta_r(H)}{\mathrm{\frac{kJ}{mol}}} := \ldots$$
+
+$$\Delta_f(H) := \ldots$$
+
+$$\Delta(H, \text{error}) := \ldots$$
+
+### Reeglistik
+
+Reaktsioonivõrrand:
+
+$$\mathrm{HCl + NaOH = NaCl + H_2O}$$
+
+Reaktsioonivõrrandist on näha, et kõiki aineid on koguseliselt ehk moolides võrdselt. Kui palju moole mingit ainet on, arvutan molaarse kontsentratsiooni järgi:
+
+$$n := {V} \cdot {c}$$
+
+Ioonvõrrand lihtsustamata:
+
+$$\mathrm{H^+ + Cl^- + Na^+ + (OH)^- = H_2O + Na^+ + Cl^-}$$
+
+Ioonvõrrand lihtsustatult:
+
+$$\mathrm{H^+ + (OH)^- = H_2O}$$
+
+Et lähteaineid on võrdselt, kasutan nt NaOH andmeid:
+
+$$n := {V(\mathrm{NaOH})} \cdot {c(\mathrm{NaOH})}$$
+
+Kuna tekkivaid aineid on sama palju kui reagante ja üks tekkiv aine on vesi, siis vee moolide arv on sama mis NaOH moolide arv:
+
+$$n(\text{NaCl, solution}) := 2 \cdot {V(\mathrm{NaOH})} \cdot {c(\mathrm{NaOH})}$$
+
+Soojushulga valem:
+
+$$q_r := c \cdot \rho \cdot (2 \cdot V(\mathrm{NaOH})) \cdot (T(\text{NaOH}) - T(\text{solution})))$$
+
+Enthalpia valem:
+
+```{=tex}
+\begin{align}
+\Delta_r(H) :&= \frac{q_r}{n(\text{NaCl, solution})}\\
+&= \frac{c \cdot \rho \cdot (2 \cdot V(\mathrm{NaOH})) \cdot (T(\text{NaOH}) - T(\text{solution})))}{2 \cdot {V(\mathrm{NaOH})} \cdot {c(\mathrm{NaOH})}}\\
+&= \frac{c \cdot \rho \cdot (T(\text{NaOH}) - T(\text{solution})))}{{c(\mathrm{NaOH})}}
+\end{align}
+```
+
+Standardenthalpiate järgi soojusefekt:
+
+$$\Delta_f(H) := \Delta_f(H(\mathrm{H_2O, v})) - \Delta_f(H(\mathrm{OH^-}))$$
+
+Katse absoluutne viga:
+
+$$\Delta(H, \text{error}) := \Delta_r(H) - \Delta_f(H)$$
+
+### Arvutamine
+
+```{r label = "neutralisation-reaction-heat-calculation"}
+delta_r_h <- c * rho * (T_naoh - T_solution) / c_naoh
+delta_f_h <- delta_f_h_h2o - delta_f_h_oh
+delta_h_error <- delta_r_h - delta_f_h
+```
+
+### Lahend
+
+$`r delta_r_h / 1e3` \times \mathrm{\frac{kJ}{mol}}$ oli neutralisatsioonireaktsioonientalpia, tekkiva vee moolide hulka arvestades.
+
+$`r delta_f_h` \times \mathrm{\frac{J}{mol}}$ oli tugeva happe ja aluse vahelise reaktsiooni ioonvõrrandile vastav soojusefekt.
+
+$`r delta_h_error` \times \mathrm{\frac{J}{mol}}$ oli katse viga. Tõenäoliselt johtub selline viga sellest, et me fikseerisime lõpptemperatuuri liiga madala.
+
+## Soojusefekt aine lahustumisel
+
+### Ülesande püstitus
+
+Valasin Liisa Kasemaga ja iti nurgaga kahte klaasi kumbagi $5 \cdot \mathrm{cm^3}$ destilleeritud vett ja mõõtsime selle temperatuuri. Ühte katseklaasi lisasime $3 \cdot \mathrm{g}$ ammooniumnitraati ja teise niisama palju naatriumsulfaati. Termomeetriga ettevaatlikult segades jälgisime aine lahustumisel toimuvat temperatuuri muutust ja märkisime suurima erinevuse algtemperatuurist. Katsest tegime järelduse.
+
+### Sisendid
+
+$$V := \mathrm{5 \cdot cm^3 \cdot \frac{(10^{-2})^3 \cdot m^3}{1 \cdot cm^3} = 5 \cdot 10^{-6} \cdot m^3}$$
+```{r label = "dissociation-heat-t-h2o"}
+T_h2o <- celsius_to_kelvin(21.5)
+```
+
+$$T(\mathrm{H_2O}) := `r T_h2o` \times \mathrm{K}$$
+
+$$m := \mathrm{3 \cdot g \cdot \frac{10^{-3} \cdot kg}{1 \cdot g} = 3 \cdot 10^{-3} \cdot kg}$$
+```{r label = "dissociation-heat-t-nh4no3"}
+T_nh4no3 <- celsius_to_kelvin(-2)
+```
+
+$$T(\mathrm{NH_4NO_3}) := `r T_nh4no3` \times \mathrm{K}$$
+```{r label = "dissociation-heat-t-na2so4"}
+T_na2so4 <- celsius_to_kelvin(27)
+```
+$$T(\mathrm{Na_2SO_4}) := `r T_na2so4` \times \mathrm{K}$$
+
+### Väljund
+
+$$\Delta(T(\mathrm{NH_4NO_3})) := \ldots$$
+$$\Delta(T(\mathrm{Na_2SO_4})) := \ldots$$
+
+### Reeglistik
+
+Kui temperatuur langeb, siis tähendab see energia kasutamist.
+
+Kui temperatuur tõuseb, siis tähendab see energia eraldumist.
+
+### Arvutamine
+
+```{r label = "dissociation-heat-calculation"}
+delta_t_nh4no3 <- T_nh4no3 - T_h2o
+delta_t_na2so4 <- T_na2so4 - T_h2o
+```
+
+### Lahend
+
+Ammooniumnitraadi temperatuur muutus $`r delta_t_nh4no3` \times K$ ja lahustumisel võttis energiat.
+
+Naatriumsulfaadi temperatuur muutus $`r delta_t_na2so4` \times K$ ja lahustumisel eraldas energiat.
+
+## Vask(II)sulfaat-5-vee kristallvee koefitsiendi määramine
+
+### Ülesande püstitus
+
+Kaalusin Liisa Kasemaga ja iti nurgaga tehnilistel kaaludel ($\pm0.01 \cdot \mathrm{g}$) puhta kuiva tiigli. Tiiglisse kaalusime 1 kuni 1.2 grammi $\mathrm{CuSO_4} \bullet n\mathrm{H_2O}$. Kristallvee eraldamiseks kuumutasime tiiglit termostaadis 220°C juures või ettevaatlikult gaasipõleti leegil, mille juures sool muutus veevabaks. Me tegime gaasipõletil. Tekkinud $\mathrm{CuSO_4}$ oli värvitu ühend. Kõrgemal temperatuuril kuumutamine ei olnud lubatud, kuna siis hakkab lagunema $\mathrm{CuSO_4}$. Tiigli jahutasime eksikaatoris ja kaalusime. Kuumutamist kordasime konstantse kaalu saavutamiseni. Kuumutamisel vähenenud mass vastas soolast eraldunud kristallvee massile.
+
+Katse tulemustest arvutasin kristallvee koefitsiendi (*n*) vask(II)sulfaatkristallhüdraadis, so vee moolide hulga ühe mooli $\mathrm{CuSO_4}$ kohta.
+
+### Sisendid
+
+$$m(\text{tiigel}) := \mathrm{16.41 \times g \times \frac{10^{-3} \times kg}{1 \times g} = 1.641 \times 10^{-2} \times kg}$$
+```{r label = "coefficient-of-water-m-platen"}
+m_platen <- 16.41e-3
+```
+
+$$m(\mathrm{CuSO_4} \bullet n\mathrm{H_2O}) := \mathrm{1.03 \times g \times \frac{10^{-3} \times kg}{1 \times g} = 1.03 \times 10^{-3} \times kg}$$
+```{r label = "coefficient-of-water-m-cuso4-nh2o"}
+m_cuso4_nh2o <- 1.03e-3
+```
+
+$$m(\text{tiigel} + \mathrm{CuSO_4}) := \mathrm{17.07 \times g \times \frac{10^{-3} \times kg}{1 \times g} = 1.707 \times 10^{-2} \times kg}$$
+
+```{r label = "coefficient-of-water-m-platen-cuso4"}
+m_platen_cuso4 <- 17.07e-3
+```
+$$M(\mathrm{S}) := \mathrm{31.972017 \times u = 31.972017 \times \frac{g}{mol} \times \frac{10^{-3} \times kg}{1 \times g} = 3.1972017 \times 10^{-2} \times \frac{kg}{mol}}$$
+[@haynes_2014_crc, p. 8-68]
+```{r label = "coefficient-of-water-m-s"}
+M_S <- 31.972017e-3
+```
+$$M(\mathrm{Cu}) := \mathrm{63.546(3) \times u = 63.546(3) \times \frac{g}{mol} \times \frac{10^{-3} \times kg}{1 \times g} = 6.3546(3) \times 10^{-2} \times \frac{kg}{mol}}$$
+[@haynes_2014_crc, p. 11-23]
+```{r label = "coefficient-of-water-m-cu"}
+M_Cu <- 63.5463e-3
+```
+
+
+### Väljund
+
+$$n := \ldots$$
+
+### Reeglistik
+
+Suurust *n* nimetatakse kristallvee koefitsiendiks ja seda saab arvutada alljärgneva valemi abil:
+
+$$n := \frac{n(\mathrm{H_2O})}{n(\text{salt})} = \frac{m(\mathrm{H_2O}) \cdot M(\text{salt})}{M(\mathrm{H_2O}) \cdot m(\text{salt})}$$
+
+Konkreetselt meil oli soolaks $\mathrm{CuSO_4}$:
+
+
+$$n := \frac{(m(\mathrm{CuSO_4} \bullet n\mathrm{H_2O}) - (m(\text{tiigel} + \mathrm{CuSO_4}) - m(\text{tiigel}))) \cdot (M(\mathrm{Cu}) + M(\mathrm{S}) + M(\mathrm{O}) \cdot 4)}{(M(\mathrm{H}) \cdot 2 + M(\mathrm{O})) \cdot (m(\text{tiigel} + \mathrm{CuSO_4}) - m(\text{tiigel}))}$$
+
+### Arvutamine
+
+```{r label = "coefficient-of-water-calculation"}
+n <- ((m_cuso4_nh2o - (m_platen_cuso4 - m_platen)) * (M_Cu + M_S + M_O * 4)) / ((M_H * 2 + M_O) * (m_platen_cuso4 - m_platen))
+```
+
+### Lahend
+
+`r n` on kristallvee koefitsient vask(II)sulfaatkristallhüdraadis.
+
+## Üleküllastatud lahuse saamine
+
+### Ülesande püstitus
+
+Kuiva katseklaasi võtsin iti nurga ja Liisa Kasemaga umbes $3 \cdot \mathrm{g}$ naatriumtiosulfaati ($\mathrm{Na_2S_2O_3 \bullet 5H_2O}$), lisasime $1 \cdot \mathrm{cm^3}$ vett ja ettevaatlikult soojendasime täieliku lahustumiseni. Katseklaasi ava sulgesime vatiga ja siis aeglaselt jahutasime toatemperatuurini. Raputasime järsult katseklaasi. Mis toimus?
+
+Valmistasime, nagu eespool näidatud, veel kord naatriumtiosulfaadi küllastatud lahuse. Saadud lahusesse viskasime naatriumtiosulfaadi kristallikese. Mis toimus?
+
+### Lahend
+
+Raputamine põhjustas geeljaks muutumise.
+
+Küllastatud lahusesse visatud naatriumtiosulfaadi kristallike läks laiali ja sadestus põhja.
+
+## Naatriumkloriidi protsentsisalduse määramine liiva-soola segus
+
+### Ülesande püstitus
+
+Juhendajalt saadud liiva-soola segu kaalusin iti nurga ja Liisa Kasemaga tehnilistel kaaludel $100 \cdot \mathrm{cm^3}$-lisse keeduklaasi. Segu lahustasime 25 kuni 50 kuupsentimeetrises destilleeritud vees, filtreerisime läbi klaaslehtril asuva paberfiltri ja filtrile jäänud liiva pesime pesupudelist filtrile suunatud veejoaga (joonis \@ref(fig:nacl-in-sand-salt-mixture-washing)). 
+```{r label = "nacl-in-sand-salt-mixture-washing", fig.cap = "Vahendid aine lahustamiseks, filtreerimiseks läbi paberfiltri ja lahustumatu jäägi pesemi-seks pesupudelist: *a* – seade lahustamiseks; *b* – filterpaber murtakse neljaks kokku ja rebitakse peale jääv paberinurk lahti keerates selle vastupidises suunas; *c* – valatakse mööda vertikaalselt hoitud klaaspulka lahuse pritsimise vältimiseks; *d* – klaasi jäänud lahustumatu jääk uhutakse pesupudelist klaasi seintele suunatava veejoaga filtrile ja pestakse veejoaga filtril asuvat sadet.", echo = FALSE, out.width = "100%"}
+include_svg("washing-out-sand.png")
+```
+Lahuse ja pesuvee (umbes 60 kuni 80 kuupsentimeetrit) kogusime mõõtesilindrisse mahuga $100 \cdot \mathrm{cm^3}$ ja jahutasime kraanivee joas (võis ka soojendada elektripliidil) 20°C'ni. Saadud lahuse mahu määrasime mõõtesilindril asuva skaala järgi ($\mathrm{cm^3}$). Areomeetri (joonis \@ref(fig:nacl-in-sand-salt-mixture-areometer)) abil mõõtsime saadud naatriumkloriidi lahuse tiheduse.
+```{r label = "nacl-in-sand-salt-mixture-areometer", fig.cap = "Areomeeter (kr. k-st) on vahend vedelike tiheduse mõõtmiseks. Ehitus põhineb Archimedese seadusel. Jääva massiga areo-meetrites on aine tiheduse mõõduks kindel sukeldus- sügavus. Areomeetrid gra-  dueeritakse kindlal temperatuuril. Levinud on areomeetri skaala    tihedustele", echo = FALSE, out.width = "100%"}
+include_svg("areometer.png")
+```
+
+Areomeetri libistasime ettevaatlikult mõõtesilindrisse valatud vedelikku nii, et see ei puudutaks põhja ja asuks eemal mõõtesilindri seintest.
+
+Naatriumkloriidi protsendilisus lahuses arvutatakse kasutades tabelit \@ref(tab:nacl-in-sand-salt-mixture-densities). Täpse tulemuse saamiseks tabeli andmete põhjal tuleb kasutada interpoleerimist.
+
+Leida NaCl % lahuses ja algsegus! Kui suur on lahuse molaarne kontsentratsioon?
+
+### Sisendid
+
+$$m := \mathrm{1.29 \times g \times \frac{10^{-3} \times kg}{1 \times g} = 1.29 \times 10^{-3} \times kg}$$
+
+$$V := \mathrm{79 \times ml \times \frac{10^{-3} \times l}{1 \times ml} \times \frac{10^{-3} \times m^3}{1 \times l} = 7.9 \times 10^{-5} \times m^3}$$
+
+$$\rho := \mathrm{1.009 \frac{kg}{m^3}}$$
+
+### Lahend
+
+Juhendis viidatud lisa ei ole, seega ei saa lahendada.
+
+## Lahuste kolligatiivsed omadused
+
+### Ülesande püstitus
+
+$$100 \cdot \mathrm{cm^3}$$ kuiva keeduklaasi pipeteerisin eliisega $$50 \cdot \mathrm{cm^3}$$ destilleeritud vett ja asetasime $$300 \cdot \mathrm{cm^3}$$ keeduklaasis olevasse lumest ja (100:5) naatriumkloriidist valmistatud jahutussegusse. Märkisime vee temperatuuri ($t_1$) momendil, kui tekkisid esimesed jääkristallid. Vee külmumistemperatuuri mõõtsime termomeetriga (0.1°C täpsusega). Allajahtumise vältimiseks tuli katse ajal vett klaaspulgaga segada. Külmumistemperatuuri saavutamise järel eemaldasime keeduklaasi jahutussegust ja raputasime vette $25 \cdot g$ eelnevat uhmris peenestatud suhkrut. Kui suhkur oli täielikult lahustunud, asetasime keeduklaasi uuesti jahutussegusse ja mõõtsime saadud lahuse külmumistemperatuuri ($t_2$).
+
+Arvutasin suhkru molaarmassi ja määrasin tehtud vea (%), arvestades, et tegemist on sahharoosiga $\mathrm{C_{12}H_{22}O_{11}}$.
+
+### Sisendid
+
+suhkru mass:
+
+$$a := \mathrm{25 \cdot g}$$
+```{r label = "colligative-characteristics-a"}
+a <- 25
+```
+
+
+vee mass:
+
+$$b := \mathrm{49 \cdot g}$$
+```{r label = "colligative-characteristics-b"}
+b <- 49
+```
+
+vee külmumistemperatuur:
+
+$$t_1 := \mathrm{-1°C}$$
+```{r label = "colligative-characteristics-t1"}
+t_1 <- -1
+```
+
+lahuse külmumistemperatuur:
+
+$$t_2 := \mathrm{-1°C}$$
+```{r label = "colligative-characteristics-t2"}
+t_2 <- -1
+```
+
+$$M(\mathrm{C}) := \mathrm{12.00000 \times u = 12.00000 \times \frac{g}{mol} \times \frac{10^{-3} \times kg}{1 \times g} = 1.200000 \times 10^{-2} \times \frac{kg}{mol}}$$
+[@haynes_2014_crc, p. 8-68]
+```{r label = "colligative-characteristics-m-c"}
+M_C <- 12e-3
+```
+
+$$K(\mathrm{H_2O}) := \mathrm{1.86°C}$$
+```{r label = "colligative-characteristics-k-h2o"}
+K_H2O <- 1.86
+```
+
+keeduklaasi mass:
+
+$$m(\text{beaker}) := \mathrm{119 \times g}$$
+
+keeduklaasi mass jääga:
+
+$$m(\text{beaker + ice}) := \mathrm{228 \times g}$$
+
+soola mass:
+
+$$m(\mathrm{NaCl}) := \mathrm{6 \times g}$$
+
+
+$$M(\mathrm{Cl}) := \mathrm{35.45 \times u = 35.45 \times \frac{g}{mol} \times \frac{10^{-3} \times kg}{1 \times g} = 3.545 \times 10^{-2} \times \frac{kg}{mol}}$$
+[@haynes_2014_crc, p. 1-12]
+$$K(\mathrm{NaCl}, \mathrm{0.1 \times \frac{mol}{kg}}) := \mathrm{0.35°C}$$
+[@haynes_2014_crc, p. 15-29]
+
+### Väljundid
+
+$$M_f := \ldots$$
+
+$$\frac{M_r - M_f}{M_r} := \ldots$$
+
+### Reeglistik
+
+$$M_f := \frac{K \cdot a}{b \cdot (t_2 - t_1)}$$
+
+### Arvutamine
+```{r label = "colligative-characteristics-calculation"}
+M_r <- M_C * 12 + M_H * 22 + M_O * 11
+#error <- (M_r - K * a / (b * ()))
+```
+
+### Lahend
+
+$`r M_r` \times \mathrm{\frac{kg}{mol}}$ on suhkru molaarmass.
+
+Viga arvutada ei saa, sest ei saa ka fiktiivset molaarmassi arvutada, kuna temperatuuride erinevust me ei tuvatanud. Üldse oli väga tülikas seda katset sooritada. Pidime lisama soola, sest ei saanud muidu temperatuuri alla vee külmumistemperatuuri.
+
+Samuti oli puudu naatriumkloriidi lahuse *K*-väärtus, mille saab küll teatmikust järele vaadata, kui arvutada välja naatriumkloriidi molaarmassi ja massi kaudu ainehulk.
+
+## Naatriumhüdroksiidi lahuse molaarse kontsentratsiooni määramine
+
+### Ülesande püstitus
+
+Tahkest naatriumhüdroksiidist kaalusin eliisega $\mathrm{100 \cdot cm^3}$ mahuga keeduklaasi nii palju ainet, kui vajatakse $\mathrm{0.25 \times dm^3}$ $\mathrm{0.1 \times M}$ lahuse valmistamiseks. Naatriumhüdroksiidi kaalutise lahustasime umbes $\mathrm{50 \cdot cm^3}$ destilleeritud vees ja jahtunult kallasime saadud lahuse $\mathrm{0.25 \times dm^3}$ mahuga mõõtekolbi. Lahuse lahjendasime mõõtjooneni, sulgesime kolvi või keeduklaasi ja lisasime sellesse umbes sama palju destilleeritud vett ning indikaatorina kaks kuni kolm tilka metüülpunast. Juhendajalt saime tuntud kontsentratsiooniga vesinikkloriidhappe lahuse, millega loputasime ning täitsime büreti. Lahus oli metüülpunase indikaatori tõttu kollane. Naatriumhüdroksiidi lahust tiitrisime lisades vesinikkloriidhapet büretist tilkhaaval tiitrimisnõusse. Tiitritavat lahust segasime, tiitrimisnõud ringikujuliselt liigutades ja tiitrimise lõpetasime, kui lahus muutus kogu mahus punakasroosaks. Büreti skaalalt lugesime tiitrimiseks kulunud HCl lahuse mahu vähemalt $\mathrm{0.1 \times cm^3}$ täpsusega.
+
+Katset kordasime võttes puhtasse tiitrimisnõusse uuesti $\mathrm{25 \cdot cm^3}$ naatriumhüdroksiidi lahust ja püüdsime tiitrimise lõpp-punkti veelgi täpsemalt määrata. Tulemustest arvutasin NaOH lahuse täpse molaarse kontsentratsiooni.
+
+### Sisendid
+
+$$V_\text{sol} := \mathrm{0.25 \times dm^3 \times \frac{10^{-3} \times m^3}{1 \times dm^3} = 2.5 \times 10^{-4} \times m^3}$$
+```{r label = "molar-concentration-v-sol"}
+V_sol <- .25e-3
+```
+
+$$c := \mathrm{0.1 \times M = 10^{-1} \times \frac{mol}{dm^3} \times \frac{1 \times dm^3}{(10^{-1})^3 \times m^3} = 10^2 \times \frac{mol}{m^3}}$$
+```{r label = "molar-concentration-c"}
+c <- .1e3
+```
+
+$$m := \mathrm{1 \cdot g \cdot \frac{10^{-3} \cdot kg}{1 \cdot g} = 10^{-3} \cdot kg}$$
+
+$$V_1(\mathrm{H_2O}) := \mathrm{50 \cdot cm^3 \cdot \frac{(10^{-2})^3 \cdot m^3}{1 \cdot cm^3} = 5 \cdot 10^{-5} \cdot m^3}$$
+```{r label = "molar-concentration-v1-h2o"}
+V_1_H2O <- 50e-6
+```
+$$V_2(\mathrm{H_2O}) := \mathrm{25 \cdot cm^3 \cdot \frac{(10^{-2})^3 \cdot m^3}{1 \cdot cm^3} = 2.5 \cdot 10^{-5} \cdot m^3}$$
+```{r label = "molar-concentration-v2-h2o"}
+V_2_H2O <- 25e-6
+```
+
+$$V_1(\mathrm{HCl}) := \mathrm{16 \cdot ml \cdot \frac{10^{-3} \cdot l}{1 \cdot ml} \cdot \frac{10^{-3} \cdot m^3}{1 \cdot l} = 1.6 \cdot 10^{-5} \cdot m^3}$$
+```{r label = "molar-concentration-v1-hcl"}
+V_1_HCl <- 16e-6
+```
+```{r label = "molar-concentration-v2-hcl"}
+V_2_HCl <- 31.2e-6 - 16e-6
+```
+$$V_2(\mathrm{HCl}) := \mathrm{`r V_2_HCl` \cdot 10^{-6} \cdot m^3}$$
+Juhend on väga segane. Miks me üldse alguses pidime välja mõõtma naatriumhüdroksiidi, kui me seda hiljem eirama pidime lahjendades seda segu kahel korral? Kuna pidime arvutama NaOH täpse kontsentratsiooni, siis järelikult selle lahjendatud segu oma. Ja seega pidime me teadma ka HCl'i molaarset kontsentratsiooni, aga ma ei tulnud katset tehes selle pealegi ning muidugi ma ei märkinud seda üles. Seetõttu ma oletan, et see oli $0.01 \cdot \mathrm{M}$ ja lähtun oma arvutustes sellest oletusest. Lisaks oli teine katse vaja teha poole väiksema kogusega.
+```{r label = "molar-concentration-c-hcl"}
+c_HCl <- .01e3
+```
+
+### Väljund
+
+$$m(\mathrm{NaOH}) := \ldots$$
+$$c(\mathrm{NaOH}) := \ldots$$
+
+### Reeglistik
+
+
+$$n(\text{NaOH}) := c(\mathrm{NaOH}) \cdot V_\text{sol}$$
+
+Naatriumhüdroksiidi massi saab arvutada kombineerides seda valemit ainehulga valemiga \@ref(eq:amount-of-substance):
+
+$$\frac{m(\text{NaOH})}{M(\text{NaOH}) }= c(\mathrm{NaOH}) \cdot V_\text{sol}$$
+
+$$m(\text{NaOH}) := M(\text{NaOH}) \cdot c(\mathrm{NaOH}) \cdot V_\text{sol}$$
+
+Reaktsioonivõrrand:
+
+$$\mathrm{NaOH + HCl \rightarrow NaCl + H_2O}$$
+
+Näeme reaktsioonivõrrandist, et moolsuhete mõttes on naatriumhüdroksiidi ja vesnikkloriidhapet võrdselt. Seetõttu teades kummagi ruumala ja ühe molaarsust, saame arvutada teise molaarsuse:
+
+$$c(\mathrm{NaOH}) := \frac{c(\mathrm{HCl}) \cdot V(\mathrm{NaOH})}{V(\mathrm{HCl})}$$
+
+### Arvutamine
+
+```{r label = "molar-concentration-calculation"}
+m_NaOH <- (M_Na + M_O + M_H) * c * V_sol
+c_1_NaOH <- c_HCl * (V_1_H2O / V_1_HCl)
+c_2_NaOH <- c_HCl * (V_2_H2O / V_2_HCl)
+```
+
+### Lahend
+
+$`r m_NaOH` \times \mathrm{kg}$ tahket naatriumhüdroksiidi vajatakse $\mathrm{0.25 \times dm^3}$ $\mathrm{0.1 \times M}$ lahuse valmistamiseks.
+
+$\mathrm{`r c_1_NaOH` \times \frac{mol}{m^3}}$ oli NaOH lahuse täpne molaarne kontsentratsioon esimeses katses ja $\mathrm{`r c_2_NaOH` \times \frac{mol}{m^3}}$ teises katses eeldades oletuslikku HCl'i molaarsust.
+
+## Üldkareduse määramine
+
+### Ülesande püstitus
+
+Pipeteerisin $\mathrm{100 \cdot cm^3}$ vett, lisasin $\mathrm{5 \cdot cm^3}$ $\mathrm{NH_4Cl}$, $\mathrm{NH_3 \bullet H_2O}$, pH (9.7) puhverlahust, väikese koguse (umbes $\mathrm{0.1 \cdot g}$) indikaatorit *ET00* ja tiitrisin $\mathrm{0.05 \cdot M}$ EDTA lahusega aeglaselt kuni lahuse punase värvuse muutumiseni siniseks. Arvutasin üldkareduse tiitrimiseks kulunud EDTA lahuse ruumala kaudu ühikutes $\mathrm{\frac{mmol}{dm}}$ ehk $\mathrm{10^{-3} \cdot \frac{mol}{dm^3}}$.
+
+### Sisendid
+```{r label = "common-hardness-v-edta"}
+V_EDTA <- 13.3e-6 - 8.5e-6
+```
+
+$$V_\text{EDTA} := \mathrm{`r V_EDTA` \cdot m^3}$$
+
+$$c_\text{EDTA} := \mathrm{0.05 \times M \times \frac{1 \times \frac{mol}{dm^3}}{1 \times M} \times \frac{1 \times dm^3}{10^{-3} \times m^3} = 5 \times 10 \times \frac{mol}{m^3}}$$
+```{r label = "common-hardness-c"}
+c <- .05e3
+```
+
+$$V(\mathrm{H_2O}) := \mathrm{100 \cdot cm^3 \cdot \frac{(10^{-2})^3 \cdot m^3}{1 \cdot cm^3} = 10^{-4} \cdot m^3}$$
+```{r label = "common-hardness-v-h2o"}
+V_H2O <- 100e-6
+```
+
+### Väljund
+
+$$hardness := \ldots$$
+
+### Reeglistik
+
+$$hardness := \frac{V_\text{EDTA} \cdot c_\text{EDTA}}{V(\mathrm{H_2O})}$$
+
+### Arvutamine
+```{r label = "common-hardness-calculation"}
+hardness <- V_EDTA * c / V_H2O
+```
+
+### Lahend
+
+$\mathrm{`r hardness` \times \frac{mmol}{m^3}}$ on üldkaredus.
+
+## Mööduva ehk karbonaatkareduse määramine
+
+### Ülesande püstitus
+
+Pipeteerisin $\mathrm{100 \cdot cm^3}$ analüüsitavat vett, lisasin kolm kuni neli tilka metüülpunase indikaatorit ja tiitrisin lahuse värvuse muutumiseni kollasest punaseks. Arvutasin mööduva ehk karbonaatkareduse tiitrimisel kulunud vesinikkloriidi lahuse ruumala järgi ühikutes $\mathrm{\frac{mmol}{dm^3}}$ ehk $\mathrm{10^{-3} \cdot \frac{mol}{dm^3}}$.
+
+### Sisendid
+```{r label = "passing-hardness-v-hcl"}
+V_HCl <- (25.3e-6 - 21.3e-6)
+```
+
+$$V(\mathrm{HCl}) := \mathrm{`r V_HCl` \times m^3}$$
+
+ma ei märkinud üles vesinikkloriidhappe molaarsust ja oletan, et see oli:
+
+$$c := \mathrm{0.01 \times M \times \frac{1 \times \frac{mol}{dm^3}}{1 \times M} \times \frac{1 \times dm^3}{10^{-3} \times m^3} = 10 \times \frac{mol}{m^3}}$$
+```{r label = "passing-hardness-c"}
+c <- .01e3
+
+```
+
+$$V(\mathrm{H_2O}) := \mathrm{100 \cdot cm^3 \cdot \frac{(10^{-2} \cdot m)^3}{1 \cdot cm^3} = 10^{-4} \cdot m^3}$$
+```{r label = "passing-hardness-v-h2o"}
+V_H2O <- 100e-6
+```
+
+### Reeglistik
+
+Reaktsioonivõrrand:
+
+$$Me\mathrm{(HCO_3)_2 + 2HCl =}Me\mathrm{Cl_2 + H_2O + 2CO_2}$$
+
+Lähtuvalt reaktsioonivõrrandist mööduva kareduse valem:
+
+$$hardness := \frac{V(\mathrm{HCl}) \cdot c}{2 \cdot V(\mathrm{H_2O})}$$
+
+### Arvutamine
+```{r label = "passing-hardness-calculation"}
+hardness <- V_HCl * c / (2 * V_H2O)
+```
+
+### Lahend
+
+$\mathrm{`r hardness` \times \frac{mmol}{dm^3}}$ on mööduv karedus.
+
+## Happed ja alused
+
+### Ülesande püstitus
+
+Mõõtmiseks kasutasin selenaga järgmiste ainete lahuseid:
+
+- 0.01 M lahused: HCl, $\mathrm{HNO_3}$, $\mathrm{H_2SO_4}$, $\mathrm{H_3PO_4}$, $\mathrm{CH_3COOH}$, $\mathrm{NH_3\bullet H_2O}$,
+
+- 0.1 M lahused: NaCl, $\mathrm{Na_2CO_3}$, $\mathrm{NH_4Cl}$, $\mathrm{Al_2(SO_4)_3}$, glükoos,
+
+- 1-M lahused: $\mathrm{CH_3COOH}$, $\mathrm{NH_3\bullet H_2O}$,
+
+- värskelt valmistatud deioniseeritud $\mathrm{H_2O}$,
+
+- kraanivesi.
+
+Kandsime pipeti abil tilkanalüüsi plaadi (TAP) kahte pessa kumbagi neli kuni viis tilka.
+
+Universaalindikaatorpaberile kandsime klaaspulgaga ühest TAP-pesast väikese tilga lahust, kusjuures tilgaalune paberipind omandas lahuse *p*(H)'le vastava värvi (võrdlesime indikaatoriga kaasasoleva skaalaga).
+
+Esimesse pessa lisasime fenoolftaleiini indikaatori lahust (ff), mis muudab lahuse roosaks aluselises keskkonnas, kui *p*(H) > 8.2, ja jääb värvituks, kui *p*(H) < 8.2.
+
+Teise pessa lisasime metüülpunase indikaatori lahust (mp), mis muudab happelise lahuse, *p*(H) < 4.4, roosaks, ja lahuse, mille *p*(H) > 6.2, kollaseks. Tulemused kandsime tabelisse \@ref(tab:ph-indicators-results).
+
+Mõõtsime kõikide lahuste *p*(H) väärtused *p*(H)-meetri abil, milleks on vastavalt gradueeritud potentsiomeeter. Tutvusime *p*(H)-meetri kasutamise juhisega ja seejärel asusime lahuste *p*(H) mõõtmisele. Järjekorras lasime igasse mõõdetavasse lahusesse potentsiomeetriga ühendatud elektroodipaari (klaaselektrood ja hõbe-hõbekloriidelektrood). Elektroodide vaheline potentsiaal on võrdeline lahuse *p*(H) väärtusega. Tulemused kandsime tabelisse \@ref(tab:ph-indicators-results).
+
+Kirjutasin katsetatud hapete ja aluste elektrolüütilise dissotsiatsiooni võrrandid. Koostasin katseseadme lihtsustatud skeemi lahuste mõõtmiseks. Millised toodud ühenditest on happed ja millised alused? Millised on nõrgad elektrolüüdid ja kuidas seda otsustada?
+
+### Sisendid
+
+Joonisel \@ref(fig:ph-indicators-taps) on näha, kuidas eri happed ja alused eri moodi värvusid.
+
+```{r label = "ph-indicators-taps", fig.cap = "TAP'idesse topitud alused ja happed värvusid eri moodi.", echo = FALSE, out.width = "100%"}
+include_svg("ph-indicators-tap-IMG_20220418_101912.jpg")
+```
+
+
+
+```{r label = "ph-indicators-results"}
+substance <- c(
+  "HCl, $\\mathrm{10 \\cdot \\frac{mol}{m^3}}$",
+  "$\\mathrm{HNO_3}$, $\\mathrm{10 \\cdot \\frac{mol}{m^3}}$",
+  "$\\mathrm{H_2SO_4}$, $\\mathrm{10 \\cdot \\frac{mol}{m^3}}$",
+  "$\\mathrm{H_3PO_4}$, $\\mathrm{10 \\cdot \\frac{mol}{m^3}}$",
+  "$\\mathrm{CH_3COOH}$, $\\mathrm{10 \\cdot \\frac{mol}{m^3}}$",
+  "$\\mathrm{NH_3\\bullet H_2O}$, $\\mathrm{10 \\cdot \\frac{mol}{m^3}}$",
+  "NaCl, $\\mathrm{10^2 \\cdot \\frac{mol}{m^3}}$",
+  "$\\mathrm{Na_2CO_3}$, $\\mathrm{10^2 \\cdot \\frac{mol}{m^3}}$",
+  "$\\mathrm{NH_4Cl}$, $\\mathrm{10^2 \\cdot \\frac{mol}{m^3}}$",
+  "$\\mathrm{Al_2(SO_4)_3}$, $\\mathrm{10^2 \\cdot \\frac{mol}{m^3}}$",
+  "glükoos, $\\mathrm{10^2 \\cdot \\frac{mol}{m^3}}$",
+  "$\\mathrm{CH_3COOH}$, $\\mathrm{10^3 \\cdot \\frac{mol}{m^3}}$",
+  "$\\mathrm{NH_3\\bullet H_2O}$, $\\mathrm{10^3 \\cdot \\frac{mol}{m^3}}$",
+  "värskelt valmistatud deioniseeritud $\\mathrm{H_2O}$",
+  "kraanivesi",
+  "NaOH, $\\mathrm{10 \\cdot \\frac{mol}{m^3}}$"
+)
+papers <- c(
+  2, #HCl
+  2, #$\mathrm{HNO_3}$
+  3, #$\mathrm{H_2SO_4}$
+  6, #$\mathrm{H_3PO_4}$
+  4, #$\mathrm{CH_3COOH}$
+  6, #$\mathrm{NH_3\bullet H_2O}$
+  6, #NaCl
+  10, #$\mathrm{Na_2CO_3}$
+  6, #$\mathrm{NH_4Cl}$
+  2, #$\mathrm{Al_2(SO_4)_3}$
+  6, #glükoos
+  3, #$\mathrm{CH_3COOH}$
+  10, #$\mathrm{NH_3\bullet H_2O}$
+  6, #värskelt valmistatud deioniseeritud $\mathrm{H_2O}$
+  7, #kraanivesi
+  10 #NaOH
+)
+ff <- c(
+  FALSE, #HCl
+  FALSE, #$\mathrm{HNO_3}$
+  FALSE, #$\mathrm{H_2SO_4}$
+  FALSE, #$\mathrm{H_3PO_4}$
+  FALSE, #$\mathrm{CH_3COOH}$
+  FALSE, #$\mathrm{NH_3\bullet H_2O}$
+  FALSE, #NaCl
+  TRUE, #$\mathrm{Na_2CO_3}$
+  FALSE, #$\mathrm{NH_4Cl}$
+  FALSE, #$\mathrm{Al_2(SO_4)_3}$
+  FALSE, #glükoos
+  FALSE, #$\mathrm{CH_3COOH}$
+  TRUE, #$\mathrm{NH_3\bullet H_2O}$
+  FALSE, #värskelt valmistatud deioniseeritud $\mathrm{H_2O}$
+  FALSE, #kraanivesi
+  TRUE #NaOH
+)
+mp <- c(
+  "roosa", #HCl
+  "roosa", #$\mathrm{HNO_3}$
+  "roosa", #$\mathrm{H_2SO_4}$
+  "roosa", #$\mathrm{H_3PO_4}$
+  "roosa", #$\mathrm{CH_3COOH}$
+  "kollane", #$\mathrm{NH_3\bullet H_2O}$
+  "", #NaCl
+  "kollane", #$\mathrm{Na_2CO_3}$
+  "kollane", #$\mathrm{NH_4Cl}$
+  "roosa", #$\mathrm{Al_2(SO_4)_3}$
+  "", #glükoos
+  "roosa", #$\mathrm{CH_3COOH}$
+  "kollane", #$\mathrm{NH_3\bullet H_2O}$
+  "roosa", #värskelt valmistatud deioniseeritud $\mathrm{H_2O}$
+  "kollane", #kraanivesi
+  "kollane" #NaOH
+)
+machine <- c(
+  2.26, #HCl
+  2.11, #$\mathrm{HNO_3}$
+  2.46, #$\mathrm{H_2SO_4}$
+  2.92, #$\mathrm{H_3PO_4}$
+  3.57, #$\mathrm{CH_3COOH}$
+  8.38, #$\mathrm{NH_3\bullet H_2O}$
+  3.72, #NaCl
+  10.18, #$\mathrm{Na_2CO_3}$
+  4.96, #$\mathrm{NH_4Cl}$
+  2.31, #$\mathrm{Al_2(SO_4)_3}$
+  5.65, #glükoos
+  2.55, #$\mathrm{CH_3COOH}$
+  10.7, #$\mathrm{NH_3\bullet H_2O}$
+  6.72, #värskelt valmistatud deioniseeritud $\mathrm{H_2O}$
+  7.56, #kraanivesi
+  12.04 #NaOH
+)
+pH <- data.frame(substance, papers, ff, mp, machine)
+colnames(pH) <- c(
+  "Ühend",
+  "Univ. ind. näit",
+  "ff värv",
+  "mp värv",
+  "*p*(H)-meetri näit")
+
+      librarian::shelf("kableExtra")
+
+print_table(pH, caption = "Lahuste *p*(H). Aluseliste ühendite *p*(H) on üle 7, happeliste oma alla 7.") %>% kable_styling(    bootstrap_options = c("striped", "bordered", "condensed", "responsive", "hover"),
+    latex_options = "scale_down",
+    full_width = TRUE
+      )
+```
+
+### Väljundid
+
+elektrolüütilise dissotsiatsiooni võrrandid
+
+*p*(H) mõõtmise skeem
+
+alused ja happed
+
+nõrgad elektrolüüdid
+
+### Joonis
+
+Joonisel \@ref(fig:ph-indicators-schemata) on esitatud *p*(H) mõõtmise skeem [@ashrit_2019_ph].
+
+```{r label = "ph-indicators-schemata", fig.cap = "mõõtmine kahe elektroodiga ", echo = FALSE, out.width = "100%"}
+include_svg("ph-indicators-tap-IMG_20220418_101912.jpg")
+```
+
+
+### Lahendamine
+
+Elektrolüütilise dissotsiatsiooni võrrandid:
+
+$$\mathrm{HCl → H^+ + Cl^-}$$
+
+$$\mathrm{HNO_3(aq) + H_2O(l) \rightarrow H_3O^+(aq) + NO_3^-(aq)}$$
+
+$$\mathrm{2 H_2SO_4 ⇌ H_3SO_4^+ + HSO_4^-}$$
+
+[@sulfuric-acid]
+
+esimene aste:
+
+$$\mathrm{HSO_4^- + H^+}$$
+
+teine aste
+
+$$\mathrm{(SO)^{2-} + H^+}$$
+
+
+$$\mathrm{H_3PO_4 → 3H^+ + (PO_4)^{-3}}$$
+
+kolmes astmes
+
+$$\mathrm{CH_3COOH(aq) + H_2O(l)  →  CH_3COO^-(aq)+ H_3O^+(aq)}$$
+
+[@dissociation]
+
+$$\mathrm{NaCl → Na^+ + Cl^-}$$
+
+$$\mathrm{Na_2CO_3 + H_2O \rightarrow NaHCO_3 + NaOH}$$
+
+$$\mathrm{2 Na^+ + CO_3^{2-} + H_2O \rightarrow Na^+ + HCO_3^- + Na^+ + (OH)^-}$$
+
+$$\mathrm{CO_3^{2-} + H_2O \rightarrow HCO_3^- + (OH)^-}$$
+
+$$\mathrm{H_2O + H_2O ↔ H_3O^+ + OH^-}$$
+
+$$\mathrm{NaOH \leftrightharpoons Na^+ + OH^-}$$
+
+Happed: HCl, $\mathrm{HNO_3}$, $\mathrm{H_2SO_4}$, $\mathrm{H_3PO_4}$, $\mathrm{CH_3COOH}$, värskelt valmistatud deioniseeritud $\mathrm{H_2O}$.
+
+Alus: NaOH.
+
+Nõrgad elektrolüüdid: $\mathrm{CH_3COOH}$, $\mathrm{H_3PO_4}$ ja $\mathrm{NH_3\bullet H_2O}$ [@httpswwwfacebookcomthoughtcodotcom_2019_what]. Nõrk elektrolüüt ei lagune täielikult vesilahuses. Nõrgad elektrolüüdid ioniseeruvad vees ainult osaliselt. Nende elektrijuhtivus on väike.
+
+## Soolade hüdrolüüs
+
+### Ülesande püstitus
+
+Milliste järgnevate sooladega toimub hüdrolüüsireaktsioon: NaCl, $\mathrm{Na_2CO_3}$, $\mathrm{NH_4Cl}$, $\mathrm{Al_2(SO_4)_3}$? Kirjutasin vastavad molekulaar- ja ioonvõrrandid. Millega on seotud lahuse *p*(H) muutumine hüdrolüüsireaktsiooni tagajärjel?
+
+### Lahendus
+
+$$\mathrm{Na_2CO_3 + H_2O \rightarrow NaHCO_3 + NaOH}$$
+
+$$\mathrm{2 Na^+ + CO_3^{2-} + H_2O \rightarrow Na^+ + HCO_3^- + Na^+ + (OH)^-}$$
+
+$$\mathrm{CO_3^{2-} + H_2O \rightarrow HCO_3^- + (OH)^-}$$
+
+$$\mathrm{NH_4Cl(s) + H_2O(l) \rightarrow NH_4^+(aq) + Cl^-(aq)}$$
+[@equation]
+
+$$\mathrm{Al_2(SO_4)_3(s) + H_2O(l) \rightarrow 2Al^{3+} + 3SO_4^{2-}}$$
+[@equation-al2so4-3]
+
+As a quick review, the general rules for the hydrolysis of monoprotic salts are:
+1. If neither the cation/anion can affect the pH, the solution is neutral
+2. If only the cation of the salt is acidic, the solution is acidic
+3. If only the anion of the salt is basic, the solution will be basic
+4. If a salt has a cation that is acidic and an anion that is basic, the pH of the solution is determined by the relative strengths of
+the acid and base
+if K = K , then no net effect on pH
+if K > K , then the solution is slightly acidic
+if K > K , then the solution is slightly basic
+
+## Sademete tekke ja lahustuvuskorrutise seos
+
+### Ülesande püstitus
+
+Kahte TAP-pessa mõõtsin selenaga igaüthe neli tilka $\mathrm{0.1 \cdot M}$ plii(II)nitraadi lahust. Ühte pessa lisasime neli tilka $\mathrm{1 \cdot M}$ naatriumkloriidi lahust ja teise ühe tilga $\mathrm{1 \cdot M}$ naatriumkloriidi lahust ning kolm tilka destilleeritud vett. Kummas pesas tekkis sade?
+
+Võrdlesin katsetulemusi arvutuslike tulemustega võttes arvesse, et aine sadeneb, kui ioonkorrutis lahustuvuskorrutise avalduses ületab lahustuvuskorrutise väärtuse. Või vastupidi, kui ioonkorrutis jääb väiksemaks lahustuvuskorrutisest, siis sadet ei teki. Arvutasin, kui suur on $\mathrm{Pb^{2+}}$- ja $\mathrm{Cl^-}$-ioonide kontsentratsioon lahustes enne ja pärast naatriumkloriidi lisamist arvestades lahjenemist reaktiivide segamisel ning leidsin ioonide kontsentratsioonide korrutised vastavalt lahustuvuskorrutise avalduse paremale poolele:
+
+$$K_s := c(\mathrm{Pb^{2+}}) \cdot (c(\mathrm{Cl^-}))^2$$
+
+Lahuses esinevad kontsentratsioonid arvutasin peale lahuste kokkusegamist.
+
+### Lahendus
+
+Joonistel \@ref(fig:precipitation-1) ja \@ref(fig:precipitation-2) on näha sadestumised.
+
+Katse 1:
+
+Reaktsioonivõrrand:
+
+$$\mathrm{Pb(NO_3)_2(aq) + 2NaCl(aq) \rightarrow 2NaNO_3(aq) + PbCl_2(s)}$$
+
+$$\mathrm{PbCl_2(s) \rightarrow Pb^{2+}(aq) + 2Cl^-(aq)}$$
+
+
+$$K_{sp}(\mathrm{PbCl_2}) := 1.7 \times 10^{-5}$$
+```{r label = "solubility-k"}
+k <- 1.7e-5
+```
+
+[@haynes_2014_crc, p. 5-201]
+
+$$\mathrm{[Pb^{2+}]} = s$$
+$$\mathrm{[Cl^{-}]} = 2 \cdot s$$
+
+$$K_{sp} := \mathrm{[Pb^{2+}][Cl^-]^2} = s \cdot (2 \cdot s)^2 = 4 \cdot s^3$$
+
+$$s^3 = \frac{K_{sp}}{4}$$
+
+$$s := \sqrt[3]{\frac{K_{sp}}{4}}$$
+```{r label = "precipitation-calculation"}
+s <- (k / 4)^(1/3)
+s_Cl <- 2 * s
+```
+
+
+$$c(\mathrm{Pb^{2+}}) := `r s`$$
+$$c(\mathrm{Cl^{-}}) := `r s_Cl`$$
+
+```{r label = "precipitation-1", fig.cap = "Esimene katse: sadet tekkis rohkem nelja tilga NaCl'ga.", echo = FALSE, out.width = "100%"}
+include_svg("solid-IMG_20220418_101939.jpg")
+```
+
+```{r label = "precipitation-2", fig.cap = "Teine katse: sadet tekkis rohkem nelja tilga NaCl'ga.", echo = FALSE, out.width = "100%"}
+include_svg("solid-IMG_20220418_102053.jpg")
+```
+
+## Komplekskatioonide saamine
+
+### Ülesande püstitus
+
+TAP-pessa pipeteerisin kaks kuni kolm tilka $\mathrm{0.5 \cdot M}$ elavhõbe(II)nitraadi lahust ja lisasin sellele tilkhaaval $\mathrm{1.0 \cdot M}$ KI lahust, kui algul tekkiv sade $\mathrm{HgI_2}$ lahustus kompleksiooni $\mathrm{[HgI_4]^{2-}}$ tekke tõttu. Koostasin reaktsioonivõrrandi.
+
+### Lahendus
+
+$$\mathrm{Hg(NO_3)_2 + 2KI \rightarrow HgI_2 + 2KNO_3}$$
+
+oranž sade
+
+$$\mathrm{2KI + HgI_2 \rightarrow K_2[HgI_4]^{2-}}$$
+
+## Kompleksanioonide saamine
+
+### Ülesande püstitus
+
+Valisin reaktiivid ($0.1 \cdot M$), et valmistada portselantiiglites AgCl ja $\mathrm{Cu(OH)_2}$ sademed. Aniooni saamiseks kasutasin vastavaid Na või K sooli. Sademetelt valasin ära lahuse, lisasin sademetele tilkhaaval ammoniaagi vesilahust kuni selle lahustumiseni ($\mathrm{NH_3(aq), 6 \cdot M}$). Milline oli saadavate lahuste värvus? Koostasin reaktsioonivõrrandid.
+
+### Lahendus
+
+Ei ole võimalik $\mathrm{AgCl}$ saada ainult Na või K soolaga. Kasutasin midagi muud, ei mäletagi, mida. Alul tuli valge sade, AgCl sinakashall, $\mathrm{Ag[(NH_3)_2]Cl}$ värvitu.
+
+$$\mathrm{Ag[(NH_3)_2]Cl \leftrightharpoons AgCl + 2NH_3}$$
+
+$$\mathrm{CuCl_2 + 2NaOH \rightarrow \stackrel{sinine}{Cu(OH)_2} + 2NaCl}$$
+
+$$\mathrm{Cu(OH)_2 + 4NH_3 \bullet H_2O \rightarrow [Cu(NH_3)_4](OH)_2 + 4H_2O}$$
+
+## Kompleksioonide lõhustamine
+
+### Ülesande püstitus
+
+$\mathrm{Ag[(NH_3)_2]Cl}$ lahusele lisasin lämmastikhapet happelise reaktsioonini (indikaatorpaberi järgi). Eraldus hõbekloriidi valge sade. Koostasin kompleksühendi dissotsiatsioonireaktsiooni võrrandi ja selgitasin lämmastikhappe toimet.
+
+$\mathrm{[Cu(NH_3)_4]^{2+}}$-ioone sisaldava lahuse pipeteerisin kahte TAP-pessa. Ühte lisasin $\mathrm{6 \cdot M}$ NaOH lahust liias ja teise $\mathrm{0.5 \cdot M}$ $\mathrm{Na_2S}$ lahust. Selgitasin, miks sade tekkis ainult ühel juhul.
+
+### Lahendus
+
+$$\mathrm{Ag[(NH_3)_2]Cl + 2HNO_3 \rightarrow AgCl + 2NH_4NO_3}$$
+$$\mathrm{Ag(NH_3)^{2+} + Cl^- \rightarrow AgCl(s) + 2NH_3(aq)}$$
+
+Lakmuspaberist eraldus sinist, mistõttu lahus punane.
+
+## Raua oksüdatsioon
+
+### Ülesande püstitus
+
+Katseklaasi võtsin 20 tilka $\mathrm{0.5 \cdot M}$ $\mathrm{CuSO_4}$ lahust ja asetasin sinna kolmeks kuni viieks minutiks eelnevalt liivapaberiga korrosioonikihist puhastatud raudnaela. Mis toimus? Koostasin reaktsioonivõrrandi näidates elektronüleminekud.
+
+### Lahendus
+
+Nael läks rooste. Lahtiühendatud vask kogunes naela ümber.
+
+$$\mathrm{CuSO_4(aq) + Fe(s) \rightarrow FeSO_4(aq) + Cu(s)}$$
+
+$$\mathrm{S^{VI} + e \rightarrow S^V}$$
+
+$$\mathrm{Fe -3e \rightarrow Fe^{III}}$$
+
+## Jodiidioonide oksüdatsioon
+
+### Ülesande püstitus
+
+TAP-pessa pipeteerisin neli kuni viis tilka $\mathrm{0.5 \cdot M}$ KI lahust, lisasin ühe tilga kuni kaks tilka 1% tärklise lahust, kaks tilka $\mathrm{0.1 \cdot M}$ HCl lahust ja kolm tilka 3% $\mathrm{H_2O_2}$ lahust. Mida võis tähele panna? Koostasin reaktsioonivõrrandi näidates elektronüleminekud.
+
+### Lahendus
+
+Tumesiniseks läks, alul lilla, peale HCl kollane.
+
+$$\mathrm{KI + C_{6}H_{10}O_{5} \rightarrow KI(C_6H_{10}O_5)}$$
+
+## Metallide pingerida: vask(II) sulfaat
+
+### Ülesande püstitus
+
+Portselantiiglisse pipeteerisin kümme tilka $\mathrm{0.5 \cdot M}$ vask(II)sulfaadi lahust ja asetasin sellesse tükikese puhastatud raudtraati või raudnaela. Kordasin katset asendades raua tsingiga. Kirjutasin toimuvate reaktsioonide võrrandid.
+
+### Lahendus
+
+Fe asendus Cu'ga:
+
+$$\mathrm{CuSO_4 + Fe \rightarrow FeSO_4 + Cu}$$
+
+Zn kattus roostega:
+
+$$\mathrm{CuSO_4 + Zn \rightarrow ZnSO_4 + Cu}$$
+
+## Metallide pingerida: pliietanaat
+
+### Ülesande püstitus
+
+Portselantiiglisse pipeteerisin kümme tilka $\mathrm{0.5 \cdot M}$ pliietanaadilahust ja asetasin sellesse tükikese tsinki. Mis seejuures toimus?
+
+### Lahendus
+
+Kattus tumesinise kihiga, tekkis hõbedane sädelus.
+
+## Metallide pingerida: hõbenitraat
+
+
+### Ülesande püstitus
+
+TAP-pessa pipeteerisin neli kuni viis tilka $\mathrm{0.1 \cdot M}$ hõbenitraadi lahust ja asetasin sellesse hästi puhastatud vasktraaditükikese. Mis toimus?
+
+### Lahendus
+
+Traadi külge tekkis tumesinine kate, samasugune ladestus.
+
+## Metallide pingerida: tsink-vask
+
+### Ülesande püstitus
+
+Kahte portselantiiglisse pipeteerisin kumbagi viis tilka $\mathrm{6 \cdot M}$ HCl lahust ja asetasin sellesse tükikese tsinki ja teise tükikese vaske. Mida märkasin?
+
+### Lahendus
+
+Tsink muliseb, lauale tekkis udu.
+
+
+## Märkusi juhendi kohta
+
+1. Viidatud lisa puudub.
+
+2. Pildid on nihkes.
+
+3. Pildid katavad teksti.
+
+4. Valemid vajavad konverteerimist.
+
+5. Valemid on nihkes.
+
+6. Millimoolist on korduvalt tehtud milligrammmool.
+
+7. Dissotsiatsioonikonstandi valemi järgi ühikud tühistuvad, ent ühikuks on määratud sama mis molaarsuse ühik.
+
+8. Hüdroksooniumioonide ja hüdroksiidioonide kontsentratsiooni valem on võrdsustatud nende summa valemiga.
+
+9. Kohati on selgitused ebapiisavad ülesannete lahendamiseks.
+
+## Teooria
+
+### Süsihappegaasi molaarmassi määramine
+
+Aatommassi skaala ühikuks on 1/12 süsiniku isotoobi C-12 massist, mida nimetatakse aatommassiühikuks – amü (1 amü » 1,66054×10-27g).
+Aatommass Ar on ühikuta suhtarv ja näitab, mitu korda on antud elemendi aatommass suurem 1/12-st C-12 massist. 
+Molekulmass Mr on molekuli mass amü-des ja on suhtarvuna ühikuta suurus. Molekulmass moodustub molekuli kuuluvate elementide aatommasside summast.
+Mool (mol) on aine hulk, mis sisaldab Avogadro arvu üksikosakesi (molekule, aatomeid, elektrone, prootoneid jt). Avogadro arv NA = 6,02×1023 mol-1 tähendab aatomite arvu süsiniku isotoobi C-12 1 moolis ehk 12 grammis. Mool on loendusühik nagu näiteks tosin.
+Molaarmass (M, g mol-1) on ühe mooli mass grammides.
+Näide. Ühe mooli tsingi mass: M(Zn) = 65,38 g mol-1. 
+Molaarruumala (Vm) on ühe mooli gaasilise aine ruumala. Et gaaside ruumala sõltub temperatuurist ja rõhust, siis võetakse molaarruumala määramisel aluseks standardtingimused: temperatuur 0oC (273K) ja rõhk 105 Pa = 1 bar. Kõikide gaaside molaarruumalaks on standardtingimustel 22,7 dm3. Molaarruumala ühikuks on dm3 mol-1.
+Märkus. Varem kasutati molaarruumala määramiseks normaaltingimusi, milles rõhk on 1 atm ehk    101 325 Pa ja mille puhul Vm = 22,4 dm3 mol-1.
+Rõhuühikuna on kasutusel ka torr, mis võrdub rõhuga 1 mm Hg (elavhõbedasam-             mast). 1 Torr = 133,322 Pa; 760 Torr = 1 atm = 101 325 Pa. Standardrõhk 105 Pa =               = 750 Torr (mm Hg) = 0,987 atm. 
+Gaasi ruumala arvutamisel  tuleb arvestada, et gaasi ruumala kasvab temperatuuri tõustes ja rõhu alanedes, ehk võrrandina:
+V_0 = VPT_0/P_0T ,  kus
+V0, P0, T0 on gaasi ruumala, rõhk ja temperatuur standardtingimustel; 
+V, P, T on gaasi ruumala, rõhk ja temperatuur antud (katse) tingimustel. 
+Temperatuuri (T) nn absoluutse (Kelvini) skaala algpunktiks on -273,15oC.
+Üleminekuks Celsiuse skaalalt (t) absoluutsele skaalale (T) kasutatakse võrrandit: T = 273 + t oC.
+
+R = P_0V_0/T_0 = (0,987(atm) 22,7 (dm^3))/(273 (K)) = 0,082 atm   dm^3 K^−1Standardsuuruste suhe on sama kõikide gaaside puhul. Seda tähistatakse tähega R ja nimetatakse universaalseks gaasikonstandiks. R arvuline väärtus sõltub valitud ühikutest, näiteks:
+R = (100000 (Pa)  22,7​ (dm^3))/(273 (K)) = 8315 Pa dm^3 K^−1
+Gaasi ruumala arvutamiseks võib kasutada lihtsustatud võrrandit, mis ühe mooli gaasi puhul on:
+PV = RT
+n mooli gaasi puhul omab võrrand kuju:
+PV = nRT
+PV=m/MRTToodud võrrandi rakendamisel kasutatakse selle laiendatud kuju, kus moolide arv on asendatud gaasi massi (g) ja molaarmassi (g mol-1) jagatisega:
+Võrrandit kasutatakse gaaside või kergesti lenduvate ainete molaarmassi määramisel. Molaarmassi arvutamisel võib lähtuda ka gaasi tihedusest või gaasi suhtelisest tihedusest. 
+ρ (g dm^−3) = (M (g mol^−1))/(22,7  (dm^3 mol^−1)) 
+
+Gaasi tihedus (r, loe: ro) on 1 dm3 standardtingimustel oleva gaasi mass (g) ja on arvutatav molaarmassi ja molaarruumala suhtest.
+d = M_1/M_2 = m_1/m_2 ,  kusGaasi suhteline tihedus (d) näitab, mitu korda on üks gaas teisest raskem või kergem. 
+M1, M2  –  kahe gaasi molaarmassid, g mol-1;
+m1, m2 – kahe võrdse ruumalaga (sama rõhk ja temperatuur) gaasi massid, g.
+Tavaliselt antakse gaasi suhteline tihedus kas vesiniku või õhu suhtes. Kuna M(H2)=2 g mol-1 ja M(õhk) = 29 g mol-1, siis saame arvutada tundmatu gaasi molaarmassi:
+    M = 2 × dvesinik
+  M = 29 × dõhk
+
+### Metalli aatommassi määramine
+
+Paljude elementide, peamiselt metallide aatommassi määramiseks võib kasutada Dulong-Petit’* seadusest tulenevat sõltuvust lihtaine aatommassi ja erisoojusmahtuvuse vahel. SI-süsteemi ühikute puhul on nende korrutis:
+aatommass × erisoojusmahtuvus » 26 000,
+kus erisoojusmahtuvuse (c) ühikuks on J K-1kg-1. 
+Erisoojusmahtuvus on soojushulk džaulides, mis on vajalik 1 kg aine temperatuuri tõstmiseks ühe kraadi võrra. Metalli erisoojusmahtuvuse määramiseks asetatakse veega täidetud kalorimeetrisse vee keemistemperatuurini soojendatud kaalutud metallitükk ja mõõdetakse vee temperatuur katse alguses ning lõpus.
+Aatommassi täpsustamiseks määratakse kaalutud metallitüki poolt vesinikkloriidhappega reageerimisel tekkiva gaasilise vesiniku ruumala. Vesinikkloriidhappes lahustuvad metallid, mis asuvad metallide aktiivsuse reas vesinikust vasakul ja mis on võimelised happest vesinikku välja tõrjuma. 
+Näiteks:            Zn + 2HCl = ZnCl2  + H2
+Al + 3HCl = AlCl3 + 1,5H2
+Teades metalli massi ja eralduva vesiniku ruumala, saab arvutada metalli aatommassi. Vesiniku ruumala viimiseks standardtingimustele arvestatakse, et vesinik kogutakse vee kohale, mistõttu vesiniku rõhk võrdub üldrõhu ja veeauru osarõhu vahega. Eeltoodu põhineb Daltoni** osarõhkude seadusel, mille järgi keemiliselt inaktiivsete gaaside üldrõhk võrdub segus olevate gaaside osarõhkude summaga. Matemaatiliselt võib Daltoni seadust väljendada võrrandiga:
+P = p1 + p2 + … +pn ,  kus
+P – üldrõhk,
+p1, p2, … ,pn – erinevate gaaside osarõhud.
+Näide. Leida metalli aatommass, kui 0,020 g metalli reageerimisel vesinikkloriidhappega vastavalt reaktsioonivõrrandile
+2Me + 6HCl = 2MeCl3 + 3H2
+eraldub 27,2 cm3 vesinikku 16oC ehk 289 K ja 750 mm Hg juures. Vesinik koguti vee kohale.
+
+Arvutame vesiniku osarõhu vee kohal 16oC juures:
+P = 750 mm Hg
+pveeaur= 13,6 mm Hg (lisa 2, tabel 1)
+pvesinik = 750 - 13,6 = 736,4 mm Hg
+T = 273 + 16 = 289 K
+V_0 = 27,2 273 ⋅ 736,4/289 ⋅ 750 = 25,2 cm^3 =  0,0252 dm^3; n_H_2= (0,0252  (dm^3))/(22,7 (dm^3mol^−1)) =   0,0011 molArvutame vesiniku ruumala standardtingimustel (273 K ja 750 mm Hg):
+n_Me = 0,0011 ⋅ 2/3 = 0,00073 mol; M(Me) = (0,020 (g))/(0,00073 (mol)) = 27,4 g ⋅ mol^−1Vastavalt reaktsioonivõrrandile leiame reageerinud metalli moolide arvu ja selle kaudu metalli molaarmassi.
+
+Metalli aatommass  Ar = 27.
+
+### Keemilise reaktsiooni kiirus
+
+Keemilised reaktsioonid kulgevad väga erineva kiirusega – sekundi murdosast lõhkeaine plahvatusel kuni miljonite aastateni kivisöe tekkimisel. Keemilise reaktsiooni kiirust mõõdetakse reageerivate ainete kontsentratsiooni muutusega ajaühikus. Kontsentratsiooniühikuna on tavaliselt kasutusel molaarsus (mol dm-3). 
+Keemilise reaktsiooni kiirus oleneb: 
+1)  reageerivate ainete iseloomust,
+2)  reageerivate ainete kontsentratsioonist,
+3)  reaktsiooni kulgemise tingimustest – temperatuurist, katalüsaatori manulusest jt.
+Kuna ained saavad üksteisega reageerida ainult nende osakeste omavahelise kokkupõrke tagajärjel, siis on arusaadav, et keemilise reaktsiooni kiirus sõltub reageerivate ainete kontsentratsioonist ehk Norra teadlaste C. Guldbergi ja P. Waage poolt 1867. a püstitatud massitoime seaduse järgi: 
+keemilise reaktsiooni kiirus on võrdeline reageerivate ainete kontsentratsioonide korrutisega.
+Vaatleme reaktsiooni, kus aine A ühineb ainega B, andes aine C:
+A + B = C
+Tähistame ainete molaarsed kontsentratsioonid vastavalt cA, cB, cC (mol dm-3), reaktsiooni kiiruse v (mol dm-3s-1; mol dm-3 min-1) ja võrdeteguri k. Suurus k kannab kiiruskonstandi nime ja sõltub reaktsiooni tingimustest. 
+Reaktsiooni kiiruse võrrand vastab reaktsioonile, mis kulgeb vasakult paremale:
+v = k cA × cB
+Tingimustes, kus cA = cB  = 1, kehtib võrdus: v = k.
+Reaktsiooni kiirus sõltub suurel määral temperatuurist, mis kiirendab aine osakeste liikumiskiirust ja suurendab osakeste omavaheliste põrgete arvu. Samal ajal tõuseb temperatuuri suurenedes põrkuvate osakeste energia ja kasvab keemilise reaktsioonini viivate põrgete osakaal. Hollandi keemik J. van’t Hoff selgitas, et reaktsiooni kiirus temperatuuri tõstmisel 10oC võrra suureneb kaks kuni neli korda. Arvu, mis näitab, mitu korda antud reaktsiooni kiirus kasvab temperatuuri tõstmisel 10oC võrra, nimetatakse reaktsiooni temperatuuriteguriks.
+Reaktsiooni kiirust erinevatel temperatuuridel võib ligikaudselt arvutada võrrandiga:
+v_t_2 = v_t_1 ⋅ γ^t_2 − t_1/10
+
+kus  t1 – algtemperatuur, 
+t2 – temperatuur, mille juures määratakse reaktsiooni kiirust,
+g – reaktsiooni temperatuuritegur.
+Reaktsiooni toimumisel heterogeenses keskkonnas sõltub kiirus faasidevahelisest kokkupuutepinnast, näiteks metalli lahustumisel happes. Samuti määravad reaktsiooni kulgemise reageerivate ainete juurdevoolu ja reaktsioonil tekkivate ainete äravoolu kiirus.
+Reaktsiooni kiirusele avaldavad mõju katalüsaatorid. Katalüsaatorid on ained, mis muudavad reaktsiooni kiirust, kuid ise esinevad pärast reaktsiooni keemiliselt muutumatuna ja samal hulgal nagu enne reaktsiooni. 
+
+### Keemiline tasakaal
+
+Kõiki keemilisi reaktsioone võib liigitada pöörduvateks ja mittepöörduvateks. Pöörduvad reaktsioonid kulgevad samaaegselt kahes vastassuunas. Mittepöörduvad reaktsioonid kulgevad praktiliselt ühes suunas lõpuni. Tavaliselt eraldub mittepöörduvas reaktsioonis reaktsioonikeskkonnast üks või mitu reageerivatest ainetest või ioonidest (gaas, sade, vähedissotsieeruv ühend), mille tõttu reaktsioon ei saa kulgeda vastassuunas.
+Oletame, et pöörduvat reaktsiooni väljendab võrrand:
+A + B Û C + D
+Vasakult paremale kulgeva reaktsiooni kiirus vastavalt massitoimeseadusele on avaldatav võrrandiga:
+v1 = k1 cA cB
+Vastassuunas kulgeva reaktsiooni kiirus on vastavalt:
+v2 = k2 cC cD
+Kui otse- ja vastassuunas kulgevate reaktsioonide kiirused muutuvad võrdseks, siis tekib tasakaalu olukord. Sel puhul v1 = v2 ja
+k1 cA cB  = k2 cC cD
+
+k_1/k_2 = c_C c_D/c_A c_BTeisiti kirjutades saame:
+K = c_C c_D/c_A c_BTähistades kiiruskonstantide  k1  ja  k2  suhet  konstandiga  K, võime kirjutada: 
+Konstanti K nimetame tasakaalukonstandiks. K on iseloomustav suurus vastavale reaktsioonile ja sõltub temperatuurist.
+
+### Keemiline termodünaamika
+
+Kõiki aineid iseloomustab ainesse kätketud keemiline energia, mille varu ainega toimuva muutuse korral kas väheneb või kasvab. Soojusenergia ülekannet ühelt kehalt teisele vaatleb teadusharu – termodünaamika, mis keemiliste reaktsioonide puhul kannab keemilise termodünaamika nime. Reaktsiooni soojusefekti mõõduna kasutatakse olekufunktsiooni nimega entalpia (H).
+Kui süsteem saab soojust, siis süsteemi entalpia kasvab, seda muutust tähistab + DH.
+Kui süsteem kaotab soojust, siis süsteemi entalpia kahaneb ja muutust tähistab - DH.
+Entalpia mõõtühikuks on J mol-1 või kJ mol-1. Energiaühikuna kasutatakse džauli (J): 1J =     = 1 · 107 erg.
+Keemilise termodünaamika esimeseks ja tähtsamaks põhiseaduseks on energia jäävuse seadus, mille kohaselt energia ei teki ega kao, vaid võib ainult muuta oma vormi. Näiteks võib soojusenergia muutuda mehaaniliseks energiaks. Selle seaduse rakendused keemilistes protsessides on rajatud Hessi* seadusele (1840. a). Reaktsiooni soojusefekt ehk reaktsioonientalpia ei olene süsteemi ülemineku teedest ühest olekust teise, vaid ainult süsteemi alg- ja lõppolekust. Praktilist tähtsust omavad sellest seadusest tulenevad kolm järeldust.
+1. Pärisuunalise keemilise reaktsiooni entalpia (∆H, loe: delta H) on võrdne vastassuunalise reaktsiooni vastasmärgiga võetud reaktsioonientalpiaga: 
+H2 + I2 ® 2HI + DH    ja   2HI ® H2 + I2 -DH
+2. Mitmeastmelise reaktsiooni summaarne reaktsioonientalpia on võrdne üksiketappide entalpiate summaga. Nii näiteks peab Hessi seaduse kohaselt grafiidi põlemisentalpia olema sõltumatu sellest, kas grafiit muutub otseselt CO2-ks või toimub CO2 teke vaheetapi CO tekke kaudu.
+3. Reaktsioonientalpia võrdub saaduste tekkeentalpiate summaga, millest on lahutatud lähteainete tekkeentalpiate summa. Tekkesoojuse all mõeldakse 1 mooli aine moodustumisel lihtainetest esineva reaktsiooni soojusefekti. Standardtingimustes püsivate lihtainete tekkeentalpiad võrduvad nulliga. 
+Näide: Arvuta etanooli põlemisentalpia, lähtudes standardtingimustest ja teades, et etanooli, vee ja süsinikdioksiidi standardtekkeentalpiad (Df Ho kJ mol-1) on vastavalt -277,6; -285,8; 393,5. Kasuta Hessi seadusest tulenevat kolmandat järeldust.
+Kirjutame põlemisreaktsiooni võrrandi:
+CH3CH2OH(v) + 3O2(g) = 2CO2(g) + 3H2O(v)
+ja vastava võrrandi soojusefekti arvutamiseks. Selleks asetame võrrandisse tekkeentalpiad ja avaldame reaktsioonientalpia ehk soojusefekti:
+DH = -2× 393,5 - 3×285,8 - (-277,6) = -1366,8 kJ mol-1
+
+### Aine sulamis- ja keemistemperatuuri määramine
+
+Igal puhtal ainel on temale omased füüsikalised omadused, nende hulgas ka sulamis- ja keemistemperatuur. Sõltuvalt nendest temperatuuridest on nad toatemperatuuril, s.o ca         20–25oC juures kas gaasilised, vedelad või tahked. Üleminekuks ühest agregaatolekust tei- se peame tõstma või vähendama kehas sisalduvat soojushulka q, mille mõõduks on keha temperatuur. Soojushulk, mida vajatakse keha temperatuuri tõstmiseks, sõltub keha võimest talletada energiat ehk kehale omasest soojusmahtuvusest. Soojusmahtuvust ühe mooli kohta nimetatakse molaarsoojusmahtuvuseks ja tähistatakse Cp (J K-1mol-1), kus indeks p näitab, et rõhk on konstantne. 
+Soojushulk, mida vajatakse n mooli aine soojendamiseks temperatuurilt T1®T2, väljendub võrrandiga:
+qp = n Cp (T2 - T1)
+Aine temperatuuri muutustega seotud protsessid nagu aurustumine/kondensatsioon või sulamine/külmumine on termodünaamiliselt iseloomustatavad entalpia muutude kaudu:
+qp  = n DHaurustumine
+qp  = n DHsulamine
+Näide: Arvutada soojusefekt DH protsessile, kus algselt 18oC juures olev vesi massiga 28 g külmutatakse jääks temperatuuriga 0oC. Cp= 75,2 kJ mol-1; DHsulamine,vesi= -6,0 kJ mol-1; M(H2O)=18 g mol-1. Soojushulk, mis eraldub vee jahutamisel 18oC juurest 0oC -ni: 
+qp = nCp(T2 - T1) = (28/18) 75,2 (273-291) = -2,1kJ
+Soojushulk, mis eraldub jää tekkimisel:
+qp = nDHsulamine= (28/18) (-6,0) = -9,3 kJ
+Kokku eraldub soohushulk: 
+qüld= DH = -2,1 -9,3 = -11,4 kJ
+
+### HCl ja NaOH vahelise neutralisatsioonireaktsiooni soojusefekti määramine
+
+Neutralisatsioonireaktsioonid said oma nime tugeva happe ja tugeva aluse vahelisel reaktsioonil tekkiva vesilahuse neutraalse reaktsiooni järgi. Sellele vastab nt reaktsioonivõrrand 
+HCl + NaOH = NaCl + H2O
+ehk ioonvõrrandina:  H+ + Cl- + Na+ + OH- = H2O + Na+ +  Cl-, 
+mis lihtsustatult on:         H+ + OH- = H2O.
+
+### Lahused ja lahustuvus
+
+Lahus on homogeenne süsteem kahest või enamast komponendist. Komponenti, mida on enamuses, nimetame lahustiks, ja teisi lahustunud aineteks. Lahusekomponendid võivad olla nii gaasid, vedelikud kui tahked ained ehk tahkised. Vaatame lahuseid, kus lahustiks on vesi ja lahustunud aineteks on tahked ained, s.o vesilahuseid. Sõltuvalt siseehitusest võivad tahked ained lahustudes anda molekule või ioone. Lahustumisel tekivad suuremal või vähemal määral lahustuva aine ioonide või molekulide ja veemolekulide vahel polaarsusest tingituna hüdraadid. Näiteks ümbritsevad naatriumkloriidi lahustumisel naatriumiooni negatiivset poolust pidi liitunud veemolekulid (dipoolid) ja kloriidioone positiivset poolust pidi liitunud veemolekulid. Taoliste ühendite ehk hüdraatide teke ühelt poolt soodustab tahke aine lahustumisprotsessi, teiselt poolt takistab tahkest ainest pärinevate ioonide liikuvust lahuses: Na+ aq; Cl- aq. Mõnikord on hüdraatne vesi lahustunud aine molekuliga nii tugevasti seotud, et aine väljakristallumisel lahusest jääb vesi selle kristallide koostisesse (näiteks CuSO4 × 5H2O). Selliseid ühendeid nimetatakse kristallhüdraatideks. Enamiku tahkete ainete lahustuvus vees suureneb temperatuuri tõusuga. Igal soolal on võime moodustada mingil temperatuuril küllastunud lahust, milles enam seda soola lahustada ei ole võimalik. Kui aga jahutada küllastunud lahust ettevaatlikult ja aeglaselt, vältides tahkete osakeste sattumist lahusesse väljastpoolt, siis võib kristallide eraldumist mitte toimuda ja tekib üleküllastunud lahus. Üleküllastunud lahus sisaldab rohkem lahustunud ainet kui see vastab aine lahustuvusele antud temperatuuril. Selline olek on ebapüsiv ja lahuse raputamisel või mõne tahke osakese sattumisel lahusesse toimub ülemäärase aine väljakristallumine. 
+Lahuse koostist väljendatakse kontsentratsiooni või protsendilisuse abil.
+1. Molaarsus (c) – lahustunud aine moolide arv ühes dm3 lahuses (mol dm-3). 
+Molaarsuse tähiseks on ka M, nt cKOH = 0,1 mol dm-3 võib kirjutada ka 0,1 M KOH.
+2. Protsendilisus (%) – lahustunud aine mass 100 massiosas lahuses.
+Aine lahustuvuse mõõduks on tema küllastumisele vastav aine kogus lahuses. Lahustuvus antakse kas molaarsusena, g/100 g lahustis või g/100 g lahuses. 
+
+### Lahuste kolligatiivsed omadused
+
+Lahuste füüsikalised omadused sõltuvad lahustunud aine osakeste (molekulide, ioonide) omavahelisest koosmõjust lahuses, mille tõttu nimetatakse neid omadusi ka kolligatiivseteks (lad colligatio – seos). Kuna põhikomponendiks on tavaliselt lahusti, siis on otstarbekas jälgida lahusti omaduste, näiteks keemis- ja külmumistemperatuuri muutust. Prantsuse keemik F. M. Raoult esitas (1880. a) seaduspärasuse, mille kohaselt lahusti külmumistemperatuur alaneb ja keemistemperatuur tõuseb võrdeliselt lahustis lahus-tunud moolide arvuga. Raoult’i seadus on väljendatav võrrandiga
+Dt = K   m,
+kus Dt on vastavalt külmumistemperatuuri alanemine või keemistemperatuuri tõus;
+m on molaalne kontsentratsioon, mis väljendab moolide arvu 1 kg lahusti kohta, mol kg-1; 
+K on lahustile omane konstant ja väljendab temperatuurimuutust 1 molaalse lahuse korral. Külmumistemperatuuri puhul nimetatakse seda krüoskoopiliseks ja keemistemperatuuri puhul ebullioskoopiliseks konstandiks. Vee puhul Kk= 1,86o; Ke = 0,52o.
+Raoult’i seaduse alusel on võimalik määrata ainete molaarmasse, kusjuures meetod kannab vastavalt krüoskoopilise või ebullioskoopilise meetodi nime.
+
+
+Näide: Arvutada naftaleeni molaarmass, kui 40 g benseenis 1,6 g naftaleeni lahustumisel langeb külmumistemperatuur 1,6o. Kk.,benseen = 5,12o.
+M = Ka 1000/bΔtAvaldame Raoult’i seaduse alusel võrrandi molaarmassi suhtes: 
+kus:
+M – molaarmass g mol-1;
+a – lahustunud aine mass, g; b – lahusti mass, g;
+Dt – temperatuurimuutus, oC;
+1000 – ümberarvutustegur grammidelt 1 kg kohta.
+M = 5,12 ⋅ 1,6 ⋅ 1000/ 40⋅1,6 = 128 g ⋅ mol^−1Järelikult on naftaleeni molaarmass:
+Märkus: Füüsikast teame, et aine keeb, kui tema aururõhk võrdsustub teda ümbritseva atmosfääri rõhuga, ja külmub, kui aururõhk vedela ja tahke faasi kohal võrdsustuvad.
+
+### Lahuste molaarne kontsentratsioon ja selle määramine
+
+Lahuse koostist väljendatakse sageli lahustunud aine standard- ehk molaarse kontsentratsiooni kaudu (mol dm-3). (Vaata ka IV ptk, töös 7 toodud selgitusi.)
+Näide: Valmistada naatriumhüdroksiidi lahus kontsentratsiooniga c = 0,2 mol dm-3. Arvutada,            kui palju vajatakse tahket naatriumhüdroksiidi 5 dm3 0,2 M NaOH lahuse saamiseks. M(NaOH) =       = 40,0 g mol-1.
+Naatriumhüdroksiidi on vaja võtta: 5 (dm3) × 0,2 (mol dm-3) × 40 (g mol-1) = 40 g.
+Lahuse valmistamiseks kaalutakse 40 g NaOH ja puistatakse see keeduklaasis olevasse ca 1 dm3 destilleeritud vette. Lahuse jahtudes viiakse lahus kvantitatiivselt üle 5 dm3 mahuga mõõtekolbi ja lahjendatakse destilleeritud veega mõõtjooneni.
+Lihtsaim viis määrata lahuse molaarset kontsentratsiooni on mahtanalüüs. Lahuste kontsentratsioonid määratakse keemiliseks reaktsiooniks kulunud tuntud kontsentratsiooniga nn mõõtlahuste ruumala mõõtmise teel. 
+Näide: Määrata vesinikkloriidhappe lahuse molaarne kontsentratsioon, kui 200 cm3 lahuse neutraliseerimiseks kulub 100 cm3 0,2 M NaOH lahust. 
+Vastavalt vesinikkloriidhappe ja naatriumhüdroksiidi vahel toimuvale reaktsioonile: HCl + NaOH =  = NaCl + H2O reageerivad mõlemad ained moolvahekorras 1:1. Arvutades reaktsiooniks kulunud NaOH moolide arvu, saame ühtlasi neutraliseeritud HCl moolide arvu:
+n_NaOH = (0,2 (mol dm^−3) ⋅ 100  (cm^3))/(1000 (cm^3dm^−3)) = 0,02 mol100 cm3 NaOH lahuses on :
+ (1000 on tegur dm3 viimiseks cm3-ks).
+200 cm3 HCl lahuses on järelikult samuti 0,02 mol HCl. 
+Kuna molaarne kontsentratsioon antakse 1 dm3 kohta, siis: 
+c_HCl = (0,02 (mol) 1000 (cm^3 dm^−3))/(200 (cm^3)) = 0,1 mol dm^−3
+Arvutuse lihtsustamiseks võib mahud anda kohe dm3-tes ja arvutus viia läbi ühe tehtega.
+Mõõtlahuse lisamist määratavale lahusele nimetatakse tiitrimiseks, mõõtlahust titrandiks   ja määratavat lahust tiitritavaks lahuseks. Mõõtlahus asub skaalaga varustatud büretis (joonis a). Tiitrimist viiakse läbi kas keeduklaasis või koonilises kolvis (joonised i, j). Tiitritavas lahuses peab määratava aine kogus olema algselt fikseeritud, seepärast võetakse seda lahuste analüüsil tiitrimisnõusse ühemahu pipetiga (joonis b1). Pipeteerimisel kasutatakse pipetipumpa (joonis h). Tahkete ainete analüüsil tuleb aine algul lahustada vees ja viia lahus kindla mahuni mõõtekolvis (joonis d). 
+Oluliseks teguriks mahtanalüüsil on toimuva keemilise reaktsiooni täpse lõpp-punkti määramine. Seda võimaldavad värvimuutvad indikaatorid, mida lisatakse tiitrimislahusesse,       või ka ühe reageeriva lahuse enda värvuse muutumine (KMnO4 muutumine värvituks Mn2+ ioonide tekke tõttu jt). Indikaatoriks võib olla ka mõni lahuse kontsentratsiooniga seotud füüsikaline parameeter, näiteks lahuse elektrijuhtivus, mis peab lõpp-punktis järsult muutuma, nii et muutust on võimalik vastava mõõteriistaga täpselt fikseerida.
+Tuntumad indikaatorid on happe ja aluse tiitrimiseks kasutatavad metüülpunane ja fenoolftaleiin. 
+
+### Elektrolüütiline dissotsiatsioon. Happed ja alused. Hüdrolüüs
+
+Aineid, mis juhivad elektrit, nimetatakse elektrolüütideks. Elektrijuhtivus on tingitud elektrilaengutest ja sõltub laetud ioonide või tugevalt polaarsete molekulide esinemisest. Elektrolüütide lahustumisel polaarsetes lahustites moodustuvad solvaaditud (vee puhul: hüdraaditud) ioonid. Seda protsessi nimetatakse elektrolüütiliseks dissotsiatsiooniks. Positiivselt laetud ioonideks on näiteks hapete, aluste ja soolade puhul vesinik- või metallioonid (katioonid), negatiivselt laetud ioonideks aga hüdroksiidioonid ja happeanioonid.
+Elektrolüütideks on happed, alused ja enamik sooli. Mitteelektrolüütideks on mittepolaarsed orgaanilised ühendid. Elektrolüüte jagatakse vastavalt oma võimele dissotsieeruda ioonideks kas tugevateks või nõrkadeks elektrolüütideks. Nõrkade elektrolüütide dissotsiatsioon on pöörduv protsess. Samaaegselt molekulide lagunemisega ioonideks toimub ioonide uuestiühinemine molekulideks. Näiteks:
+HCN « H+ + CN-
+Seega esinevad lahuses tasakaaluolukorras mitte ainult ioonid, vaid ka dissotsieerumata molekulid. Massitoime seadusest lähtudes saame tasakaalukonstandile järgmise avaldise, kus K on elektrolüütilise dissotsiatsiooni konstant ja c tähistab molaarset kontsentratsiooni. Dissotsiatsioonikonstandi ühikuks on molaarsus.
+K = c_H​+  c_CN​−/c_HCN (mol dm^−3)
+
+Dissotsiatsioonikonstant ei sõltu lahuse kontsentratsioonist, kuid sõltub temperatuurist. Elektrolüüdi võimet dissotsieeruda ioonideks iseloomustatakse ka dissotsiatsioonimäära a kaudu, milleks on suhe dissotsieerunud molekulide ja lahustunud molekulide üldarvu vahel. Dissotsiatsioonimäär suureneb lahuse lahjendamisega ja erinevate elektrolüütide dissotsiatsiooniastmeid saab võrrelda ainult lahuste puhul, mis omavad sama molaarset kontsentratsiooni. 
+Hapetest on tugevad elektrolüüdid näiteks H2SO4, HCl, HNO3, alustest NaOH, KOH, Ca(OH)2 ja peaaegu kõik soolad (a > 0,8). Hapetest on nõrgad elektrolüüdid näiteks H2S, HCN, H2CO3, CH3COOH ja alustest NH3 aq (a < 0,2). 
+Hapete ja aluste klassikalise definitsiooni töötas välja rootslane Svante Arrhenius aastatel 1883–1887. Selle kohaselt annavad happed dissotsieerudes prootoneid ja alused hüdroksiidioone (HCl, NaOH jt). G. Brönstedi ja T. Lowry (1923. a) järgi on happed prootonite doonorid ja alused prootonite aktseptorid. Selle järgi peab hape sisaldama prootoneid, alus aga ei pea sisaldama hüdroksiidioone.
+Näide : NH3 (aq) + H2O = NH4+ + OH- 
+              alus           hape
+Puhas vesi sisaldab väheses koguses nii tasakaalus olevaid hüdratiseerunud prootoneid ehk hüdroksooniumioone (H3O+) kui ka hüdroksiidioone (OH-). Selle tasakaalu aluseks on reaktsioon:
+H2O + H2O ↔ H3O+ + OH-
+Märkus: Antud reaktsioon on autoprotonatsioon, kus nii hüdroksoonium- kui ka hüdroksiidioonid tekivad sama aine molekulidest. 
+K_v= c_H_3_^O​​+  ⋅   c​_OH^−   = 1,00   ⋅10 ^−14  (mol  dm   ^−3  )^2Tasakaalu iseloomustab vee ioonkorrutis:
+K_v= c_H_2O_^+⋅  c_OH^− = √1^ ⋅  10^−14 (mol dm^−3)^2Puhtas vees on dissotsiatsioonivõrrandist lähtudes võrdselt nii hüdroksoonium- kui hüdroksiidioone. Järelikult on kummagi iooni kontsentratsioon puhtas vees
+Taanlase Sörenseni* järgi on kasutusel pH mõiste, mis väljendab negatiivset logaritmi prootonite molaarsest kontsentratsioonist. 
+-log cH+ = pH
+Analoogselt saame  pOH :                     -log cOH- = pOH                                                
+Vesilahuses on pH skaala ulatuseks ala, mis vastab vee dissotsiatsioonile. Selles alas on prootonite ja hüdroksiidioonide molaarsete kontsentratsioonide summa lähtudes vee dissotsiatsioonikonstandist: 
+cH+ + cOH- = 10-14 mol dm-3 ehk logaritmilisel kujul: pH + pOH = 14.
+        pH  skaala
+
+ 
+                                                                                                                                                
+                                                                                                                               
+
+
+Nõrkade hapete ja aluste lahuste pH sõltub nende molekulide dissotsiatsioonist ja selle käigus vabanevatest prootonitest või hüdroksiidioonidest. Määravaks suuruseks on siin elektrolüütilise dissotsiatsiooni konstant Kdis.. Mida väiksem on Kdis., seda vähem dissotsieerub vastav ühend ja seda nõrgem elektrolüüt see on. 
+Hüdrolüüsi nähtust vaadeldakse tavaliselt koos soolade dissotsiatsioonil ilmneva lahuse pH muutusega kas happelises või aluselises suunas. Kui sool lahustub vees, siis nõrga happe või nõrga aluse ioonid reageerivad vee ioonidega, rikkudes nendevahelist tasakaalu ja muutes sellega pH-d. Näiteks vaatleme nõrga happe soola kaaliumtsüaniidi dissotsiatsiooni ja hüdrolüüsi.
+Dissotsiatsioonil tekib nõrga tsüaanvesinikhappe anioon:
+KCN = K+ + CN-,
+mis moodustab vesilahuses vähedissotsieeruva tsüaanvesinikhappe, jättes lahusesse OH--ioonide liia:
+KCN + H2O = HCN + KOH
+ehk ioonvõrrandina:  CN- + H2O = HCN + OH-.
+Kaaliumtsüaniidi võib Brönstedi ja Lowry järgi vaadelda kui nõrka alust, mis seob endaga prootoni vee molekulist. Aluste omapära ongi see, et nad vajavad hüdroksiidioonide osaluse kindlustamiseks vee osavõttu aluse dissotsiatsioonist.
+Kaaliumtsüaniidi aluselise dissotsiatsiooni konstant on ioonvõrrandit aluseks võttes järgmine:
+K_KCN = c_HCN c_OH^−/c_CN^− c_H_2O 
+Ühendades vee praktiliselt konstantse molaarse kontsentratsiooni kaaliumtsüaniidi dissotsiatsioonikonstandiga KKCN, saame vastava aluselise dissotsiatsioonikostandi Ka: 
+K_a,KCN = c_HCN c_OH^−/ (mol dm^−3)
+
+KCN aluselise ja HCN happelise dissotsiatsiooni konstandid (vt eespool) on omavahel seotud läbi vee ioonkorrutise: Ka × Kh = 10-14. Seda seost võib kasutada Ka leidmiseks Kh kaudu. Viimane antakse tavaliselt keemiatabelites. pH praktiline määramine toimub kahel viisil. Esiteks kasutatakse indikaatoraineid, mille värv sõltub lahuse happesusest (lakmus, metüülpunane, fenoolftaleiin). Teiseks ja täpsemaks võimaluseks on määrata pH väärtus potentsiomeetriliselt, pannes lahusesse vastavad elektroodid ja mõõtes nende vahel tekkivat elektromotoorjõudu. Elektroodide vaheline elektromotoorjõud sõltub lahuse happesusest.
+Ülesanne 1. Piima pH on keskmiselt 6,5. Arvutage prootonite kontsentratsioon piimas.
+Logaritmi definitsioonist teame, et kui y = log x, siis x = 10y .
+Niisiis kui pH = -log cH,  siis cH  = 10 -pH 
+Kui pH = 6,5, siis cH = 10-6,5
+Kasutame taskuarvutil klahvi 10x: Kirjutan 6.5 ja vahetan märgi +/- nii, et saan -6.5. Nüüd valin teise funktsiooni 2ndF ja vajutan klahvi 10x: saan 0.000000316 = 3.2 × 10-7.
+Võib ka arvutada järgnevalt:   -log cH = 6,5
+       log cH  = -6,5 = -6 - 1 + (-0,5 + 1) = -7 + 0,5
+             cH  = 3,2 × 10-7 M  
+Ülesanne 2. Arvutage 0,15 M vesinikkloriidhappe lahuse pH, prootonite, hüdroksiid- ja kloriidioonide molaarne kontsentratsioon lahuses. Vesinikkloriidhape HCl on tugev hape ja praktiliselt 100%-liselt dissotsieerunud ioonideks. Järelikult on nii prootonite kui ka kloriidioonide molaarne kontsentratsioon lahuses võrdne lahustatud happe moolide arvuga ühes dm3-is ehk molaarse kontsentratsiooniga. 
+cHCl = cH = cCl = 0,15 mol dm-3 = 0,15 M
+pH = -log cH  = -log (1,5 × 10-1 ) = -log 1,5 - log 10-1 = -0.18 + 1 = 0,82
+cOH = 1,00 × 10-14 (M2) / 1,5 × 10-1 (M) = 0,67 × 10-13 M = 6,7 × 10 -14 M
+pOH = -log(6,7× 10-14) = -log 6,7 - log 10 -14 = -0,83 + 14 = 13,17 = 13,2
+Arvutades leitud pH järgi: pOH = 14 - 0,7 = 13,3.
+Ülesanne 3. Aspiriini keemiline nimetus on atsetüülsalitsüülhape CH3COOC6H4COOH. Aspiriini elektrolüütilise dissotsiatsiooni konstandi negatiivne logaritm pKa = 4,56. Arvutage aspiriini lahuse pH, kui toatemperatuuril on 100 cm3 vees lahustatud 325 mg aspiriini (standardtableti mass). 
+Leiame lahuse molaarse kontsentratsiooni: M(aspiriin)  = 180 g mol-1
+c aspiriin = 0,325 (g) × (1000/100) / 180 = 0,018 mol dm-3.
+Nõrga happena dissotsieerub aspiriin vaid vähesel määral. Dissotsiatsioonikonstanti kasutades saame välja arvutada prootonite kontsentratsiooni:
+CH3COOC6H4COOH = CH3COOC6H4COO- + H+
+                                                         hape             =       anioon                 + H+
+K = c_anioon ⋅ c_H/c_hape
+
+
+K = c^2_H/c_hape ehk c_H = √K ⋅ c_hapeKuna canioon = cH, siis saame lihtsustuse 
+pH = ½ (-log K) + ½ log chape = ½ pK + ½ log chape 
+pH = ½ 4,56 + ½ log 1,8× 10-2 = 2,28 + 0,88 = 3,16
+Vastus: aspiriini tableti lahustamisel pooles klaasis vees saame lahuse, mille pH on 3,16. 
+
+### Sademete tekkimine ja lahustuvuskorrutis
+
+Aine loetakse vähelahustuvaks, kui kokkupuutel lahustiga lahustub tühine osa tahkest faasist. Kui sademe on moodustanud elektrolüüt, siis tema lahustunud osa dissotsieerub ioonideks ja toimub tasakaal tahke faasi, lahustunud osa ja selle dissotsiatsioonil tekkivate ioonide vahel.
+Vaatleme näitena diarseentrisulfiidi:
+As2S3, tahke « As2S3, lahus « 2As3+ + 3S2-
+K_As_2S_3 = c^2_As^3+ c^3_S^2−/c_As_2S_3Arvestades, et lahustunud osa selle dissotsiatsiooni tõttu tegelikult puudub, võime välja jätta tasakaalusüsteemi keskmise astme ning esimese ja viimase osa põhjal tasakaalukonstandi. Arvestades sellega, et tegemist on väga lahjade lahustega, võime avalduses kasutada aktiivsuste* asemel molaarseid kontsentratsioone:
+K_S,As_2S_3​ = c^2_As^3+c^3_S^2−Sademe kontsentratsiooni võime lugeda konstantseks ja ühendada tasakaalukonstandiga uueks konstandiks, mida nimetatakse lahustuvuskorrutiseks Ks:
+Lahustuvuskorrutise praktiline väärtus seisneb eelkõige võimaluses ennustada sademe te- ket, näiteks kas sademe teket lahuste kokkuvalamisel või sademe lahustumist lahuse lahjendamisel veega. Samatüübilise valemiga ühendite (näiteks AgCl ja PbS; Fe2(SO4)3 ja Al2(SO4)2) puhul on ühend seda vähem lahustuv, mida väiksem on lahustuvuskorrutis. Lahustuvuskorrutis sõltub temperatuurist. Nii näiteks on hõbekloriidi ja hõbejodiidi la-        hustuvuskorrutised 25oC juures vastavalt Ks, AgCl = 1,6 × 10-10 (mol dm-3)2 ja Ks, AgI =                  = 1,5 × 10-15 (mol dm-3)2. Sellest järeldub, et hõbejodiid lahustub vähem kui hõbekloriid. Lahustuvuskorrutise arvulist väärtust on kerge leida, kui on teada vastava elektrolüüdi lahustuvus vees ehk täpsemini molaarne kontsentratsioon. Lahustuvuskorrutise ühik (mol dm-3)n tuletub, arvestades antud ühendi koostisesse kuuluvate ioonide stöhhiomeetrilisi koefitsiente ja on lihtsustatult tähistatav ka kui Mn, kus n = 1, 2, 3, 4 jne. 
+
+Näiteks sisaldab pliifosfaadi küllastatud lahus 20oC juures 1,39 × 10-6 mol dm-3 pliifosfaati dissotseerinud kujul. Vastavalt võrrandile (Pb3(PO4)2 = 3Pb2+ + 2PO43-) tekib ühest moolist soolast kolm mooli plii ioone ja kaks mooli fosfaatioone. 
+Järelikult saame lahustuvuskorrutise väärtuseks: 
+Ks = (3 × 1,39 × 10-6 )3× (2 × 1,39 × 10-6)2 = 5,6 × 10-32  (mol dm-3)5
+Samaväärsena võib kasutadada molaarse kontsentratsiooni tähist M, mille kohaselt Ks = 5,6 ∙ 10-32 M5.
+
+### Kompleksühendid
+
+Kompleksühenditeks nimetatakse ühendite klassi, kus iooni või molekuli moodustavate osakeste (ioonide, aatomite, radikaalide, molekulide) vaheline keemiline side on tekkinud doonor-aktseptormehhanismi järgi. Sellise mehhanismi kohaselt ühe aatomi elektronpaar ja teise aatomi vaba orbitaal kattuvad. Elektronpaari andjat nimetatakse doonoriks ja selle vastuvõtjat aktseptoriks. Kompleksioon moodustab kompleksühendi sisesfääri ja paigutatakse kompleksühendi valemi kirjutamisel sageli nurksulgudesse. Sellega märgime, et antud ühendi lahustumisel vees jääb kompleksioon koostisosadeks lagunemata. Kõik ioonid, mis ei kuulu kompleksiooni koosseisu, moodustavad ühendi välissfääri. Sisesfääris on tsentraalioon, mis on kompleksimoodustajaks. Selle iooni ümber paigutuvad nn ligandid, milleks on vastasnimelist laengut kandvad ioonid või elektroneutraalsed molekulid nagu NH3, H2O jt. Levinumaid ligande nimetatakse järgmiselt: F- – fluoro, Cl- – kloro, I- – jodo, OH- – hüdrokso, S2- – tio, CN- – tsüano, NO2- – nitro, NH3 – ammiin, H2O – akva. Ligandide üldist arvu nimetatakse kompleksimoodustaja koordinatsiooniarvuks ja see on tavaliselt kas 2, 4 või 6. Kompleksioonid võivad olla katioonid, anioonid või tervikuna elektroneutraalsed.
+Näiteks [Cu(NH3)4] SO4 – tetraammiinvask(II)sulfaat,  
+             K[Ag(CN)2] – kaaliumditsüanoargentaat(I),
+              [CoCl3(NH3)3] – triammiintriklorokoobalt.
+Katioonsetele ja neutraalsetele kompleksidele nimetuste andmisel alustatakse lugemist ligandidest ja seejärel nimetatakse teised ioonid, kusjuures tsentraalaatomile lisatakse selle oksüdatsiooniaste. Anioonsete komplekside korral kasutatakse kompleksimoodustaja ladinakeelset nimetust, mis lõpeb liitega -aat. Kompleksioonid erinevad püsivuse poolest, mida iseloomustab ebapüsivuskonstant. Ebapüsivuskonstant K on kompleksiooni dissotsiatsioonireaktsiooni taakaalukonstant ja sõltub antud iooni omadustest ja temperatuurist. 
+Näiteks:
+[Ag(NH3)2]+ « Ag+ + 2 NH3
+K = c_Ag^+c^2_NH_3/(c_(Ag(NH_3)_2^+)) = 6,8 ⋅ 10^−8 (mol  dm^−3)^2
+
+
+Eristada tuleb kompleksühendeid kaksiksooladest, milles puudub tugev side üksikioonide vahel ja dissotsieerumisel nad lähevad lahusesse omaette ioonidena: 
+Kaksiksool kaaliumalumiiniumdisulfaat:  AlK(SO4)2 = Al3+ + K+ + 2 SO42-
+Komplekssool dikaaliumheksakloroplatinaat:  K2[PtCl6] = 2K+ + [PtCl6]2-
+Kompleksühendite teke on sageli sademete lahustumise või tekke põhjuseks, värvimuutuste põhjusteks jt.
+
+### Redoksreaktsioonid
+
+Redutseerumis- ja oksüdeerumisprotsessid (redoksprotsessid) keemilistes reaktsioonides kulgevad elementide oksüdatsiooniastme muutumisega. Oksüdatsiooniaste (o-a) on elemendi aatomi laeng ühendis, eeldusel et ühend on üles ehitatud ioonidest ühe elemendi kaupa. O-a kirjutatakse rooma numbritega elemendi sümbolist üles paremale või elemendi sümboli kohale. Positiivsele arvule plussmärki ei kirjutata, negatiivse arvu puhul kirjutatakse miinusmärk arvu ette. Iooni laengu tähistusviis erineb o-a tähistusviisist. Iooni laengu puhul on arv kirjutatud araabia numbriga ja asub ioonist paremal ülal. Laengu pluss- ja miinusmärk kirjutatakse järele, näiteks H+, Cl-, SO42-. Protsessi, mille vältel aine loovutab elektrone, nimetatakse oksüdatsiooniks. Elektroni loovutava elemendi o-a kasvab. Aine oksüdatsioonil vabanevad elektronid liidetakse teise aine poolt, mis redutseerub. Redutseeruva aine o-a väheneb.
+Näiteks märkides o-a:    0        I  -I    II  -I      0
+                                       Zn   +  2 HCl = ZnCl2 + H2
+
+Kasutades tähistusena ioonilaenguid, võime redoksprotsessi kirjutada elektroni ülekande poolreaktsioonide kaudu:
+                                              Zno - 2e- = Zn2+
+                                                 2H+ + 2e- = H2o 
+Elektronide ülekannet redoksreaktsioonil võib skemaatiliselt kujutada järgmiselt:
+                                    Zn  + 2 HCl    =      ZnCl2  +   H2 
+
+                                             -2 e-   ®       +2e-®      
+Elektroni ülekandeskeemides tuleb jälgida, et äraantavate ja vastuvõetavate elektronide hulgad oleksid võrdsed. Võrdsustamise käigus tuleb redoksreaktsiooni võrrandisse viia vastavad koefitsiendid. Näiteks tasakaalustame järgmise reaktsiooni.
+…Al + …H2SO4 = Al2(SO4)3 + …H2
+
+ Al0 -3e- = Al3+           x2
+ 2 H+  +2 e- = H20        x3
+
+                            2Al      +  3 H2SO4 = Al2(SO4)3 + 3H2
+
+                                              2 (-3e-) = -6e-      3 (+ 2e-) = +6e-
+Väävelhappe ülesanne antud reaktsioonis on olla vesiniku allikas ja anda alumiiniumsulfaadi moodustumiseks vajalikud kolm sulfaatiooni. Võime poolest põhjustada oksüdeerumisreaktsiooni või redutseerumisreaktsiooni liigitatakse keemilised ühendid vastavalt oksüdeerijateks ja redutseerijateks. Nii on aine, mis redutseerub, teise aine suhtes oksüdeerija ja aine, mis oksüdeerub, teise suhtes redutseerija. Ülaltoodud näites on alumiinium vesinikioonide suhtes redutseerija, ise seejuures oksüdeerudes (andes ära elektrone). Vesinikioonid on alumiiniumi suhtes oksüdeerijaks, ise seejuures redutseerudes (võttes vastu elektrone). Aine omadus olla kas oksüdeerija või redutseerija sõltub vastaspoolest. Näiteks on nitritioonid happelises keskkonnas dikromaatioonide suhtes redutseerijad, jodiidioonide suhtes aga oksüdeerijad:
+                                  III            VI                     V         III
+                               3 NO2- + Cr2O72- + 8H+ = 3NO3- + 2Cr3+ + 4H2O
+
+                                          -2e-                         2 × 3e- 
+                                    
+                                    2NO2- + 2I- + 2H+ = 2 NO + I2 + H2O
+                              
+                                            1 ∙ 2e-             2 ∙ 1e-    
+O-a. määramiseks on rida reegleid.
+1. Kõik vabad elemendid ja molekulid on elektriliselt neutraalsed ja ühendis esinevate ioonide positiivsete ja negatiivsete o-a-te summa on 0.
+2. Keemilistes ühendites oleva vesiniku oksüdatsiooniaste on tavaliselt I. Erandiks on hüdriidides olev vesinik (-I) (NaH, CaH2 jt).
+3. Keemilises ühendis on hapniku oksüdatsiooniaste -II. Erandiks on peroksiidid nagu H2O2, milles esineb O-O side ja ioonis O22- on hapniku o-a = -I.
+4. Leelismetallide Li, Na, K jt o-a on I.
+5. Leelismuldmetallide Ca, Sr, Ba ja elementide Mg, Cd ja Zn o-a on ühendites II.
+6. Alumiiniumi o-a ühendites on III.
+Näiteks määrame lämmastiku o-a ühendis HNO3. Vastavalt punktidele 2 ja 3 leiame, et vesiniku aatomi o-a on I ja kolme hapniku o-a on 3 (-II) = -VI. Kuna molekul on elektriliselt neutraalne, siis:
+1 - 6 + X = 0 ja x = 5, ehk lämmastiku o-a on V.
+
+### Galvaanielement. Elektrokeemiline pingerida
+
+Kui kaks otseses või elektrijuhtme kaudu kontaktis olevat metalli, näiteks tsink ja vask, on kontaktis ka elektrolüüdi lahusega (joonis 12), siis toimuvad metallide ja elektrolüüdi kokkupuutepinnal redoksprotsessid. Selle tulemusena toimub metallides vabanevate elektronide suunatud liikumine ehk elektrivool. Metall, mis kergemini loovutab elektrone, muutub negatiivselt laetud elektroodiks ja selle pinnal toimub oksüdeerumine. Elektrood kannab anoodi nime. Anoodiga paaris olev metall laadub positiivselt ja selle pinnal toimub redutseerumine ning elektrood kannab katoodi nime.
+Voolu suund on “-” elektroodilt   ®      “+” elektroodile.
+
+
+  
+
+                                                                                           
+
+                                                                                                    Zn0 - 2e- = Zn2+
+                                     Zn2+               Cu2+          SO42-
+                                                           H2O                                 Cu2+ + 2e- = Cu0
+
+Joonis 12. Galvaanielemendi põhimõtteline skeem.
+Erinevate metallide ühendamisel elektrolüütkeskkonnas tekib nn galvaanielement (itaallase L. Galvani järgi). Galvaanielemendis on katoodiks passiivsem metall ja anoodiks aktiivsem metall. Metallide aktiivsust mõõdetakse potentsiaalivahega, mis tekib metalli ja elektrolüüdi vahel ehk elektroodipotentsiaaliga. Elektroodipotentsiaalide absoluutseid väärtusi pole võimalik mõõta, vaid mõõdetakse nende suhtelisi väärtusi. Võrdluselektroodina kasutatakse standardvesinikelektroodi, mille elektroodipotentsiaali loetakse 25oC juures võrdseks 0,00 voldiga. Potentsiaalivahet, mis valitseb standardvesinikelektroodi ja oma soola lahusesse asetatud metalli vahel, nimetatakse antud metalli elektroodipotentsiaaliks. Kui metallioonide aktiivsus lahuses on 1, nimetatakse vastavat potentsiaalivahet metalli standardpotentsiaaliks.
+Standardpotentsiaalid (25oC juures).
+Elektrood	Standardpotentsiaal, V	Elektrood	Standardpotentsiaal, V
+K+½K	-2,92	Sn2+ ½Sn	-0,14
+Na+ ½Na	-2,71	Pb2+½Pb	-0,13
+Mg2+½Mg	-2,38	H+½1/2 H2	0,00
+Al3+½Al	-1,66	Cu2+½Cu	+0,34
+Mn2+½Mn	-1,18	Ag+½Ag	+0,80
+Zn2+½Zn	-0,76	Hg2+½Hg	+0,85
+Fe2+½Fe	-0,44	Au3+½Au	+1,42
+Ni2+½Ni	-0,24	                     	
+Galvaanielemendis tekkiv potentsiaalivahe kahe elektroodi vahel kannab elektromotoorjõu nime (EMJ) ja on arvutatav elektroodipotentsiaalide vahest. Kuna EMJ on alati positiivse väärtusega, siis lahutatakse suuremast potentsiaalist väiksem. Näiteks kui on tegemist tsink-vaskelemendiga, kus tsink on 1 M tsinksulfaadi lahuses ja vask 1 M vasksulfaadi lahuses, on galvaanielemendi EMJ: 
+DE = 0,34 - (-0,76) = 1,10 V.
+Kui metalli ioonide aktiivsus lahuses on suurem või väiksem kui 1, siis arvutatakse metallelektroodi potentsiaal võrrandiga:
+E = E^0 + 0,058/z log a ,
+
+kus Eo – metallelektroodi standardpotentsiaal,
+z – ülekantavate elektronide arv,
+a – metalli ioonide aktiivsus lahuses. Ligikaudsel arvutusel võib aktiivsuse asendada metalli ioonide molaarse kontsentratsiooniga lahuses.
+
+### Elektrolüüs
+
+Elektrolüüs on elektrokeemiline protsess, milles elektrivoolu toimel on võimalik saada puhtaid aineid, katta metalle teiste metallidega (galvaanilised katted) ja analüüsida elektrolüütlahuste koostist. Elektrivooluallikaks on alalisvooluallikas (akumulaator, patarei jt). Elektrivoolu vahendajaks vooluallika ja elektrolüüdi vahel on elektroodid, millest üks on anood ja teine katood. Anoodil toimub oksüdatsiooniprotsess ja selle laeng on “+”. Katoodil toimub redutseerimisprotsess ja selle laeng on “-”. Elektrolüüsi käigus liiguvad katioonid katoodile ja anioonid anoodile. Elektroodide vahel peab valitsema pinge, mis ületaks EMJ, mis vastaks samast süsteemist moodustuvale galvaanielemendile.
+Voolutugevusest sõltub aga elektrolüüsiprotsessi kiirus. Vesilahuste elektrolüüsil ei saa eraldada lihtaineid katoodil, mille elektroodipotentsiaal on väiksem või võrdne alumiiniumi elektroodipotentsiaaliga. Selle asemel eraldub katoodil ülepingete tõttu elektroodi pinnal veest vesinik. Vajaduse korral elektrolüüsitakse elektrolüütide sulameid. Elektrolüüsil vesilahustest ei ole võimalik oksüdeerida hapnikku sisaldavaid anioone nagu sulfaat, nitraat, fosfaat jt. Nende asemel oksüdeerub madalamat elektroodipotentsiaali omav hapnik veest. Elektrolüüsi viiakse sageli läbi kõrgendatud temperatuuril ja lahust segades. Mõlemad tegurid kiirendavad elektrolüüsi protsessi. Elektroodide materjal sõltub elektrolüüsi eesmärgist. Galvaanilise katte saamiseks elektrolüüsil ühendatakse kaetav metall katoodina. Elektrolüüdiks on katva metalli soola lahus. Analüütiliseks otstarbeks vajatakse elektroode inertsest materjalist, milleks võib olla plaatina, roostevaba teras, grafiit.
+Korrosiooniks nimetatakse materjalide keemilist või elektrokeemilist hävinemist ümbritseva keskkonna toimel. Metallid hävinevad enamasti elektrokeemilise korrosiooni tõttu, mille põhjuseks on galvaanielemendi esinemine korrodeeruvas süsteemis. Selle juures hävineb anoodiks olev osapool (aktiivsem metall). 
+Näiteks halvasti tsingitud raudplekk moodustab niiskusekihiga kaetult galvaanielemendi, kus tsink on anoodiks, raud katoodiks ja lisanditega niiskusekiht elektrolüüdiks. Korrosioonil tsink oksüdeerub ja hävib, kaitstes seejuures rauda, mis on katoodiks. Raua pinnal toimub elektronide liitumine näiteks happelises niiskusekihis olevate prootonitega.
+Zn - 2e- = Zn2+
+(Fe)2H+ + 2e- = 2H = H2
+Tuntuim on laialt kasutatava raua korrosioon, kusjuures raua oksüdeerumise põhjustab mõni kõrgema elektroodipotentsiaaliga aine (metall). Näiteks võib tuua paarid Fe-Sn ja Fe-Cu. Raua oksüdeerumise algfaasis tekivad Fe(II)ühendid, mis kokkupuutes õhuhapnikuga lähevad üle Fe(III)ühenditeks. Tavaliselt kujutab rauarooste endast Fe(II) ja Fe(III) liitühendit. Korrosiooni pidurdamiseks kasutatakse aineid, nn inhibiitoreid, mis adsorbeeruvad metalli pinnal ja takistavad vesinikioonide juurdepääsu metallile ning korrosiooniprotsessi. Inhibiitoriteks on sageli orgaanilised ained. 

@@ -1,0 +1,8 @@
+
+```{=tex}
+\begin{align}
+M(\mathrm{Na}) :&= \mathrm{22.9897692820(19) \times u\\
+&= 22.9897692820(19) \times \frac{g}{mol} \times \frac{10^{-3} \times kg}{1 \times g}\\
+&= 2.29897692820(19) \times 10^{-2} \times \frac{kg}{mol}}
+\end{align}
+```

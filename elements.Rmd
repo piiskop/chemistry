@@ -1,0 +1,217 @@
+# A-grupi elemendid
+
+## Elementide ülevaade
+
+```{r label = "a"}
+# millest erineb oma grupis ja metallide seas,
+# biotoime,
+# kus leidub,
+# kõige suuremates hulkades toodetav leelismetall,
+# võrrand lahjendatud sool + väävelhape,
+# tootmine - võrrand,
+# kasutamine,
+# probleemid,
+# happed,
+# rühma elementide erinevus ja sarnasus,
+# valemid - ühine ja erinev,
+# oksiidid - valemid,
+# mis juhtub kuumutamisel,
+# kloriid - valem,
+# miks otsa saab,
+# mis kujul looduses,
+# varude suurus,
+# soolade nimetused
+element <- c(
+  "Al [@haynes_2014_crc, pp. 4-3, @a2021-aluminum]",
+  "Ar [@haynes_2014_crc, p. 4-4, @argon, @helmenstine_2018_periodic]",
+  "As [@haynes_2014_crc, p. 4-5]",
+  "Sb [@haynes_2014_crc, p. 4-4, @a2021-antimony]"
+)
+
+weight <- c(
+  26.98153868, # Al
+  39.9481, # Ar
+  74.921602, # As
+  121.7601 # Sb
+)
+
+density <- c(
+  2.7e3, # Al
+  1.7837e3, # Ar
+  5.75e3, # As
+  6.7e3 # Sb
+)
+
+protons <- c(
+  13, # Al
+  18, # Ar
+  33, # As
+  51 # Sb
+)
+
+mp <- c(
+  660.32, # Al
+  -189.36, # Ar
+  616, # As
+  630.63 # Sb
+)
+
+bp <- c(
+  2519, # Al
+  -185.85, # Ar
+  616, # As
+  1587 # Sb
+)
+
+valence <- c(
+  "3", # Al,
+  "0 [@helmenstine_2018_periodic]", # Ar,
+  "-3, 0, +3, +5", # As,
+  "-3, 0, +3, +5" # Sb
+)
+
+heating <- c(
+  "it will definitely oxidize [@what]", # Al
+  "", # Ar
+  "rapidly oxidizes to arsenous oxide (\\mathrm{As2O3})
+with the odor of garlic [@haynes_2014_crc, p. 4-5], the non-metal form easily dissolves [@arsenic]", # As
+  "$\\mathrm{SbO_3}$ [@a2021-antimony]" # Sb
+)
+
+uses <- c(
+  "in medicine as an astringent, as a mordant in dyeing, kitchen
+utensils, outside building decoration, in-
+dustrial applications, in electrical transmission
+lines, modern aircraft and
+rockets, in coatings for telescope mirrors, in making decorative
+paper, packages, toys, in glassmaking and refractories, in the construction of lasers for producing coherent light [@haynes_2014_crc, pp. 4-3], in reducing stomach acidity, heat transfer applications [@a2021-aluminum]", # Al
+  "in electric light
+bulbs and in fluorescent tubes, in filling photo tubes, glow tubes, as an inert gas shield for arc welding and cutting, as a blanket
+for the production of titanium and other reactive elements, as a protective atmosphere for growing silicon and ger-
+manium crystals [@haynes_2014_crc, pp. 4-4], in double dazzled windows to fill the space between the panels [@argon], in incandescent lights to protect the filament from oxygen, to store sensitive chemicals, to protect some materials, to preserve important historical documents or maps, to preserve the drinks by adding argon on the top of wine bottles [@a2021_argon]", # Ar
+  "in bronzing, pyrotechny, for hardening and improving the sphericity of shot, as agricultural insec-
+ticides and poisons, as a dop-
+ing agent in solid-state devices such as transistors, as a laser material to convert electricity di-
+rectly into coherent light  [@haynes_2014_crc, pp. 4-5], to make light-emitting diodes [@arsenic], as an alloying metal with lead to form a harder and durable metal, to prevent wood degradation by termites and fungus [@a2021-arsenic]", # As
+  "in semiconductor technology for making infrared detectors,
+diodes, and Hall-effect devices, in alloys, greatly increases the hardness and mechanical strength of
+lead, batteries, antifriction alloys, type metal, small arms and
+tracer bullets, cable sheathing, manufacturing flame-proof-
+ing compounds, paints, ceramic enamels, glass, and pottery, in medicine [@haynes_2014_crc, p. 4-4], as a reflecting surface in mirrors [@a2021-antimony]" # Sb
+)
+
+production <- c(
+  "by the electrolysis of alumina dissolved in cryolite", # Al
+  "radioactive decay of potassium [@a2021_argon]", # Ar
+  "", # As
+  "extracted from the sulfide by roast-
+ing to the oxide, which is reduced by salt and scrap iron, from
+its oxides it is also prepared by reduction with carbon" #Sb
+)
+
+earth_s_crust <- c(
+  .081, # Al
+  0.0000015, # Ar
+  1.8 / 1000000, # As
+  .00000035 # Sb
+)
+
+atmosphere <- c(
+  0, # Al
+  .0094, # Ar
+  0, # As
+  0 # Sb
+)
+```
+
+## Al
+
+Joonisel \@ref(fig:cryolite) on näha krüoliit, millest valmistati kuni 1987. aastani alumiiniumi, misjärel viimast sünteesima asuti. Krüoliidi valem:
+
+$$\mathrm{Na_3AlF_6}$$
+
+[@cryolite]
+
+```{r label = "cryolite", fig.cap = "Cryolite [@cryolite]", echo = FALSE, out.width = "100%"}
+include_svg("cryolite.jpg")
+```
+
+Joonisel \@ref(fig:bauxite) on näha boksiit, mida leidub eelkõige Jamaikas ja millest valmistatakse tänapäevas alumiiniumi.
+
+
+```{r label = "bauxite", fig.cap = "Bauxite [@search]", echo = FALSE, out.width = "100%"}
+include_svg("Bauxite.jpg")
+```
+
+Joonisel \@ref(fig:al) on näha alumiinium.
+
+
+```{r label = "al", fig.cap = "Al [@a2021-aluminum]", echo = FALSE, out.width = "100%"}
+include_svg("Appearance-of-Aluminum.jpg")
+```
+
+## Ar
+
+Spektroskoopiliselt on jälgitud ioonmolekule:
+
+$$\mathrm{(ArKr)^+}$$
+$$\mathrm{(ArXe)^+}$$
+$$\mathrm{(NeAr)^+}$$
+
+Ultraviolettvalgust külmunud argoonile, mis sisaldas väikeses koguses $\mathrm{HF}$'i, peale lastes saadi Soomes:
+
+$$\mathrm{HArF}$$
+
+## As
+
+Joonisel \@ref(fig:realgar) on näha realgar, mille sulfiidides leidub arseeni. Realgarit leidub Šveitsis. Valem:
+
+$$\mathrm{As_4S_4}$$
+
+```{r label = "realgar", fig.cap = "Realgar [@realgar]", echo = FALSE, out.width = "100%"}
+include_svg("realgar.jpg")
+```
+
+Orpimendi, mille sulfiidides leidub arseeni. Leidub nt Jaapanis. Valem:
+
+$$\mathrm{As_2S_3}$$
+
+Arsenopüriiti kuumutades sublimeerub arseen. Leidub Portugalis ja kui seda lõhkuda, lehkab küüslaugu järele, mis viitab arseenisisaldusele. Valem:
+
+$$\mathrm{FeSAs}$$
+
+Joonisel \@ref(fig:as) on näha arseen.
+
+```{r label = "as", fig.cap = "Arseen [@a2021-arsenic]", echo = FALSE, out.width = "100%"}
+include_svg("Appearance-of-Arsenic.jpg")
+```
+
+Tähtsaimad ühendid:
+
+1.  valge arseen:
+
+    $$\mathrm{As_2O_3}$$
+
+2.  Pariisi roheline:
+
+    $$\mathrm{3Cu(AsO_2)_2 \bullet Cu(C_2H_3O_2)_2}$$
+
+3. kaltsiumi arsenaat
+
+4. plii arsenaat
+
+## Sb
+
+Joonisel \@ref(fig:stibnite) on näha stibniit, millest tehakse antimoni. Stibniidi valem:
+
+$$\mathrm{Sb_2S_3}$$
+
+```{r label = "stibnite", fig.cap = "Stibnite [@stibnite]", echo = FALSE, out.width = "100%"}
+include_svg("stibnite.jpg")
+```
+
+Joonisel \@ref(fig:antimon) on näha antimon, mida toodetakse peamiselt Hiinas.
+
+```{r label = "antimon", fig.cap = "Antimon [@a2021-antimony]", echo = FALSE, out.width = "100%"}
+include_svg("Appearance-of-Antimony.jpg")
+```
